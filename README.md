@@ -34,7 +34,7 @@
 
 **iOSDevLog**
 
-![qrcode](assets/img/qrcode_430.jpg)
+![qrcode](/assets/img/qrcode_430.jpg)
 
 
 ## *Blog*
