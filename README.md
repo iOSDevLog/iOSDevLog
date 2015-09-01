@@ -1,45 +1,43 @@
 # iOS Dev Log
 ---
 
-*version control*
-
-**git**
-
-<http://www.git-scm.com/>
-
+## *Version Control*
 ---
 
-*version control tool*
+## **git**
 
-**SourceTree**
+<http://www.git-scm.com/>
+	
+<https://github.com>
+
+## **SourceTree**
 
 <https://www.sourcetreeapp.com/>
 
----
-
-**.gitignore**
+## *.gitignore*
 
 <https://www.gitignore.io>
 
 <https://www.gitignore.io/api/code,objective-c,swift,osx>
 
+## Social Networking
 ---
 
-*Weibo*
+## *Weibo*
 
-@gnuhua
+**@gnuhua**
 
 <http://weibo.com/iOSDevLog>
 
----
 
-*WeChat Official Accounts*
+## *WeChat Official Accounts*
 
-iOSDevLog
+**iOSDevLog**
 
----
+![qrcode](assets/img/qrcode_430.jpg)
 
-*Blog*
+
+## *Blog*
 
 <http://jiaxh.com>
 
