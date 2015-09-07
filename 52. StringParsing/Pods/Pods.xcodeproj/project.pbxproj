@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0563F12B51958482FD7B754F1D2165D4 /* CPGrammarInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE1D5FFD78FB900C41A9DEF1B2E15CB /* CPGrammarInternal.h */; };
+		06E21E7E548DB24874E533873237B2E4 /* CPToken.h in Headers */ = {isa = PBXBuildFile; fileRef = A968AF40B810ACEF5B5B1BCB0CAA9C2D /* CPToken.h */; };
+		071F463FEE62E3609330811D766C5F87 /* CPShiftReduceGotoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F667584C6CBEB71914030E81DCE2A0 /* CPShiftReduceGotoTable.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		1009BE5F4F6AF209FB1B05D53F257E13 /* NSSetFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0363F30FA01F5979A48A5CBD2B33B8D1 /* NSSetFunctional.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		1245B8F6ED03E6EBC8E11163D4D3D093 /* CPEOFToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 6430DA4367F3D61AC409A0A738C2ECFE /* CPEOFToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		149EF20B0DB28088777AE026EACF47A2 /* CPIdentifierToken.m in Sources */ = {isa = PBXBuildFile; fileRef = F5626CF7D347EA3CDBC79D685E46110A /* CPIdentifierToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		15FD2B3E47894FEF75963ADA5CD80938 /* CPNumberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A35C036E78737F91B189FEB8B9DDF /* CPNumberToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		16F7B91ADC9DA33BEA43715E6C8B33C7 /* CPTokenRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4367652B7DCB1EDB1A408F7997DABE1E /* CPTokenRecogniser.h */; };
+		1719E3AD799B7D638197B43BA0F9160B /* CPSyntaxTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073A85135A9A62104DF6411FECD8048 /* CPSyntaxTree.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		1B8C43F5AFD26D95D6B6319C46E6AA4F /* CPErrorToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9F3B27DF8DA5C54C53F7C81CA25D5 /* CPErrorToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		21DACB4057A012145CC83793AF724EDC /* CPRule+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B07CA8567C43E8C3D8D2E2C95CABD87 /* CPRule+Internal.h */; };
+		235BCE379BDF5AA15D9561EE3804F8C9 /* CPKeywordToken.h in Headers */ = {isa = PBXBuildFile; fileRef = CCF463B68F202B9581EAFFB6A046459D /* CPKeywordToken.h */; };
+		26051AED662D79D44B35ACA08CAD6BE5 /* CPRHSItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 801470E2DE8D0514C96D0A3B1C914989 /* CPRHSItem.h */; };
+		265042CE89DB19655CA257CFB4F249DB /* CPLR1Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 507FB71C8C4EE6CACF023A34223D5C48 /* CPLR1Item.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		2A72A0E128B65773662FB2A77A2826D5 /* CPShiftReduceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3DD752DF341EBD3D7ECB325298C3BE /* CPShiftReduceParser.h */; };
+		2C229E8701E0EE6350D9C76419FF0B60 /* CPRHSItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 792388B7B354759158338C056E52775E /* CPRHSItem+Private.h */; };
+		2FD126AE9334D404B86A7E75E8A048BB /* CPJSONParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C330DF966B357F0C53823D0B85D797 /* CPJSONParser.h */; };
+		3290BEDA5DD045F2F75939D8B4BE188F /* CPRecoveryAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A6BA6FE8F477C46E77DE1424FD4E068C /* CPRecoveryAction.h */; };
+		35087B7D5EA96143B80042B091F60299 /* CPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0304B0D39FFF286D15ABD7C52E7EB74D /* CPParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		38E5F46DB4834DDA1AB5C40CC8A8134A /* CPIdentifierRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA65D4A7109E5075653BE641358D42F0 /* CPIdentifierRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		3B418035760FD986FBE07C87EB7FF87E /* CPNumberToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BC57ACFACABFB67628267CD116A3FB /* CPNumberToken.h */; };
+		3B44632483FF17BD310A3ECBFB505021 /* CPWhiteSpaceToken.h in Headers */ = {isa = PBXBuildFile; fileRef = F958107F64FFA540805FEB202BD6DBC1 /* CPWhiteSpaceToken.h */; };
+		3C05C64F57840BA5198A8CCBE8B7DB1D /* CPIdentifierRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D67CC6FAF1988664A3F2102E7986DE9 /* CPIdentifierRecogniser.h */; };
+		3DF71BAEC1EE94B9F3A71E94F0651BFA /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EF753598A7E47293F1FE464859CFC /* Pods-dummy.m */; };
+		403270141C4E0C0F86209483A8C2835A /* NSArray+Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BFD7C358AED8EFA29418B84105FA79 /* NSArray+Functional.h */; };
+		408D101326D5099B1DDA998485A20FF7 /* CPSenTestKitAssertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB5E25337449D112AF432DFFE00451BD /* CPSenTestKitAssertions.h */; };
+		45CE8365C34772A4EA7A58BE9D165066 /* CPErrorToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A0CDDDCA471CB974B092264C49B8ED /* CPErrorToken.h */; };
+		4905084DD097D55EECB558F0AF94CB68 /* CPSyntaxTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CED7ABA25288F66EF6B37635FC40C06 /* CPSyntaxTree.h */; };
+		4B724F5EE61E1BC00BA59150BD1103AE /* CPShiftReduceAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD751F332E7B02161C6C3FD74604A87 /* CPShiftReduceAction.h */; };
+		506B7641823C5E4346BD4C45BAF6C642 /* CPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FBED393DD8682F019B7CC6915455 /* CPItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		50FCDBAADB0B7F3F24AF49C939C3EF1D /* CPTokenStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5173C1F651765A33457E6DA2692D4 /* CPTokenStream.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		523B881E98B09AABD372EE9A4A314FEC /* CPQuotedToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D62BA27C8B8B4F4666574FAB1CB76B2 /* CPQuotedToken.h */; };
+		5496F5A2C25557839571DFABC2900789 /* CPShiftReduceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF95806BE583B7276268A021B3D37ED7 /* CPShiftReduceParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		5568D332DF2C7A83C5EB167D1843AB61 /* CPToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D44B55646B1CC5B95FD5C62DE1B37A6D /* CPToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		567277DBCBB19B7402714E6B4AB00150 /* CPJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93715E3C1EB67E1A05AF01E6A3F133 /* CPJSONParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		591A6659353999A680623F1499B1D30D /* CPRule.h in Headers */ = {isa = PBXBuildFile; fileRef = D5C5C93F0DF9778E0F019183FED3369D /* CPRule.h */; };
+		5979DDEE4A31E4645304E6DEB25B1F47 /* CPGrammarSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 584035EA240FF85AB4E3A15B32ECA2C1 /* CPGrammarSymbol.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		62C5414C40A6D892F1470857DA05CCCC /* CPSLRParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E86D148F7769F3AC8F11C706F8DD8FF8 /* CPSLRParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		665F3B85A1E4B8C86FE21FAB01B820E3 /* CoreParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7A231FCF3C90E0FF6D1E8D8CC60DE1 /* CoreParse.h */; };
+		68ED4C17ADA601B9AEAB135BFB59849D /* CPIdentifierToken.h in Headers */ = {isa = PBXBuildFile; fileRef = E38A4065AFE35697856D32CDB4345680 /* CPIdentifierToken.h */; };
+		6C298BFC1B9DD257002F06C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C298BFB1B9DD257002F06C2 /* Foundation.framework */; };
+		6DD544A6FCF52F4384DC6A4F9E932D16 /* CPLR1Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065B045BEE66CE07AE17477374F5D1 /* CPLR1Parser.h */; };
+		6E59612D91A0456AD7F630078A028DD9 /* CPNumberRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F905C36B0EF7032A3961E88035B780 /* CPNumberRecogniser.h */; };
+		70403850F4974CBBE0F5359528BF21A7 /* CPSLRParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 31903CF06D789A80A190745209330AA5 /* CPSLRParser.h */; };
+		72CEC60D10C3ABB4498AFB65D6182E12 /* CPTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 911DDE144CDBA1D44123FCB4ADD653A1 /* CPTokeniser.h */; };
+		73002082CD0FAA2059C586476CB116EB /* CPRHSItemResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 336210590F3D52F9F798B52BE8C774FB /* CPRHSItemResult.h */; };
+		772275CC215C0D3D76A242A5D17ED8FF /* CPQuotedRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = BB88081FD3A60C5DDE5BEFE2EAD60FFB /* CPQuotedRecogniser.h */; };
+		77893915AB5D3578299A09344F76F5F3 /* CPShiftReduceAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E38826137266C9F984A4525900192970 /* CPShiftReduceAction.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		7ABAE0938BBA607BE8E769B8E5942933 /* CPGrammarPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B88A7AC67F1B4DBBB68524A37C3874E /* CPGrammarPrivate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		7E75B72C9A2E7069562F5CCFC84AFA6F /* CPRegexpRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C0F2AA49B86CAC41B030DB415866FA /* CPRegexpRecogniser.h */; };
+		898455C1B95276B90C15B0F218924EF7 /* CPRHSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A45E10C9348E68A68F65A31F7B6218 /* CPRHSItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		899CBC797B7FFAE4342F494E55103A27 /* CPWhiteSpaceRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = E0A9C35C8EAD65E4AA59328CB1ED54B9 /* CPWhiteSpaceRecogniser.h */; };
+		89BD1297EC1D7D43FBE1654B0EE22397 /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D78B03DE4BEEBF723084353DE5337F5 /* NSArray+Functional.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		8AE11B8316856BED4F8CDF1D71E7E586 /* CPTokenStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 18385FACEA09022FE8CCD75B45BC76BD /* CPTokenStream.h */; };
+		8C89B120B999FC0FEA92116005D73AD7 /* CPKeywordRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8123703853B9F90F0B8CE8322EF10772 /* CPKeywordRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		8F1AE0BA94CED9A771F5C31B320E0A5C /* CPEOFToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5357359F7CC2B028C96B0003F30EAEAE /* CPEOFToken.h */; };
+		91153BD489B394AE38AC968D1FAB3798 /* CPKeywordToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2EEB13FA06EE8B9C2E5561DD0509 /* CPKeywordToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		9A9DFB0EA270D8EFFF2E9AC522491BA8 /* CPParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F8BDCE9541B5B3D9FE9662CE03B87A /* CPParser.h */; };
+		9F2D4D5B1246CEFCEABEEA38CEF04C55 /* CPQuotedRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A892F3FEBDD98047C57BD99B8759C03E /* CPQuotedRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		9F8F668B420A1D956B53F1D0AE95F5A9 /* CPTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADFF5524421C377CB4CCF08722FF10C /* CPTokeniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		9FC6F6B699B23A293C4484F73BE4C356 /* CPShiftReduceState.h in Headers */ = {isa = PBXBuildFile; fileRef = 528DE517499DF8ED7DBC7B266D0C4A17 /* CPShiftReduceState.h */; };
+		A0146E5D9F21F89EAD0440A6DBA1A78B /* CPWhiteSpaceToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0099DB894C953DB2D443B5C5989FBE0A /* CPWhiteSpaceToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		A39C8B89CE9F4076BBB4298858AB7A4A /* CPGrammar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F7076CCF1D311A35BEBDBCF114793A9 /* CPGrammar.h */; };
+		A3ADC8638B352CAAE7622FC3BF75FA83 /* CPRecoveryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C34BFD908F57B5E5739FAE68BA76E10 /* CPRecoveryAction.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		A44B0BEBB39149BE9E3E785EAF696E83 /* CoreParse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D89E1AEE0E6262614DD08AB81054B /* CoreParse-dummy.m */; };
+		A4F576CBD8F68559FFFBA17BBA6D68BD /* CPShiftReduceActionTable.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B79AA53DB1B1BC211DB770E7EBC61D /* CPShiftReduceActionTable.h */; };
+		AACDB4D06479C6380E9226B0A2110871 /* CPShiftReduceState.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A65BF29356A258BF25F4DB78848BEA /* CPShiftReduceState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		AE2DEBFE03071DDDF87CB479DED6FC31 /* CPLALR1Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B747CA252551CC8841AA94A97B4B0 /* CPLALR1Parser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		AFD185B1CEF66B1A30C6668DFDED05FB /* CPGrammarInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = B411914217FD1AB4D819F455D413B8A7 /* CPGrammarInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		B1154A6687B215D0A9F4F1D0BF5446CB /* CPShiftReduceActionTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A799ECA56D5B42AE7A30A62F3CC9EFCD /* CPShiftReduceActionTable.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		C0C6789B4E3400255BFBEAA7305B9425 /* CPKeywordRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD8402CEA03AB69CECBA5354E569C8A /* CPKeywordRecogniser.h */; };
+		C2B9AF88AEA2F51161C1EA10A80AEBB1 /* CPLR1Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C0F228E1331C931866DA18E2DD1542 /* CPLR1Parser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		C2D5376B531BED5826F4F9BCE4DD9E78 /* CPWhiteSpaceRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2066568929FEB7EFD62B21756047FCA /* CPWhiteSpaceRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		C83236FA970E21FDBEDA1A047BDBBEA4 /* CPShiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BE780B485AA104CA28B161AE622AE6B4 /* CPShiftAction.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		C87F26ACB58B806F0F9DDAF5C8CA01C5 /* CPShiftAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0924B6750AAEE90E8A5BA20039616B03 /* CPShiftAction.h */; };
+		C8F9E902DA341612BA4191F9DE47BDCF /* CPRHSItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C4CC844B9D6B439108D67A5F9A3AE8 /* CPRHSItemResult.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		CDC2F6DEA714B0FB655E1832B55F113C /* CPItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A744C31CD105E4C634489A5C608332 /* CPItem.h */; };
+		D538614D5C37B585640F39A14B9DCE86 /* CPQuotedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC114E4269F300F97E76FCEFA9B631 /* CPQuotedToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		E0A386302F9F139CE9270F7CA410C918 /* CPNumberRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EF2D678E03D6012D2737ADDD14803D /* CPNumberRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		E39751179157FC93165C85030A58FCBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219814D12C17163EC4F001AF4B169FE3 /* Foundation.framework */; };
+		E61B1F57B51194705286FF01492F0625 /* CPGrammar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D3D02683D2E8C9A37B6C074876421B /* CPGrammar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		E8D89970F228D7DF8644EA3169F014C6 /* CPRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 10544F407F384CF2A085F5C38FED9956 /* CPRule.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		EB6C05781B3AA75C9F0EE3816B3C3F39 /* CPShiftReduceGotoTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DB7A7C1D6154EA82418E02E71B8F6E /* CPShiftReduceGotoTable.h */; };
+		EC5B5CB736EB1B0EE7FC48788C752929 /* CPLALR1Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E54C967E43A51158D89AA1C08326A5 /* CPLALR1Parser.h */; };
+		ED0D1B2F256F672210FB4F457965C328 /* CPRegexpRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23993B58853471558C1B09C2F9B467B6 /* CPRegexpRecogniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -fno-objc-arc "; }; };
+		EF52F9AB8F40B8251E9ACAE6984039A8 /* CPLR1Item.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E216BFBDA7EC766D24AE600E049B32 /* CPLR1Item.h */; };
+		EF9EA2C849960D1EBC5849C856FAEA82 /* CPGrammarSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = B371D2718CDF9B3AFE8453379773662A /* CPGrammarSymbol.h */; };
+		F0E8E1D5DFAA04679EF56C6BDACC159E /* CPGrammarPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9A605C311BB7C28DC7E60218B16295 /* CPGrammarPrivate.h */; };
+		F11AD215827EBE62FEEA06C26A3124DF /* NSSetFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = C25C7578B2E616A49D1E3D1A189C3198 /* NSSetFunctional.h */; };
+		F8B52D8326013B84D91E59360E5657CD /* CPShiftReduceParserProtectedMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = B6556CC361801B2FEEB889F7BEDB1D2E /* CPShiftReduceParserProtectedMethods.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D8651FD8E9FF5569EEE3D41FBB61A0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F4285921AFDEF95897C933269671A86;
+			remoteInfo = CoreParse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0099DB894C953DB2D443B5C5989FBE0A /* CPWhiteSpaceToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPWhiteSpaceToken.m; path = "CoreParse/Tokenisation/Token Types/CPWhiteSpaceToken.m"; sourceTree = "<group>"; };
+		0304B0D39FFF286D15ABD7C52E7EB74D /* CPParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPParser.m; path = CoreParse/Parsers/CPParser.m; sourceTree = "<group>"; };
+		0363F30FA01F5979A48A5CBD2B33B8D1 /* NSSetFunctional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSSetFunctional.m; path = CoreParse/NSSetFunctional.m; sourceTree = "<group>"; };
+		03FAC6EBC01134C1983C542394FD9ACC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		054B747CA252551CC8841AA94A97B4B0 /* CPLALR1Parser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPLALR1Parser.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPLALR1Parser.m; sourceTree = "<group>"; };
+		0924B6750AAEE90E8A5BA20039616B03 /* CPShiftAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftAction.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftAction.h; sourceTree = "<group>"; };
+		098C2173D4FEF2C4CA231C51A2934F4B /* libCoreParse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreParse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C34BFD908F57B5E5739FAE68BA76E10 /* CPRecoveryAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPRecoveryAction.m; path = "CoreParse/Parsers/Error Recovery/CPRecoveryAction.m"; sourceTree = "<group>"; };
+		0CC5173C1F651765A33457E6DA2692D4 /* CPTokenStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPTokenStream.m; path = CoreParse/Tokenisation/CPTokenStream.m; sourceTree = "<group>"; };
+		0CED7ABA25288F66EF6B37635FC40C06 /* CPSyntaxTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPSyntaxTree.h; path = "CoreParse/Syntax Tree/CPSyntaxTree.h"; sourceTree = "<group>"; };
+		10544F407F384CF2A085F5C38FED9956 /* CPRule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPRule.m; path = CoreParse/Grammar/CPRule.m; sourceTree = "<group>"; };
+		13A65BF29356A258BF25F4DB78848BEA /* CPShiftReduceState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftReduceState.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceState.m; sourceTree = "<group>"; };
+		13A744C31CD105E4C634489A5C608332 /* CPItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPItem.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPItem.h; sourceTree = "<group>"; };
+		15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		15BFD7C358AED8EFA29418B84105FA79 /* NSArray+Functional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Functional.h"; path = "CoreParse/NSArray+Functional.h"; sourceTree = "<group>"; };
+		17B54A4314AED05BC9DC81508810D2F2 /* CoreParse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CoreParse.xcconfig; sourceTree = "<group>"; };
+		18385FACEA09022FE8CCD75B45BC76BD /* CPTokenStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPTokenStream.h; path = CoreParse/Tokenisation/CPTokenStream.h; sourceTree = "<group>"; };
+		1B88A7AC67F1B4DBBB68524A37C3874E /* CPGrammarPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPGrammarPrivate.m; path = CoreParse/Grammar/CPGrammarPrivate.m; sourceTree = "<group>"; };
+		20C330DF966B357F0C53823D0B85D797 /* CPJSONParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPJSONParser.h; path = "CoreParse/Built In Parsers/CPJSONParser.h"; sourceTree = "<group>"; };
+		20CEA5981C6072F6F933CBE896F1FCD1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E216BFBDA7EC766D24AE600E049B32 /* CPLR1Item.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPLR1Item.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPLR1Item.h; sourceTree = "<group>"; };
+		219814D12C17163EC4F001AF4B169FE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		23993B58853471558C1B09C2F9B467B6 /* CPRegexpRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPRegexpRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPRegexpRecogniser.m"; sourceTree = "<group>"; };
+		25CFDECCCECBCEF4A84D3EDEDA586BC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		2A9A605C311BB7C28DC7E60218B16295 /* CPGrammarPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPGrammarPrivate.h; path = CoreParse/Grammar/CPGrammarPrivate.h; sourceTree = "<group>"; };
+		2D78B03DE4BEEBF723084353DE5337F5 /* NSArray+Functional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Functional.m"; path = "CoreParse/NSArray+Functional.m"; sourceTree = "<group>"; };
+		31903CF06D789A80A190745209330AA5 /* CPSLRParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPSLRParser.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPSLRParser.h; sourceTree = "<group>"; };
+		32A0CDDDCA471CB974B092264C49B8ED /* CPErrorToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPErrorToken.h; path = "CoreParse/Tokenisation/Token Types/CPErrorToken.h"; sourceTree = "<group>"; };
+		336210590F3D52F9F798B52BE8C774FB /* CPRHSItemResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPRHSItemResult.h; path = CoreParse/Grammar/CPRHSItemResult.h; sourceTree = "<group>"; };
+		3C8EF753598A7E47293F1FE464859CFC /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		4073A85135A9A62104DF6411FECD8048 /* CPSyntaxTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPSyntaxTree.m; path = "CoreParse/Syntax Tree/CPSyntaxTree.m"; sourceTree = "<group>"; };
+		40E54C967E43A51158D89AA1C08326A5 /* CPLALR1Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPLALR1Parser.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPLALR1Parser.h; sourceTree = "<group>"; };
+		4367652B7DCB1EDB1A408F7997DABE1E /* CPTokenRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPTokenRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPTokenRecogniser.h"; sourceTree = "<group>"; };
+		45AC114E4269F300F97E76FCEFA9B631 /* CPQuotedToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPQuotedToken.m; path = "CoreParse/Tokenisation/Token Types/CPQuotedToken.m"; sourceTree = "<group>"; };
+		46C0F2AA49B86CAC41B030DB415866FA /* CPRegexpRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPRegexpRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPRegexpRecogniser.h"; sourceTree = "<group>"; };
+		4BE1D5FFD78FB900C41A9DEF1B2E15CB /* CPGrammarInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPGrammarInternal.h; path = CoreParse/Grammar/CPGrammarInternal.h; sourceTree = "<group>"; };
+		4E7A231FCF3C90E0FF6D1E8D8CC60DE1 /* CoreParse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CoreParse.h; path = CoreParse/CoreParse.h; sourceTree = "<group>"; };
+		4F7076CCF1D311A35BEBDBCF114793A9 /* CPGrammar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPGrammar.h; path = CoreParse/Grammar/CPGrammar.h; sourceTree = "<group>"; };
+		500D89E1AEE0E6262614DD08AB81054B /* CoreParse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CoreParse-dummy.m"; sourceTree = "<group>"; };
+		507FB71C8C4EE6CACF023A34223D5C48 /* CPLR1Item.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPLR1Item.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPLR1Item.m; sourceTree = "<group>"; };
+		528DE517499DF8ED7DBC7B266D0C4A17 /* CPShiftReduceState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceState.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceState.h; sourceTree = "<group>"; };
+		52A2FBED393DD8682F019B7CC6915455 /* CPItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPItem.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPItem.m; sourceTree = "<group>"; };
+		5357359F7CC2B028C96B0003F30EAEAE /* CPEOFToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPEOFToken.h; path = "CoreParse/Tokenisation/Token Types/CPEOFToken.h"; sourceTree = "<group>"; };
+		584035EA240FF85AB4E3A15B32ECA2C1 /* CPGrammarSymbol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPGrammarSymbol.m; path = CoreParse/Grammar/CPGrammarSymbol.m; sourceTree = "<group>"; };
+		5D67CC6FAF1988664A3F2102E7986DE9 /* CPIdentifierRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPIdentifierRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPIdentifierRecogniser.h"; sourceTree = "<group>"; };
+		5EE9F3B27DF8DA5C54C53F7C81CA25D5 /* CPErrorToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPErrorToken.m; path = "CoreParse/Tokenisation/Token Types/CPErrorToken.m"; sourceTree = "<group>"; };
+		61DF2EEB13FA06EE8B9C2E5561DD0509 /* CPKeywordToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPKeywordToken.m; path = "CoreParse/Tokenisation/Token Types/CPKeywordToken.m"; sourceTree = "<group>"; };
+		62DB7A7C1D6154EA82418E02E71B8F6E /* CPShiftReduceGotoTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceGotoTable.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceGotoTable.h; sourceTree = "<group>"; };
+		641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		6430DA4367F3D61AC409A0A738C2ECFE /* CPEOFToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPEOFToken.m; path = "CoreParse/Tokenisation/Token Types/CPEOFToken.m"; sourceTree = "<group>"; };
+		65788438532E04FC3AF8CDB769E5DC6A /* CoreParse-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CoreParse-Private.xcconfig"; sourceTree = "<group>"; };
+		6B07CA8567C43E8C3D8D2E2C95CABD87 /* CPRule+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CPRule+Internal.h"; path = "CoreParse/Grammar/CPRule+Internal.h"; sourceTree = "<group>"; };
+		6C298BFB1B9DD257002F06C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70BC57ACFACABFB67628267CD116A3FB /* CPNumberToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPNumberToken.h; path = "CoreParse/Tokenisation/Token Types/CPNumberToken.h"; sourceTree = "<group>"; };
+		74065B045BEE66CE07AE17477374F5D1 /* CPLR1Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPLR1Parser.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPLR1Parser.h; sourceTree = "<group>"; };
+		792388B7B354759158338C056E52775E /* CPRHSItem+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CPRHSItem+Private.h"; path = "CoreParse/Grammar/CPRHSItem+Private.h"; sourceTree = "<group>"; };
+		7D93715E3C1EB67E1A05AF01E6A3F133 /* CPJSONParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPJSONParser.m; path = "CoreParse/Built In Parsers/CPJSONParser.m"; sourceTree = "<group>"; };
+		7FD751F332E7B02161C6C3FD74604A87 /* CPShiftReduceAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceAction.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceAction.h; sourceTree = "<group>"; };
+		801470E2DE8D0514C96D0A3B1C914989 /* CPRHSItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPRHSItem.h; path = CoreParse/Grammar/CPRHSItem.h; sourceTree = "<group>"; };
+		8123703853B9F90F0B8CE8322EF10772 /* CPKeywordRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPKeywordRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPKeywordRecogniser.m"; sourceTree = "<group>"; };
+		8ADFF5524421C377CB4CCF08722FF10C /* CPTokeniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPTokeniser.m; path = CoreParse/Tokenisation/CPTokeniser.m; sourceTree = "<group>"; };
+		8E4A35C036E78737F91B189FEB8B9DDF /* CPNumberToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPNumberToken.m; path = "CoreParse/Tokenisation/Token Types/CPNumberToken.m"; sourceTree = "<group>"; };
+		8F3DD752DF341EBD3D7ECB325298C3BE /* CPShiftReduceParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceParser.h; path = CoreParse/Parsers/CPShiftReduceParser.h; sourceTree = "<group>"; };
+		911DDE144CDBA1D44123FCB4ADD653A1 /* CPTokeniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPTokeniser.h; path = CoreParse/Tokenisation/CPTokeniser.h; sourceTree = "<group>"; };
+		91C0F228E1331C931866DA18E2DD1542 /* CPLR1Parser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPLR1Parser.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPLR1Parser.m; sourceTree = "<group>"; };
+		95EF2D678E03D6012D2737ADDD14803D /* CPNumberRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPNumberRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPNumberRecogniser.m"; sourceTree = "<group>"; };
+		99C4CC844B9D6B439108D67A5F9A3AE8 /* CPRHSItemResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPRHSItemResult.m; path = CoreParse/Grammar/CPRHSItemResult.m; sourceTree = "<group>"; };
+		9D62BA27C8B8B4F4666574FAB1CB76B2 /* CPQuotedToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPQuotedToken.h; path = "CoreParse/Tokenisation/Token Types/CPQuotedToken.h"; sourceTree = "<group>"; };
+		A6BA6FE8F477C46E77DE1424FD4E068C /* CPRecoveryAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPRecoveryAction.h; path = "CoreParse/Parsers/Error Recovery/CPRecoveryAction.h"; sourceTree = "<group>"; };
+		A799ECA56D5B42AE7A30A62F3CC9EFCD /* CPShiftReduceActionTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftReduceActionTable.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceActionTable.m; sourceTree = "<group>"; };
+		A7D3D02683D2E8C9A37B6C074876421B /* CPGrammar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPGrammar.m; path = CoreParse/Grammar/CPGrammar.m; sourceTree = "<group>"; };
+		A892F3FEBDD98047C57BD99B8759C03E /* CPQuotedRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPQuotedRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPQuotedRecogniser.m"; sourceTree = "<group>"; };
+		A968AF40B810ACEF5B5B1BCB0CAA9C2D /* CPToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPToken.h; path = "CoreParse/Tokenisation/Token Types/CPToken.h"; sourceTree = "<group>"; };
+		AA65D4A7109E5075653BE641358D42F0 /* CPIdentifierRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPIdentifierRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPIdentifierRecogniser.m"; sourceTree = "<group>"; };
+		B371D2718CDF9B3AFE8453379773662A /* CPGrammarSymbol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPGrammarSymbol.h; path = CoreParse/Grammar/CPGrammarSymbol.h; sourceTree = "<group>"; };
+		B3A45E10C9348E68A68F65A31F7B6218 /* CPRHSItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPRHSItem.m; path = CoreParse/Grammar/CPRHSItem.m; sourceTree = "<group>"; };
+		B3F8BDCE9541B5B3D9FE9662CE03B87A /* CPParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPParser.h; path = CoreParse/Parsers/CPParser.h; sourceTree = "<group>"; };
+		B411914217FD1AB4D819F455D413B8A7 /* CPGrammarInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPGrammarInternal.m; path = CoreParse/Grammar/CPGrammarInternal.m; sourceTree = "<group>"; };
+		B6556CC361801B2FEEB889F7BEDB1D2E /* CPShiftReduceParserProtectedMethods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceParserProtectedMethods.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceParserProtectedMethods.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB88081FD3A60C5DDE5BEFE2EAD60FFB /* CPQuotedRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPQuotedRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPQuotedRecogniser.h"; sourceTree = "<group>"; };
+		BE780B485AA104CA28B161AE622AE6B4 /* CPShiftAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftAction.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftAction.m; sourceTree = "<group>"; };
+		BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		C25C7578B2E616A49D1E3D1A189C3198 /* NSSetFunctional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSSetFunctional.h; path = CoreParse/NSSetFunctional.h; sourceTree = "<group>"; };
+		C3F905C36B0EF7032A3961E88035B780 /* CPNumberRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPNumberRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPNumberRecogniser.h"; sourceTree = "<group>"; };
+		C4F667584C6CBEB71914030E81DCE2A0 /* CPShiftReduceGotoTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftReduceGotoTable.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceGotoTable.m; sourceTree = "<group>"; };
+		CB5E25337449D112AF432DFFE00451BD /* CPSenTestKitAssertions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPSenTestKitAssertions.h; path = CoreParse/CPSenTestKitAssertions.h; sourceTree = "<group>"; };
+		CCF463B68F202B9581EAFFB6A046459D /* CPKeywordToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPKeywordToken.h; path = "CoreParse/Tokenisation/Token Types/CPKeywordToken.h"; sourceTree = "<group>"; };
+		D44B55646B1CC5B95FD5C62DE1B37A6D /* CPToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPToken.m; path = "CoreParse/Tokenisation/Token Types/CPToken.m"; sourceTree = "<group>"; };
+		D5C5C93F0DF9778E0F019183FED3369D /* CPRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPRule.h; path = CoreParse/Grammar/CPRule.h; sourceTree = "<group>"; };
+		DAD8402CEA03AB69CECBA5354E569C8A /* CPKeywordRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPKeywordRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPKeywordRecogniser.h"; sourceTree = "<group>"; };
+		DAED5646F1C4FBB72564A77BF77803A9 /* CoreParse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreParse-prefix.pch"; sourceTree = "<group>"; };
+		E0A9C35C8EAD65E4AA59328CB1ED54B9 /* CPWhiteSpaceRecogniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPWhiteSpaceRecogniser.h; path = "CoreParse/Tokenisation/Token Recognisers/CPWhiteSpaceRecogniser.h"; sourceTree = "<group>"; };
+		E2066568929FEB7EFD62B21756047FCA /* CPWhiteSpaceRecogniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPWhiteSpaceRecogniser.m; path = "CoreParse/Tokenisation/Token Recognisers/CPWhiteSpaceRecogniser.m"; sourceTree = "<group>"; };
+		E38826137266C9F984A4525900192970 /* CPShiftReduceAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftReduceAction.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceAction.m; sourceTree = "<group>"; };
+		E38A4065AFE35697856D32CDB4345680 /* CPIdentifierToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPIdentifierToken.h; path = "CoreParse/Tokenisation/Token Types/CPIdentifierToken.h"; sourceTree = "<group>"; };
+		E86D148F7769F3AC8F11C706F8DD8FF8 /* CPSLRParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPSLRParser.m; path = CoreParse/Parsers/CPShiftReduceParsers/CPSLRParser.m; sourceTree = "<group>"; };
+		E8B79AA53DB1B1BC211DB770E7EBC61D /* CPShiftReduceActionTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPShiftReduceActionTable.h; path = CoreParse/Parsers/CPShiftReduceParsers/CPShiftReduceActionTable.h; sourceTree = "<group>"; };
+		F5626CF7D347EA3CDBC79D685E46110A /* CPIdentifierToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPIdentifierToken.m; path = "CoreParse/Tokenisation/Token Types/CPIdentifierToken.m"; sourceTree = "<group>"; };
+		F958107F64FFA540805FEB202BD6DBC1 /* CPWhiteSpaceToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CPWhiteSpaceToken.h; path = "CoreParse/Tokenisation/Token Types/CPWhiteSpaceToken.h"; sourceTree = "<group>"; };
+		FF95806BE583B7276268A021B3D37ED7 /* CPShiftReduceParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CPShiftReduceParser.m; path = CoreParse/Parsers/CPShiftReduceParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		660451BC581DB1CAC63415C1194BBF0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C298BFC1B9DD257002F06C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A40FDCB8745B701F767505CD7D6FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39751179157FC93165C85030A58FCBD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		496DE89A58D60CEE3FBB52550CA20E95 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17B54A4314AED05BC9DC81508810D2F2 /* CoreParse.xcconfig */,
+				65788438532E04FC3AF8CDB769E5DC6A /* CoreParse-Private.xcconfig */,
+				500D89E1AEE0E6262614DD08AB81054B /* CoreParse-dummy.m */,
+				DAED5646F1C4FBB72564A77BF77803A9 /* CoreParse-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CoreParse";
+			sourceTree = "<group>";
+		};
+		53634095492C925481A186EB34E3EF5C /* CoreParse */ = {
+			isa = PBXGroup;
+			children = (
+				5357359F7CC2B028C96B0003F30EAEAE /* CPEOFToken.h */,
+				6430DA4367F3D61AC409A0A738C2ECFE /* CPEOFToken.m */,
+				32A0CDDDCA471CB974B092264C49B8ED /* CPErrorToken.h */,
+				5EE9F3B27DF8DA5C54C53F7C81CA25D5 /* CPErrorToken.m */,
+				4F7076CCF1D311A35BEBDBCF114793A9 /* CPGrammar.h */,
+				A7D3D02683D2E8C9A37B6C074876421B /* CPGrammar.m */,
+				4BE1D5FFD78FB900C41A9DEF1B2E15CB /* CPGrammarInternal.h */,
+				B411914217FD1AB4D819F455D413B8A7 /* CPGrammarInternal.m */,
+				2A9A605C311BB7C28DC7E60218B16295 /* CPGrammarPrivate.h */,
+				1B88A7AC67F1B4DBBB68524A37C3874E /* CPGrammarPrivate.m */,
+				B371D2718CDF9B3AFE8453379773662A /* CPGrammarSymbol.h */,
+				584035EA240FF85AB4E3A15B32ECA2C1 /* CPGrammarSymbol.m */,
+				5D67CC6FAF1988664A3F2102E7986DE9 /* CPIdentifierRecogniser.h */,
+				AA65D4A7109E5075653BE641358D42F0 /* CPIdentifierRecogniser.m */,
+				E38A4065AFE35697856D32CDB4345680 /* CPIdentifierToken.h */,
+				F5626CF7D347EA3CDBC79D685E46110A /* CPIdentifierToken.m */,
+				13A744C31CD105E4C634489A5C608332 /* CPItem.h */,
+				52A2FBED393DD8682F019B7CC6915455 /* CPItem.m */,
+				20C330DF966B357F0C53823D0B85D797 /* CPJSONParser.h */,
+				7D93715E3C1EB67E1A05AF01E6A3F133 /* CPJSONParser.m */,
+				DAD8402CEA03AB69CECBA5354E569C8A /* CPKeywordRecogniser.h */,
+				8123703853B9F90F0B8CE8322EF10772 /* CPKeywordRecogniser.m */,
+				CCF463B68F202B9581EAFFB6A046459D /* CPKeywordToken.h */,
+				61DF2EEB13FA06EE8B9C2E5561DD0509 /* CPKeywordToken.m */,
+				40E54C967E43A51158D89AA1C08326A5 /* CPLALR1Parser.h */,
+				054B747CA252551CC8841AA94A97B4B0 /* CPLALR1Parser.m */,
+				20E216BFBDA7EC766D24AE600E049B32 /* CPLR1Item.h */,
+				507FB71C8C4EE6CACF023A34223D5C48 /* CPLR1Item.m */,
+				74065B045BEE66CE07AE17477374F5D1 /* CPLR1Parser.h */,
+				91C0F228E1331C931866DA18E2DD1542 /* CPLR1Parser.m */,
+				C3F905C36B0EF7032A3961E88035B780 /* CPNumberRecogniser.h */,
+				95EF2D678E03D6012D2737ADDD14803D /* CPNumberRecogniser.m */,
+				70BC57ACFACABFB67628267CD116A3FB /* CPNumberToken.h */,
+				8E4A35C036E78737F91B189FEB8B9DDF /* CPNumberToken.m */,
+				B3F8BDCE9541B5B3D9FE9662CE03B87A /* CPParser.h */,
+				0304B0D39FFF286D15ABD7C52E7EB74D /* CPParser.m */,
+				BB88081FD3A60C5DDE5BEFE2EAD60FFB /* CPQuotedRecogniser.h */,
+				A892F3FEBDD98047C57BD99B8759C03E /* CPQuotedRecogniser.m */,
+				9D62BA27C8B8B4F4666574FAB1CB76B2 /* CPQuotedToken.h */,
+				45AC114E4269F300F97E76FCEFA9B631 /* CPQuotedToken.m */,
+				801470E2DE8D0514C96D0A3B1C914989 /* CPRHSItem.h */,
+				B3A45E10C9348E68A68F65A31F7B6218 /* CPRHSItem.m */,
+				792388B7B354759158338C056E52775E /* CPRHSItem+Private.h */,
+				336210590F3D52F9F798B52BE8C774FB /* CPRHSItemResult.h */,
+				99C4CC844B9D6B439108D67A5F9A3AE8 /* CPRHSItemResult.m */,
+				A6BA6FE8F477C46E77DE1424FD4E068C /* CPRecoveryAction.h */,
+				0C34BFD908F57B5E5739FAE68BA76E10 /* CPRecoveryAction.m */,
+				46C0F2AA49B86CAC41B030DB415866FA /* CPRegexpRecogniser.h */,
+				23993B58853471558C1B09C2F9B467B6 /* CPRegexpRecogniser.m */,
+				D5C5C93F0DF9778E0F019183FED3369D /* CPRule.h */,
+				10544F407F384CF2A085F5C38FED9956 /* CPRule.m */,
+				6B07CA8567C43E8C3D8D2E2C95CABD87 /* CPRule+Internal.h */,
+				31903CF06D789A80A190745209330AA5 /* CPSLRParser.h */,
+				E86D148F7769F3AC8F11C706F8DD8FF8 /* CPSLRParser.m */,
+				CB5E25337449D112AF432DFFE00451BD /* CPSenTestKitAssertions.h */,
+				0924B6750AAEE90E8A5BA20039616B03 /* CPShiftAction.h */,
+				BE780B485AA104CA28B161AE622AE6B4 /* CPShiftAction.m */,
+				7FD751F332E7B02161C6C3FD74604A87 /* CPShiftReduceAction.h */,
+				E38826137266C9F984A4525900192970 /* CPShiftReduceAction.m */,
+				E8B79AA53DB1B1BC211DB770E7EBC61D /* CPShiftReduceActionTable.h */,
+				A799ECA56D5B42AE7A30A62F3CC9EFCD /* CPShiftReduceActionTable.m */,
+				62DB7A7C1D6154EA82418E02E71B8F6E /* CPShiftReduceGotoTable.h */,
+				C4F667584C6CBEB71914030E81DCE2A0 /* CPShiftReduceGotoTable.m */,
+				8F3DD752DF341EBD3D7ECB325298C3BE /* CPShiftReduceParser.h */,
+				FF95806BE583B7276268A021B3D37ED7 /* CPShiftReduceParser.m */,
+				B6556CC361801B2FEEB889F7BEDB1D2E /* CPShiftReduceParserProtectedMethods.h */,
+				528DE517499DF8ED7DBC7B266D0C4A17 /* CPShiftReduceState.h */,
+				13A65BF29356A258BF25F4DB78848BEA /* CPShiftReduceState.m */,
+				0CED7ABA25288F66EF6B37635FC40C06 /* CPSyntaxTree.h */,
+				4073A85135A9A62104DF6411FECD8048 /* CPSyntaxTree.m */,
+				A968AF40B810ACEF5B5B1BCB0CAA9C2D /* CPToken.h */,
+				D44B55646B1CC5B95FD5C62DE1B37A6D /* CPToken.m */,
+				4367652B7DCB1EDB1A408F7997DABE1E /* CPTokenRecogniser.h */,
+				18385FACEA09022FE8CCD75B45BC76BD /* CPTokenStream.h */,
+				0CC5173C1F651765A33457E6DA2692D4 /* CPTokenStream.m */,
+				911DDE144CDBA1D44123FCB4ADD653A1 /* CPTokeniser.h */,
+				8ADFF5524421C377CB4CCF08722FF10C /* CPTokeniser.m */,
+				E0A9C35C8EAD65E4AA59328CB1ED54B9 /* CPWhiteSpaceRecogniser.h */,
+				E2066568929FEB7EFD62B21756047FCA /* CPWhiteSpaceRecogniser.m */,
+				F958107F64FFA540805FEB202BD6DBC1 /* CPWhiteSpaceToken.h */,
+				0099DB894C953DB2D443B5C5989FBE0A /* CPWhiteSpaceToken.m */,
+				4E7A231FCF3C90E0FF6D1E8D8CC60DE1 /* CoreParse.h */,
+				15BFD7C358AED8EFA29418B84105FA79 /* NSArray+Functional.h */,
+				2D78B03DE4BEEBF723084353DE5337F5 /* NSArray+Functional.m */,
+				C25C7578B2E616A49D1E3D1A189C3198 /* NSSetFunctional.h */,
+				0363F30FA01F5979A48A5CBD2B33B8D1 /* NSSetFunctional.m */,
+				496DE89A58D60CEE3FBB52550CA20E95 /* Support Files */,
+			);
+			path = CoreParse;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				219814D12C17163EC4F001AF4B169FE3 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A9632B466F86144952F34A63C768060C /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		952EEBFAF8F7E620423C9F156F25A506 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */,
+				BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */,
+				3C8EF753598A7E47293F1FE464859CFC /* Pods-dummy.m */,
+				641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */,
+				03FAC6EBC01134C1983C542394FD9ACC /* Pods.debug.xcconfig */,
+				25CFDECCCECBCEF4A84D3EDEDA586BC5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		A9632B466F86144952F34A63C768060C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53634095492C925481A186EB34E3EF5C /* CoreParse */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C298BFB1B9DD257002F06C2 /* Foundation.framework */,
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				098C2173D4FEF2C4CA231C51A2934F4B /* libCoreParse.a */,
+				20CEA5981C6072F6F933CBE896F1FCD1 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				952EEBFAF8F7E620423C9F156F25A506 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F71E5C78512ABEA775586677CC4B9481 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F1AE0BA94CED9A771F5C31B320E0A5C /* CPEOFToken.h in Headers */,
+				45CE8365C34772A4EA7A58BE9D165066 /* CPErrorToken.h in Headers */,
+				A39C8B89CE9F4076BBB4298858AB7A4A /* CPGrammar.h in Headers */,
+				0563F12B51958482FD7B754F1D2165D4 /* CPGrammarInternal.h in Headers */,
+				F0E8E1D5DFAA04679EF56C6BDACC159E /* CPGrammarPrivate.h in Headers */,
+				EF9EA2C849960D1EBC5849C856FAEA82 /* CPGrammarSymbol.h in Headers */,
+				3C05C64F57840BA5198A8CCBE8B7DB1D /* CPIdentifierRecogniser.h in Headers */,
+				68ED4C17ADA601B9AEAB135BFB59849D /* CPIdentifierToken.h in Headers */,
+				CDC2F6DEA714B0FB655E1832B55F113C /* CPItem.h in Headers */,
+				2FD126AE9334D404B86A7E75E8A048BB /* CPJSONParser.h in Headers */,
+				C0C6789B4E3400255BFBEAA7305B9425 /* CPKeywordRecogniser.h in Headers */,
+				235BCE379BDF5AA15D9561EE3804F8C9 /* CPKeywordToken.h in Headers */,
+				EC5B5CB736EB1B0EE7FC48788C752929 /* CPLALR1Parser.h in Headers */,
+				EF52F9AB8F40B8251E9ACAE6984039A8 /* CPLR1Item.h in Headers */,
+				6DD544A6FCF52F4384DC6A4F9E932D16 /* CPLR1Parser.h in Headers */,
+				6E59612D91A0456AD7F630078A028DD9 /* CPNumberRecogniser.h in Headers */,
+				3B418035760FD986FBE07C87EB7FF87E /* CPNumberToken.h in Headers */,
+				9A9DFB0EA270D8EFFF2E9AC522491BA8 /* CPParser.h in Headers */,
+				772275CC215C0D3D76A242A5D17ED8FF /* CPQuotedRecogniser.h in Headers */,
+				523B881E98B09AABD372EE9A4A314FEC /* CPQuotedToken.h in Headers */,
+				2C229E8701E0EE6350D9C76419FF0B60 /* CPRHSItem+Private.h in Headers */,
+				26051AED662D79D44B35ACA08CAD6BE5 /* CPRHSItem.h in Headers */,
+				73002082CD0FAA2059C586476CB116EB /* CPRHSItemResult.h in Headers */,
+				3290BEDA5DD045F2F75939D8B4BE188F /* CPRecoveryAction.h in Headers */,
+				7E75B72C9A2E7069562F5CCFC84AFA6F /* CPRegexpRecogniser.h in Headers */,
+				21DACB4057A012145CC83793AF724EDC /* CPRule+Internal.h in Headers */,
+				591A6659353999A680623F1499B1D30D /* CPRule.h in Headers */,
+				70403850F4974CBBE0F5359528BF21A7 /* CPSLRParser.h in Headers */,
+				408D101326D5099B1DDA998485A20FF7 /* CPSenTestKitAssertions.h in Headers */,
+				C87F26ACB58B806F0F9DDAF5C8CA01C5 /* CPShiftAction.h in Headers */,
+				4B724F5EE61E1BC00BA59150BD1103AE /* CPShiftReduceAction.h in Headers */,
+				A4F576CBD8F68559FFFBA17BBA6D68BD /* CPShiftReduceActionTable.h in Headers */,
+				EB6C05781B3AA75C9F0EE3816B3C3F39 /* CPShiftReduceGotoTable.h in Headers */,
+				2A72A0E128B65773662FB2A77A2826D5 /* CPShiftReduceParser.h in Headers */,
+				F8B52D8326013B84D91E59360E5657CD /* CPShiftReduceParserProtectedMethods.h in Headers */,
+				9FC6F6B699B23A293C4484F73BE4C356 /* CPShiftReduceState.h in Headers */,
+				4905084DD097D55EECB558F0AF94CB68 /* CPSyntaxTree.h in Headers */,
+				06E21E7E548DB24874E533873237B2E4 /* CPToken.h in Headers */,
+				16F7B91ADC9DA33BEA43715E6C8B33C7 /* CPTokenRecogniser.h in Headers */,
+				8AE11B8316856BED4F8CDF1D71E7E586 /* CPTokenStream.h in Headers */,
+				72CEC60D10C3ABB4498AFB65D6182E12 /* CPTokeniser.h in Headers */,
+				899CBC797B7FFAE4342F494E55103A27 /* CPWhiteSpaceRecogniser.h in Headers */,
+				3B44632483FF17BD310A3ECBFB505021 /* CPWhiteSpaceToken.h in Headers */,
+				665F3B85A1E4B8C86FE21FAB01B820E3 /* CoreParse.h in Headers */,
+				403270141C4E0C0F86209483A8C2835A /* NSArray+Functional.h in Headers */,
+				F11AD215827EBE62FEEA06C26A3124DF /* NSSetFunctional.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2CCAA4104B36697B9FE69BA4788E7764 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9612733FE976CBC0A8014C672E7C191E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				5B8C60ACBC379EE2EC0FB08B3D62B9BC /* Sources */,
+				C06A40FDCB8745B701F767505CD7D6FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				661BA42740EAC1856E5201C2833A3A53 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 20CEA5981C6072F6F933CBE896F1FCD1 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F4285921AFDEF95897C933269671A86 /* CoreParse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D482AD03525902491375C86F3807C99 /* Build configuration list for PBXNativeTarget "CoreParse" */;
+			buildPhases = (
+				7427175A562F19D1217A8413B4CE9955 /* Sources */,
+				660451BC581DB1CAC63415C1194BBF0C /* Frameworks */,
+				F71E5C78512ABEA775586677CC4B9481 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreParse;
+			productName = CoreParse;
+			productReference = 098C2173D4FEF2C4CA231C51A2934F4B /* libCoreParse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F4285921AFDEF95897C933269671A86 /* CoreParse */,
+				2CCAA4104B36697B9FE69BA4788E7764 /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B8C60ACBC379EE2EC0FB08B3D62B9BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF71BAEC1EE94B9F3A71E94F0651BFA /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7427175A562F19D1217A8413B4CE9955 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1245B8F6ED03E6EBC8E11163D4D3D093 /* CPEOFToken.m in Sources */,
+				1B8C43F5AFD26D95D6B6319C46E6AA4F /* CPErrorToken.m in Sources */,
+				E61B1F57B51194705286FF01492F0625 /* CPGrammar.m in Sources */,
+				AFD185B1CEF66B1A30C6668DFDED05FB /* CPGrammarInternal.m in Sources */,
+				7ABAE0938BBA607BE8E769B8E5942933 /* CPGrammarPrivate.m in Sources */,
+				5979DDEE4A31E4645304E6DEB25B1F47 /* CPGrammarSymbol.m in Sources */,
+				38E5F46DB4834DDA1AB5C40CC8A8134A /* CPIdentifierRecogniser.m in Sources */,
+				149EF20B0DB28088777AE026EACF47A2 /* CPIdentifierToken.m in Sources */,
+				506B7641823C5E4346BD4C45BAF6C642 /* CPItem.m in Sources */,
+				567277DBCBB19B7402714E6B4AB00150 /* CPJSONParser.m in Sources */,
+				8C89B120B999FC0FEA92116005D73AD7 /* CPKeywordRecogniser.m in Sources */,
+				91153BD489B394AE38AC968D1FAB3798 /* CPKeywordToken.m in Sources */,
+				AE2DEBFE03071DDDF87CB479DED6FC31 /* CPLALR1Parser.m in Sources */,
+				265042CE89DB19655CA257CFB4F249DB /* CPLR1Item.m in Sources */,
+				C2B9AF88AEA2F51161C1EA10A80AEBB1 /* CPLR1Parser.m in Sources */,
+				E0A386302F9F139CE9270F7CA410C918 /* CPNumberRecogniser.m in Sources */,
+				15FD2B3E47894FEF75963ADA5CD80938 /* CPNumberToken.m in Sources */,
+				35087B7D5EA96143B80042B091F60299 /* CPParser.m in Sources */,
+				9F2D4D5B1246CEFCEABEEA38CEF04C55 /* CPQuotedRecogniser.m in Sources */,
+				D538614D5C37B585640F39A14B9DCE86 /* CPQuotedToken.m in Sources */,
+				898455C1B95276B90C15B0F218924EF7 /* CPRHSItem.m in Sources */,
+				C8F9E902DA341612BA4191F9DE47BDCF /* CPRHSItemResult.m in Sources */,
+				A3ADC8638B352CAAE7622FC3BF75FA83 /* CPRecoveryAction.m in Sources */,
+				ED0D1B2F256F672210FB4F457965C328 /* CPRegexpRecogniser.m in Sources */,
+				E8D89970F228D7DF8644EA3169F014C6 /* CPRule.m in Sources */,
+				62C5414C40A6D892F1470857DA05CCCC /* CPSLRParser.m in Sources */,
+				C83236FA970E21FDBEDA1A047BDBBEA4 /* CPShiftAction.m in Sources */,
+				77893915AB5D3578299A09344F76F5F3 /* CPShiftReduceAction.m in Sources */,
+				B1154A6687B215D0A9F4F1D0BF5446CB /* CPShiftReduceActionTable.m in Sources */,
+				071F463FEE62E3609330811D766C5F87 /* CPShiftReduceGotoTable.m in Sources */,
+				5496F5A2C25557839571DFABC2900789 /* CPShiftReduceParser.m in Sources */,
+				AACDB4D06479C6380E9226B0A2110871 /* CPShiftReduceState.m in Sources */,
+				1719E3AD799B7D638197B43BA0F9160B /* CPSyntaxTree.m in Sources */,
+				5568D332DF2C7A83C5EB167D1843AB61 /* CPToken.m in Sources */,
+				50FCDBAADB0B7F3F24AF49C939C3EF1D /* CPTokenStream.m in Sources */,
+				9F8F668B420A1D956B53F1D0AE95F5A9 /* CPTokeniser.m in Sources */,
+				C2D5376B531BED5826F4F9BCE4DD9E78 /* CPWhiteSpaceRecogniser.m in Sources */,
+				A0146E5D9F21F89EAD0440A6DBA1A78B /* CPWhiteSpaceToken.m in Sources */,
+				A44B0BEBB39149BE9E3E785EAF696E83 /* CoreParse-dummy.m in Sources */,
+				89BD1297EC1D7D43FBE1654B0EE22397 /* NSArray+Functional.m in Sources */,
+				1009BE5F4F6AF209FB1B05D53F257E13 /* NSSetFunctional.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		661BA42740EAC1856E5201C2833A3A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoreParse;
+			target = 8F4285921AFDEF95897C933269671A86 /* CoreParse */;
+			targetProxy = 4D8651FD8E9FF5569EEE3D41FBB61A0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		052A17875CB827423D627183396CEB60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D93C44CF96E7FCC6635EAFDB3B37770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65788438532E04FC3AF8CDB769E5DC6A /* CoreParse-Private.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CoreParse/CoreParse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		97FA1278F2F17935E3AA833B25246CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FAC6EBC01134C1983C542394FD9ACC /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		99842FA27492D60CC4CE878126DA4786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25CFDECCCECBCEF4A84D3EDEDA586BC5 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CEFF1EAB80AE7FA639B88ECD39B324E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65788438532E04FC3AF8CDB769E5DC6A /* CoreParse-Private.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CoreParse/CoreParse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D482AD03525902491375C86F3807C99 /* Build configuration list for PBXNativeTarget "CoreParse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D93C44CF96E7FCC6635EAFDB3B37770 /* Debug */,
+				CEFF1EAB80AE7FA639B88ECD39B324E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9612733FE976CBC0A8014C672E7C191E /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97FA1278F2F17935E3AA833B25246CB7 /* Debug */,
+				99842FA27492D60CC4CE878126DA4786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

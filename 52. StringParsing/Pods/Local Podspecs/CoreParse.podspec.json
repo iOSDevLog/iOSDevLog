@@ -1,0 +1,11 @@
+{
+  "name": "CoreParse",
+  "version": "0.1",
+  "platforms": {
+    "ios": null
+  },
+  "source": {
+    "git": "https://github.com/beelsebob/CoreParse.git"
+  },
+  "source_files": "CoreParse/**/*.{h,m}"
+}
