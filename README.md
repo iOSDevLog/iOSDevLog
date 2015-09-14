@@ -1,6 +1,11 @@
 # iOS Dev Log
 ---
 
+## Podcast
+---
+
+<https://itunes.apple.com/cn/podcast/ios-kai-fa-ri-zhi/id1039229999?mt=2>
+
 ## *Version Control*
 ---
 
@@ -19,6 +24,10 @@
 <https://www.gitignore.io>
 
 <https://www.gitignore.io/api/code,objective-c,swift,osx>
+
+## ref
+
+<https://github.com/objcio>
 
 ## Social Networking
 ---
