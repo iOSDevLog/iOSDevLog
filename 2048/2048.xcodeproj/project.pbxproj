@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6CF4CE2B1BA7164000EB5877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4CE2A1BA7164000EB5877 /* AppDelegate.swift */; };
-		6CF4CE2D1BA7164000EB5877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4CE2C1BA7164000EB5877 /* ViewController.swift */; };
 		6CF4CE321BA7164000EB5877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF4CE311BA7164000EB5877 /* Assets.xcassets */; };
 		6CF4CE351BA7164000EB5877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF4CE331BA7164000EB5877 /* LaunchScreen.storyboard */; };
 		6CF4CE401BA7164000EB5877 /* _048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4CE3F1BA7164000EB5877 /* _048Tests.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		6CF4CE271BA7164000EB5877 /* 2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF4CE2A1BA7164000EB5877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6CF4CE2C1BA7164000EB5877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CF4CE311BA7164000EB5877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CF4CE341BA7164000EB5877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CF4CE361BA7164000EB5877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				6CF4CE601BA7173600EB5877 /* controller */,
 				6CF4CE5D1BA7171700EB5877 /* protocal */,
 				6CF4CE581BA716F300EB5877 /* Model */,
-				6CF4CE2C1BA7164000EB5877 /* ViewController.swift */,
 				6CF4CE311BA7164000EB5877 /* Assets.xcassets */,
 				6CF4CE2A1BA7164000EB5877 /* AppDelegate.swift */,
 				6CF4CE331BA7164000EB5877 /* LaunchScreen.storyboard */,
@@ -323,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CF4CE6E1BA718E500EB5877 /* CollectionViewCell.swift in Sources */,
-				6CF4CE2D1BA7164000EB5877 /* ViewController.swift in Sources */,
 				6CF4CE5C1BA7170600EB5877 /* NumberTileGameViewController.swift in Sources */,
 				6CF4CE5B1BA7170600EB5877 /* ModelSingleton.swift in Sources */,
 				6CF4CE5F1BA7172D00EB5877 /* ScoreViewProtocol.swift in Sources */,
