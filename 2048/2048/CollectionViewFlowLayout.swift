@@ -1,6 +1,6 @@
 //
 //  CollectionViewFlowLayout.swift
-//  28
+//  2048
 //
 //  Created by JiaXianhua on 15/9/14.
 //  Copyright (c) 2015年 jiaxianhua. All rights reserved.

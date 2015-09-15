@@ -1,6 +1,6 @@
 //
 //  ScoreView.swift
-//  28
+//  2048
 //
 //  Created by JiaXianhua on 15/9/14.
 //  Copyright (c) 2015年 jiaxianhua. All rights reserved.
@@ -8,18 +8,10 @@
 
 import UIKit
 
-class ScoreView: UILabel, ScoreViewProtocol {
+class ScoreView: UILabel {
     var score: Int = 0 {
         didSet {
-            self.text = "SCORE: \(score)"
+            self.text = "Score: \(score)"
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func scoreChanged(newScore s: Int)  {
-        score = s
     }
 }
