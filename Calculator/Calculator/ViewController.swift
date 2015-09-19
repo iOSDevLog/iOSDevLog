@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func operate(sender: UIButton) {
+    }
+    
     var operandStack = Array<Double>()
     
     @IBAction func enter(sender: UIButton) {
