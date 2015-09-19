@@ -31,17 +31,24 @@ class ViewController: UIViewController {
         }
         
         switch operation {
-        case "×": performOperation { $0 * $1 }
-        case "÷": performOperation { $1 / $0 }
-        case "+": performOperation { $0 + $1 }
-        case "−": performOperation { $1 - $0 }
-        case "√": performOperation { sqrt($0) }
+        case "×": performTwoOperation { $0 * $1 }
+        case "÷": performTwoOperation { $1 / $0 }
+        case "+": performTwoOperation { $0 + $1 }
+        case "−": performTwoOperation { $1 - $0 }
+        case "√": performOneOperation { sqrt($0) }
         default:
             break
         }
     }
     
-    func performOperation(operation: (Double, Double) -> Double) {
+    func performOneOperation(operation: (Double) -> Double) {
+        if operandStack.count >= 1 {
+            displayValue = operation(operandStack.removeLast())
+            enter()
+        }
+    }
+    
+    func performTwoOperation(operation: (Double, Double) -> Double) {
         if operandStack.count >= 2 {
             displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
             enter()
