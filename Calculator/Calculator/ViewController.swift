@@ -32,7 +32,13 @@ class ViewController: UIViewController {
     }
     
     var displayValue: Double {
-        return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+            userIsInTheMiddleOfTypingANumber = false
+        }
     }
     
 }
