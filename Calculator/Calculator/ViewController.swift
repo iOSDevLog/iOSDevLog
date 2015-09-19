@@ -31,16 +31,19 @@ class ViewController: UIViewController {
         }
         
         switch operation {
-            case "×":
-                if operandStack.count >= 2 {
-                    displayValue = operandStack.removeLast() * operandStack.removeLast()
-                    enter()
-            }
+//        case "×":
 //        case "÷":
 //        case "+":
 //        case "−":
         default:
             break
+        }
+    }
+    
+    func performOperation(operaion: (Double, Double) -> Double) {
+        if operandStack.count >= 2 {
+            displayValue = operandStack.removeLast() * operandStack.removeLast()
+            enter()
         }
     }
     
