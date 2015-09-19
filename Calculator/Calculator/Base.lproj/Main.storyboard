@@ -130,7 +130,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ttl-Yy-f6h"/>
                                     <action selector="enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8G-6Y-cLq"/>
                                 </connections>
                             </button>
