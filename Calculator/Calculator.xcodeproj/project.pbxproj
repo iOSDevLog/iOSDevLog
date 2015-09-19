@@ -156,6 +156,7 @@
 		6C4C46751BAC5CD700D86003 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = com.jiaxh;
 				TargetAttributes = {
@@ -411,6 +412,7 @@
 				6C4C469E1BAC5CD800D86003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C4C469F1BAC5CD800D86003 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +421,7 @@
 				6C4C46A11BAC5CD800D86003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
