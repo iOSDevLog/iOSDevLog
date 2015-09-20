@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class CalculatorBrain {
+    enum Op {
+        case Operand(Double)
+        case UnaryOperation(String, Double -> Double)
+        case BinaryOperation(String, (Double, Double) -> Double)
+    }
+    
+    var opStack = [Op]()
+}
