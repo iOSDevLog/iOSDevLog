@@ -21,9 +21,9 @@ class CalculatorBrain {
     
     init() {
         knownOps["×"] = Op.BinaryOperation("×", *)
-        knownOps["÷"] = Op.BinaryOperation("÷", { $1 * $0 })
+        knownOps["÷"] = Op.BinaryOperation("÷", { $1 / $0 })
         knownOps["+"] = Op.BinaryOperation("+", +)
-        knownOps["−"] = Op.BinaryOperation("−", { $1 * $0 })
+        knownOps["−"] = Op.BinaryOperation("−", { $1 - $0 })
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
     }
     
@@ -60,13 +60,15 @@ class CalculatorBrain {
         return result
     }
     
-    func pushOperand(operand: Double) {
+    func pushOperand(operand: Double) -> Double? {
         opStack.append(Op.Operand(operand))
+        return evaluate()
     }
     
-    func performOperation(symbol: String) {
+    func performOperation(symbol: String) -> Double? {
         if let operation = knownOps[symbol] {
             opStack.append(operation)
         }
+        return evaluate()
     }
 }
