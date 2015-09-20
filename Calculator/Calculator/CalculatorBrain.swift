@@ -33,7 +33,10 @@ class CalculatorBrain {
     private var knownOps = [String: Op]()
     
     init() {
-        knownOps["×"] = Op.BinaryOperation("×", *)
+        func learnOp(op: Op) {
+            knownOps[op.description] = op
+        }
+        learnOp(Op.BinaryOperation("×", *))
         knownOps["÷"] = Op.BinaryOperation("÷", { $1 / $0 })
         knownOps["+"] = Op.BinaryOperation("+", +)
         knownOps["−"] = Op.BinaryOperation("−", { $1 - $0 })
