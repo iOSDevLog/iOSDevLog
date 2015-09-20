@@ -57,6 +57,7 @@ class CalculatorBrain {
     
     func evaluate() -> Double? {
         let (result, remainer) = evaluate(opStack)
+        println("\(opStack) = \(result) with \(remainer) left over")
         return result
     }
     
