@@ -15,9 +15,9 @@ class CalculatorBrain {
         case BinaryOperation(String, (Double, Double) -> Double)
     }
     
-    var opStack = [Op]()
+    private var opStack = [Op]()
     
-    var knownOps = [String: Op]()
+    private var knownOps = [String: Op]()
     
     init() {
         knownOps["×"] = Op.BinaryOperation("×", *)
