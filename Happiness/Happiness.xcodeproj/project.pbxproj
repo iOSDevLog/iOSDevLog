@@ -14,6 +14,7 @@
 		6CB0D37F1BB05731007B64E2 /* HappinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0D37E1BB05731007B64E2 /* HappinessTests.swift */; };
 		6CB0D38A1BB05731007B64E2 /* HappinessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0D3891BB05731007B64E2 /* HappinessUITests.swift */; };
 		6CB0D3981BB057DC007B64E2 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0D3971BB057DC007B64E2 /* HappinessViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6CB0D39C1BB05876007B64E2 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB0D39B1BB05876007B64E2 /* FaceView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6CB0D3891BB05731007B64E2 /* HappinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessUITests.swift; sourceTree = "<group>"; };
 		6CB0D38B1BB05731007B64E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CB0D3971BB057DC007B64E2 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		6CB0D39B1BB05876007B64E2 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6CB0D3691BB05730007B64E2 /* AppDelegate.swift */,
 				6CB0D36D1BB05730007B64E2 /* Main.storyboard */,
+				6CB0D39B1BB05876007B64E2 /* FaceView.swift */,
 				6CB0D3971BB057DC007B64E2 /* HappinessViewController.swift */,
 				6CB0D3701BB05730007B64E2 /* Assets.xcassets */,
 				6CB0D3721BB05730007B64E2 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			files = (
 				6CB0D3981BB057DC007B64E2 /* HappinessViewController.swift in Sources */,
 				6CB0D36A1BB05730007B64E2 /* AppDelegate.swift in Sources */,
+				6CB0D39C1BB05876007B64E2 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
