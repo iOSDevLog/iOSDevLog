@@ -9,7 +9,7 @@
 import Foundation
 
 class CalculatorBrain {
-    enum Op: Printable {
+    enum Op: CustomStringConvertible {
         case Operand(Double)
         case UnaryOperation(String, Double -> Double)
         case BinaryOperation(String, (Double, Double) -> Double)
@@ -43,6 +43,27 @@ class CalculatorBrain {
         learnOp(Op.UnaryOperation("√", sqrt))
     }
     
+    // guaranteed to be a PropertyList
+    var program: AnyObject {
+        get {
+            return opStack.map{ $0.description }
+        }
+        set {
+            if let opSymbols = newValue as? Array<String> {
+                var newOpStack = [Op]()
+                for opSymbols in opSymbols {
+                    if let op = knownOps[opSymbols] {
+                        newOpStack.append(op)
+                    }
+                    else if let operand = NSNumberFormatter().numberFromString(opSymbols)?.doubleValue {
+                        newOpStack.append(.Operand(operand))
+                    }
+                }
+                opStack = newOpStack
+            }
+        }
+    }
+    
     private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
         if !ops.isEmpty {
             var remainingOps = ops
@@ -71,9 +92,9 @@ class CalculatorBrain {
         return (nil, ops)
     }
     
-    func evaluate() -> Double? {
+    private func evaluate() -> Double? {
         let (result, remainer) = evaluate(opStack)
-        println("\(opStack) = \(result) with \(remainer) left over")
+        print("\(opStack) = \(result) with \(remainer) left over")
         return result
     }
     
