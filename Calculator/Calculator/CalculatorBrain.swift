@@ -43,8 +43,10 @@ class CalculatorBrain {
         learnOp(Op.UnaryOperation("√", sqrt))
     }
     
+    typealias PropertyList = AnyObject
+    
     // guaranteed to be a PropertyList
-    var program: AnyObject {
+    var program: PropertyList {
         get {
             return opStack.map{ $0.description }
         }
@@ -84,8 +86,6 @@ class CalculatorBrain {
                         return (operation(operand1, operand2), op2Evaluation.remainingOps)
                     }
                 }
-            default:
-                break
             }
         }
         
