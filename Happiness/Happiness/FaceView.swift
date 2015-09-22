@@ -8,6 +8,13 @@
 
 import UIKit
 
+// our delegate protocol
+// gets the data for us
+// (so that we can be a generic View component)
+protocol FaceViewDataSource: class {
+    func smilinessForFaceView(sender: FaceView) -> Double?
+}
+
 @IBDesignable
 class FaceView: UIView
 {
@@ -26,11 +33,11 @@ class FaceView: UIView
         didSet { setNeedsDisplay() }
     }
     
-    var faceCenter: CGPoint {
+    private var faceCenter: CGPoint {
         return convertPoint(center, fromView: superview)
     }
     
-    var faceRadius: CGFloat {
+    private var faceRadius: CGFloat {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
