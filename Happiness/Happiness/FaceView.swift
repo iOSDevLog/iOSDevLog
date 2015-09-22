@@ -41,6 +41,21 @@ class FaceView: UIView
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
+    // public (non-private) delegate property
+    // anyone who wants to provide our View's data
+    // should just set themselves to be this property
+    weak var dataSource: FaceViewDataSource?
+    
+    // gesture handler for pinching
+    // non-private so that Controllers can create a recognizer for pinch
+    // and then add it to us if they want us to support pinching
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            scale *= gesture.scale
+            gesture.scale = 1
+        }
+    }
+    
     override func drawRect(rect: CGRect)
     {
         let facePath = UIBezierPath(

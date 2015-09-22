@@ -29,9 +29,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="scale">
                                         <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="faceCenter">
-                                        <point key="value" x="300" y="300"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -43,6 +40,9 @@
                             <constraint firstItem="qbd-tH-TwA" firstAttribute="leading" secondItem="4JB-5K-CtZ" secondAttribute="leading" id="zdh-H5-bBr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="qbd-tH-TwA" id="hxO-xc-uWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eG-Kj-sGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
