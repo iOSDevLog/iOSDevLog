@@ -72,7 +72,10 @@ class FaceView: UIView
         bezierPathForEye(.Left).stroke()
         bezierPathForEye(.Right).stroke()
         
-        let smiliness = -0.5
+        // get the smiliness from our dataSource delegate
+        // smiliness will default to zero if either the dataSource is nil or the dataSource returns nil
+        let smiliness = dataSource?.smilinessForFaceView(self) ?? 0.0
+        
         let smilePath = bezierPathForSmile(smiliness)
         smilePath.stroke()
     }

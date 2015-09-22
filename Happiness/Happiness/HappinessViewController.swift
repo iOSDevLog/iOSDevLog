@@ -53,4 +53,24 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
         // interpret the Model for the View
         return Double(happiness-50)/50
     }
+    
+    @IBAction func changeHappiness(sender: UIPanGestureRecognizer) {
+        
+        switch sender.state {
+        case .Ended: fallthrough
+        case .Changed:
+            let translation = sender.translationInView(faceView)
+            // here we are basically interpreting input from the View for our Model
+            let happinessChange = -Int(translation.y / Constants.HappinessGestureScale)
+            if happinessChange != 0 {
+                happiness += happinessChange
+                // normally the translation of a pan gesture
+                // is relative to the point at which it was first recognized
+                // but we can reset that point so that we are getting "incremental" pan data ...
+                sender.setTranslation(CGPointZero, inView: faceView)
+            }
+        default: break
+        }
+    }
+    
 }
