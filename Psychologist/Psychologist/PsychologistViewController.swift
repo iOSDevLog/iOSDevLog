@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PsychologistViewController: UIViewController {
+class PsychologistViewController
+: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
