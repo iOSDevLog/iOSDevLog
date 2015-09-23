@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Psychologist View Controller-->
+        <!--Psychologist-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PsychologistViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="03b-Wf-VmG">
-                                <rect key="frame" x="28" y="28" width="544" height="43"/>
+                                <rect key="frame" x="28" y="72" width="544" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -90,16 +90,18 @@
                             <constraint firstItem="03b-Wf-VmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="v8e-Z8-ISw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Psychologist" id="xgz-eX-w0C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1081" y="-303"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="dBv-Ns-8kW">
             <objects>
                 <splitViewController id="eg6-nJ-FYp" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="masterViewController" id="l3n-ca-n8b"/>
+                        <segue destination="iAd-3r-BAy" kind="relationship" relationship="masterViewController" id="l3n-ca-n8b"/>
                         <segue destination="85R-mI-WSg" kind="relationship" relationship="detailViewController" id="KhM-8Q-UjJ"/>
                     </connections>
                 </splitViewController>
@@ -159,6 +161,24 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="305" y="1201"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GUm-ho-fCI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iAd-3r-BAy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lg5-Oi-KWG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zvd-to-mtY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gN6-Ld-flH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-303"/>
         </scene>
     </scenes>
 </document>
