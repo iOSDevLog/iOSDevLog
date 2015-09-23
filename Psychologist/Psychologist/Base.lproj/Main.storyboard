@@ -37,6 +37,9 @@
                                         <exclude reference="rIb-wV-1N8"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="85R-mI-WSg" kind="showDetail" identifier="sad" id="16c-wz-TIV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0h-Do-n7b">
                                 <rect key="frame" x="235" y="239" width="132" height="41"/>
@@ -52,6 +55,9 @@
                                         <exclude reference="tHj-k3-IyC"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="85R-mI-WSg" kind="showDetail" identifier="happy" id="fHP-ze-jz8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfV-0E-42G">
                                 <rect key="frame" x="255" y="321" width="92" height="41"/>
@@ -67,6 +73,9 @@
                                         <exclude reference="ah6-3o-QJe"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="85R-mI-WSg" kind="showDetail" identifier="meh" id="eDC-v0-Njr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lO-Mb-cg6">
                                 <rect key="frame" x="271" y="362" width="59" height="30"/>
@@ -181,4 +190,7 @@
             <point key="canvasLocation" x="45" y="-303"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eDC-v0-Njr"/>
+    </inferredMetricsTieBreakers>
 </document>
