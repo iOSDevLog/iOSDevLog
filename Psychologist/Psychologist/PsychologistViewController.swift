@@ -10,10 +10,7 @@ import UIKit
 
 class PsychologistViewController
 : UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func nothing(sender: UIButton) {performSegueWithIdentifier("nothing", sender: nil)
     }
     
     // prepare for segues

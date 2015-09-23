@@ -82,6 +82,9 @@
                                 <state key="normal" title="Nothing!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jO-P1-s1D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -100,6 +103,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="xgz-eX-w0C"/>
+                    <connections>
+                        <segue destination="NoL-pt-szW" kind="showDetail" identifier="nothing" id="6Ez-3g-8WJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,6 +216,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fHP-ze-jz8"/>
+        <segue reference="6Ez-3g-8WJ"/>
     </inferredMetricsTieBreakers>
 </document>
