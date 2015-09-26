@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ch-55-Vie">
-                                <rect key="frame" x="483" y="28" width="97" height="30"/>
+                                <rect key="frame" x="107" y="28" width="473" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -43,15 +43,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="389" id="7FB-TS-Ts5"/>
-                            <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" id="DNB-ps-rja"/>
+                            <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ch-55-Vie" secondAttribute="trailing" id="IuH-hT-YfC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ypl-wn-9xD" secondAttribute="leading" id="LHe-cu-pcn"/>
                             <constraint firstItem="Ypl-wn-9xD" firstAttribute="baseline" secondItem="9Ch-55-Vie" secondAttribute="baseline" id="Tqs-Ui-wTX"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="width" secondItem="Ypl-wn-9xD" secondAttribute="width" id="Yev-Da-ZYy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fMi-Tk-87N" secondAttribute="leading" id="aNj-S2-uAk"/>
-                            <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jec-18-sII"/>
+                            <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jec-18-sII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ftm-Jx-eFt" secondAttribute="trailing" id="lF1-f0-rCa"/>
-                            <constraint firstItem="9Ch-55-Vie" firstAttribute="leading" secondItem="Ypl-wn-9xD" secondAttribute="trailing" constant="384" id="tt3-iC-e9W"/>
+                            <constraint firstItem="9Ch-55-Vie" firstAttribute="leading" secondItem="Ypl-wn-9xD" secondAttribute="trailing" constant="8" symbolic="YES" id="tt3-iC-e9W"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="baseline" secondItem="Ftm-Jx-eFt" secondAttribute="baseline" id="uPs-Cc-XrW"/>
                         </constraints>
                     </view>
