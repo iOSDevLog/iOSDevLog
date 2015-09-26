@@ -62,18 +62,27 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-7w-nfZ">
                                 <rect key="frame" x="20" y="298" width="479" height="294"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="498" width="479" height="294"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-aa-fdB">
                                 <rect key="frame" x="507" y="424" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="507" y="624" width="73" height="21"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-aG-Bca">
                                 <rect key="frame" x="507" y="453" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="507" y="653" width="73" height="21"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -111,6 +120,19 @@
                             <constraint firstItem="RUC-Rr-C0p" firstAttribute="bottom" secondItem="VTt-jo-dQS" secondAttribute="bottom" id="wIj-Wx-sn2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RUC-Rr-C0p" secondAttribute="leading" id="xa8-VP-JTr"/>
                         </constraints>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="8ZY-x8-gNX"/>
+                                <exclude reference="P4z-In-4kX"/>
+                                <exclude reference="8ZT-Ot-JF8"/>
+                                <exclude reference="Br2-Jp-r0B"/>
+                                <exclude reference="bwi-gs-0ke"/>
+                                <exclude reference="BPJ-Va-s50"/>
+                                <exclude reference="VFh-qM-AwZ"/>
+                                <exclude reference="eDG-FW-PNl"/>
+                                <exclude reference="2Xs-g4-5v4"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="companyLabel" destination="GjM-aG-Bca" id="txn-9u-Nxu"/>
