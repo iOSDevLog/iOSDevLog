@@ -47,26 +47,36 @@
                                 <rect key="frame" x="396" y="104" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-Rr-C0p">
-                                <rect key="frame" x="94" y="236" width="69" height="15"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-Rr-C0p">
+                                <rect key="frame" x="20" y="111" width="69" height="15"/>
+                                <color key="backgroundColor" red="0.49829048860000003" green="1" blue="0.0762378638" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-t3-cIG">
+                                <rect key="frame" x="511" y="111" width="69" height="15"/>
                                 <color key="backgroundColor" red="0.49829048860000003" green="1" blue="0.0762378638" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OKC-uN-p7U" firstAttribute="top" secondItem="ahe-t3-cIG" secondAttribute="top" id="4Jo-aO-JrG"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="8" symbolic="YES" id="7FB-TS-Ts5"/>
+                            <constraint firstItem="ahe-t3-cIG" firstAttribute="leading" secondItem="OKC-uN-p7U" secondAttribute="trailing" constant="77" id="CSt-WU-B77"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ch-55-Vie" secondAttribute="trailing" id="IuH-hT-YfC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ypl-wn-9xD" secondAttribute="leading" id="LHe-cu-pcn"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="top" secondItem="Ftm-Jx-eFt" secondAttribute="bottom" constant="8" id="TCW-zY-0Lt"/>
                             <constraint firstItem="Ypl-wn-9xD" firstAttribute="baseline" secondItem="9Ch-55-Vie" secondAttribute="baseline" id="Tqs-Ui-wTX"/>
+                            <constraint firstItem="VTt-jo-dQS" firstAttribute="leading" secondItem="RUC-Rr-C0p" secondAttribute="trailing" constant="27" id="VCN-p6-aPe"/>
+                            <constraint firstItem="OKC-uN-p7U" firstAttribute="bottom" secondItem="ahe-t3-cIG" secondAttribute="bottom" id="XX3-0M-7C2"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="width" secondItem="Ypl-wn-9xD" secondAttribute="width" id="Yev-Da-ZYy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fMi-Tk-87N" secondAttribute="leading" id="aNj-S2-uAk"/>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jec-18-sII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ftm-Jx-eFt" secondAttribute="trailing" id="lF1-f0-rCa"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="baseline" secondItem="VTt-jo-dQS" secondAttribute="baseline" id="pD9-5y-t4l"/>
+                            <constraint firstItem="RUC-Rr-C0p" firstAttribute="top" secondItem="VTt-jo-dQS" secondAttribute="top" id="pQ4-IU-PWp"/>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="leading" secondItem="Ypl-wn-9xD" secondAttribute="trailing" constant="8" symbolic="YES" id="tt3-iC-e9W"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="baseline" secondItem="Ftm-Jx-eFt" secondAttribute="baseline" id="uPs-Cc-XrW"/>
+                            <constraint firstItem="RUC-Rr-C0p" firstAttribute="bottom" secondItem="VTt-jo-dQS" secondAttribute="bottom" id="wIj-Wx-sn2"/>
                         </constraints>
                     </view>
                 </viewController>
