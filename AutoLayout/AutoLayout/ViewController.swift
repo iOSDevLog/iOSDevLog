@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         updateUI()
     }
     
+    var loggedInUser: User? { didSet { updateUI() } }
     var secure: Bool = false { didSet { updateUI() } }
     
     private func updateUI() {
@@ -32,5 +33,10 @@ class ViewController: UIViewController {
     @IBAction func toggleSecurity() {
         secure = !secure
     }
+    
+    @IBAction func login() {
+        loggedInUser = User.login(loginField.text ?? "", password: passwordField.text ?? "")
+    }
+    
 }
 
