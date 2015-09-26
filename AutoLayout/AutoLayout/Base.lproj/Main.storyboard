@@ -113,7 +113,7 @@
                             </constraint>
                             <constraint firstItem="yAJ-aa-fdB" firstAttribute="leading" secondItem="Mp3-7w-nfZ" secondAttribute="trailing" constant="8" symbolic="YES" id="bwi-gs-0ke"/>
                             <constraint firstItem="GjM-aG-Bca" firstAttribute="leading" secondItem="yAJ-aa-fdB" secondAttribute="leading" id="eDG-FW-PNl"/>
-                            <constraint firstItem="Mp3-7w-nfZ" firstAttribute="top" secondItem="OKC-uN-p7U" secondAttribute="bottom" constant="306" id="eoL-wl-T8Y">
+                            <constraint firstItem="Mp3-7w-nfZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OKC-uN-p7U" secondAttribute="bottom" constant="306" id="eoL-wl-T8Y">
                                 <variation key="heightClass=regular" constant="8" symbolic="YES"/>
                             </constraint>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jec-18-sII"/>
