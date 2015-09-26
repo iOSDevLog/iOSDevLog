@@ -61,16 +61,16 @@
                                 <rect key="frame" x="409" y="104" width="171" height="30"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-7w-nfZ">
-                                <rect key="frame" x="20" y="298" width="197" height="294"/>
+                                <rect key="frame" x="20" y="298" width="479" height="294"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-aa-fdB">
-                                <rect key="frame" x="225" y="424" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-aa-fdB">
+                                <rect key="frame" x="507" y="424" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-aG-Bca">
-                                <rect key="frame" x="225" y="453" width="73" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-aG-Bca">
+                                <rect key="frame" x="507" y="453" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +85,8 @@
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="8" symbolic="YES" id="7FB-TS-Ts5"/>
                             <constraint firstItem="yAJ-aa-fdB" firstAttribute="bottom" secondItem="Mp3-7w-nfZ" secondAttribute="centerY" id="8ZT-Ot-JF8"/>
                             <constraint firstItem="Mp3-7w-nfZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OKC-uN-p7U" secondAttribute="bottom" constant="8" symbolic="YES" id="8ZY-x8-gNX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GjM-aG-Bca" secondAttribute="trailing" id="BPJ-Va-s50"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yAJ-aa-fdB" secondAttribute="trailing" id="Br2-Jp-r0B"/>
                             <constraint firstItem="ahe-t3-cIG" firstAttribute="leading" secondItem="OKC-uN-p7U" secondAttribute="trailing" constant="8" symbolic="YES" id="CSt-WU-B77"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ahe-t3-cIG" secondAttribute="trailing" id="Fy5-qG-JEJ"/>
