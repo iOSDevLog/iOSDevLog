@@ -42,6 +42,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTt-jo-dQS">
                                 <rect key="frame" x="199" y="104" width="114" height="30"/>
                                 <state key="normal" title="Change Security"/>
+                                <connections>
+                                    <action selector="toggleSecurity" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ys-NL-UqS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-uN-p7U">
                                 <rect key="frame" x="363" y="104" width="38" height="30"/>
@@ -81,6 +84,11 @@
                             <constraint firstAttribute="leadingMargin" secondItem="RUC-Rr-C0p" secondAttribute="leading" id="xa8-VP-JTr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginField" destination="9Ch-55-Vie" id="fcy-vR-ZZM"/>
+                        <outlet property="passwordField" destination="Ftm-Jx-eFt" id="nFG-YW-Oxo"/>
+                        <outlet property="passwordLabel" destination="fMi-Tk-87N" id="XnI-DP-LdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
