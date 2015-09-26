@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -62,6 +63,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-7w-nfZ">
                                 <rect key="frame" x="20" y="298" width="197" height="294"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-aa-fdB">
+                                <rect key="frame" x="225" y="424" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-aG-Bca">
+                                <rect key="frame" x="225" y="453" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -70,6 +83,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mp3-7w-nfZ" secondAttribute="bottom" constant="8" symbolic="YES" id="2Xs-g4-5v4"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="top" secondItem="ahe-t3-cIG" secondAttribute="top" id="4Jo-aO-JrG"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="8" symbolic="YES" id="7FB-TS-Ts5"/>
+                            <constraint firstItem="yAJ-aa-fdB" firstAttribute="bottom" secondItem="Mp3-7w-nfZ" secondAttribute="centerY" id="8ZT-Ot-JF8"/>
                             <constraint firstItem="Mp3-7w-nfZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OKC-uN-p7U" secondAttribute="bottom" constant="8" symbolic="YES" id="8ZY-x8-gNX"/>
                             <constraint firstItem="ahe-t3-cIG" firstAttribute="leading" secondItem="OKC-uN-p7U" secondAttribute="trailing" constant="8" symbolic="YES" id="CSt-WU-B77"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
@@ -80,9 +94,12 @@
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="top" secondItem="Ftm-Jx-eFt" secondAttribute="bottom" constant="8" symbolic="YES" id="TCW-zY-0Lt"/>
                             <constraint firstItem="Ypl-wn-9xD" firstAttribute="baseline" secondItem="9Ch-55-Vie" secondAttribute="baseline" id="Tqs-Ui-wTX"/>
                             <constraint firstItem="VTt-jo-dQS" firstAttribute="leading" secondItem="RUC-Rr-C0p" secondAttribute="trailing" constant="8" symbolic="YES" id="VCN-p6-aPe"/>
+                            <constraint firstItem="GjM-aG-Bca" firstAttribute="top" secondItem="yAJ-aa-fdB" secondAttribute="bottom" constant="8" symbolic="YES" id="VFh-qM-AwZ"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="bottom" secondItem="ahe-t3-cIG" secondAttribute="bottom" id="XX3-0M-7C2"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="width" secondItem="Ypl-wn-9xD" secondAttribute="width" id="Yev-Da-ZYy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fMi-Tk-87N" secondAttribute="leading" id="aNj-S2-uAk"/>
+                            <constraint firstItem="yAJ-aa-fdB" firstAttribute="leading" secondItem="Mp3-7w-nfZ" secondAttribute="trailing" constant="8" symbolic="YES" id="bwi-gs-0ke"/>
+                            <constraint firstItem="GjM-aG-Bca" firstAttribute="leading" secondItem="yAJ-aa-fdB" secondAttribute="leading" id="eDG-FW-PNl"/>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jec-18-sII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ftm-Jx-eFt" secondAttribute="trailing" id="lF1-f0-rCa"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="baseline" secondItem="VTt-jo-dQS" secondAttribute="baseline" id="pD9-5y-t4l"/>
