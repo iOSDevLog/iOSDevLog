@@ -49,11 +49,9 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-Rr-C0p">
                                 <rect key="frame" x="20" y="104" width="171" height="30"/>
-                                <color key="backgroundColor" red="0.49829048860000003" green="1" blue="0.0762378638" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-t3-cIG">
                                 <rect key="frame" x="409" y="104" width="171" height="30"/>
-                                <color key="backgroundColor" red="0.49829048860000003" green="1" blue="0.0762378638" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
