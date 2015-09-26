@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftm-Jx-eFt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftm-Jx-eFt">
                                 <rect key="frame" x="483" y="66" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -30,6 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ch-55-Vie" secondAttribute="trailing" id="IuH-hT-YfC"/>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jec-18-sII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ftm-Jx-eFt" secondAttribute="trailing" id="lF1-f0-rCa"/>
