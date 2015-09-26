@@ -59,17 +59,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-t3-cIG">
                                 <rect key="frame" x="409" y="104" width="171" height="30"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-7w-nfZ">
-                                <rect key="frame" x="20" y="286" width="197" height="294"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-7w-nfZ">
+                                <rect key="frame" x="20" y="298" width="197" height="294"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="leading" secondItem="VTt-jo-dQS" secondAttribute="trailing" constant="50" id="1HA-lo-XeY"/>
                             <constraint firstItem="RUC-Rr-C0p" firstAttribute="width" secondItem="ahe-t3-cIG" secondAttribute="width" id="1xV-Ga-AjC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mp3-7w-nfZ" secondAttribute="bottom" constant="20" id="2Xs-g4-5v4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mp3-7w-nfZ" secondAttribute="bottom" constant="8" symbolic="YES" id="2Xs-g4-5v4"/>
                             <constraint firstItem="OKC-uN-p7U" firstAttribute="top" secondItem="ahe-t3-cIG" secondAttribute="top" id="4Jo-aO-JrG"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="8" symbolic="YES" id="7FB-TS-Ts5"/>
+                            <constraint firstItem="Mp3-7w-nfZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OKC-uN-p7U" secondAttribute="bottom" constant="8" symbolic="YES" id="8ZY-x8-gNX"/>
                             <constraint firstItem="ahe-t3-cIG" firstAttribute="leading" secondItem="OKC-uN-p7U" secondAttribute="trailing" constant="8" symbolic="YES" id="CSt-WU-B77"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ahe-t3-cIG" secondAttribute="trailing" id="Fy5-qG-JEJ"/>
