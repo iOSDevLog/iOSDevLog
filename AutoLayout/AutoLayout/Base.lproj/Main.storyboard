@@ -47,6 +47,10 @@
                                 <rect key="frame" x="396" y="104" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-Rr-C0p">
+                                <rect key="frame" x="94" y="236" width="69" height="15"/>
+                                <color key="backgroundColor" red="0.49829048860000003" green="1" blue="0.0762378638" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
