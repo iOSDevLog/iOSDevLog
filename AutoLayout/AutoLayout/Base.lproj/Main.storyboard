@@ -111,7 +111,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="companyLabel" destination="GjM-aG-Bca" id="txn-9u-Nxu"/>
+                        <outlet property="imageView" destination="Mp3-7w-nfZ" id="wss-iD-NGX"/>
                         <outlet property="loginField" destination="9Ch-55-Vie" id="fcy-vR-ZZM"/>
+                        <outlet property="nameLabel" destination="yAJ-aa-fdB" id="fsB-Ph-X9J"/>
                         <outlet property="passwordField" destination="Ftm-Jx-eFt" id="nFG-YW-Oxo"/>
                         <outlet property="passwordLabel" destination="fMi-Tk-87N" id="XnI-DP-LdC"/>
                     </connections>
