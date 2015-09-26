@@ -42,7 +42,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="389" id="7FB-TS-Ts5"/>
+                            <constraint firstItem="Ftm-Jx-eFt" firstAttribute="leading" secondItem="fMi-Tk-87N" secondAttribute="trailing" constant="8" symbolic="YES" id="7FB-TS-Ts5"/>
                             <constraint firstItem="Ftm-Jx-eFt" firstAttribute="top" secondItem="9Ch-55-Vie" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-ps-rja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ch-55-Vie" secondAttribute="trailing" id="IuH-hT-YfC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ypl-wn-9xD" secondAttribute="leading" id="LHe-cu-pcn"/>
