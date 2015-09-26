@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ch-55-Vie">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ch-55-Vie">
                                 <rect key="frame" x="483" y="28" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -50,6 +50,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="fMi-Tk-87N" secondAttribute="leading" id="aNj-S2-uAk"/>
                             <constraint firstItem="9Ch-55-Vie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jec-18-sII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ftm-Jx-eFt" secondAttribute="trailing" id="lF1-f0-rCa"/>
+                            <constraint firstItem="9Ch-55-Vie" firstAttribute="leading" secondItem="Ypl-wn-9xD" secondAttribute="trailing" constant="384" id="tt3-iC-e9W"/>
                             <constraint firstItem="fMi-Tk-87N" firstAttribute="baseline" secondItem="Ftm-Jx-eFt" secondAttribute="baseline" id="uPs-Cc-XrW"/>
                         </constraints>
                     </view>
