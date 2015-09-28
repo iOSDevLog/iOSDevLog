@@ -15,7 +15,38 @@
                     <view key="view" contentMode="scaleToFill" id="PAV-YZ-G5M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v81-iR-a00">
+                                <rect key="frame" x="224" y="265" width="153" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Cassini">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqx-Bi-bg0">
+                                <rect key="frame" x="245" y="187" width="110" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Earth">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-MN-kTB">
+                                <rect key="frame" x="231" y="343" width="138" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Saturn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v81-iR-a00" firstAttribute="top" secondItem="Oqx-Bi-bg0" secondAttribute="bottom" constant="8" symbolic="YES" id="6Uv-DF-07c"/>
+                            <constraint firstItem="v81-iR-a00" firstAttribute="centerX" secondItem="PAV-YZ-G5M" secondAttribute="centerX" id="bwC-za-1V8"/>
+                            <constraint firstItem="v81-iR-a00" firstAttribute="centerY" secondItem="PAV-YZ-G5M" secondAttribute="centerY" id="ckd-D3-IWB"/>
+                            <constraint firstItem="Q6Y-MN-kTB" firstAttribute="top" secondItem="v81-iR-a00" secondAttribute="bottom" constant="8" symbolic="YES" id="oee-Vf-5aA"/>
+                            <constraint firstItem="Q6Y-MN-kTB" firstAttribute="centerX" secondItem="PAV-YZ-G5M" secondAttribute="centerX" id="w0F-oE-Hw7"/>
+                            <constraint firstItem="Oqx-Bi-bg0" firstAttribute="centerX" secondItem="PAV-YZ-G5M" secondAttribute="centerX" id="xDh-pG-LbU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PdX-si-cgR"/>
                 </viewController>
