@@ -12,6 +12,6 @@ struct DemoURL {
     struct NASA {
         static let Cassini = NSURL(string: "http://space.lamost.org/explore/spacesite/images/ISS-STS131.jpg")
         static let Earth = NSURL(string: "http://i2.topit.me/2/c2/de/1123183025b72dec22o.jpg")
-        static let Saturn = NSURL(string: "http://img0.imgtn.bdimg.com/it/u=4124129269,27236039&fm=21&gp=0.jpg")
+        static let Saturn = NSURL(string: "http://www.bioon.com/popular/UploadFiles/200406/20040604001715210.jpg")
     }
 }
