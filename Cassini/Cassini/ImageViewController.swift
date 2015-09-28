@@ -9,6 +9,12 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.contentSize = imageView.frame.size
+        }
+    }
+    
     var imageURL: NSURL? {
         didSet {
             image = nil
@@ -39,6 +45,7 @@ class ImageViewController: UIViewController {
         set {
             imageView.image = newValue
             imageView.sizeToFit()
+            scrollView?.contentSize = imageView.frame.size
         }
     }
     
