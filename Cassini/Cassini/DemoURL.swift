@@ -10,8 +10,8 @@ import Foundation
 struct DemoURL {
     static let Stanford = NSURL(string: "http://comm.stanford.edu/wp-content/uploads/2013/01/stanford-campus.png")
     struct NASA {
-        static let Cassini = NSURL(string: "http://www.jpl.nasa.gov/images/cassini/20090202/pia03883-full.jpg")
-        static let Earth = NSURL(string: "http://www.nasa.gov/sites/default/files/wave_earth_mosaic_3.jpg")
-        static let Saturn = NSURL(string: "http://www.nasa.gov/sites/default/files/saturn_collage.jpg")
+        static let Cassini = NSURL(string: "http://space.lamost.org/explore/spacesite/images/ISS-STS131.jpg")
+        static let Earth = NSURL(string: "http://i2.topit.me/2/c2/de/1123183025b72dec22o.jpg")
+        static let Saturn = NSURL(string: "http://img0.imgtn.bdimg.com/it/u=4124129269,27236039&fm=21&gp=0.jpg")
     }
 }
