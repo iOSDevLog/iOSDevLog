@@ -67,7 +67,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView)
+        scrollView.addSubview(imageView)
     }
     
     // for efficiency, we will only actually fetch the image
