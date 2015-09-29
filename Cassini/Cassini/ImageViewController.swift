@@ -35,13 +35,15 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         if let url = imageURL {
             
             let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
-            dispatch_async(dispatch_get_global_queue(qos, 0), { () -> Void in
-                let imageData = NSData(contentsOfURL: url)
-                if imageData != nil {
-                    self.image = UIImage(data: imageData!)
-                }
-                else {
-                    self.image = nil
+            dispatch_async(dispatch_get_global_queue(qos, 0), {
+                dispatch_async(dispatch_get_main_queue()) {
+                    let imageData = NSData(contentsOfURL: url)
+                    if imageData != nil {
+                        self.image = UIImage(data: imageData!)
+                    }
+                    else {
+                        self.image = nil
+                    }
                 }
             })
         }
