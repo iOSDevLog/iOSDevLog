@@ -10,14 +10,18 @@ import UIKit
 
 class TweetTableViewController: UITableViewController {
 
+    var tweets = [[Tweet]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let request = TwitterRequest(search: "#stanford", count: 100)
+        request.fetchTweets { (newTweets) -> Void in
+            if newTweets.count > 0 {
+                self.tweets.insert(newTweets, atIndex: 0)
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
