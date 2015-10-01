@@ -12,14 +12,18 @@ class TweetTableViewController: UITableViewController {
 
     var tweets = [[Tweet]]()
     
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let request = TwitterRequest(search: "#stanford", count: 100)
         request.fetchTweets { (newTweets) -> Void in
-            if newTweets.count > 0 {
-                self.tweets.insert(newTweets, atIndex: 0)
-                self.tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue()) {
+                if newTweets.count > 0 {
+                    self.tweets.insert(newTweets, atIndex: 0)
+                    self.tableView.reloadData()
+                }
             }
         }
     }
