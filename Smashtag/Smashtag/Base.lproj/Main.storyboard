@@ -35,13 +35,13 @@
                                                 <constraint firstAttribute="height" constant="48" id="dvH-je-cCf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rv-41j">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rv-41j">
                                             <rect key="frame" x="64" y="8" width="528" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDc-Mj-LNc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDc-Mj-LNc">
                                             <rect key="frame" x="64" y="35" width="528" height="159"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,9 +50,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="topMargin" secondItem="MOU-fv-Lcr" secondAttribute="top" id="DSG-Qe-4wI"/>
+                                        <constraint firstItem="sDc-Mj-LNc" firstAttribute="leading" secondItem="Lwl-rv-41j" secondAttribute="leading" id="ErK-UO-b7h"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="MOU-fv-Lcr" secondAttribute="leading" id="IRV-PZ-4Im"/>
+                                        <constraint firstItem="sDc-Mj-LNc" firstAttribute="top" secondItem="Lwl-rv-41j" secondAttribute="bottom" constant="6" id="JG1-bt-exe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sDc-Mj-LNc" secondAttribute="bottom" id="RAw-6G-0zd"/>
                                         <constraint firstItem="Lwl-rv-41j" firstAttribute="leading" secondItem="MOU-fv-Lcr" secondAttribute="trailing" constant="8" id="cz0-MW-EPB"/>
                                         <constraint firstAttribute="topMargin" secondItem="Lwl-rv-41j" secondAttribute="top" id="eZt-bW-PKl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sDc-Mj-LNc" secondAttribute="trailing" id="u1K-8M-alo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Lwl-rv-41j" secondAttribute="trailing" id="xUc-zl-fUl"/>
                                     </constraints>
                                 </tableViewCellContentView>
