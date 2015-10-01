@@ -31,24 +31,27 @@ class TweetTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return tweets.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tweets[section].count
     }
 
-    /*
+    private struct Storyboard {
+        static let CellReuseIndntifier = "Tweet"
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
+        let tweet = tweets[indexPath.section][indexPath.row]
+        cell.textLabel?.text = tweet.text
+        cell.detailTextLabel?.text = tweet.user.name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
