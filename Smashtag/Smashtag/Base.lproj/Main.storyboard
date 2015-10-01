@@ -35,10 +35,19 @@
                                                 <constraint firstAttribute="height" constant="48" id="dvH-je-cCf"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rv-41j">
+                                            <rect key="frame" x="64" y="8" width="528" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="topMargin" secondItem="MOU-fv-Lcr" secondAttribute="top" id="DSG-Qe-4wI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="MOU-fv-Lcr" secondAttribute="leading" id="IRV-PZ-4Im"/>
+                                        <constraint firstItem="Lwl-rv-41j" firstAttribute="leading" secondItem="MOU-fv-Lcr" secondAttribute="trailing" constant="8" id="cz0-MW-EPB"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Lwl-rv-41j" secondAttribute="top" id="eZt-bW-PKl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Lwl-rv-41j" secondAttribute="trailing" id="xUc-zl-fUl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
