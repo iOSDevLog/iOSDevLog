@@ -28,6 +28,8 @@ class TweetTableViewController: UITableViewController {
         }
     }
 
+    @IBOutlet weak var searchTextField: UITextField!
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

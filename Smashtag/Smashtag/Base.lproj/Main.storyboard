@@ -50,6 +50,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="5Tk-6c-1ul"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="tRU-LV-zf2" id="cRf-wP-OYv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IyK-OK-5gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
