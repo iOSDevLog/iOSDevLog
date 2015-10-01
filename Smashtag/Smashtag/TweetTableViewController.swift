@@ -30,7 +30,7 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     
     func refresh() {
         if searchText != nil {
-            let request = TwitterRequest(search: "#stanford", count: 100)
+            let request = TwitterRequest(search: searchText!, count: 100)
             request.fetchTweets { (newTweets) -> Void in
                 dispatch_async(dispatch_get_main_queue()) {
                     if newTweets.count > 0 {
@@ -74,7 +74,7 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIndntifier, forIndexPath: indexPath)
 
         // Configure the cell...
         let tweet = tweets[indexPath.section][indexPath.row]
