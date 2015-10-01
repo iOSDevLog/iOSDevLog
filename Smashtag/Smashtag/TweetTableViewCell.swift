@@ -9,5 +9,7 @@
 import UIKit
 
 class TweetTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var tweetProfileImageView: UIImageView!
+    @IBOutlet weak var tweetScreenNameLable: UILabel!
+    @IBOutlet weak var tweetTextLabel: UILabel!
 }
