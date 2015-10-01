@@ -35,32 +35,43 @@
                                                 <constraint firstAttribute="height" constant="48" id="dvH-je-cCf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rv-41j">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rv-41j">
                                             <rect key="frame" x="64" y="8" width="528" height="20"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDc-Mj-LNc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tweet Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDc-Mj-LNc">
                                             <rect key="frame" x="64" y="34" width="528" height="160"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGA-Ie-Phf">
+                                            <rect key="frame" x="8" y="64" width="48" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="pGA-Ie-Phf" secondAttribute="bottom" id="DBc-Ap-c5o"/>
                                         <constraint firstAttribute="topMargin" secondItem="MOU-fv-Lcr" secondAttribute="top" id="DSG-Qe-4wI"/>
+                                        <constraint firstItem="pGA-Ie-Phf" firstAttribute="leading" secondItem="MOU-fv-Lcr" secondAttribute="leading" id="Ed9-Fr-5Ru"/>
                                         <constraint firstItem="sDc-Mj-LNc" firstAttribute="leading" secondItem="Lwl-rv-41j" secondAttribute="leading" id="ErK-UO-b7h"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="MOU-fv-Lcr" secondAttribute="leading" id="IRV-PZ-4Im"/>
                                         <constraint firstItem="sDc-Mj-LNc" firstAttribute="top" secondItem="Lwl-rv-41j" secondAttribute="bottom" constant="6" id="JG1-bt-exe"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="sDc-Mj-LNc" secondAttribute="bottom" id="RAw-6G-0zd"/>
+                                        <constraint firstItem="pGA-Ie-Phf" firstAttribute="trailing" secondItem="MOU-fv-Lcr" secondAttribute="trailing" id="Rem-Gx-toe"/>
                                         <constraint firstItem="Lwl-rv-41j" firstAttribute="leading" secondItem="MOU-fv-Lcr" secondAttribute="trailing" constant="8" id="cz0-MW-EPB"/>
+                                        <constraint firstItem="pGA-Ie-Phf" firstAttribute="top" secondItem="MOU-fv-Lcr" secondAttribute="bottom" constant="8" symbolic="YES" id="dKz-Kb-9H9"/>
                                         <constraint firstAttribute="topMargin" secondItem="Lwl-rv-41j" secondAttribute="top" id="eZt-bW-PKl"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="sDc-Mj-LNc" secondAttribute="trailing" id="u1K-8M-alo"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Lwl-rv-41j" secondAttribute="trailing" id="xUc-zl-fUl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="tweetCreatedLabel" destination="pGA-Ie-Phf" id="QPV-UN-QTA"/>
                                     <outlet property="tweetProfileImageView" destination="MOU-fv-Lcr" id="8mn-Eh-Vfe"/>
                                     <outlet property="tweetScreenNameLabel" destination="Lwl-rv-41j" id="zFh-O8-tfM"/>
                                     <outlet property="tweetTextLabel" destination="sDc-Mj-LNc" id="i1W-Jg-gc4"/>
