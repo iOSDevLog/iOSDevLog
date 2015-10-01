@@ -62,7 +62,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tweetProfileImageView" destination="MOU-fv-Lcr" id="8mn-Eh-Vfe"/>
-                                    <outlet property="tweetScreenNameLable" destination="Lwl-rv-41j" id="Vt1-Gx-XDF"/>
+                                    <outlet property="tweetScreenNameLabel" destination="Lwl-rv-41j" id="zFh-O8-tfM"/>
                                     <outlet property="tweetTextLabel" destination="sDc-Mj-LNc" id="i1W-Jg-gc4"/>
                                 </connections>
                             </tableViewCell>
