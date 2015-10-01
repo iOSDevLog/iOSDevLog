@@ -8,27 +8,56 @@
 
 import UIKit
 
-class TweetTableViewController: UITableViewController {
+class TweetTableViewController: UITableViewController, UITextFieldDelegate {
 
     var tweets = [[Tweet]]()
+    var searchText: String? = "#stanford" {
+        didSet {
+            searchTextField?.text = searchText
+            tweets.removeAll()
+            tableView.reloadData()
+            refresh()
+        }
+    }
     
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let request = TwitterRequest(search: "#stanford", count: 100)
-        request.fetchTweets { (newTweets) -> Void in
-            dispatch_async(dispatch_get_main_queue()) {
-                if newTweets.count > 0 {
-                    self.tweets.insert(newTweets, atIndex: 0)
-                    self.tableView.reloadData()
+        refresh()
+    }
+    
+    func refresh() {
+        if searchText != nil {
+            let request = TwitterRequest(search: "#stanford", count: 100)
+            request.fetchTweets { (newTweets) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    if newTweets.count > 0 {
+                        self.tweets.insert(newTweets, atIndex: 0)
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
+
     }
 
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField! {
+        didSet {
+            searchTextField.delegate = self
+            searchTextField.text = searchText
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == searchTextField {
+            textField.resignFirstResponder()
+            searchText = textField.text
+        }
+        
+        return true
+    }
     
     // MARK: - Table view data source
 
