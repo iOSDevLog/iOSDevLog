@@ -15,11 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-el-JwC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iEH-TI-skn" appends="YES" id="HCw-80-TiK"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XOj-el-JwC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8sr-sL-U5C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XOj-el-JwC" secondAttribute="bottom" id="BAz-fZ-fVP"/>
+                            <constraint firstItem="XOj-el-JwC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CUd-e3-VzK"/>
+                            <constraint firstAttribute="trailing" secondItem="XOj-el-JwC" secondAttribute="trailing" id="vvO-Fj-0ol"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="XOj-el-JwC" id="YU7-ad-sYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iEH-TI-skn">
+                    <connections>
+                        <action selector="drop:" destination="BYZ-38-t0r" id="d0c-Og-UZ6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
