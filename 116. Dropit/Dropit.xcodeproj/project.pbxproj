@@ -12,6 +12,7 @@
 		6C71F5DA1BC024BD00F9D5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C71F5D91BC024BD00F9D5B4 /* Assets.xcassets */; };
 		6C71F5DD1BC024BD00F9D5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C71F5DB1BC024BD00F9D5B4 /* LaunchScreen.storyboard */; };
 		6C71F5E51BC024EF00F9D5B4 /* DropitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C71F5E41BC024EF00F9D5B4 /* DropitViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6C73E1AA1BC13B560050B029 /* DropitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C73E1A91BC13B560050B029 /* DropitBehavior.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6C71F5DC1BC024BD00F9D5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C71F5DE1BC024BD00F9D5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C71F5E41BC024EF00F9D5B4 /* DropitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitViewController.swift; sourceTree = "<group>"; };
+		6C73E1A91BC13B560050B029 /* DropitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				6C71F5D21BC024BD00F9D5B4 /* AppDelegate.swift */,
 				6C71F5E41BC024EF00F9D5B4 /* DropitViewController.swift */,
 				6C71F5D61BC024BD00F9D5B4 /* Main.storyboard */,
+				6C73E1A91BC13B560050B029 /* DropitBehavior.swift */,
 				6C71F5D91BC024BD00F9D5B4 /* Assets.xcassets */,
 				6C71F5DB1BC024BD00F9D5B4 /* LaunchScreen.storyboard */,
 				6C71F5DE1BC024BD00F9D5B4 /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				6C71F5E51BC024EF00F9D5B4 /* DropitViewController.swift in Sources */,
 				6C71F5D31BC024BD00F9D5B4 /* AppDelegate.swift in Sources */,
+				6C73E1AA1BC13B560050B029 /* DropitBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +289,7 @@
 				6C71F5E31BC024BE00F9D5B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
