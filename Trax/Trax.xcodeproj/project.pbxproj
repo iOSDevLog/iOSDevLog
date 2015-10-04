@@ -22,6 +22,7 @@
 		6C34FBDD1BC17F4200C5D3D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C34FBE01BC17F4200C5D3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C34FBE21BC17F4200C5D3D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAE13AF1BC1827700978049 /* Vacation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Vacation.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				6C34FBDD1BC17F4200C5D3D3 /* Assets.xcassets */,
 				6C34FBDF1BC17F4200C5D3D3 /* LaunchScreen.storyboard */,
 				6C34FBE21BC17F4200C5D3D3 /* Info.plist */,
+				6CAE13AF1BC1827700978049 /* Vacation.gpx */,
 			);
 			path = Trax;
 			sourceTree = "<group>";
@@ -285,6 +287,7 @@
 				6C34FBE71BC17F4200C5D3D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
