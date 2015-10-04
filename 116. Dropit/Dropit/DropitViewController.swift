@@ -8,13 +8,14 @@
 
 import UIKit
 
-class DropitViewController: UIViewController {
+class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     // MARK: - Outlets
     @IBOutlet weak var gameView: UIView!
     
     // MARK: - Animation
     lazy var animator: UIDynamicAnimator = {
         let lazilyCreatedDynamicAnimator = UIDynamicAnimator(referenceView: self.gameView)
+        lazilyCreatedDynamicAnimator.delegate = self
         return lazilyCreatedDynamicAnimator
         }()
     
@@ -26,10 +27,14 @@ class DropitViewController: UIViewController {
         animator.addBehavior(dropitBehavior)
     }
     
-    var dropPerRow = 10
+    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+        removeCompletedRow()
+    }
+    
+    var dropsPerRow = 10
     
     var dropSize: CGSize {
-        let size = gameView.bounds.width / CGFloat(dropPerRow)
+        let size = gameView.bounds.width / CGFloat(dropsPerRow)
         return CGSize(width: size, height: size)
     }
     
@@ -39,12 +44,46 @@ class DropitViewController: UIViewController {
     
     func drop() {
         var frame = CGRect(origin: CGPointZero, size: dropSize)
-        frame.origin.x = CGFloat.random(dropPerRow) * dropSize.width
+        frame.origin.x = CGFloat.random(dropsPerRow) * dropSize.width
         
         let dropView = UIView(frame: frame)
         dropView.backgroundColor = UIColor.random
         
         dropitBehavior.addDrop(dropView)
+    }
+    
+    // removes a single, completed row
+    // allows for a little "wiggle room" for mostly complete rows
+    // in the end, does nothing more than call removeDrop() in DropitBehavior
+    
+    func removeCompletedRow() {
+        var dropsToRemove = [UIView]()
+        var dropFrame = CGRect(x: 0, y: gameView.frame.maxY, width: dropSize.width, height: dropSize.height)
+        
+        repeat {
+            dropFrame.origin.y -= dropSize.height
+            dropFrame.origin.x = 0
+            var dropsFound = [UIView]()
+            var rowIsComplete = true
+            for _ in 0 ..< dropsPerRow {
+                if let hitView = gameView.hitTest(CGPoint(x: dropFrame.midX, y: dropFrame.midY), withEvent: nil) {
+                    if hitView.superview == gameView {
+                        dropsFound.append(hitView)
+                    }
+                    else {
+                        rowIsComplete = false
+                    }
+                }
+                dropFrame.origin.x += dropSize.width
+            }
+            if rowIsComplete {
+                dropsToRemove += dropsFound
+            }
+        } while dropsToRemove.count == 0 && dropFrame.origin.y > 0
+        
+        for drop in dropsToRemove {
+            dropitBehavior.removeDrop(drop)
+        }
     }
 }
 
