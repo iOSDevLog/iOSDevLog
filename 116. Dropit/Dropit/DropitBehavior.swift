@@ -9,5 +9,30 @@
 import UIKit
 
 class DropitBehavior: UIDynamicBehavior {
+    
+    let gravity = UIGravityBehavior()
+    
+    lazy var collider: UICollisionBehavior = {
+        let lazilyCreatedCOllider = UICollisionBehavior()
+        lazilyCreatedCOllider.translatesReferenceBoundsIntoBoundary = true
+        return lazilyCreatedCOllider
+        }()
+    
+    override init() {
+        super.init()
+        addChildBehavior(gravity)
+        addChildBehavior(collider)
+    }
+    
+    func addDrop(drop: UIView) {
+        dynamicAnimator?.referenceView?.addSubview(drop)
+        gravity.addItem(drop)
+        collider.addItem(drop)
+    }
 
+    func removeDrop(drop: UIView) {
+        gravity.removeItem(drop)
+        collider.removeItem(drop)
+        drop.removeFromSuperview()
+    }
 }
