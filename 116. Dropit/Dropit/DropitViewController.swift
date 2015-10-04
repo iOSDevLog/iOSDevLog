@@ -10,7 +10,7 @@ import UIKit
 
 class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     // MARK: - Outlets
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var gameView: BezierPathsView!
     
     // MARK: - Animation
     lazy var animator: UIDynamicAnimator = {
@@ -34,9 +34,10 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let barrierSize = dropSize
-        let barrierOrigin = CGPoint(x: gameView.bounds.midX - barrierSize.width/2, y: gameView.bounds.midY - barrierSize.height/2)
+        let barrierOrigin = CGPoint(x: gameView.bounds.midX-barrierSize.width/2, y: gameView.bounds.midY-barrierSize.height/2)
         let path = UIBezierPath(ovalInRect: CGRect(origin: barrierOrigin, size: barrierSize))
         dropitBehavior.addBarrier(path, named: PathNames.MiddleBarrier)
+        gameView.setPath(path, named: PathNames.MiddleBarrier)
     }
     
     func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
