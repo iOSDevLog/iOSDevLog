@@ -18,6 +18,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    var gpxURL: NSURL? {
+        didSet {
+            if let url = gpxURL {
+//                GPX.
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
