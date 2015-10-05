@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class GPXViewController: UIViewController, MKMapViewDelegate {
-    
+    // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             mapView.mapType = .Satellite
@@ -18,6 +18,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    // MARK: - Public API
     var gpxURL: NSURL? {
         didSet {
             clearWaypoints()
@@ -31,8 +32,24 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    // MARK: - Waypoints
+    // MARK: - View Controller Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let center = NSNotificationCenter.defaultCenter()
+        let queue = NSOperationQueue.mainQueue()
+        let appDelegate = UIApplication.sharedApplication().delegate
+        
+        center.addObserverForName(GPXURL.Notification, object: appDelegate, queue: queue) { notification in
+            if let url = notification.userInfo?[GPXURL.key] as? NSURL {
+                self.gpxURL = url
+            }
+        }
+        
+        gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx")
+    }
     
+    // MARK: - Waypoints
     private func clearWaypoints() {
         if mapView?.annotations != nil { mapView.removeAnnotations(mapView.annotations as [MKAnnotation]) }
     }
@@ -42,9 +59,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         mapView.showAnnotations(waypoints, animated: true)
     }
     
-    
     // MARK: - Constants
-    
     private struct Constants {
         static let LeftCalloutFrame = CGRect(x: 0, y: 0, width: 59, height: 59)
         static let AnnotationViewReuseIdentifier = "waypoint"
@@ -95,6 +110,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         performSegueWithIdentifier(Constants.ShowImageSegue, sender: view)
     }
     
+    // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.ShowImageSegue {
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
@@ -104,22 +120,6 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                 }
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let center = NSNotificationCenter.defaultCenter()
-        let queue = NSOperationQueue.mainQueue()
-        let appDelegate = UIApplication.sharedApplication().delegate
-        
-        center.addObserverForName(GPXURL.Notification, object: appDelegate, queue: queue) { notification in
-            if let url = notification.userInfo?[GPXURL.key] as? NSURL {
-                self.gpxURL = url
-            }
-        }
-        
-        gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx")
     }
 }
 
