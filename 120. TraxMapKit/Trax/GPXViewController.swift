@@ -42,6 +42,31 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         mapView.showAnnotations(waypoints, animated: true)
     }
     
+    
+    // MARK: - Constants
+    
+    private struct Constants {
+        static let LeftCalloutFrame = CGRect(x: 0, y: 0, width: 59, height: 59)
+        static let AnnotationViewReuseIdentifier = "waypoint"
+        static let ShowImageSegue = "Show Image"
+    }
+    
+    
+    // MARK: - MKMapViewDelegate
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
+        
+        if view == nil {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: Constants.AnnotationViewReuseIdentifier)
+            view!.canShowCallout = true
+        }
+        else {
+            view!.annotation = annotation
+        }
+        
+        return view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +79,8 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                 self.gpxURL = url
             }
         }
+        
+        gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx")
     }
 }
 
