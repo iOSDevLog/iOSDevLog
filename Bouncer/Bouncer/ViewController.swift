@@ -9,17 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let bouncer = BouncerBehavior()
+    lazy var animator: UIDynamicAnimator = {
+        UIDynamicAnimator(referenceView: self.view)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        animator.addBehavior(bouncer)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
 }
 
