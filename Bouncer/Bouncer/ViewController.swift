@@ -14,6 +14,19 @@ class ViewController: UIViewController {
         UIDynamicAnimator(referenceView: self.view)
     }()
     
+    var redBlock: UIView?
+    
+    // MARK: - View Controller Lifecycle
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if redBlock == nil {
+            redBlock = addBlock()
+            redBlock?.backgroundColor = UIColor.redColor()
+            bouncer.addBlock(redBlock!)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animator.addBehavior(bouncer)
