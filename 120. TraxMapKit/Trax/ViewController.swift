@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var textView: UITextView!
+class ViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView! {
+        didSet {
+            mapView.mapType = .Satellite
+            mapView.delegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +27,6 @@ class ViewController: UIViewController {
         
         center.addObserverForName(GPXURL.Notification, object: appDelegate, queue: queue) { notification in
             if let url = notification.userInfo?[GPXURL.key] as? NSURL {
-                self.textView.text = "Received \(url)"
             }
         }
     }
