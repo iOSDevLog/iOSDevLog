@@ -24,35 +24,33 @@ Email:  <iosdevlog@iosdevlog.com>
 
 <https://itunes.apple.com/cn/podcast/ios-kai-fa-ri-zhi/id1039229999?mt=2>
 
-## *Version Control*
+## Version Control
 ---
 
-## **git**
+### *git*
 
 <http://www.git-scm.com/>
 	
 <https://github.com>
 
-## **SourceTree**
+### *SourceTree*
 
 <https://www.sourcetreeapp.com/>
 
-## *.gitignore*
+### *.gitignore*
 
 <https://www.gitignore.io>
 
 <https://www.gitignore.io/api/code,objective-c,swift,osx>
 
-## ref
+## Reference
 --
 
-### <http://objc.io>
----
+### *<http://objc.io>*
 
 <https://github.com/objcio>
 
-### iTunes U/Developing iOS 8 Apps Swift
----
+### *iTunes U/Developing iOS 8 Apps Swift*
 
 [iTunes U/Developing iOS 8 Apps Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099)
 
