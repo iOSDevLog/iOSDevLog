@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class GPXViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
@@ -20,10 +20,26 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     var gpxURL: NSURL? {
         didSet {
+            clearWaypoints()
             if let url = gpxURL {
-//                GPX.
+                GPX.parse(url) {
+                    if let gpx = $0 {
+                        self.handleWaypoints(gpx.waypoints)
+                    }
+                }
             }
         }
+    }
+    
+    // MARK: - Waypoints
+    
+    private func clearWaypoints() {
+        if mapView?.annotations != nil { mapView.removeAnnotations(mapView.annotations as [MKAnnotation]) }
+    }
+    
+    private func handleWaypoints(waypoints: [GPX.Waypoint]) {
+        mapView.addAnnotations(waypoints)
+        mapView.showAnnotations(waypoints, animated: true)
     }
     
     override func viewDidLoad() {
@@ -35,6 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         center.addObserverForName(GPXURL.Notification, object: appDelegate, queue: queue) { notification in
             if let url = notification.userInfo?[GPXURL.key] as? NSURL {
+                self.gpxURL = url
             }
         }
     }
