@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "50A661B7099C5FF8EAA8620CB5290BEEB36841CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "50A661B7099C5FF8EAA8620CB5290BEEB36841CB" : 0,
+    "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A6C4F85-58C5-45F4-8E84-88FF0FA9EE2E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "50A661B7099C5FF8EAA8620CB5290BEEB36841CB" : "iOSDevLog\/",
+    "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Bouncer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Bouncer\/Bouncer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/romaonthego\/RESideMenu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSDevLog\/iOSDevLog.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "50A661B7099C5FF8EAA8620CB5290BEEB36841CB"
+    }
+  ]
+}
