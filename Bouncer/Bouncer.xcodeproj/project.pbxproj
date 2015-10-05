@@ -12,6 +12,7 @@
 		6CD14CC91BC26CAA00D41936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD14CC71BC26CAA00D41936 /* Main.storyboard */; };
 		6CD14CCB1BC26CAA00D41936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD14CCA1BC26CAA00D41936 /* Assets.xcassets */; };
 		6CD14CCE1BC26CAA00D41936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD14CCC1BC26CAA00D41936 /* LaunchScreen.storyboard */; };
+		6CD14CD61BC26D0E00D41936 /* BouncerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD14CD51BC26D0E00D41936 /* BouncerBehavior.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6CD14CCA1BC26CAA00D41936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CD14CCD1BC26CAA00D41936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CD14CCF1BC26CAA00D41936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CD14CD51BC26D0E00D41936 /* BouncerBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncerBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		6CD14CC21BC26CAA00D41936 /* Bouncer */ = {
 			isa = PBXGroup;
 			children = (
+				6CD14CD51BC26D0E00D41936 /* BouncerBehavior.swift */,
 				6CD14CC31BC26CAA00D41936 /* AppDelegate.swift */,
 				6CD14CC51BC26CAA00D41936 /* ViewController.swift */,
 				6CD14CC71BC26CAA00D41936 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			files = (
 				6CD14CC61BC26CAA00D41936 /* ViewController.swift in Sources */,
 				6CD14CC41BC26CAA00D41936 /* AppDelegate.swift in Sources */,
+				6CD14CD61BC26D0E00D41936 /* BouncerBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
