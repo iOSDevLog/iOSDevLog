@@ -70,6 +70,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
             if waypoint.thumbnailURL != nil {
                 view!.leftCalloutAccessoryView = UIImageView(frame: Constants.LeftCalloutFrame)
             }
+            
+            if waypoint.imageURL != nil {
+                view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            }
         }
 
         return view
@@ -82,6 +86,21 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                     if let image = UIImage(data: imageData) {
                         thumbnailImageView.image = image
                     }
+                }
+            }
+        }
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegueWithIdentifier(Constants.ShowImageSegue, sender: view)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constants.ShowImageSegue {
+            if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
+                if let ivc = segue.destinationViewController as? ImageViewController {
+                    ivc.imageURL = waypoint.imageURL
+                    ivc.title = waypoint.name
                 }
             }
         }
