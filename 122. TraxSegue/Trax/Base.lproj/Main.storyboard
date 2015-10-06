@@ -39,7 +39,7 @@
                     <connections>
                         <outlet property="mapView" destination="RL0-TG-R1n" id="CNX-qY-Uf9"/>
                         <segue destination="gz6-E4-6uQ" kind="show" identifier="Show Image" id="aMe-u6-Cz7"/>
-                        <segue destination="ggc-5G-u1v" kind="presentation" identifier="Edit Waypoint" id="5v8-1l-Q6Q"/>
+                        <segue destination="vMu-Bu-hxE" kind="presentation" identifier="Edit Waypoint" id="5v8-1l-Q6Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,26 +105,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2n-zw-09l">
-                                <rect key="frame" x="20" y="31" width="45" height="21"/>
+                                <rect key="frame" x="20" y="75" width="45" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-M4-TbH">
-                                <rect key="frame" x="73" y="28" width="507" height="30"/>
+                                <rect key="frame" x="73" y="72" width="507" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Eq-oU-zvo">
-                                <rect key="frame" x="73" y="66" width="507" height="30"/>
+                                <rect key="frame" x="73" y="110" width="507" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-C4-BVN">
-                                <rect key="frame" x="20" y="69" width="45" height="21"/>
+                                <rect key="frame" x="20" y="113" width="45" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,6 +148,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="tTH-M4-TbH" secondAttribute="trailing" id="rEK-vk-XBm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u1t-yd-pgR">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="xCv-Zq-0KC">
+                            <connections>
+                                <action selector="done:" destination="ggc-5G-u1v" id="GTB-RO-MyE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="infoTextField" destination="9Eq-oU-zvo" id="TuR-yX-lt6"/>
                         <outlet property="nameTextField" destination="tTH-M4-TbH" id="CyD-NG-3a8"/>
@@ -155,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy0-6I-l6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="1111"/>
+            <point key="canvasLocation" x="2826" y="1111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="soL-i2-qug">
@@ -175,6 +182,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZD-hf-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="-303"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IMY-na-p3f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMu-Bu-hxE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FVD-cD-sdy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ggc-5G-u1v" kind="relationship" relationship="rootViewController" id="uyx-vN-ebs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viY-t3-car" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="1111"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,10 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField! { didSet { nameTextField.delegate = self } }
     @IBOutlet weak var infoTextField: UITextField! { didSet { infoTextField.delegate = self } }
     
+    @IBAction func done(sender: UIBarButtonItem) {
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func updateUI() {
         nameTextField?.text = waypointToEdit?.name
         infoTextField?.text = waypointToEdit?.info
