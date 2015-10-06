@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1990" y="389"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Waypoint View Controller-->
         <scene sceneID="5bw-5v-RIF">
             <objects>
-                <viewController id="ggc-5G-u1v" sceneMemberID="viewController">
+                <viewController id="ggc-5G-u1v" customClass="EditWaypointViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5vD-Cj-6v7"/>
                         <viewControllerLayoutGuide type="bottom" id="qzd-la-Qet"/>
@@ -148,6 +148,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="tTH-M4-TbH" secondAttribute="trailing" id="rEK-vk-XBm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoTextField" destination="9Eq-oU-zvo" id="TuR-yX-lt6"/>
+                        <outlet property="nameTextField" destination="tTH-M4-TbH" id="CyD-NG-3a8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy0-6I-l6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
