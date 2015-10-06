@@ -1,15 +1,15 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "50A661B7099C5FF8EAA8620CB5290BEEB36841CB",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4B15E798984058D1F6CD94B336237B1BF218D979",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "50A661B7099C5FF8EAA8620CB5290BEEB36841CB" : 0,
+    "4B15E798984058D1F6CD94B336237B1BF218D979" : 0,
     "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F2C80065-8F0E-4285-9EC3-6E7D2E509B71",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "50A661B7099C5FF8EAA8620CB5290BEEB36841CB" : "iOSDevLog\/",
+    "4B15E798984058D1F6CD94B336237B1BF218D979" : "iOSDevLog\/",
     "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Trax",
@@ -17,14 +17,14 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "124. TraxCamera\/Trax.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSDevLog\/iOSDevLog.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4B15E798984058D1F6CD94B336237B1BF218D979"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/romaonthego\/RESideMenu.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4D9AE519C7D7E765CA7498EFD8B3BB24ACB11215"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSDevLog\/iOSDevLog.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "50A661B7099C5FF8EAA8620CB5290BEEB36841CB"
     }
   ]
 }
