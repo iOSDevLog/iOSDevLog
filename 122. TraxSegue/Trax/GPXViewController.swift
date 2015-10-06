@@ -162,7 +162,12 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     }
     
     func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
-        return UINavigationController(rootViewController: controller.presentedViewController)
+        let navcon = UINavigationController(rootViewController: controller.presentedViewController)
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
+        visualEffectView.frame = navcon.view.bounds
+        navcon.view.insertSubview(visualEffectView, atIndex: 0)
+        
+        return navcon
     }
 }
 
