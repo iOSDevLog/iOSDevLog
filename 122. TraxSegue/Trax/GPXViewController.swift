@@ -147,6 +147,8 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                     let coordinatePoint = mapView.convertCoordinate(waypoint.coordinate, toPointToView: mapView)
                     if let ppc = ewvc.popoverPresentationController {
                         ppc.sourceRect = (sender as! MKAnnotationView).popoverSourceRectForCoordinatePoint(coordinatePoint)
+                        let minimumSize = ewvc.view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+                        ewvc.preferredContentSize = CGSize(width: Constants.EditWaypointPopoverWidth, height: minimumSize.height)
                     }
                     ewvc.waypointToEdit = waypoint
                 }
