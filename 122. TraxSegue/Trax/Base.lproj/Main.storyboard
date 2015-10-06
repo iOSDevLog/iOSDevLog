@@ -39,7 +39,7 @@
                     <connections>
                         <outlet property="mapView" destination="RL0-TG-R1n" id="CNX-qY-Uf9"/>
                         <segue destination="gz6-E4-6uQ" kind="show" identifier="Show Image" id="aMe-u6-Cz7"/>
-                        <segue destination="vMu-Bu-hxE" kind="presentation" identifier="Edit Waypoint" id="P0f-JN-44A"/>
+                        <segue destination="vMu-Bu-hxE" kind="presentation" identifier="Edit Waypoint" modalPresentationStyle="formSheet" id="P0f-JN-44A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
