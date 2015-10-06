@@ -141,6 +141,9 @@
                                 <rect key="frame" x="561" y="70" width="19" height="22"/>
                                 <animations/>
                                 <state key="normal" image="Camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="ggc-5G-u1v" eventType="touchUpInside" id="PzU-2S-rO4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

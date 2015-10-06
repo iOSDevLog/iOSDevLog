@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class EditWaypointViewController: UIViewController, UITextFieldDelegate {
+class EditWaypointViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var waypointToEdit: EditableWaypoint? { didSet { updateUI() } }
     
     // MARK: Image
@@ -22,6 +23,18 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField! { didSet { nameTextField.delegate = self } }
     @IBOutlet weak var infoTextField: UITextField! { didSet { infoTextField.delegate = self } }
+    
+    @IBAction func takePhoto(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let picker = UIImagePickerController()
+            picker.sourceType = .Camera
+            // if video, check media types
+            picker.mediaTypes = [kUTTypeImage] as NSArray as! [String]
+            picker.delegate = self
+            picker.allowsEditing = true
+            presentViewController(picker, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func done(sender: UIBarButtonItem) {
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
