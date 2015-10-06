@@ -132,19 +132,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-Fx-RZ7">
-                                <rect key="frame" x="20" y="104" width="560" height="488"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC8-Bm-2Y3">
                                 <rect key="frame" x="561" y="70" width="19" height="22"/>
                                 <animations/>
                                 <state key="normal" image="Camera"/>
                                 <connections>
-                                    <action selector="takePhoto:" destination="ggc-5G-u1v" eventType="touchUpInside" id="PzU-2S-rO4"/>
+                                    <action selector="takePhoto:" destination="ggc-5G-u1v" eventType="touchUpInside" id="LLB-5E-z69"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-Fx-RZ7">
+                                <rect key="frame" x="20" y="104" width="560" height="488"/>
+                                <animations/>
+                            </view>
                         </subviews>
                         <animations/>
                         <constraints>
