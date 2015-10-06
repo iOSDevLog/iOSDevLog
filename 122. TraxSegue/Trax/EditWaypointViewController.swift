@@ -8,14 +8,24 @@
 
 import UIKit
 
-class EditWaypointViewController: UIViewController {
-    var waypointToEdit: EditableWaypoint?
+class EditWaypointViewController: UIViewController, UITextFieldDelegate {
+    var waypointToEdit: EditableWaypoint? { didSet { updateUI() } }
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var infoTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField! { didSet { nameTextField.delegate = self } }
+    @IBOutlet weak var infoTextField: UITextField! { didSet { infoTextField.delegate = self } }
+    
+    func updateUI() {
+        nameTextField?.text = waypointToEdit?.name
+        infoTextField?.text = waypointToEdit?.info
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
