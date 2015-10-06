@@ -38,6 +38,7 @@
                     <connections>
                         <outlet property="mapView" destination="RL0-TG-R1n" id="CNX-qY-Uf9"/>
                         <segue destination="gz6-E4-6uQ" kind="show" identifier="Show Image" id="aMe-u6-Cz7"/>
+                        <segue destination="ggc-5G-u1v" kind="presentation" identifier="Edit Waypoint" id="5v8-1l-Q6Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,6 +90,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYv-lK-9hC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1990" y="389"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5bw-5v-RIF">
+            <objects>
+                <viewController id="ggc-5G-u1v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5vD-Cj-6v7"/>
+                        <viewControllerLayoutGuide type="bottom" id="qzd-la-Qet"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SVs-9U-twu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy0-6I-l6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="1108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="soL-i2-qug">
