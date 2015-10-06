@@ -83,11 +83,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         view!.rightCalloutAccessoryView = nil
         if let waypoint = annotation as? GPX.Waypoint {
             if waypoint.thumbnailURL != nil {
-                view!.leftCalloutAccessoryView = UIImageView(frame: Constants.LeftCalloutFrame)
-            }
-            
-            if waypoint.imageURL != nil {
-                view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+                view!.leftCalloutAccessoryView = UIButton(frame: Constants.LeftCalloutFrame)
             }
         }
 
@@ -96,10 +92,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         if let waypoint = view.annotation as? GPX.Waypoint {
-            if let thumbnailImageView = view.leftCalloutAccessoryView as? UIImageView {
+            if let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton {
                 if let imageData = NSData(contentsOfURL: waypoint.thumbnailURL!) { // blocks main thread!
                     if let image = UIImage(data: imageData) {
-                        thumbnailImageView.image = image
+                        thumbnailImageButton.setImage(image, forState: .Normal)
                     }
                 }
             }
