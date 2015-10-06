@@ -30,6 +30,7 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
     func updateUI() {
         nameTextField?.text = waypointToEdit?.name
         infoTextField?.text = waypointToEdit?.info
+        updateImage()
     }
     
     override func viewDidLoad() {
