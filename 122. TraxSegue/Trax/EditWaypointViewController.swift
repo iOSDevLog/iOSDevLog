@@ -24,6 +24,27 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
         updateUI()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        observingTextFields()
+    }
+    
+    
+    private func observingTextFields() {
+        let center = NSNotificationCenter.defaultCenter()
+        let queue = NSOperationQueue.mainQueue()
+        center.addObserverForName(UITextFieldTextDidChangeNotification, object: nameTextField, queue: queue) { notification in
+            if let waypoint = self.waypointToEdit {
+                waypoint.name = self.nameTextField.text
+            }
+        }
+        center.addObserverForName(UITextFieldTextDidChangeNotification, object: infoTextField, queue: queue) { notification in
+            if let waypoint = self.waypointToEdit {
+                waypoint.info = self.infoTextField.text
+            }
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
