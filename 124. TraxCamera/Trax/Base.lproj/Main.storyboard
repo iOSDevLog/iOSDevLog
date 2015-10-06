@@ -132,29 +132,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-CR-7ez">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-Fx-RZ7">
                                 <rect key="frame" x="20" y="104" width="560" height="488"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <animations/>
                         <constraints>
                             <constraint firstItem="tTH-M4-TbH" firstAttribute="top" secondItem="5vD-Cj-6v7" secondAttribute="bottom" constant="8" id="2dj-mw-z14"/>
                             <constraint firstItem="9Eq-oU-zvo" firstAttribute="leading" secondItem="Fpg-C4-BVN" secondAttribute="trailing" constant="8" symbolic="YES" id="2t0-3q-geY"/>
+                            <constraint firstItem="OQr-Fx-RZ7" firstAttribute="top" secondItem="9Eq-oU-zvo" secondAttribute="bottom" constant="8" id="AbL-Er-ecS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="i2n-zw-09l" secondAttribute="leading" id="BHr-6y-KCa"/>
                             <constraint firstItem="tTH-M4-TbH" firstAttribute="leading" secondItem="i2n-zw-09l" secondAttribute="trailing" constant="8" symbolic="YES" id="JBV-PF-MIz"/>
                             <constraint firstItem="i2n-zw-09l" firstAttribute="leading" secondItem="Fpg-C4-BVN" secondAttribute="leading" id="JwB-cX-SXR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OQr-Fx-RZ7" secondAttribute="trailing" id="U6W-yw-MH2"/>
                             <constraint firstItem="9Eq-oU-zvo" firstAttribute="top" secondItem="tTH-M4-TbH" secondAttribute="bottom" constant="8" symbolic="YES" id="Vkq-xK-T8R"/>
-                            <constraint firstItem="A3o-CR-7ez" firstAttribute="top" secondItem="9Eq-oU-zvo" secondAttribute="bottom" constant="8" symbolic="YES" id="W62-S7-Jqp"/>
                             <constraint firstItem="tTH-M4-TbH" firstAttribute="leading" secondItem="9Eq-oU-zvo" secondAttribute="leading" id="YbX-HK-4NZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OQr-Fx-RZ7" secondAttribute="leading" id="bCq-3i-TpZ"/>
                             <constraint firstItem="Fpg-C4-BVN" firstAttribute="baseline" secondItem="9Eq-oU-zvo" secondAttribute="baseline" id="cma-cZ-5dU"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="A3o-CR-7ez" secondAttribute="leading" id="fuO-HP-ebo"/>
-                            <constraint firstItem="qzd-la-Qet" firstAttribute="top" secondItem="A3o-CR-7ez" secondAttribute="bottom" constant="8" id="iiE-cO-UHV"/>
                             <constraint firstItem="i2n-zw-09l" firstAttribute="baseline" secondItem="tTH-M4-TbH" secondAttribute="baseline" id="o9O-gt-pAM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Eq-oU-zvo" secondAttribute="trailing" id="ogL-ps-Hn6"/>
+                            <constraint firstItem="qzd-la-Qet" firstAttribute="top" secondItem="OQr-Fx-RZ7" secondAttribute="bottom" constant="8" id="qg4-rG-vi1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tTH-M4-TbH" secondAttribute="trailing" id="rEK-vk-XBm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A3o-CR-7ez" secondAttribute="trailing" id="zCv-te-zU3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u1t-yd-pgR">
@@ -165,6 +165,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageViewContainer" destination="OQr-Fx-RZ7" id="1Fe-ka-w0F"/>
                         <outlet property="infoTextField" destination="9Eq-oU-zvo" id="TuR-yX-lt6"/>
                         <outlet property="nameTextField" destination="tTH-M4-TbH" id="CyD-NG-3a8"/>
                     </connections>

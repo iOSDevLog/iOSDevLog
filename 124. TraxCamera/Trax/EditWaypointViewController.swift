@@ -11,6 +11,15 @@ import UIKit
 class EditWaypointViewController: UIViewController, UITextFieldDelegate {
     var waypointToEdit: EditableWaypoint? { didSet { updateUI() } }
     
+    // MARK: Image
+    var imageView = UIImageView()
+    
+    @IBOutlet weak var imageViewContainer: UIView! {
+        didSet {
+            imageViewContainer.addSubview(imageView)
+        }
+    }
+    
     @IBOutlet weak var nameTextField: UITextField! { didSet { nameTextField.delegate = self } }
     @IBOutlet weak var infoTextField: UITextField! { didSet { infoTextField.delegate = self } }
     
