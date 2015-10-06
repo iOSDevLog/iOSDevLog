@@ -64,6 +64,7 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate, UIImage
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        nameTextField.becomeFirstResponder()
     }
     
     override func viewDidAppear(animated: Bool) {
