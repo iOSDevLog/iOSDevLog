@@ -59,6 +59,15 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         mapView.showAnnotations(waypoints, animated: true)
     }
     
+    @IBAction func addWaypoint(sender: UILongPressGestureRecognizer) {
+        if sender.state == UIGestureRecognizerState.Began {
+            let coordinate = mapView.convertPoint(sender.locationInView(mapView), toCoordinateFromView: mapView)
+            let waypoint = GPX.Waypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            waypoint.name = "Dropped"
+            mapView.addAnnotation(waypoint)
+        }
+    }
+    
     // MARK: - Constants
     private struct Constants {
         static let LeftCalloutFrame = CGRect(x: 0, y: 0, width: 59, height: 59)
