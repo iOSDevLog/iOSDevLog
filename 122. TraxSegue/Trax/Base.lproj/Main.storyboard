@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g4W-S4-hbS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -102,13 +103,55 @@
                     <view key="view" contentMode="scaleToFill" id="SVs-9U-twu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2n-zw-09l">
+                                <rect key="frame" x="20" y="31" width="45" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-M4-TbH">
+                                <rect key="frame" x="73" y="28" width="507" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Eq-oU-zvo">
+                                <rect key="frame" x="73" y="66" width="507" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-C4-BVN">
+                                <rect key="frame" x="20" y="69" width="45" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tTH-M4-TbH" firstAttribute="top" secondItem="5vD-Cj-6v7" secondAttribute="bottom" constant="8" id="2dj-mw-z14"/>
+                            <constraint firstItem="9Eq-oU-zvo" firstAttribute="leading" secondItem="Fpg-C4-BVN" secondAttribute="trailing" constant="8" id="2t0-3q-geY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="i2n-zw-09l" secondAttribute="leading" id="BHr-6y-KCa"/>
+                            <constraint firstItem="tTH-M4-TbH" firstAttribute="leading" secondItem="i2n-zw-09l" secondAttribute="trailing" constant="8" symbolic="YES" id="JBV-PF-MIz"/>
+                            <constraint firstItem="i2n-zw-09l" firstAttribute="leading" secondItem="Fpg-C4-BVN" secondAttribute="leading" id="JwB-cX-SXR"/>
+                            <constraint firstItem="9Eq-oU-zvo" firstAttribute="top" secondItem="tTH-M4-TbH" secondAttribute="bottom" constant="8" symbolic="YES" id="Vkq-xK-T8R"/>
+                            <constraint firstItem="tTH-M4-TbH" firstAttribute="leading" secondItem="9Eq-oU-zvo" secondAttribute="leading" id="YbX-HK-4NZ"/>
+                            <constraint firstItem="Fpg-C4-BVN" firstAttribute="baseline" secondItem="9Eq-oU-zvo" secondAttribute="baseline" id="cma-cZ-5dU"/>
+                            <constraint firstItem="qzd-la-Qet" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Eq-oU-zvo" secondAttribute="bottom" constant="8" symbolic="YES" id="kfT-Jd-fHW"/>
+                            <constraint firstItem="i2n-zw-09l" firstAttribute="baseline" secondItem="tTH-M4-TbH" secondAttribute="baseline" id="o9O-gt-pAM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Eq-oU-zvo" secondAttribute="trailing" id="ogL-ps-Hn6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tTH-M4-TbH" secondAttribute="trailing" id="rEK-vk-XBm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy0-6I-l6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="1108"/>
+            <point key="canvasLocation" x="2014" y="1111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="soL-i2-qug">
