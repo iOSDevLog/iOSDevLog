@@ -160,6 +160,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.OverFullScreen
     }
+    
+    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        return UINavigationController(rootViewController: controller.presentedViewController)
+    }
 }
 
 // MARK: - Convenience Extensions
