@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class GPXViewController: UIViewController, MKMapViewDelegate {
+class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate {
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
@@ -149,11 +149,16 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                         ppc.sourceRect = (sender as! MKAnnotationView).popoverSourceRectForCoordinatePoint(coordinatePoint)
                         let minimumSize = ewvc.view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
                         ewvc.preferredContentSize = CGSize(width: Constants.EditWaypointPopoverWidth, height: minimumSize.height)
+                        ppc.delegate = self
                     }
                     ewvc.waypointToEdit = waypoint
                 }
             }
         }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.OverFullScreen
     }
 }
 
