@@ -135,12 +135,40 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.ShowImageSegue {
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
-                if let ivc = segue.destinationViewController as? ImageViewController {
+                if let ivc = segue.destinationViewController.contentViewController as? ImageViewController {
                     ivc.imageURL = waypoint.imageURL
                     ivc.title = waypoint.name
                 }
             }
         }
+        else if segue.identifier == Constants.EditWaypointSegue {
+            if let waypoint = (sender as? MKAnnotationView)?.annotation as? EditableWaypoint {
+                if let ewvc = segue.destinationViewController.contentViewController as? EditWaypointViewController {
+                    ewvc.waypointToEdit = waypoint
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Convenience Extensions
+extension UIViewController {
+    var contentViewController: UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController!
+        }
+        else {
+            return self
+        }
+    }
+}
+
+extension MKAnnotationView {
+    func popoverSourceRectForCoordinatePoint(coordinatePoint: CGPoint) -> CGRect {
+        var popoverSourceRectCenter = coordinatePoint
+        popoverSourceRectCenter.x -= frame.width / 2 - centerOffset.x - calloutOffset.x
+        popoverSourceRectCenter.y -= frame.height / 2 - centerOffset.y - calloutOffset.y
+        return CGRect(origin: popoverSourceRectCenter, size: frame.size)
     }
 }
 

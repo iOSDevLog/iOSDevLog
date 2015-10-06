@@ -39,7 +39,7 @@
                     <connections>
                         <outlet property="mapView" destination="RL0-TG-R1n" id="CNX-qY-Uf9"/>
                         <segue destination="gz6-E4-6uQ" kind="show" identifier="Show Image" id="aMe-u6-Cz7"/>
-                        <segue destination="vMu-Bu-hxE" kind="presentation" identifier="Edit Waypoint" id="5v8-1l-Q6Q"/>
+                        <segue destination="vMu-Bu-hxE" kind="presentation" identifier="Edit Waypoint" id="P0f-JN-44A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy0-6I-l6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="1111"/>
+            <point key="canvasLocation" x="1990" y="1161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="soL-i2-qug">
@@ -200,7 +200,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viY-t3-car" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="1111"/>
+            <point key="canvasLocation" x="1267" y="1161"/>
         </scene>
     </scenes>
 </document>
