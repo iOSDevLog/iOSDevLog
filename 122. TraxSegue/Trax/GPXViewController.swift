@@ -144,6 +144,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         else if segue.identifier == Constants.EditWaypointSegue {
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? EditableWaypoint {
                 if let ewvc = segue.destinationViewController.contentViewController as? EditWaypointViewController {
+                    let coordinatePoint = mapView.convertCoordinate(waypoint.coordinate, toPointToView: mapView)
+                    if let ppc = ewvc.popoverPresentationController {
+                        ppc.sourceRect = (sender as! MKAnnotationView).popoverSourceRectForCoordinatePoint(coordinatePoint)
+                    }
                     ewvc.waypointToEdit = waypoint
                 }
             }
