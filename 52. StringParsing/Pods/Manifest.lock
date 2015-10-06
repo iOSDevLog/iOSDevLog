@@ -1,0 +1,19 @@
+PODS:
+  - CoreParse (0.1)
+
+DEPENDENCIES:
+  - CoreParse (from `CoreParse.podspec`)
+
+EXTERNAL SOURCES:
+  CoreParse:
+    :podspec: CoreParse.podspec
+
+CHECKOUT OPTIONS:
+  CoreParse:
+    :commit: 73f2b8506a05722bf65a8f183334ed68ee0de726
+    :git: https://github.com/beelsebob/CoreParse.git
+
+SPEC CHECKSUMS:
+  CoreParse: a82fdc57f0752d1e0b5051e6235341b24d9c579e
+
+COCOAPODS: 0.38.2

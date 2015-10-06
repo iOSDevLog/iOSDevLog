@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C4CDFD21B9B534A00B38EFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CDFD11B9B534A00B38EFA /* main.m */; };
+		6C4CDFD51B9B534A00B38EFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CDFD41B9B534A00B38EFA /* AppDelegate.m */; };
+		6C4CDFD81B9B534A00B38EFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CDFD71B9B534A00B38EFA /* ViewController.m */; };
+		6C4CDFDB1B9B534A00B38EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4CDFD91B9B534A00B38EFA /* Main.storyboard */; };
+		6C4CDFDD1B9B534A00B38EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4CDFDC1B9B534A00B38EFA /* Assets.xcassets */; };
+		6C4CDFE01B9B534A00B38EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4CDFDE1B9B534A00B38EFA /* LaunchScreen.storyboard */; };
+		6C4CDFEB1B9B534A00B38EFA /* _8__KPAColorFormatterExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CDFEA1B9B534A00B38EFA /* _8__KPAColorFormatterExampleTests.m */; };
+		6C4CDFF61B9B534B00B38EFA /* _8__KPAColorFormatterExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CDFF51B9B534B00B38EFA /* _8__KPAColorFormatterExampleUITests.m */; };
+		6C4CE0051B9B538400B38EFA /* KPAColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4CE0041B9B538400B38EFA /* KPAColorFormatter.m */; settings = {ASSET_TAGS = (); }; };
+		6C4CE0071B9B539500B38EFA /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C4CE0061B9B539500B38EFA /* colors.json */; settings = {ASSET_TAGS = (); }; };
+		6C4CE00C1B9B53AE00B38EFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C4CE0091B9B53AE00B38EFA /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C4CDFE71B9B534A00B38EFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C4CDFC51B9B534A00B38EFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C4CDFCC1B9B534A00B38EFA;
+			remoteInfo = "58. KPAColorFormatterExample";
+		};
+		6C4CDFF21B9B534B00B38EFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C4CDFC51B9B534A00B38EFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C4CDFCC1B9B534A00B38EFA;
+			remoteInfo = "58. KPAColorFormatterExample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C4CDFCD1B9B534A00B38EFA /* 58. KPAColorFormatterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "58. KPAColorFormatterExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4CDFD11B9B534A00B38EFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C4CDFD31B9B534A00B38EFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6C4CDFD41B9B534A00B38EFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6C4CDFD61B9B534A00B38EFA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6C4CDFD71B9B534A00B38EFA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C4CDFDA1B9B534A00B38EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C4CDFDC1B9B534A00B38EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C4CDFDF1B9B534A00B38EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C4CDFE11B9B534A00B38EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C4CDFE61B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "58. KPAColorFormatterExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4CDFEA1B9B534A00B38EFA /* _8__KPAColorFormatterExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _8__KPAColorFormatterExampleTests.m; sourceTree = "<group>"; };
+		6C4CDFEC1B9B534A00B38EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C4CDFF11B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "58. KPAColorFormatterExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4CDFF51B9B534B00B38EFA /* _8__KPAColorFormatterExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _8__KPAColorFormatterExampleUITests.m; sourceTree = "<group>"; };
+		6C4CDFF71B9B534B00B38EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C4CE0031B9B538400B38EFA /* KPAColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAColorFormatter.h; sourceTree = "<group>"; };
+		6C4CE0041B9B538400B38EFA /* KPAColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAColorFormatter.m; sourceTree = "<group>"; };
+		6C4CE0061B9B539500B38EFA /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		6C4CE00A1B9B53AE00B38EFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C4CE00B1B9B53AE00B38EFA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C4CDFCA1B9B534A00B38EFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFE31B9B534A00B38EFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFEE1B9B534B00B38EFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C4CDFC41B9B534A00B38EFA = {
+			isa = PBXGroup;
+			children = (
+				6C4CDFCF1B9B534A00B38EFA /* 58. KPAColorFormatterExample */,
+				6C4CDFE91B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests */,
+				6C4CDFF41B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests */,
+				6C4CDFCE1B9B534A00B38EFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C4CDFCE1B9B534A00B38EFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CDFCD1B9B534A00B38EFA /* 58. KPAColorFormatterExample.app */,
+				6C4CDFE61B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests.xctest */,
+				6C4CDFF11B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C4CDFCF1B9B534A00B38EFA /* 58. KPAColorFormatterExample */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CE0031B9B538400B38EFA /* KPAColorFormatter.h */,
+				6C4CE0041B9B538400B38EFA /* KPAColorFormatter.m */,
+				6C4CDFD31B9B534A00B38EFA /* AppDelegate.h */,
+				6C4CDFD41B9B534A00B38EFA /* AppDelegate.m */,
+				6C4CDFD61B9B534A00B38EFA /* ViewController.h */,
+				6C4CDFD71B9B534A00B38EFA /* ViewController.m */,
+				6C4CDFD91B9B534A00B38EFA /* Main.storyboard */,
+				6C4CDFDC1B9B534A00B38EFA /* Assets.xcassets */,
+				6C4CDFDE1B9B534A00B38EFA /* LaunchScreen.storyboard */,
+				6C4CDFE11B9B534A00B38EFA /* Info.plist */,
+				6C4CDFD01B9B534A00B38EFA /* Supporting Files */,
+			);
+			path = "58. KPAColorFormatterExample";
+			sourceTree = "<group>";
+		};
+		6C4CDFD01B9B534A00B38EFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CE0081B9B53AE00B38EFA /* Localizations */,
+				6C4CE0061B9B539500B38EFA /* colors.json */,
+				6C4CDFD11B9B534A00B38EFA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C4CDFE91B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CDFEA1B9B534A00B38EFA /* _8__KPAColorFormatterExampleTests.m */,
+				6C4CDFEC1B9B534A00B38EFA /* Info.plist */,
+			);
+			path = "58. KPAColorFormatterExampleTests";
+			sourceTree = "<group>";
+		};
+		6C4CDFF41B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CDFF51B9B534B00B38EFA /* _8__KPAColorFormatterExampleUITests.m */,
+				6C4CDFF71B9B534B00B38EFA /* Info.plist */,
+			);
+			path = "58. KPAColorFormatterExampleUITests";
+			sourceTree = "<group>";
+		};
+		6C4CE0081B9B53AE00B38EFA /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				6C4CE0091B9B53AE00B38EFA /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C4CDFCC1B9B534A00B38EFA /* 58. KPAColorFormatterExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C4CDFFA1B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExample" */;
+			buildPhases = (
+				6C4CDFC91B9B534A00B38EFA /* Sources */,
+				6C4CDFCA1B9B534A00B38EFA /* Frameworks */,
+				6C4CDFCB1B9B534A00B38EFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "58. KPAColorFormatterExample";
+			productName = "58. KPAColorFormatterExample";
+			productReference = 6C4CDFCD1B9B534A00B38EFA /* 58. KPAColorFormatterExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C4CDFE51B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C4CDFFD1B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExampleTests" */;
+			buildPhases = (
+				6C4CDFE21B9B534A00B38EFA /* Sources */,
+				6C4CDFE31B9B534A00B38EFA /* Frameworks */,
+				6C4CDFE41B9B534A00B38EFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C4CDFE81B9B534A00B38EFA /* PBXTargetDependency */,
+			);
+			name = "58. KPAColorFormatterExampleTests";
+			productName = "58. KPAColorFormatterExampleTests";
+			productReference = 6C4CDFE61B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C4CDFF01B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C4CE0001B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExampleUITests" */;
+			buildPhases = (
+				6C4CDFED1B9B534B00B38EFA /* Sources */,
+				6C4CDFEE1B9B534B00B38EFA /* Frameworks */,
+				6C4CDFEF1B9B534B00B38EFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C4CDFF31B9B534B00B38EFA /* PBXTargetDependency */,
+			);
+			name = "58. KPAColorFormatterExampleUITests";
+			productName = "58. KPAColorFormatterExampleUITests";
+			productReference = 6C4CDFF11B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C4CDFC51B9B534A00B38EFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = jiaxianhua;
+				TargetAttributes = {
+					6C4CDFCC1B9B534A00B38EFA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					6C4CDFE51B9B534A00B38EFA = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 6C4CDFCC1B9B534A00B38EFA;
+					};
+					6C4CDFF01B9B534B00B38EFA = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 6C4CDFCC1B9B534A00B38EFA;
+					};
+				};
+			};
+			buildConfigurationList = 6C4CDFC81B9B534A00B38EFA /* Build configuration list for PBXProject "58. KPAColorFormatterExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nl,
+			);
+			mainGroup = 6C4CDFC41B9B534A00B38EFA;
+			productRefGroup = 6C4CDFCE1B9B534A00B38EFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C4CDFCC1B9B534A00B38EFA /* 58. KPAColorFormatterExample */,
+				6C4CDFE51B9B534A00B38EFA /* 58. KPAColorFormatterExampleTests */,
+				6C4CDFF01B9B534B00B38EFA /* 58. KPAColorFormatterExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C4CDFCB1B9B534A00B38EFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4CE00C1B9B53AE00B38EFA /* Localizable.strings in Resources */,
+				6C4CDFE01B9B534A00B38EFA /* LaunchScreen.storyboard in Resources */,
+				6C4CE0071B9B539500B38EFA /* colors.json in Resources */,
+				6C4CDFDD1B9B534A00B38EFA /* Assets.xcassets in Resources */,
+				6C4CDFDB1B9B534A00B38EFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFE41B9B534A00B38EFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFEF1B9B534B00B38EFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C4CDFC91B9B534A00B38EFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4CDFD81B9B534A00B38EFA /* ViewController.m in Sources */,
+				6C4CE0051B9B538400B38EFA /* KPAColorFormatter.m in Sources */,
+				6C4CDFD51B9B534A00B38EFA /* AppDelegate.m in Sources */,
+				6C4CDFD21B9B534A00B38EFA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFE21B9B534A00B38EFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4CDFEB1B9B534A00B38EFA /* _8__KPAColorFormatterExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C4CDFED1B9B534B00B38EFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4CDFF61B9B534B00B38EFA /* _8__KPAColorFormatterExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C4CDFE81B9B534A00B38EFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C4CDFCC1B9B534A00B38EFA /* 58. KPAColorFormatterExample */;
+			targetProxy = 6C4CDFE71B9B534A00B38EFA /* PBXContainerItemProxy */;
+		};
+		6C4CDFF31B9B534B00B38EFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C4CDFCC1B9B534A00B38EFA /* 58. KPAColorFormatterExample */;
+			targetProxy = 6C4CDFF21B9B534B00B38EFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C4CDFD91B9B534A00B38EFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C4CDFDA1B9B534A00B38EFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C4CDFDE1B9B534A00B38EFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C4CDFDF1B9B534A00B38EFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6C4CE0091B9B53AE00B38EFA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C4CE00A1B9B53AE00B38EFA /* en */,
+				6C4CE00B1B9B53AE00B38EFA /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C4CDFF81B9B534B00B38EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C4CDFF91B9B534B00B38EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C4CDFFB1B9B534B00B38EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "58. KPAColorFormatterExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C4CDFFC1B9B534B00B38EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "58. KPAColorFormatterExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6C4CDFFE1B9B534B00B38EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "58. KPAColorFormatterExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/58. KPAColorFormatterExample.app/58. KPAColorFormatterExample";
+			};
+			name = Debug;
+		};
+		6C4CDFFF1B9B534B00B38EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "58. KPAColorFormatterExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/58. KPAColorFormatterExample.app/58. KPAColorFormatterExample";
+			};
+			name = Release;
+		};
+		6C4CE0011B9B534B00B38EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "58. KPAColorFormatterExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "58. KPAColorFormatterExample";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6C4CE0021B9B534B00B38EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "58. KPAColorFormatterExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiaxianhua.-8--KPAColorFormatterExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "58. KPAColorFormatterExample";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C4CDFC81B9B534A00B38EFA /* Build configuration list for PBXProject "58. KPAColorFormatterExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C4CDFF81B9B534B00B38EFA /* Debug */,
+				6C4CDFF91B9B534B00B38EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C4CDFFA1B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C4CDFFB1B9B534B00B38EFA /* Debug */,
+				6C4CDFFC1B9B534B00B38EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C4CDFFD1B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C4CDFFE1B9B534B00B38EFA /* Debug */,
+				6C4CDFFF1B9B534B00B38EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C4CE0001B9B534B00B38EFA /* Build configuration list for PBXNativeTarget "58. KPAColorFormatterExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C4CE0011B9B534B00B38EFA /* Debug */,
+				6C4CE0021B9B534B00B38EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C4CDFC51B9B534A00B38EFA /* Project object */;
+}
