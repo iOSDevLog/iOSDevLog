@@ -17,6 +17,16 @@
 
 /* Begin PBXFileReference section */
 		6C2FC5FF1BB6EFC000FD1576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6C7882421BC5717D00DCD717 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6C7882431BC5717D00DCD717 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6C7882441BC5718000DCD717 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		6C7882451BC5718000DCD717 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6C7882461BC5718400DCD717 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		6C7882471BC5718400DCD717 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6C7882481BC571A700DCD717 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		6C7882491BC571A700DCD717 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6C78824A1BC571B100DCD717 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		6C78824B1BC571B100DCD717 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6C7B210B1BB45A8F00108B02 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7B210E1BB45A9000108B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7B21101BB45A9000108B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +160,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C7B21131BB45A9000108B02 /* Base */,
+				6C7882421BC5717D00DCD717 /* zh-Hans */,
+				6C7882441BC5718000DCD717 /* fr */,
+				6C7882461BC5718400DCD717 /* zh-Hant */,
+				6C7882481BC571A700DCD717 /* ja */,
+				6C78824A1BC571B100DCD717 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -158,6 +173,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C7B21181BB45A9000108B02 /* Base */,
+				6C7882431BC5717D00DCD717 /* zh-Hans */,
+				6C7882451BC5718000DCD717 /* fr */,
+				6C7882471BC5718400DCD717 /* zh-Hant */,
+				6C7882491BC571A700DCD717 /* ja */,
+				6C78824B1BC571B100DCD717 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
