@@ -40,6 +40,8 @@
 		6C7B21151BB45A9000108B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C7B21181BB45A9000108B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7B211A1BB45A9000108B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8BEBB91BC5814800DAE00C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C8BEBBA1BC5814800DAE00C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				6C7882541BC5743C00DCD717 /* ja */,
 				6C78825C1BC57B7200DCD717 /* zh-Hant */,
+				6C8BEBBA1BC5814800DAE00C /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			children = (
 				6C7882591BC577D300DCD717 /* ja */,
 				6C78825B1BC57B7200DCD717 /* zh-Hant */,
+				6C8BEBB91BC5814800DAE00C /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

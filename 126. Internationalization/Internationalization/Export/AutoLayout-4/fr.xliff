@@ -33,22 +33,22 @@
       </trans-unit>
       <trans-unit id="OKC-uN-p7U.normalTitle">
         <source>Login</source>
-        <target>Login</target>
+        <target>S'Identifier</target>
         <note>Class = "UIButton"; normalTitle = "Login"; ObjectID = "OKC-uN-p7U";</note>
       </trans-unit>
       <trans-unit id="VTt-jo-dQS.normalTitle">
         <source>Change Security</source>
-        <target>Change Security</target>
+        <target>Change de Sécurité</target>
         <note>Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "VTt-jo-dQS";</note>
       </trans-unit>
       <trans-unit id="Ypl-wn-9xD.text">
         <source>Username</source>
-        <target>Username</target>
+        <target>Nom d'utilisateur</target>
         <note>Class = "UILabel"; text = "Username"; ObjectID = "Ypl-wn-9xD";</note>
       </trans-unit>
       <trans-unit id="fMi-Tk-87N.text">
         <source>Password</source>
-        <target>Password</target>
+        <target>Mot de Passe</target>
         <note>Class = "UILabel"; text = "Password"; ObjectID = "fMi-Tk-87N";</note>
       </trans-unit>
       <trans-unit id="yAJ-aa-fdB.text">
@@ -65,9 +65,11 @@
     <body>
       <trans-unit id="CFBundleName">
         <source>$(PRODUCT_NAME)</source>
+        <target>$(PRODUCT_NAME)</target>
       </trans-unit>
       <trans-unit id="CFBundleShortVersionString">
         <source>1.0</source>
+        <target>1.0</target>
       </trans-unit>
     </body>
   </file>
@@ -78,26 +80,32 @@
     <body>
       <trans-unit id="Invalid user name or password">
         <source>Invalid user name or password</source>
+        <target>Nom d'utilisateur ou mot de passe invalide</target>
         <note>Message in an alert when the user types in an incorrect user name or password</note>
       </trans-unit>
       <trans-unit id="Last Login %@ days ago at %@">
         <source>Last Login %1$@ days ago at %2$@</source>
+        <target>Dernière connexion il ya %1$@ jours à %2$@</target>
         <note>Reports the number of days ago and time that the user last logged in</note>
       </trans-unit>
       <trans-unit id="Login Error">
         <source>Login Error</source>
+        <target>Erreur Connexion</target>
         <note>Title of alert when user types in an incorrect user name or password</note>
       </trans-unit>
       <trans-unit id="Password">
         <source>Password</source>
+        <target>Mot de Passe</target>
         <note>Prompt for the user's password when it is not secure (i.e. plain text)</note>
       </trans-unit>
       <trans-unit id="Secured Password">
         <source>Secured Password</source>
+        <target>Mot de Passe Sécurisé</target>
         <note>Prompt for an obscured (not plain text) password</note>
       </trans-unit>
       <trans-unit id="Try Again">
         <source>Try Again</source>
+        <target>Essayer à Nouveau</target>
         <note>The only button available in an alert presented when the user types incorrect user name or password</note>
       </trans-unit>
     </body>
