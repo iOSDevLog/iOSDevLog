@@ -29,22 +29,22 @@
       </trans-unit>
       <trans-unit id="OKC-uN-p7U.normalTitle">
         <source>Login</source>
-        <target>Login</target>
+        <target>ログイン</target>
         <note>Class = "UIButton"; normalTitle = "Login"; ObjectID = "OKC-uN-p7U";</note>
       </trans-unit>
       <trans-unit id="VTt-jo-dQS.normalTitle">
         <source>Change Security</source>
-        <target>Change Security</target>
+        <target>セキュリティ変更</target>
         <note>Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "VTt-jo-dQS";</note>
       </trans-unit>
       <trans-unit id="Ypl-wn-9xD.text">
         <source>Username</source>
-        <target>Username</target>
+        <target>ユーザー名</target>
         <note>Class = "UILabel"; text = "Username"; ObjectID = "Ypl-wn-9xD";</note>
       </trans-unit>
       <trans-unit id="fMi-Tk-87N.text">
         <source>Password</source>
-        <target>Password</target>
+        <target>パスワード</target>
         <note>Class = "UILabel"; text = "Password"; ObjectID = "fMi-Tk-87N";</note>
       </trans-unit>
       <trans-unit id="yAJ-aa-fdB.text">
