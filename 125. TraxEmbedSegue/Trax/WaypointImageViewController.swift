@@ -17,6 +17,18 @@ class WaypointImageViewController: ImageViewController {
         }
     }
     
+    // we "prepare" for the embed segue
+    // by grabbing the MVC that is embedded
+    // we can then update it whenever it might need it
+    var smvc: SimpleMapViewController?
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Embed Map" {
+            smvc = segue.destinationViewController as? SimpleMapViewController
+            updateEmbeddedMap()
+        }
+    }
+    
     // normally an embedded MVC would be more complicated
     // than this simple map view controller
     // but there is not time in a demo to create that
