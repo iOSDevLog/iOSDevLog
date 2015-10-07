@@ -73,6 +73,17 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                             </scrollView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amC-fk-IAT">
+                                <rect key="frame" x="380" y="380" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bve-ei-vta"/>
+                                    <constraint firstAttribute="height" constant="200" id="mP4-Hm-HDg"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="E8j-Rz-PxU" kind="embed" id="Bke-Sq-lJ0"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,7 +92,9 @@
                             <constraint firstAttribute="trailing" secondItem="Fbk-VK-3Ae" secondAttribute="trailing" id="4aX-EU-5J4"/>
                             <constraint firstItem="Fbk-VK-3Ae" firstAttribute="leading" secondItem="DoS-cU-kXR" secondAttribute="leading" id="K6B-oi-bN2"/>
                             <constraint firstItem="PNv-Gh-Bx9" firstAttribute="top" secondItem="Fbk-VK-3Ae" secondAttribute="bottom" id="lpm-u6-K7E"/>
+                            <constraint firstAttribute="trailing" secondItem="amC-fk-IAT" secondAttribute="trailing" constant="20" symbolic="YES" id="moe-4A-CQb"/>
                             <constraint firstItem="fIJ-AR-ZcH" firstAttribute="centerY" secondItem="DoS-cU-kXR" secondAttribute="centerY" id="qcq-hn-IyK"/>
+                            <constraint firstAttribute="bottom" secondItem="amC-fk-IAT" secondAttribute="bottom" constant="20" symbolic="YES" id="sCo-gc-X5l"/>
                             <constraint firstItem="Fbk-VK-3Ae" firstAttribute="top" secondItem="Qss-h7-B1b" secondAttribute="bottom" id="srB-Xm-735"/>
                         </constraints>
                     </view>
@@ -201,6 +214,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZD-hf-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="-303"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3il-g7-KaS">
+            <objects>
+                <viewController id="E8j-Rz-PxU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FtK-7J-SvC">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIP-fA-F0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="389"/>
         </scene>
     </scenes>
     <resources>
