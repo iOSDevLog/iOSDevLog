@@ -74,10 +74,12 @@
     <body>
       <trans-unit id="Invalid user name or password">
         <source>Invalid user name or password</source>
+        <target>無効なユーザー名もしくはパスワード</target>
         <note>Message in an alert when the user types in an incorrect user name or password</note>
       </trans-unit>
       <trans-unit id="Login Error">
         <source>Login Error</source>
+        <target>ログインエラー</target>
         <note>Title of alert when user types in an incorrect user name or password</note>
       </trans-unit>
       <trans-unit id="Password">
@@ -92,6 +94,7 @@
       </trans-unit>
       <trans-unit id="Try Again">
         <source>Try Again</source>
+        <target>再度入力</target>
         <note>The only button available in an alert presented when the user types incorrect user name or password</note>
       </trans-unit>
     </body>
