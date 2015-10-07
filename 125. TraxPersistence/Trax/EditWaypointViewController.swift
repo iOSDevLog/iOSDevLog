@@ -44,7 +44,32 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate, UIImage
         imageView.image = image
         
         makeRoomForImage()
+        saveImageInWaypoint()
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    // we save the image in the file system here, but we never remove it
+    // obviously this demo is only the start of this application
+    // not only would we need to manage the images in our filesystem
+    // but we don't even save our edited waypoints from app launch to app launch
+    // (we'd probably want to be able to write these edited waypoints to a gpx file too)
+    // the goal here is just to show how to access the file system
+    
+    func saveImageInWaypoint() {
+        if let image = imageView.image {
+            if let imageData = UIImageJPEGRepresentation(image, 1.0) {
+                let fileManager = NSFileManager()
+                if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
+                    let unique = NSDate.timeIntervalSinceReferenceDate()
+                    let url = docsDir.URLByAppendingPathComponent("\(unique).jpg")
+                    let url_path = String(url.absoluteString)
+                    if imageData.writeToURL(url, atomically: true) {
+                        waypointToEdit?.links = [GPX.Link(href: url_path)]
+                    }
+                }
+            }
+        }
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
