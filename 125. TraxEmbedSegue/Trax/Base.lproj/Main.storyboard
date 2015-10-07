@@ -215,16 +215,31 @@
             </objects>
             <point key="canvasLocation" x="619" y="-303"/>
         </scene>
-        <!--View Controller-->
+        <!--Simple Map View Controller-->
         <scene sceneID="3il-g7-KaS">
             <objects>
-                <viewController id="E8j-Rz-PxU" sceneMemberID="viewController">
+                <viewController id="E8j-Rz-PxU" customClass="SimpleMapViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FtK-7J-SvC">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-ra-0QC">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j2j-ra-0QC" secondAttribute="trailing" id="2U7-9b-sx4"/>
+                            <constraint firstItem="j2j-ra-0QC" firstAttribute="leading" secondItem="FtK-7J-SvC" secondAttribute="leading" id="EgE-Jr-ie5"/>
+                            <constraint firstItem="j2j-ra-0QC" firstAttribute="top" secondItem="FtK-7J-SvC" secondAttribute="top" id="RbZ-tc-KUR"/>
+                            <constraint firstAttribute="bottom" secondItem="j2j-ra-0QC" secondAttribute="bottom" id="jGZ-uT-zOv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="j2j-ra-0QC" id="drt-29-KBy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIP-fA-F0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
