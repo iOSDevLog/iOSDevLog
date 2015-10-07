@@ -44,6 +44,8 @@
 		6C8BEBBA1BC5814800DAE00C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C8BEBBB1BC5823000DAE00C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C8BEBBC1BC5823000DAE00C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6C8BEBBD1BC583AF00DAE00C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6C8BEBBE1BC583AF00DAE00C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				6C78825C1BC57B7200DCD717 /* zh-Hant */,
 				6C8BEBBA1BC5814800DAE00C /* fr */,
 				6C8BEBBC1BC5823000DAE00C /* ar */,
+				6C8BEBBE1BC583AF00DAE00C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				6C78825B1BC57B7200DCD717 /* zh-Hant */,
 				6C8BEBB91BC5814800DAE00C /* fr */,
 				6C8BEBBB1BC5823000DAE00C /* ar */,
+				6C8BEBBD1BC583AF00DAE00C /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
