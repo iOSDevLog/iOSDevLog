@@ -44,8 +44,25 @@ class ViewController: UIViewController {
         secure = !secure
     }
     
-    @IBAction func login() {
+    private struct AlertStrings {
+        struct LoginError {
+            static let Title = NSLocalizedString("Login Error",
+                comment: "Title of alert when user types in an incorrect user name or password")
+            static let Message = NSLocalizedString("Invalid user name or password",
+                comment: "Message in an alert when the user types in an incorrect user name or password")
+            static let DismissButton = NSLocalizedString("Try Again",
+                comment: "The only button available in an alert presented when the user types incorrect user name or password")
+        }
+    }
+    
+    // log in (set our Model)
+    @IBAction private func login() {
         loggedInUser = User.login(loginField.text ?? "", password: passwordField.text ?? "")
+        if loggedInUser == nil {
+            let alert = UIAlertController(title: AlertStrings.LoginError.Title, message: AlertStrings.LoginError.Message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: AlertStrings.LoginError.DismissButton, style: UIAlertActionStyle.Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     var image: UIImage? {
