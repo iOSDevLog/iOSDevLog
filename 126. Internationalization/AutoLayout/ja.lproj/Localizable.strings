@@ -1,0 +1,6 @@
+/* Prompt for the user's password when it is not secure (i.e. plain text) */
+"Password" = "パスワード";
+
+/* Prompt for an obscured (not plain text) password */
+"Secured Password" = "セキュリティパスワード";
+

@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         
         passwordLabel?.text = secure ? securedPassword : password
         
-        passwordLabel.text = secure ? "Secured Password" : "Password"
         nameLabel.text = loggedInUser?.name
         companyLabel.text = loggedInUser?.company
         image = loggedInUser?.image
