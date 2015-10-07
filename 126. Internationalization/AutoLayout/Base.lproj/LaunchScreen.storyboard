@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Dev Log Internationalization" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX0-jH-MNQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Dev Log Internationalization" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX0-jH-MNQ">
                                 <rect key="frame" x="88" y="282" width="424" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -36,8 +36,10 @@
                         <constraints>
                             <constraint firstItem="498-lg-uwg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G7A-TT-UR8"/>
                             <constraint firstItem="IX0-jH-MNQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K3h-uR-wOU"/>
+                            <constraint firstItem="IX0-jH-MNQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="LL6-Qd-eO1"/>
                             <constraint firstItem="IX0-jH-MNQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QyZ-yP-845"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="498-lg-uwg" secondAttribute="bottom" constant="8" symbolic="YES" id="Z5o-Lv-8bj"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IX0-jH-MNQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ybv-lm-RTC"/>
                         </constraints>
                     </view>
                 </viewController>

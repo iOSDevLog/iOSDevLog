@@ -22,3 +22,5 @@
 ![126.Internationalization-9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/126.Internationalization-9)
 
 ![126.Internationalization-10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/126.Internationalization-10)
+
+![126.Internationalization-11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/126.Internationalization-11)
