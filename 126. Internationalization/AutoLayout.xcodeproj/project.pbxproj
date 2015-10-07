@@ -31,6 +31,8 @@
 		6C78824B1BC571B100DCD717 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6C7882541BC5743C00DCD717 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C7882591BC577D300DCD717 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C78825B1BC57B7200DCD717 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6C78825C1BC57B7200DCD717 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6C7B210B1BB45A8F00108B02 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7B210E1BB45A9000108B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7B21101BB45A9000108B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C7882541BC5743C00DCD717 /* ja */,
+				6C78825C1BC57B7200DCD717 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6C7882591BC577D300DCD717 /* ja */,
+				6C78825B1BC57B7200DCD717 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
