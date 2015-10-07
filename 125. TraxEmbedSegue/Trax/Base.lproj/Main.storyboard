@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="1267" y="400"/>
         </scene>
-        <!--Image View Controller-->
+        <!--Waypoint Image View Controller-->
         <scene sceneID="nW5-nf-seh">
             <objects>
-                <viewController id="gz6-E4-6uQ" customClass="ImageViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gz6-E4-6uQ" customClass="WaypointImageViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qss-h7-B1b"/>
                         <viewControllerLayoutGuide type="bottom" id="PNv-Gh-Bx9"/>
