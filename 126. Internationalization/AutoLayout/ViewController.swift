@@ -50,7 +50,8 @@ class ViewController: UIViewController {
             let lastLoginFormatString = NSLocalizedString("Last Login %@ days ago at %@",
                 comment: "Reports the number of days ago and time that the user last logged in")
             lastLoginLabel.text = String.localizedStringWithFormat(lastLoginFormatString, daysAgo, time)
-        } else {
+        }
+        else {
             lastLoginLabel.text = ""
         }
     }

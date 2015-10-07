@@ -1,6 +1,9 @@
 /* Message in an alert when the user types in an incorrect user name or password */
 "Invalid user name or password" = "無効なユーザー名もしくはパスワード";
 
+/* Reports the number of days ago and time that the user last logged in */
+"Last Login %@ days ago at %@" = "最終ログイン: %@日前 %@";
+
 /* Title of alert when user types in an incorrect user name or password */
 "Login Error" = "ログインエラー";
 
