@@ -39,6 +39,20 @@ class ViewController: UIViewController {
         nameLabel.text = loggedInUser?.name
         companyLabel.text = loggedInUser?.company
         image = loggedInUser?.image
+        if let lastLogin = loggedInUser?.lastLogin {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+            dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
+            let time = dateFormatter.stringFromDate(lastLogin)
+            let numberFormatter = NSNumberFormatter()
+            numberFormatter.maximumFractionDigits = 1
+            let daysAgo = numberFormatter.stringFromNumber(-lastLogin.timeIntervalSinceNow/(60*60*24))!
+            let lastLoginFormatString = NSLocalizedString("Last Login %@ days ago at %@",
+                comment: "Reports the number of days ago and time that the user last logged in")
+            lastLoginLabel.text = String.localizedStringWithFormat(lastLoginFormatString, daysAgo, time)
+        } else {
+            lastLoginLabel.text = ""
+        }
     }
     
     @IBAction func toggleSecurity() {
