@@ -27,6 +27,14 @@ class ViewController: UIViewController {
     
     private func updateUI() {
         passwordField.secureTextEntry = secure
+        
+        let password = NSLocalizedString("Password",
+            comment: "Prompt for the user's password when it is not secure (i.e. plain text)")
+        let securedPassword = NSLocalizedString("Secured Password",
+            comment: "Prompt for an obscured (not plain text) password")
+        
+        passwordLabel?.text = secure ? securedPassword : password
+        
         passwordLabel.text = secure ? "Secured Password" : "Password"
         nameLabel.text = loggedInUser?.name
         companyLabel.text = loggedInUser?.company
