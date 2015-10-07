@@ -74,10 +74,12 @@
     <body>
       <trans-unit id="Password">
         <source>Password</source>
+        <target>パスワード</target>
         <note>Prompt for the user's password when it is not secure (i.e. plain text)</note>
       </trans-unit>
       <trans-unit id="Secured Password">
         <source>Secured Password</source>
+        <target>セキュリティパスワード</target>
         <note>Prompt for an obscured (not plain text) password</note>
       </trans-unit>
     </body>
