@@ -24,7 +24,8 @@ class BouncerBehavior: UIDynamicBehavior {
     lazy var blockBehavior: UIDynamicItemBehavior = {
         let lazilyCreatedBlockBehavior = UIDynamicItemBehavior()
         lazilyCreatedBlockBehavior.allowsRotation = true
-        lazilyCreatedBlockBehavior.elasticity = 0.85
+        
+        lazilyCreatedBlockBehavior.elasticity = CGFloat(NSUserDefaults.standardUserDefaults().doubleForKey("BouncerBehavior.Elasticity"))
         lazilyCreatedBlockBehavior.friction = 0
         lazilyCreatedBlockBehavior.resistance = 0
         return lazilyCreatedBlockBehavior

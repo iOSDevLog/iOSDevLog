@@ -10,47 +10,19 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Name</string>
-			<key>Key</key>
-			<string>name_preference</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Enabled</string>
-			<key>Key</key>
-			<string>enabled_preference</string>
-			<key>DefaultValue</key>
-			<true/>
+			<string>Elasticity</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSSliderSpecifier</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>BouncerBehavior.Elasticity</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
+			<real>0.85</real>
 			<key>MinimumValue</key>
-			<integer>0</integer>
+			<real>0.5</real>
 			<key>MaximumValue</key>
-			<integer>1</integer>
+			<real>1.1</real>
 			<key>MinimumValueImage</key>
 			<string></string>
 			<key>MaximumValueImage</key>
