@@ -28,8 +28,12 @@ class BouncerBehavior: UIDynamicBehavior {
         lazilyCreatedBlockBehavior.elasticity = CGFloat(NSUserDefaults.standardUserDefaults().doubleForKey("BouncerBehavior.Elasticity"))
         lazilyCreatedBlockBehavior.friction = 0
         lazilyCreatedBlockBehavior.resistance = 0
+        NSNotificationCenter.defaultCenter().addObserverForName(NSUserDefaultsDidChangeNotification, object: nil, queue: nil, usingBlock: { (notifaction) -> Void in
+            lazilyCreatedBlockBehavior.elasticity = CGFloat(NSUserDefaults.standardUserDefaults().doubleForKey("BouncerBehavior.Elasticity"))
+        })
+        
         return lazilyCreatedBlockBehavior
-        }()
+    }()
     
     override init() {
         super.init()
