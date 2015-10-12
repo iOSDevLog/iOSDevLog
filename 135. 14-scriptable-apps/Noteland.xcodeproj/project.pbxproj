@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		844BE34B195B6170003E264C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844BE34A195B6170003E264C /* Cocoa.framework */; };
+		844BE355195B6170003E264C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844BE353195B6170003E264C /* InfoPlist.strings */; };
+		844BE357195B6170003E264C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE356195B6170003E264C /* main.m */; };
+		844BE35B195B6170003E264C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 844BE359195B6170003E264C /* Credits.rtf */; };
+		844BE35E195B6170003E264C /* NLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE35D195B6170003E264C /* NLAppDelegate.m */; };
+		844BE361195B6170003E264C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844BE35F195B6170003E264C /* MainMenu.xib */; };
+		844BE363195B6170003E264C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844BE362195B6170003E264C /* Images.xcassets */; };
+		844BE36A195B6170003E264C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844BE369195B6170003E264C /* XCTest.framework */; };
+		844BE36B195B6170003E264C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844BE34A195B6170003E264C /* Cocoa.framework */; };
+		844BE373195B6170003E264C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844BE371195B6170003E264C /* InfoPlist.strings */; };
+		844BE375195B6170003E264C /* NotelandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE374195B6170003E264C /* NotelandTests.m */; };
+		844BE380195B61C9003E264C /* NLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE37F195B61C9003E264C /* NLApplication.m */; };
+		844BE382195B778F003E264C /* noteland.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 844BE381195B778F003E264C /* noteland.sdef */; };
+		844BE387195B7A18003E264C /* NLNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE384195B7A18003E264C /* NLNote.m */; };
+		844BE388195B7A18003E264C /* NLTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BE386195B7A18003E264C /* NLTag.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		844BE36C195B6170003E264C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844BE33F195B616F003E264C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844BE346195B616F003E264C;
+			remoteInfo = Noteland;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		844BE347195B6170003E264C /* Noteland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noteland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844BE34A195B6170003E264C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		844BE34D195B6170003E264C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		844BE34E195B6170003E264C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		844BE34F195B6170003E264C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		844BE352195B6170003E264C /* Noteland-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Noteland-Info.plist"; sourceTree = "<group>"; };
+		844BE354195B6170003E264C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		844BE356195B6170003E264C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		844BE358195B6170003E264C /* Noteland-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Noteland-Prefix.pch"; sourceTree = "<group>"; };
+		844BE35A195B6170003E264C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		844BE35C195B6170003E264C /* NLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLAppDelegate.h; sourceTree = "<group>"; };
+		844BE35D195B6170003E264C /* NLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLAppDelegate.m; sourceTree = "<group>"; };
+		844BE360195B6170003E264C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		844BE362195B6170003E264C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		844BE368195B6170003E264C /* NotelandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotelandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844BE369195B6170003E264C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		844BE370195B6170003E264C /* NotelandTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotelandTests-Info.plist"; sourceTree = "<group>"; };
+		844BE372195B6170003E264C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		844BE374195B6170003E264C /* NotelandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotelandTests.m; sourceTree = "<group>"; };
+		844BE37E195B61C9003E264C /* NLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLApplication.h; sourceTree = "<group>"; };
+		844BE37F195B61C9003E264C /* NLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLApplication.m; sourceTree = "<group>"; };
+		844BE381195B778F003E264C /* noteland.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = noteland.sdef; sourceTree = "<group>"; };
+		844BE383195B7A18003E264C /* NLNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLNote.h; sourceTree = "<group>"; };
+		844BE384195B7A18003E264C /* NLNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLNote.m; sourceTree = "<group>"; };
+		844BE385195B7A18003E264C /* NLTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLTag.h; sourceTree = "<group>"; };
+		844BE386195B7A18003E264C /* NLTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLTag.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		844BE344195B616F003E264C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE34B195B6170003E264C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844BE365195B6170003E264C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE36B195B6170003E264C /* Cocoa.framework in Frameworks */,
+				844BE36A195B6170003E264C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		844BE33E195B616F003E264C = {
+			isa = PBXGroup;
+			children = (
+				844BE350195B6170003E264C /* Noteland */,
+				844BE36E195B6170003E264C /* NotelandTests */,
+				844BE349195B6170003E264C /* Frameworks */,
+				844BE348195B6170003E264C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		844BE348195B6170003E264C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				844BE347195B6170003E264C /* Noteland.app */,
+				844BE368195B6170003E264C /* NotelandTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		844BE349195B6170003E264C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				844BE34A195B6170003E264C /* Cocoa.framework */,
+				844BE369195B6170003E264C /* XCTest.framework */,
+				844BE34C195B6170003E264C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		844BE34C195B6170003E264C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				844BE34D195B6170003E264C /* AppKit.framework */,
+				844BE34E195B6170003E264C /* CoreData.framework */,
+				844BE34F195B6170003E264C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		844BE350195B6170003E264C /* Noteland */ = {
+			isa = PBXGroup;
+			children = (
+				844BE381195B778F003E264C /* noteland.sdef */,
+				844BE37E195B61C9003E264C /* NLApplication.h */,
+				844BE37F195B61C9003E264C /* NLApplication.m */,
+				844BE35C195B6170003E264C /* NLAppDelegate.h */,
+				844BE35D195B6170003E264C /* NLAppDelegate.m */,
+				844BE383195B7A18003E264C /* NLNote.h */,
+				844BE384195B7A18003E264C /* NLNote.m */,
+				844BE385195B7A18003E264C /* NLTag.h */,
+				844BE386195B7A18003E264C /* NLTag.m */,
+				844BE35F195B6170003E264C /* MainMenu.xib */,
+				844BE362195B6170003E264C /* Images.xcassets */,
+				844BE351195B6170003E264C /* Supporting Files */,
+			);
+			path = Noteland;
+			sourceTree = "<group>";
+		};
+		844BE351195B6170003E264C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				844BE352195B6170003E264C /* Noteland-Info.plist */,
+				844BE353195B6170003E264C /* InfoPlist.strings */,
+				844BE356195B6170003E264C /* main.m */,
+				844BE358195B6170003E264C /* Noteland-Prefix.pch */,
+				844BE359195B6170003E264C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		844BE36E195B6170003E264C /* NotelandTests */ = {
+			isa = PBXGroup;
+			children = (
+				844BE374195B6170003E264C /* NotelandTests.m */,
+				844BE36F195B6170003E264C /* Supporting Files */,
+			);
+			path = NotelandTests;
+			sourceTree = "<group>";
+		};
+		844BE36F195B6170003E264C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				844BE370195B6170003E264C /* NotelandTests-Info.plist */,
+				844BE371195B6170003E264C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		844BE346195B616F003E264C /* Noteland */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844BE378195B6170003E264C /* Build configuration list for PBXNativeTarget "Noteland" */;
+			buildPhases = (
+				844BE343195B616F003E264C /* Sources */,
+				844BE344195B616F003E264C /* Frameworks */,
+				844BE345195B616F003E264C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Noteland;
+			productName = Noteland;
+			productReference = 844BE347195B6170003E264C /* Noteland.app */;
+			productType = "com.apple.product-type.application";
+		};
+		844BE367195B6170003E264C /* NotelandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844BE37B195B6170003E264C /* Build configuration list for PBXNativeTarget "NotelandTests" */;
+			buildPhases = (
+				844BE364195B6170003E264C /* Sources */,
+				844BE365195B6170003E264C /* Frameworks */,
+				844BE366195B6170003E264C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844BE36D195B6170003E264C /* PBXTargetDependency */,
+			);
+			name = NotelandTests;
+			productName = NotelandTests;
+			productReference = 844BE368195B6170003E264C /* NotelandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		844BE33F195B616F003E264C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Q Branch LLC";
+				TargetAttributes = {
+					844BE367195B6170003E264C = {
+						TestTargetID = 844BE346195B616F003E264C;
+					};
+				};
+			};
+			buildConfigurationList = 844BE342195B616F003E264C /* Build configuration list for PBXProject "Noteland" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 844BE33E195B616F003E264C;
+			productRefGroup = 844BE348195B6170003E264C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				844BE346195B616F003E264C /* Noteland */,
+				844BE367195B6170003E264C /* NotelandTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		844BE345195B616F003E264C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE355195B6170003E264C /* InfoPlist.strings in Resources */,
+				844BE363195B6170003E264C /* Images.xcassets in Resources */,
+				844BE382195B778F003E264C /* noteland.sdef in Resources */,
+				844BE35B195B6170003E264C /* Credits.rtf in Resources */,
+				844BE361195B6170003E264C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844BE366195B6170003E264C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE373195B6170003E264C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		844BE343195B616F003E264C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE35E195B6170003E264C /* NLAppDelegate.m in Sources */,
+				844BE380195B61C9003E264C /* NLApplication.m in Sources */,
+				844BE357195B6170003E264C /* main.m in Sources */,
+				844BE388195B7A18003E264C /* NLTag.m in Sources */,
+				844BE387195B7A18003E264C /* NLNote.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844BE364195B6170003E264C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BE375195B6170003E264C /* NotelandTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		844BE36D195B6170003E264C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844BE346195B616F003E264C /* Noteland */;
+			targetProxy = 844BE36C195B6170003E264C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		844BE353195B6170003E264C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844BE354195B6170003E264C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		844BE359195B6170003E264C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844BE35A195B6170003E264C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		844BE35F195B6170003E264C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844BE360195B6170003E264C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		844BE371195B6170003E264C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844BE372195B6170003E264C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		844BE376195B6170003E264C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		844BE377195B6170003E264C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		844BE379195B6170003E264C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noteland/Noteland-Prefix.pch";
+				INFOPLIST_FILE = "Noteland/Noteland-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		844BE37A195B6170003E264C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noteland/Noteland-Prefix.pch";
+				INFOPLIST_FILE = "Noteland/Noteland-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		844BE37C195B6170003E264C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Noteland.app/Contents/MacOS/Noteland";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noteland/Noteland-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NotelandTests/NotelandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		844BE37D195B6170003E264C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Noteland.app/Contents/MacOS/Noteland";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noteland/Noteland-Prefix.pch";
+				INFOPLIST_FILE = "NotelandTests/NotelandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		844BE342195B616F003E264C /* Build configuration list for PBXProject "Noteland" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844BE376195B6170003E264C /* Debug */,
+				844BE377195B6170003E264C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844BE378195B6170003E264C /* Build configuration list for PBXNativeTarget "Noteland" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844BE379195B6170003E264C /* Debug */,
+				844BE37A195B6170003E264C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		844BE37B195B6170003E264C /* Build configuration list for PBXNativeTarget "NotelandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844BE37C195B6170003E264C /* Debug */,
+				844BE37D195B6170003E264C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 844BE33F195B616F003E264C /* Project object */;
+}
