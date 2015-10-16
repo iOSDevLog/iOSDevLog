@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xhd-aH-v0H">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reactive Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-xV-316">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-2D-390">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEJ-2R-X9u">
+                                <rect key="frame" x="508" y="148" width="73" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <segue destination="OEf-Ih-dzl" kind="show" id="ZZ1-iz-Ey0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Invalid credentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-GS-eQF">
+                                <rect key="frame" x="20" y="161" width="480" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEJ-2R-X9u" secondAttribute="trailing" constant="-1" id="EVe-Ny-Ntw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zEO-2D-390" secondAttribute="trailing" id="Ecd-En-kcq"/>
+                            <constraint firstItem="uEJ-2R-X9u" firstAttribute="leading" secondItem="hOY-GS-eQF" secondAttribute="trailing" constant="8" symbolic="YES" id="IsP-uF-ZE7"/>
+                            <constraint firstItem="hOY-GS-eQF" firstAttribute="baseline" secondItem="uEJ-2R-X9u" secondAttribute="baseline" id="JgL-uY-4Yc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hOY-GS-eQF" secondAttribute="leading" id="LUa-iL-Fiw"/>
+                            <constraint firstItem="uEJ-2R-X9u" firstAttribute="top" secondItem="zEO-2D-390" secondAttribute="bottom" constant="8" id="TbO-xz-O0d"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zEO-2D-390" secondAttribute="leading" id="jsQ-pS-D0D"/>
+                            <constraint firstItem="zEO-2D-390" firstAttribute="top" secondItem="CfR-xV-316" secondAttribute="bottom" constant="8" id="kaa-7s-0CX"/>
+                            <constraint firstItem="CfR-xV-316" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="khO-XI-kqD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CfR-xV-316" secondAttribute="trailing" id="w3b-bY-dTB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CfR-xV-316" secondAttribute="leading" id="yKE-GR-wvX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Reactive Sign In" id="hSK-SZ-Vi0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1299" y="-369"/>
+        </scene>
+        <!--Kitten!-->
+        <scene sceneID="9XV-ta-ySw">
+            <objects>
+                <viewController id="OEf-Ih-dzl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZbK-4S-wRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="IpD-dw-nDq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cam-EU-Yc2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="zjy-GV-yzJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.flickr.com/photos/50362297@N07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-Mr-HKz">
+                                <rect key="frame" x="20" y="571" width="353" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IpD-dw-nDq" firstAttribute="top" secondItem="zjy-GV-yzJ" secondAttribute="bottom" id="A2o-Jb-0JB"/>
+                            <constraint firstItem="zjy-GV-yzJ" firstAttribute="leading" secondItem="Cam-EU-Yc2" secondAttribute="leading" id="FZm-hc-dNL"/>
+                            <constraint firstItem="IpD-dw-nDq" firstAttribute="top" secondItem="3Rh-Mr-HKz" secondAttribute="bottom" constant="8" symbolic="YES" id="RfE-Xd-V6I"/>
+                            <constraint firstAttribute="trailing" secondItem="zjy-GV-yzJ" secondAttribute="trailing" id="Wwn-rW-EbH"/>
+                            <constraint firstItem="zjy-GV-yzJ" firstAttribute="top" secondItem="ZbK-4S-wRu" secondAttribute="bottom" id="a0S-Zp-027"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Rh-Mr-HKz" secondAttribute="leading" id="qav-MG-TS9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kitten!" id="3ju-v6-pWb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lq2-oL-dIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2097" y="-369"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="837-lk-71t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhd-aH-v0H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pm1-C1-8K1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Clf-A3-f6l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbn-n6-8O4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="-369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kitten" width="179" height="246"/>
+    </resources>
 </document>
