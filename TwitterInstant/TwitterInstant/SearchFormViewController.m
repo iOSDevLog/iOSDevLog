@@ -8,6 +8,7 @@
 
 #import "SearchFormViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <RACEXTScope.h>
 
 @interface SearchFormViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *searchText;
@@ -20,9 +21,11 @@
     
     self.title = @"Twitter Instant";
     
+    @weakify(self)
     [[self.searchText.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor whiteColor] : [UIColor yellowColor];
     }] subscribeNext:^(UIColor *color) {
+        @strongify(self)
         self.searchText.backgroundColor = color;
     }];
 }
