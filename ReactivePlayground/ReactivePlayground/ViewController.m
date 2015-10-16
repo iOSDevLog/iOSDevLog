@@ -25,15 +25,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[[self.usernameTextField.rac_textSignal map:^id(NSString *text) {
-        return @(text.length);
-    }]
-      filter:^BOOL(NSNumber *length) {
-          return [length intValue] > 3;
-      }]
-     subscribeNext:^(id x) {
-         NSLog(@"%@", x);
-     }];
+    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString *text) {
+        return @([self isValidUsername:text]);
+    }];
+    
+    RACSignal *validPasswordSignal = [self.passwordTextField.rac_textSignal map:^id(NSString *text) {
+        return @([self isValidPassword:text]);
+    }];
+    
+    [[validUsernameSignal map:^id(NSNumber *usernameValid) {
+        return [usernameValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
+    }] subscribeNext:^(UIColor *color) {
+        self.usernameTextField.backgroundColor = color;
+    }];
+    
+    [[validPasswordSignal map:^id(NSNumber *passwordValid) {
+        return [passwordValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
+    }] subscribeNext:^(UIColor *color) {
+        self.passwordTextField.backgroundColor = color;
+    }];
+}
+
+- (BOOL)isValidUsername:(NSString *)username {
+    return username.length > 3;
+}
+
+- (BOOL)isValidPassword:(NSString *)password {
+    return password.length > 3;
 }
 
 @end
