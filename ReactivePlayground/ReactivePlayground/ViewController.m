@@ -55,8 +55,10 @@
         self.signInButton.enabled = [signupActive boolValue];
     }];
     
-    [[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        NSLog(@"Button clicked");
+    [[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
+        return [self signInButton];
+    }] subscribeNext:^(id x) {
+        NSLog(@"Sign in result: %@", x);
     }];
 }
 
