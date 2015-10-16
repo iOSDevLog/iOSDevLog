@@ -15,9 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UILabel *signInFailureText;
-
-@property (nonatomic) BOOL passwordIsValid;
-@property (nonatomic) BOOL usernameIsValid;
 @end
 
 @implementation ViewController
@@ -40,6 +37,12 @@
     RAC(self.usernameTextField, backgroundColor) = [validUsernameSignal map:^id(NSNumber *passwordValid) {
         return [passwordValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
     }];
+    
+    RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, validPasswordSignal]
+                                                      reduce:^id(NSNumber *usernameValid, NSNumber *passwordValid){
+                                                          
+                                                          return @([usernameValid boolValue] && [passwordValid boolValue]);
+                                                      }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
