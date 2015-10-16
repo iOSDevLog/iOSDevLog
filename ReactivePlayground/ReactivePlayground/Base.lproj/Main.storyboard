@@ -65,6 +65,7 @@
                         <outlet property="signInButton" destination="uEJ-2R-X9u" id="eK0-rh-HhE"/>
                         <outlet property="signInFailureText" destination="hOY-GS-eQF" id="0NH-0E-wtg"/>
                         <outlet property="usernameTextField" destination="CfR-xV-316" id="fB7-q6-FX9"/>
+                        <segue destination="OEf-Ih-dzl" kind="show" identifier="signInSuccess" id="GXD-DB-pa2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

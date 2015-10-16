@@ -57,8 +57,12 @@
     
     [[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
         return [self signInSignal];
-    }] subscribeNext:^(id x) {
-        NSLog(@"Sign in result: %@", x);
+    }] subscribeNext:^(NSNumber *signedIn) {
+        BOOL success = [signedIn boolValue];
+        self.signInFailureText.hidden = success;
+        if (success) {
+            [self performSegueWithIdentifier:@"signInSuccess" sender:self];
+        }
     }];
 }
 
