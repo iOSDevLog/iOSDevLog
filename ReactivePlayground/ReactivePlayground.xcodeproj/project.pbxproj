@@ -13,6 +13,7 @@
 		6C81A9971BD0E18500E0EC03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A9951BD0E18500E0EC03 /* Main.storyboard */; };
 		6C81A9991BD0E18500E0EC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A9981BD0E18500E0EC03 /* Assets.xcassets */; };
 		6C81A99C1BD0E18500E0EC03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A99A1BD0E18500E0EC03 /* LaunchScreen.storyboard */; };
+		6C81A9A51BD0ECFC00E0EC03 /* DummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C81A9A41BD0ECFC00E0EC03 /* DummySignInService.m */; settings = {ASSET_TAGS = (); }; };
 		965AFF877456061F4DF0279A /* libPods-ReactivePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E98AD3C510E9E1545E393B1C /* libPods-ReactivePlayground.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		6C81A9981BD0E18500E0EC03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C81A99B1BD0E18500E0EC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C81A99D1BD0E18500E0EC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C81A9A31BD0ECFC00E0EC03 /* DummySignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummySignInService.h; sourceTree = "<group>"; };
+		6C81A9A41BD0ECFC00E0EC03 /* DummySignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummySignInService.m; sourceTree = "<group>"; };
 		E75B9EE18606E9401F51CEDF /* Pods-ReactivePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlayground/Pods-ReactivePlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		E98AD3C510E9E1545E393B1C /* libPods-ReactivePlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactivePlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +80,8 @@
 				6C81A9901BD0E18500E0EC03 /* AppDelegate.m */,
 				6C81A9921BD0E18500E0EC03 /* ViewController.h */,
 				6C81A9931BD0E18500E0EC03 /* ViewController.m */,
+				6C81A9A31BD0ECFC00E0EC03 /* DummySignInService.h */,
+				6C81A9A41BD0ECFC00E0EC03 /* DummySignInService.m */,
 				6C81A9951BD0E18500E0EC03 /* Main.storyboard */,
 				6C81A9981BD0E18500E0EC03 /* Assets.xcassets */,
 				6C81A99A1BD0E18500E0EC03 /* LaunchScreen.storyboard */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C81A9A51BD0ECFC00E0EC03 /* DummySignInService.m in Sources */,
 				6C81A9941BD0E18500E0EC03 /* ViewController.m in Sources */,
 				6C81A9911BD0E18500E0EC03 /* AppDelegate.m in Sources */,
 				6C81A98E1BD0E18500E0EC03 /* main.m in Sources */,
