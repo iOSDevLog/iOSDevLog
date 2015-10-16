@@ -22,7 +22,7 @@
 
 - (IBAction)changeSegment:(id)sender
 {
-    self.segmentLabel.text = [NSString stringWithFormat:@"Segment %i", self.segmentedControl.selectedSegmentIndex];
+    self.segmentLabel.text = [NSString stringWithFormat:@"Segment %li", self.segmentedControl.selectedSegmentIndex];
 }
 
 @end
