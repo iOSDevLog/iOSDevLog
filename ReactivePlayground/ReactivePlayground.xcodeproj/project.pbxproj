@@ -13,9 +13,11 @@
 		6C81A9971BD0E18500E0EC03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A9951BD0E18500E0EC03 /* Main.storyboard */; };
 		6C81A9991BD0E18500E0EC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A9981BD0E18500E0EC03 /* Assets.xcassets */; };
 		6C81A99C1BD0E18500E0EC03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C81A99A1BD0E18500E0EC03 /* LaunchScreen.storyboard */; };
+		965AFF877456061F4DF0279A /* libPods-ReactivePlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E98AD3C510E9E1545E393B1C /* libPods-ReactivePlayground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EB76FB89761B7A6CF597D31 /* Pods-ReactivePlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlayground/Pods-ReactivePlayground.release.xcconfig"; sourceTree = "<group>"; };
 		6C81A9891BD0E18500E0EC03 /* ReactivePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactivePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C81A98D1BD0E18500E0EC03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C81A98F1BD0E18500E0EC03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		6C81A9981BD0E18500E0EC03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C81A99B1BD0E18500E0EC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C81A99D1BD0E18500E0EC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75B9EE18606E9401F51CEDF /* Pods-ReactivePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlayground/Pods-ReactivePlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		E98AD3C510E9E1545E393B1C /* libPods-ReactivePlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactivePlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965AFF877456061F4DF0279A /* libPods-ReactivePlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55027D4239DAB1461957A8F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E98AD3C510E9E1545E393B1C /* libPods-ReactivePlayground.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C81A9801BD0E18500E0EC03 = {
 			isa = PBXGroup;
 			children = (
 				6C81A98B1BD0E18500E0EC03 /* ReactivePlayground */,
 				6C81A98A1BD0E18500E0EC03 /* Products */,
+				6FC23943ED0492898A13C396 /* Pods */,
+				55027D4239DAB1461957A8F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6FC23943ED0492898A13C396 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E75B9EE18606E9401F51CEDF /* Pods-ReactivePlayground.debug.xcconfig */,
+				5EB76FB89761B7A6CF597D31 /* Pods-ReactivePlayground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C81A9A01BD0E18500E0EC03 /* Build configuration list for PBXNativeTarget "ReactivePlayground" */;
 			buildPhases = (
+				A3071963DD305F85BE5DAE5E /* Check Pods Manifest.lock */,
 				6C81A9851BD0E18500E0EC03 /* Sources */,
 				6C81A9861BD0E18500E0EC03 /* Frameworks */,
 				6C81A9871BD0E18500E0EC03 /* Resources */,
+				55B052BA434F61D2FB16397A /* Embed Pods Frameworks */,
+				20747AD9496ABD62D7ED578A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20747AD9496ABD62D7ED578A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactivePlayground/Pods-ReactivePlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55B052BA434F61D2FB16397A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactivePlayground/Pods-ReactivePlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3071963DD305F85BE5DAE5E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C81A9851BD0E18500E0EC03 /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		6C81A9A11BD0E18500E0EC03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E75B9EE18606E9401F51CEDF /* Pods-ReactivePlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReactivePlayground/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		6C81A9A21BD0E18500E0EC03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB76FB89761B7A6CF597D31 /* Pods-ReactivePlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReactivePlayground/Info.plist;
@@ -300,6 +377,7 @@
 				6C81A9A21BD0E18500E0EC03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
