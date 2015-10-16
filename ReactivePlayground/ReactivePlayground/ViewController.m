@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DummySignInService.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController ()
@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UILabel *signInFailureText;
+
+@property (strong, nonatomic) DummySignInService *signInService;
 @end
 
 @implementation ViewController
@@ -24,6 +26,8 @@
     
     // initially hide the failure message
     self.signInFailureText.hidden = YES;
+    
+    self.signInService = [DummySignInService new];
     
     RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString *text) {
         return @([self isValidUsername:text]);
@@ -63,5 +67,18 @@
 - (BOOL)isValidPassword:(NSString *)password {
     return password.length > 3;
 }
+
+- (RACSignal *)signInSignal {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self.signInService signInWithUsername:self.usernameTextField.text
+                                      password:self.passwordTextField.text
+                                      complete:^(BOOL success) {
+                                          [subscriber sendNext:@(success)];
+                                          [subscriber sendCompleted];
+                                      }];
+        return nil;
+    }];
+}
+
 
 @end
