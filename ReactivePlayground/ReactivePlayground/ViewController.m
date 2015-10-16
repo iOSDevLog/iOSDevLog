@@ -33,16 +33,12 @@
         return @([self isValidPassword:text]);
     }];
     
-    [[validUsernameSignal map:^id(NSNumber *usernameValid) {
-        return [usernameValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
-    }] subscribeNext:^(UIColor *color) {
-        self.usernameTextField.backgroundColor = color;
+    RAC(self.passwordTextField, backgroundColor) = [validPasswordSignal map:^id(NSNumber *passwordValid) {
+        return [passwordValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
     }];
     
-    [[validPasswordSignal map:^id(NSNumber *passwordValid) {
+    RAC(self.usernameTextField, backgroundColor) = [validUsernameSignal map:^id(NSNumber *passwordValid) {
         return [passwordValid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
-    }] subscribeNext:^(UIColor *color) {
-        self.passwordTextField.backgroundColor = color;
     }];
 }
 
