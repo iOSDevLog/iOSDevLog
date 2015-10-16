@@ -55,15 +55,22 @@
         self.signInButton.enabled = [signupActive boolValue];
     }];
     
-    [[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
-        return [self signInSignal];
-    }] subscribeNext:^(NSNumber *signedIn) {
-        BOOL success = [signedIn boolValue];
-        self.signInFailureText.hidden = success;
-        if (success) {
-            [self performSegueWithIdentifier:@"signInSuccess" sender:self];
-        }
-    }];
+    [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+       doNext:^(id x) {
+           self.signInButton.enabled = NO;
+           self.signInFailureText.hidden = YES;
+       }]
+      flattenMap:^RACStream *(id value) {
+          return [self signInSignal];
+      }]
+     subscribeNext:^(NSNumber *signedIn) {
+         self.signInButton.enabled = YES;
+         BOOL success = [signedIn boolValue];
+         self.signInFailureText.hidden = success;
+         if (success) {
+             [self performSegueWithIdentifier:@"signInSuccess" sender:self];
+         }
+     }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
