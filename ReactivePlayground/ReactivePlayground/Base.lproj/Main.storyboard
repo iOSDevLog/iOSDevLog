@@ -34,9 +34,6 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <segue destination="OEf-Ih-dzl" kind="show" id="ZZ1-iz-Ey0"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Invalid credentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-GS-eQF">
                                 <rect key="frame" x="20" y="161" width="480" height="21"/>
