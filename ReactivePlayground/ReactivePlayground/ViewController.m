@@ -25,16 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    RACSignal *usernameSourceSignal = self.usernameTextField.rac_textSignal;
-    
-    RACSignal *filteredUsername = [usernameSourceSignal filter:^BOOL(id value) {
-        NSString *text = value;
-        return text.length > 3;
-    }];
-    
-    [filteredUsername subscribeNext:^(id x) {
-        NSLog(@"%@", x);
-    }];
+    [[[self.usernameTextField.rac_textSignal map:^id(NSString *text) {
+        return @(text.length);
+    }]
+      filter:^BOOL(NSNumber *length) {
+          return [length intValue] > 3;
+      }]
+     subscribeNext:^(id x) {
+         NSLog(@"%@", x);
+     }];
 }
 
 @end
