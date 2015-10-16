@@ -25,8 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.usernameTextField.rac_textSignal subscribeNext:^(id x) {
-        
+    [[self.usernameTextField.rac_textSignal filter:^BOOL(id value) {
+        NSString *text = value;
+        return text.length > 3;
+    }] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
 }
