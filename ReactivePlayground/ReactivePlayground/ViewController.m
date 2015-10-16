@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // initially hide the failure message
+    self.signInFailureText.hidden = YES;
+    
     RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString *text) {
         return @([self isValidUsername:text]);
     }];
