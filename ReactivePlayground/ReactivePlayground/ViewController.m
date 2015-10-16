@@ -43,6 +43,10 @@
                                                           
                                                           return @([usernameValid boolValue] && [passwordValid boolValue]);
                                                       }];
+    
+    [signUpActiveSignal subscribeNext:^(NSNumber *signupActive) {
+        self.signInButton.enabled = [signupActive boolValue];
+    }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
