@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C41C8B01BD4D6D80098942B /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41C8AF1BD4D6D80098942B /* Tweet.m */; settings = {ASSET_TAGS = (); }; };
 		6CE9DC601BD109650010A9C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9DC5F1BD109650010A9C1 /* main.m */; };
 		6CE9DC631BD109650010A9C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9DC621BD109650010A9C1 /* AppDelegate.m */; };
 		6CE9DC691BD109650010A9C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9DC671BD109650010A9C1 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C41C8AE1BD4D6D80098942B /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		6C41C8AF1BD4D6D80098942B /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		6CE9DC5B1BD109650010A9C1 /* TwitterInstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterInstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE9DC5F1BD109650010A9C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6CE9DC611BD109650010A9C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				6CE9DC791BD10AC30010A9C1 /* SearchResultsViewController.m */,
 				6CE9DC7B1BD10B260010A9C1 /* TableViewCell.h */,
 				6CE9DC7C1BD10B260010A9C1 /* TableViewCell.m */,
+				6C41C8AE1BD4D6D80098942B /* Tweet.h */,
+				6C41C8AF1BD4D6D80098942B /* Tweet.m */,
 				6CE9DC5E1BD109650010A9C1 /* Supporting Files */,
 			);
 			path = TwitterInstant;
@@ -237,6 +242,7 @@
 				6CE9DC631BD109650010A9C1 /* AppDelegate.m in Sources */,
 				6CE9DC601BD109650010A9C1 /* main.m in Sources */,
 				6CE9DC771BD10A110010A9C1 /* SearchFormViewController.m in Sources */,
+				6C41C8B01BD4D6D80098942B /* Tweet.m in Sources */,
 				6CE9DC7D1BD10B260010A9C1 /* TableViewCell.m in Sources */,
 				6CE9DC7A1BD10AC30010A9C1 /* SearchResultsViewController.m in Sources */,
 			);
