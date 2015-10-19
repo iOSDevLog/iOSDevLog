@@ -21,12 +21,8 @@
     
     self.title = @"Twitter Instant";
     
-    @weakify(self)
-    [[self.searchText.rac_textSignal map:^id(NSString *text) {
+    RAC(self.searchText, backgroundColor) = [self.searchText.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor whiteColor] : [UIColor yellowColor];
-    }] subscribeNext:^(UIColor *color) {
-        @strongify(self)
-        self.searchText.backgroundColor = color;
     }];
 }
 
