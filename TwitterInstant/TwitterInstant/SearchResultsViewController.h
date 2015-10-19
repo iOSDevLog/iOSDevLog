@@ -10,4 +10,6 @@
 
 @interface SearchResultsViewController : UITableViewController
 
+- (void)displayTweets:(NSArray *)tweets;
+
 @end

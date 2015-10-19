@@ -11,6 +11,9 @@
 #import <RACEXTScope.h>
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
+#import "Tweet.h"
+#import "NSArray+LinqExtensions.h"
+#import "SearchResultsViewController.h"
 
 typedef NS_ENUM(NSInteger, RWTwitterInstantError) {
     RWTwitterInstantErrorAccessDenied,
@@ -20,10 +23,14 @@ typedef NS_ENUM(NSInteger, RWTwitterInstantError) {
 static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
 
 @interface SearchFormViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *searchText;
 
 @property (strong, nonatomic) ACAccountStore *accountStore;
 @property (strong, nonatomic) ACAccountType *twitterAccountType;
+
+@property (strong, nonatomic) SearchResultsViewController *resultsViewController;
+
 @end
 
 @implementation SearchFormViewController
@@ -32,6 +39,8 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
     [super viewDidLoad];
     
     self.title = @"Twitter Instant";
+    
+    self.resultsViewController = self.splitViewController.viewControllers[1];
     
     self.accountStore = [[ACAccountStore alloc] init];
     self.twitterAccountType = [self.accountStore
@@ -56,10 +65,14 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
            return [self signalForSearchWithText:text];
        }]
       deliverOn:[RACScheduler mainThreadScheduler]]
-     subscribeNext:^(id x) {
-         NSLog(@"%@", x);
+     subscribeNext:^(NSDictionary *jsonSearchResult) {
+         NSArray *statuses = jsonSearchResult[@"statuses"];
+         NSArray *tweets = [statuses linq_select:^id(id tweet) {
+             return [Tweet tweetWithStatus:tweet];
+         }];
+         [self.resultsViewController displayTweets:tweets];
      } error:^(NSError *error) {
-         NSLog(@"An error occurred: %@", error); 
+         NSLog(@"An error occurred: %@", error);
      }];
 }
 

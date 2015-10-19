@@ -9,6 +9,7 @@
 #import "SearchResultsViewController.h"
 #import "TableViewCell.h"
 #import "Tweet.h"
+#import "NSArray+LinqExtensions.h"
 
 @interface SearchResultsViewController ()
 
@@ -22,6 +23,11 @@
     [super viewDidLoad];
     
     self.tweets = [NSArray array];
+}
+
+- (void)displayTweets:(NSArray *)tweets {
+    self.tweets = tweets;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
