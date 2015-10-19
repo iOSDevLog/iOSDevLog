@@ -40,6 +40,8 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
     
     self.title = @"Twitter Instant";
     
+    [self styleTextField:self.searchText];
+    
     self.resultsViewController = self.splitViewController.viewControllers[1];
     
     self.accountStore = [[ACAccountStore alloc] init];
@@ -75,6 +77,13 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
      } error:^(NSError *error) {
          NSLog(@"An error occurred: %@", error);
      }];
+}
+
+- (void)styleTextField:(UITextField *)textField {
+    CALayer *textFieldLayer = textField.layer;
+    textFieldLayer.borderColor = [UIColor grayColor].CGColor;
+    textFieldLayer.borderWidth = 2.0f;
+    textFieldLayer.cornerRadius = 0.0f;
 }
 
 - (BOOL)isValidSearchText:(NSString *)text {
