@@ -36,6 +36,10 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
     RAC(self.searchText, backgroundColor) = [self.searchText.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor whiteColor] : [UIColor yellowColor];
     }];
+    
+    self.accountStore = [[ACAccountStore alloc] init];
+    self.twitterAccountType = [self.accountStore
+                               accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
 }
 
 - (BOOL)isValidSearchText:(NSString *)text {
