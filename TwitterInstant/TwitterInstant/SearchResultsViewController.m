@@ -10,6 +10,7 @@
 #import "TableViewCell.h"
 #import "Tweet.h"
 #import "NSArray+LinqExtensions.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface SearchResultsViewController ()
 
@@ -30,6 +31,19 @@
     [self.tableView reloadData];
 }
 
+- (RACSignal *)signalForLoadingImage:(NSString *)imageUrl {
+    RACScheduler *scheduler = [RACScheduler
+                               schedulerWithPriority:RACSchedulerPriorityBackground];
+    
+    return [[RACSignal createSignal:^RACDisposable *(id subscriber) {
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+        UIImage *image = [UIImage imageWithData:data];
+        [subscriber sendNext:image];
+        [subscriber sendCompleted];
+        return nil;
+    }] subscribeOn:scheduler];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -43,6 +57,13 @@
     Tweet *tweet = self.tweets[indexPath.row];
     cell.twitterStatusText.text = tweet.status;
     cell.twitterUsernameText.text = [NSString stringWithFormat:@"@%@",tweet.username];
+    cell.twitterAvatarView.image = nil;
+    
+    [[[self signalForLoadingImage:tweet.profileImageUrl]
+      deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(UIImage *image) {
+         cell.twitterAvatarView.image = image;
+     }];
     
     return cell;
 }

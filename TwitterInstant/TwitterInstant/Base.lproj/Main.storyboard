@@ -115,6 +115,7 @@
                                 <connections>
                                     <outlet property="twitterAvatarView" destination="heI-Vd-3mi" id="xSa-Jl-Ugn"/>
                                     <outlet property="twitterStatusText" destination="ZEk-BF-Vyt" id="ca5-cJ-nv8"/>
+                                    <outlet property="twitterUsernameText" destination="zg6-PL-RpN" id="Spb-Mi-NGZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
