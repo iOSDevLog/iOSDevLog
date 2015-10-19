@@ -6,6 +6,7 @@
 target 'TwitterInstant' do
 
 pod 'ReactiveCocoa', '~> 2.5'
+pod 'LinqToObjectiveC', '~> 2.0.0'
 
 end
 
