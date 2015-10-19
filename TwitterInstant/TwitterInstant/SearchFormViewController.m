@@ -42,15 +42,21 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
     }];
     
     @weakify(self)
-    [[[self requestAccessToTwitterSignal]
-      then:^RACSignal *{
+    
+    
+    [[[[self requestAccessToTwitterSignal]
+       then:^RACSignal *{
+           @strongify(self)
+           return self.searchText.rac_textSignal;
+       }]
+      filter:^BOOL(NSString *text) {
           @strongify(self)
-          return self.searchText.rac_textSignal;
+          return [self isValidSearchText:text];
       }]
      subscribeNext:^(id x) {
          NSLog(@"%@", x);
-     } error:^(NSError *error) {
-         NSLog(@"An error occurred: %@", error);
+     } error:^(NSError *error) { 
+         NSLog(@"An error occurred: %@", error); 
      }];
 }
 
