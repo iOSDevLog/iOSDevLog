@@ -9,9 +9,21 @@
 #import "SearchFormViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <RACEXTScope.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+
+typedef NS_ENUM(NSInteger, RWTwitterInstantError) {
+    RWTwitterInstantErrorAccessDenied,
+    RWTwitterInstantErrorNoTwitterAccounts,
+    RWTwitterInstantErrorInvalidResponse
+};
+static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
 
 @interface SearchFormViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *searchText;
+
+@property (strong, nonatomic) ACAccountStore *accountStore;
+@property (strong, nonatomic) ACAccountType *twitterAccountType;
 @end
 
 @implementation SearchFormViewController
