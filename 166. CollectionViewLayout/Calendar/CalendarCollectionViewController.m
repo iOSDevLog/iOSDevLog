@@ -27,6 +27,11 @@ static NSString * const reuseHeaderIdentifier = @"HeaderView";
     [self.collectionView registerNib:headerViewNib forSupplementaryViewOfKind:@"HourHeaderView" withReuseIdentifier:reuseHeaderIdentifier];
     
     CalendarDataSource *dataSource = (CalendarDataSource *)self.collectionView.dataSource;
+    
+    dataSource.configureCellBlock = ^(CalendarEventCell *calendarEventCell, NSIndexPath *indexPath, id<CalendarEvent> event) {
+        calendarEventCell.titleLabel.text = event.title;
+    };
+    
     dataSource.configureHeaderViewBlock = ^(HeaderView *headerView, NSString *kind, NSIndexPath *indexPath) {
         if ([kind isEqualToString:@"DayHeaderView"]) {
             headerView.titleLabel.text = [NSString stringWithFormat:@"Day %ld", (long)indexPath.item];

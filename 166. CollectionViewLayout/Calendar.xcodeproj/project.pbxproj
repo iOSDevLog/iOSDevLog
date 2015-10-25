@@ -17,6 +17,8 @@
 		DE23BC211BDC85DC00EAE151 /* CalendarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23BC201BDC85DC00EAE151 /* CalendarDataSource.m */; };
 		DE6C65E11BDCEEA700DFC4C9 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */; };
 		DE6C65E21BDCEEA700DFC4C9 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */; };
+		DE9BEB631BDD2547008AF062 /* SampleCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BEB621BDD2547008AF062 /* SampleCalendarEvent.m */; };
+		DE9BEB661BDD2B01008AF062 /* CalendarEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BEB651BDD2B01008AF062 /* CalendarEventCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,11 @@
 		DE6C65DE1BDCEEA700DFC4C9 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		DE9BEB601BDD24E7008AF062 /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
+		DE9BEB611BDD2547008AF062 /* SampleCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCalendarEvent.h; sourceTree = "<group>"; };
+		DE9BEB621BDD2547008AF062 /* SampleCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCalendarEvent.m; sourceTree = "<group>"; };
+		DE9BEB641BDD2B01008AF062 /* CalendarEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEventCell.h; sourceTree = "<group>"; };
+		DE9BEB651BDD2B01008AF062 /* CalendarEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEventCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,8 @@
 				DE6C65DE1BDCEEA700DFC4C9 /* HeaderView.h */,
 				DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */,
 				DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */,
+				DE9BEB641BDD2B01008AF062 /* CalendarEventCell.h */,
+				DE9BEB651BDD2B01008AF062 /* CalendarEventCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -115,6 +124,9 @@
 		DE23BC161BDC851900EAE151 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE9BEB601BDD24E7008AF062 /* CalendarEvent.h */,
+				DE9BEB611BDD2547008AF062 /* SampleCalendarEvent.h */,
+				DE9BEB621BDD2547008AF062 /* SampleCalendarEvent.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,7 +180,6 @@
 				TargetAttributes = {
 					DE23BBF91BDC846400EAE151 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 2926X3EUC5;
 					};
 				};
 			};
@@ -210,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE23BC021BDC846400EAE151 /* AppDelegate.m in Sources */,
+				DE9BEB631BDD2547008AF062 /* SampleCalendarEvent.m in Sources */,
+				DE9BEB661BDD2B01008AF062 /* CalendarEventCell.m in Sources */,
 				DE6C65E11BDCEEA700DFC4C9 /* HeaderView.m in Sources */,
 				DE23BC211BDC85DC00EAE151 /* CalendarDataSource.m in Sources */,
 				DE23BBFF1BDC846400EAE151 /* main.m in Sources */,
@@ -326,9 +339,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Calendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iosdevlog.com.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -337,9 +351,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Calendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iosdevlog.com.Calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
