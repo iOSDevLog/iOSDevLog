@@ -43,6 +43,12 @@ static const CGFloat HourHeaderWidth = 100;
         [layoutAttributes addObject:attributes];
     }
     
+    NSArray *hourHeaderIndexPaths = [self indexPathsOfHourHeaderViewsInRect:rect];
+    for (NSIndexPath *indexPath in hourHeaderIndexPaths) {
+        UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForSupplementaryViewOfKind:@"HourHeaderView" atIndexPath:indexPath];
+        [layoutAttributes addObject:attributes];
+    }
+    
     return layoutAttributes;
 }
 
@@ -51,10 +57,15 @@ static const CGFloat HourHeaderWidth = 100;
     
     CGFloat totolWidth = [self collectionViewContentSize].width;
     
-    CGFloat alailableWidth = totolWidth - HourHeaderWidth;
-    CGFloat widthPerDay = alailableWidth / DaysPerWeek;
-    attributes.frame = CGRectMake(HourHeaderWidth + (widthPerDay * indexPath.item), 0, widthPerDay, DayHeaderHeight);
-    attributes.zIndex = -10;
+    if ([elementKind isEqualToString:@"DayHeaderView"]) {
+        CGFloat alailableWidth = totolWidth - HourHeaderWidth;
+        CGFloat widthPerDay = alailableWidth / DaysPerWeek;
+        attributes.frame = CGRectMake(HourHeaderWidth + (widthPerDay * indexPath.item), 0, widthPerDay, DayHeaderHeight);
+        attributes.zIndex = -10;
+    } else if ([elementKind isEqualToString:@"HourHeaderView"]) {
+        attributes.frame =  CGRectMake(0, DayHeaderHeight + (HeightPerHour * indexPath.item), totolWidth, HeightPerHour);
+        attributes.zIndex = -10;
+    }
     
     return attributes;
 }
