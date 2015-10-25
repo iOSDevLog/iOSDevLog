@@ -15,6 +15,8 @@
 		DE23BC191BDC854A00EAE151 /* CalendarCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23BC181BDC854A00EAE151 /* CalendarCollectionViewController.m */; };
 		DE23BC1D1BDC858E00EAE151 /* CalendarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23BC1C1BDC858E00EAE151 /* CalendarLayout.m */; };
 		DE23BC211BDC85DC00EAE151 /* CalendarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23BC201BDC85DC00EAE151 /* CalendarDataSource.m */; };
+		DE6C65E11BDCEEA700DFC4C9 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */; };
+		DE6C65E21BDCEEA700DFC4C9 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		DE23BC1C1BDC858E00EAE151 /* CalendarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarLayout.m; sourceTree = "<group>"; };
 		DE23BC1F1BDC85DC00EAE151 /* CalendarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDataSource.h; sourceTree = "<group>"; };
 		DE23BC201BDC85DC00EAE151 /* CalendarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDataSource.m; sourceTree = "<group>"; };
+		DE6C65DE1BDCEEA700DFC4C9 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,9 @@
 		DE23BC151BDC850F00EAE151 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE6C65DE1BDCEEA700DFC4C9 /* HeaderView.h */,
+				DE6C65DF1BDCEEA700DFC4C9 /* HeaderView.m */,
+				DE6C65E01BDCEEA700DFC4C9 /* HeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 				DE23BC0D1BDC846500EAE151 /* LaunchScreen.storyboard in Resources */,
 				DE23BC0A1BDC846500EAE151 /* Assets.xcassets in Resources */,
 				DE23BC081BDC846500EAE151 /* Main.storyboard in Resources */,
+				DE6C65E21BDCEEA700DFC4C9 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE23BC021BDC846400EAE151 /* AppDelegate.m in Sources */,
+				DE6C65E11BDCEEA700DFC4C9 /* HeaderView.m in Sources */,
 				DE23BC211BDC85DC00EAE151 /* CalendarDataSource.m in Sources */,
 				DE23BBFF1BDC846400EAE151 /* main.m in Sources */,
 				DE23BC191BDC854A00EAE151 /* CalendarCollectionViewController.m in Sources */,
@@ -353,6 +363,7 @@
 				DE23BC131BDC846500EAE151 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

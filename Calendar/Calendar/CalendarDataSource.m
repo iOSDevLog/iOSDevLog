@@ -7,21 +7,21 @@
 //
 
 #import "CalendarDataSource.h"
+#import "HeaderView.h"
 
 static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseHeaderIdentifier = @"HeaderView";
 
 @implementation CalendarDataSource
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
     return 0;
 }
 
@@ -31,6 +31,12 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     return cell;
+}
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    HeaderView *headerView = (HeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:@"DayHeaderView" withReuseIdentifier:reuseHeaderIdentifier forIndexPath:indexPath];
+    return headerView;
 }
 
 @end
