@@ -8,11 +8,50 @@
 
 #import "CalendarDataSource.h"
 #import "HeaderView.h"
+#import "SampleCalendarEvent.h"
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"CalendarEventCell";
 static NSString * const reuseHeaderIdentifier = @"HeaderView";
 
+@interface CalendarDataSource ()
+
+@property (strong, nonatomic) NSMutableArray *event;
+
+@end
+
 @implementation CalendarDataSource
+
+#pragma mark - 
+
+- (void)awakeFromNib {
+    self.event = [[NSMutableArray alloc] init];
+    
+    [self generateOneData];
+}
+
+- (void)generateOneData {
+    SampleCalendarEvent *event = [SampleCalendarEvent randomEvent];
+    [self.event addObject:event];
+}
+
+- (id<CalendarEvent>)eventAtIndexPath:(NSIndexPath *)indexPath {
+    return self.event[indexPath.item];
+}
+
+- (NSArray *)indexPathsOfEventsBetweenMinDayIndex:(NSInteger)minDayIndex maxDayIndex:(NSInteger)maxDayIndex minStartHour:(NSInteger)minStartHour maxStartHour:(NSInteger)maxStartHour {
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    [self.event enumerateObjectsUsingBlock:^(id  _Nonnull event, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([event day] >= minDayIndex
+            && [event day] <= maxDayIndex
+            && [event startHour] >= minStartHour
+            && [event startHour] <= maxStartHour    ) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:0];
+            [indexPaths addObject:indexPath];
+        }
+    }];
+    
+    return indexPaths;
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -22,13 +61,17 @@ static NSString * const reuseHeaderIdentifier = @"HeaderView";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.event.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    id<CalendarEvent> event = self.event[indexPath.item];
+    CalendarEventCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    if (self.configureCellBlock) {
+        self.configureCellBlock(cell, indexPath, event);
+    }
     
     return cell;
 }

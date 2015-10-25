@@ -7,7 +7,7 @@
 //
 
 #import "CalendarLayout.h"
-//#import "CalendarEvent.h"
+#import "CalendarEvent.h"
 #import "CalendarDataSource.h"
 
 static const NSUInteger DaysPerWeek = 7;
@@ -49,7 +49,22 @@ static const CGFloat HourHeaderWidth = 100;
         [layoutAttributes addObject:attributes];
     }
     
+    // Cells
+    NSArray *visibleIndexPaths = [self indexPathsOfItemsInRect:rect];
+    for (NSIndexPath *indexPath in visibleIndexPaths) {
+        UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
+        [layoutAttributes addObject:attributes];
+    }
+    
     return layoutAttributes;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CalendarDataSource *dataSource = self.collectionView.dataSource;
+    id<CalendarEvent> event = [dataSource eventAtIndexPath:indexPath];
+    UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    attributes.frame = [self frameForEvent:event];
+    return attributes;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
@@ -77,16 +92,16 @@ static const CGFloat HourHeaderWidth = 100;
 
 #pragma mark - Helpers
 
-//- (NSArray *)indexPathsOfItemsInRect:(CGRect)rect {
-//    NSInteger minVisibleDay = [self dayIndexFromXCoordinate:CGRectGetMinX(rect)];
-//    NSInteger maxVisibleDay = [self dayIndexFromXCoordinate:CGRectGetMaxX(rect)];
-//    NSInteger minVisibleHour = [self hourIndexFromYCoordinate:CGRectGetMinY(rect)];
-//    NSInteger maxVisibleHour = [self hourIndexFromYCoordinate:CGRectGetMaxY(rect)];
-//    
-//    CalendarDataSource *dataSource = self.collectionView.dataSource;
-//    NSArray *indexPaths = [dataSource indexPathsOfEventsBetweenMinDayIndex:minVisibleDay maxDayIndex:maxVisibleDay minStartHour:minVisibleHour maxStartHour:maxVisibleHour];
-//    return indexPaths;
-//}
+- (NSArray *)indexPathsOfItemsInRect:(CGRect)rect {
+    NSInteger minVisibleDay = [self dayIndexFromXCoordinate:CGRectGetMinX(rect)];
+    NSInteger maxVisibleDay = [self dayIndexFromXCoordinate:CGRectGetMaxX(rect)];
+    NSInteger minVisibleHour = [self hourIndexFromYCoordinate:CGRectGetMinY(rect)];
+    NSInteger maxVisibleHour = [self hourIndexFromYCoordinate:CGRectGetMaxY(rect)];
+    
+    CalendarDataSource *dataSource = self.collectionView.dataSource;
+    NSArray *indexPaths = [dataSource indexPathsOfEventsBetweenMinDayIndex:minVisibleDay maxDayIndex:maxVisibleDay minStartHour:minVisibleHour maxStartHour:maxVisibleHour];
+    return indexPaths;
+}
 
 - (NSInteger)dayIndexFromXCoordinate:(CGFloat)xPosition {
     CGFloat contentWidth = [self collectionViewContentSize].width - HourHeaderWidth;
@@ -132,18 +147,18 @@ static const CGFloat HourHeaderWidth = 100;
     return indexPaths;
 }
 
-//- (CGRect)frameForEvent:(id<CalendarEvent>)event {
-//    CGFloat totalWidth = [self collectionViewContentSize].width - HourHeaderWidth;
-//    CGFloat widthPerDay = totalWidth / DaysPerWeek;
-//    
-//    CGRect frame = CGRectZero;
-//    frame.origin.x = HourHeaderWidth + widthPerDay * event.day;
-//    frame.origin.y = DayHeaderHeight + HeightPerHour * event.startHour;
-//    frame.size.width = widthPerDay;
-//    frame.size.height = event.durationInHours * HeightPerHour;
-//    
-//    frame = CGRectInset(frame, HorizontalSpacing/2.0, 0);
-//    return frame;
-//}
+- (CGRect)frameForEvent:(id<CalendarEvent>)event {
+    CGFloat totalWidth = [self collectionViewContentSize].width - HourHeaderWidth;
+    CGFloat widthPerDay = totalWidth / DaysPerWeek;
+    
+    CGRect frame = CGRectZero;
+    frame.origin.x = HourHeaderWidth + widthPerDay * event.day;
+    frame.origin.y = DayHeaderHeight + HeightPerHour * event.startHour;
+    frame.size.width = widthPerDay;
+    frame.size.height = event.durationInHours * HeightPerHour;
+    
+    frame = CGRectInset(frame, HorizontalSpacing/2.0, 0);
+    return frame;
+}
 
 @end
