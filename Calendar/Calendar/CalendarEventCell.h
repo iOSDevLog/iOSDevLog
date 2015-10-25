@@ -10,5 +10,4 @@
 
 @interface CalendarEventCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
 @end

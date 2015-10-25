@@ -47,6 +47,11 @@
                                     <constraint firstItem="DLx-1o-ykc" firstAttribute="leading" secondItem="S9U-S8-hMk" secondAttribute="leadingMargin" id="7CP-aL-3a5"/>
                                     <constraint firstItem="DLx-1o-ykc" firstAttribute="trailing" secondItem="S9U-S8-hMk" secondAttribute="trailingMargin" id="DdG-eO-x0H"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="titleLabel" destination="DLx-1o-ykc" id="ojt-7r-6Yx"/>
                                 </connections>

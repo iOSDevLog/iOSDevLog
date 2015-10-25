@@ -26,12 +26,18 @@ static NSString * const reuseHeaderIdentifier = @"HeaderView";
 - (void)awakeFromNib {
     self.event = [[NSMutableArray alloc] init];
     
-    [self generateOneData];
+    [self generateDatas:20];
 }
 
 - (void)generateOneData {
     SampleCalendarEvent *event = [SampleCalendarEvent randomEvent];
     [self.event addObject:event];
+}
+
+- (void)generateDatas:(NSInteger)count {
+    for (NSUInteger i = 0; i < count; ++i) {
+        [self generateOneData];
+    }
 }
 
 - (id<CalendarEvent>)eventAtIndexPath:(NSIndexPath *)indexPath {

@@ -85,9 +85,13 @@ static const CGFloat HourHeaderWidth = 100;
     return attributes;
 }
 
-
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-    return YES;
+    CGRect oldBounds = self.collectionView.bounds;
+    if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 #pragma mark - Helpers
