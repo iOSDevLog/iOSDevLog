@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "HeaderView.h"
+
+typedef void(^ConfigureHeaderViewBlock)(HeaderView *headerView, NSString *kind, NSIndexPath *indexPath);
 
 @interface CalendarDataSource : NSObject <UICollectionViewDataSource>
+
+@property (copy, nonatomic) ConfigureHeaderViewBlock configureHeaderViewBlock;
 
 @end

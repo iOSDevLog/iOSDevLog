@@ -36,6 +36,11 @@ static NSString * const reuseHeaderIdentifier = @"HeaderView";
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     HeaderView *headerView = (HeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:@"DayHeaderView" withReuseIdentifier:reuseHeaderIdentifier forIndexPath:indexPath];
+    
+    if (self.configureHeaderViewBlock) {
+        self.configureHeaderViewBlock(headerView, kind, indexPath);
+    }
+    
     return headerView;
 }
 

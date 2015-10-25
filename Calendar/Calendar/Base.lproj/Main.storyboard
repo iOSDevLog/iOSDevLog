@@ -33,9 +33,13 @@
                                 <animations/>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6oe-WM-sJf" id="g0R-CX-vjx"/>
+                        </connections>
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umI-7M-Dgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6oe-WM-sJf" customClass="CalendarDataSource"/>
             </objects>
             <point key="canvasLocation" x="624" y="487"/>
         </scene>
