@@ -1,0 +1,1 @@
+../../KPAViewControllerTestHelper/Classes/KPAViewControllerTestHelper.h

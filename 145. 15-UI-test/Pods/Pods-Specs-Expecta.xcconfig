@@ -1,0 +1,1 @@
+PODS_SPECS_EXPECTA_OTHER_LDFLAGS = -framework Foundation

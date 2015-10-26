@@ -1,0 +1,19 @@
+PODS:
+  - Expecta (0.3.1)
+  - KPAStoryboardConvenience (1.0.1)
+  - KPAViewControllerTestHelper (1.0.1)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - KPAStoryboardConvenience
+  - KPAViewControllerTestHelper
+  - Specta
+
+SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  KPAStoryboardConvenience: 3935ed31692d614a532ce1b58d214fa232230216
+  KPAViewControllerTestHelper: 1d91516f1cddd67a6030049758b5d3310475db39
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+
+COCOAPODS: 0.33.1

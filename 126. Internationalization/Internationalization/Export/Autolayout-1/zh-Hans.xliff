@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="AutoLayout/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0.1" build-num="7A1001"/>
+    </header>
+    <body>
+      <trans-unit id="498-lg-uwg.text">
+        <source>http://iosdevlog.com</source>
+        <target>http://iosdevlog.com</target>
+        <note>Class = "UILabel"; text = "http://iosdevlog.com"; ObjectID = "498-lg-uwg";</note>
+      </trans-unit>
+      <trans-unit id="IX0-jH-MNQ.text">
+        <source>iOS Dev Log Internationalization</source>
+        <target>iOS Dev Log Internationalization</target>
+        <note>Class = "UILabel"; text = "iOS Dev Log Internationalization"; ObjectID = "IX0-jH-MNQ";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="AutoLayout/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0.1" build-num="7A1001"/>
+    </header>
+    <body>
+      <trans-unit id="GjM-aG-Bca.text">
+        <source>Company</source>
+        <target>Company</target>
+        <note>Class = "UILabel"; text = "Company"; ObjectID = "GjM-aG-Bca";</note>
+      </trans-unit>
+      <trans-unit id="OKC-uN-p7U.normalTitle">
+        <source>Login</source>
+        <target>Login</target>
+        <note>Class = "UIButton"; normalTitle = "Login"; ObjectID = "OKC-uN-p7U";</note>
+      </trans-unit>
+      <trans-unit id="VTt-jo-dQS.normalTitle">
+        <source>Change Security</source>
+        <target>Change Security</target>
+        <note>Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "VTt-jo-dQS";</note>
+      </trans-unit>
+      <trans-unit id="Ypl-wn-9xD.text">
+        <source>Username</source>
+        <target>Username</target>
+        <note>Class = "UILabel"; text = "Username"; ObjectID = "Ypl-wn-9xD";</note>
+      </trans-unit>
+      <trans-unit id="fMi-Tk-87N.text">
+        <source>Password</source>
+        <target>Password</target>
+        <note>Class = "UILabel"; text = "Password"; ObjectID = "fMi-Tk-87N";</note>
+      </trans-unit>
+      <trans-unit id="yAJ-aa-fdB.text">
+        <source>Name</source>
+        <target>Name</target>
+        <note>Class = "UILabel"; text = "Name"; ObjectID = "yAJ-aa-fdB";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="AutoLayout/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0.1" build-num="7A1001"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
