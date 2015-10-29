@@ -44,9 +44,11 @@ Email:  <iosdevlog@iosdevlog.com>
 <https://www.gitignore.io/api/code,objective-c,swift,osx>
 
 ## Reference
---
+---
 
 ### *<http://objc.io>*
+
+<http://objccn.io>
 
 <https://github.com/objcio>
 
@@ -57,3 +59,9 @@ Email:  <iosdevlog@iosdevlog.com>
 [CS193P iPhone Application Development](http://web.stanford.edu/class/cs193p/cgi-bin/drupal/)
 
 <https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift/>
+
+
+# License
+---
+
+iOSDevLog is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
