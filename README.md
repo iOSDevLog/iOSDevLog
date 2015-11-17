@@ -25,6 +25,11 @@ Email:  <iosdevlog@iosdevlog.com>
 
 <https://github.com/iOSDevLog/iOSDevLog>
 
+## Video
+---
+
+视频地址: <http://pan.baidu.com/s/1pJ5qjwR>
+
 ## Podcast
 ---
 
