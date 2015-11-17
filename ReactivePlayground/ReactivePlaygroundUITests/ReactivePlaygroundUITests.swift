@@ -46,19 +46,8 @@ class ReactivePlaygroundUITests: XCTestCase {
         passwordTextField.tap()
         passwordTextField.typeText("world")
         
-//        XCTAssertEqual(app.navigationBars.element.identifier, "Kitten!")
-        
-        let signInButton = app.buttons["Sign In"]
-        signInButton.tap()
-        usernameTextField.tap()
-        usernameTextField.tap()
-        usernameTextField.typeText("user")
-        passwordTextField.tap()
-        passwordTextField.tap()
-        passwordTextField.typeText("password")
-        signInButton.tap()
-        
         XCTAssertEqual(app.navigationBars.element.identifier, "Kitten!")
+        
     }
     
     func testAccess() {
