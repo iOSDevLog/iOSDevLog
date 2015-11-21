@@ -29,6 +29,10 @@
                                             <rect key="frame" x="12" y="8" width="27" height="27"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="WsM-3N-Zc2" secondAttribute="height" multiplier="1:1" id="VTd-mp-Kmn"/>
                                                 <constraint firstAttribute="width" constant="27" id="yGe-ng-fvQ"/>

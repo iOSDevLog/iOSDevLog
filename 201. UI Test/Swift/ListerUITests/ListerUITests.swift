@@ -33,6 +33,30 @@ class ListerUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testAddOneItem() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Groceries"].tap()
+        tablesQuery.textFields["Add Item"].tap()
+        
+        let textField = tablesQuery.childrenMatchingType(.Cell).elementBoundByIndex(0).childrenMatchingType(.TextField).element
+        
+        textField.typeText("Coocies")
+        app.typeText("\r")
+        
+        let button = tablesQuery.buttons["Coocies"]
+        
+        XCTAssertEqual(button.value as? String, "0")
+        button.tap()
+        XCTAssertEqual(button.value as? String, "1")
+        
+        
+        app.navigationBars.matchingIdentifier("Groceries").buttons["Edit"].tap()
+        tablesQuery.cells.containingType(.Button, identifier:"Coocies").buttons["Delete "].tap()
+        tablesQuery.buttons["Delete"].tap()
+    }
+    
     func testChangeColor() {
         
         let app = XCUIApplication()

@@ -515,12 +515,17 @@ class ListViewController: UITableViewController, UITextFieldDelegate, ListColorC
             listItemCell.textField.placeholder = NSLocalizedString("Add Item", comment: "")
             listItemCell.textField.text = ""
             listItemCell.checkBox.hidden = true
+            listItemCell.textField.accessibilityLabel = listItemCell.textField.text
         }
         else {
             let listItem = listPresenter.presentedListItems[row - 1]
 
             listItemCell.isComplete = listItem.isComplete
             listItemCell.textField.text = listItem.text
+            
+            listItemCell.checkBox.accessibilityValue = "\(Int(listItemCell.checkBox.isChecked))"
+            listItemCell.checkBox.accessibilityLabel = listItemCell.textField.text
+            
         }
     }
     
