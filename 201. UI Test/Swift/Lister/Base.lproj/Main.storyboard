@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A178n" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JQK-Og-D31">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JQK-Og-D31">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -85,6 +86,10 @@
                                             <rect key="frame" x="560" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.95294117649999999" green="0.41960784309999999" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <accessibility key="accessibilityConfiguration" label="red">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="vzN-vk-sum"/>
                                             </constraints>
@@ -93,6 +98,10 @@
                                             <rect key="frame" x="520" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.62352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <accessibility key="accessibilityConfiguration" label="orange">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="fbc-Fx-PUo"/>
                                             </constraints>
@@ -101,6 +110,10 @@
                                             <rect key="frame" x="480" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.87450980389999999" blue="0.2470588235" alpha="1" colorSpace="deviceRGB"/>
+                                            <accessibility key="accessibilityConfiguration" label="yellow">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="4Ug-X0-WlA"/>
                                             </constraints>
@@ -109,6 +122,10 @@
                                             <rect key="frame" x="440" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.70588235290000001" green="0.83529411760000005" blue="0.35294117650000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <accessibility key="accessibilityConfiguration" label="green">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="GZ0-qQ-s2v"/>
                                             </constraints>
@@ -117,6 +134,10 @@
                                             <rect key="frame" x="401" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.43921568630000002" green="0.70196078429999997" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <accessibility key="accessibilityConfiguration" label="blue">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="mKx-Ki-azh"/>
                                             </constraints>
@@ -125,6 +146,10 @@
                                             <rect key="frame" x="361" y="0.0" width="40" height="43"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration" label="gray">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="8kx-Yq-Nea"/>
                                             </constraints>

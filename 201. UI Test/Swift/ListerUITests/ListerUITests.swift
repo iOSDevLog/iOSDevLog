@@ -33,4 +33,22 @@ class ListerUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testChangeColor() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Today"].tap()
+        
+        let todayNavigationBarsQuery = app.navigationBars.matchingIdentifier("Today")
+        todayNavigationBarsQuery.buttons["Edit"].tap()
+        tablesQuery.buttons["red"].tap()
+        tablesQuery.buttons["orange"].tap()
+        tablesQuery.buttons["yellow"].tap()
+        tablesQuery.buttons["green"].tap()
+        tablesQuery.buttons["blue"].tap()
+        tablesQuery.buttons["gray"].tap()
+        todayNavigationBarsQuery.buttons["Done"].tap()
+        
+    }
+    
 }
