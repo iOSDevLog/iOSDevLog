@@ -75,4 +75,32 @@ class ListerUITests: XCTestCase {
         
     }
     
+    func testAddTwoItems() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Groceries"].tap()
+        
+        let textField = tablesQuery.textFields["Add Item"]
+        textField.tap()
+        textField.typeText("Coocies")
+        app.typeText("\r")
+        
+        let button = tablesQuery.buttons["Coocies"]
+        
+        XCTAssertEqual(button.value as? String, "0")
+        button.tap()
+        XCTAssertEqual(button.value as? String, "1")
+        
+        textField.tap()
+        textField.typeText("Coocies")
+        app.typeText("\r")
+        
+        let button2 = tablesQuery.descendantsMatchingType(.Button).matchingIdentifier("Coocies").elementBoundByIndex(0)
+        
+        XCTAssertEqual(button2.value as? String, "0")
+        button2.tap()
+        XCTAssertEqual(button2.value as? String, "1")
+    }
+    
 }
