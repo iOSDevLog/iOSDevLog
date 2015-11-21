@@ -276,6 +276,7 @@
 		3EFC7DA318FB08C90012B60F /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC7D9B18FB08C90012B60F /* ListTableView.swift */; };
 		3EFC7DA418FB08C90012B60F /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC7D9C18FB08C90012B60F /* ListItemView.swift */; };
 		3EFC7DA618FB08C90012B60F /* ResizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC7D9E18FB08C90012B60F /* ResizingTextField.swift */; };
+		DE6B34ED1C007A5D00A6F282 /* ListerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B34EC1C007A5D00A6F282 /* ListerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -446,6 +447,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 16EE5953192016410052916A;
 			remoteInfo = ListerKit;
+		};
+		DE6B34EF1C007A5D00A6F282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CBDA9F18F6EE3A00233D3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16CBDAA618F6EE3A00233D3C;
+			remoteInfo = Lister;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -783,6 +791,9 @@
 		3EFC7D9D18FB08C90012B60F /* NSColor+AppSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+AppSpecific.swift"; sourceTree = "<group>"; };
 		3EFC7D9E18FB08C90012B60F /* ResizingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingTextField.swift; sourceTree = "<group>"; };
 		55BB61D41A13C7C3001BE161 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE6B34EA1C007A5D00A6F282 /* ListerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6B34EC1C007A5D00A6F282 /* ListerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListerUITests.swift; sourceTree = "<group>"; };
+		DE6B34EE1C007A5D00A6F282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -872,6 +883,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3E9358791920355C0091408E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE6B34E71C007A5D00A6F282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1120,6 +1138,7 @@
 				3E497FC718FAFA2400B32837 /* Lister OS X App */,
 				1674D9AB18F7299E0019FF77 /* Shared ListerKit Framework Code */,
 				3E6F0E46198C8663009A4CBB /* Shared Lister Resources */,
+				DE6B34EB1C007A5D00A6F282 /* ListerUITests */,
 				1603123419DA00590011D42B /* Frameworks */,
 				16CBDAA818F6EE3A00233D3C /* Products */,
 			);
@@ -1142,6 +1161,7 @@
 				16CD55E11B127D2400DB4F4F /* Lister Watch App.app */,
 				16CD55ED1B127D2400DB4F4F /* Lister Watch Extension.appex */,
 				16CD560C1B127DDC00DB4F4F /* ListerWatchKit.framework */,
+				DE6B34EA1C007A5D00A6F282 /* ListerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1780,6 +1800,15 @@
 			name = "Main App";
 			sourceTree = "<group>";
 		};
+		DE6B34EB1C007A5D00A6F282 /* ListerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B34EC1C007A5D00A6F282 /* ListerUITests.swift */,
+				DE6B34EE1C007A5D00A6F282 /* Info.plist */,
+			);
+			path = ListerUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2083,12 +2112,31 @@
 			productReference = 3E93587D1920355C0091408E /* ListerKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DE6B34E91C007A5D00A6F282 /* ListerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE6B34F11C007A5D00A6F282 /* Build configuration list for PBXNativeTarget "ListerUITests" */;
+			buildPhases = (
+				DE6B34E61C007A5D00A6F282 /* Sources */,
+				DE6B34E71C007A5D00A6F282 /* Frameworks */,
+				DE6B34E81C007A5D00A6F282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE6B34F01C007A5D00A6F282 /* PBXTargetDependency */,
+			);
+			name = ListerUITests;
+			productName = ListerUITests;
+			productReference = DE6B34EA1C007A5D00A6F282 /* ListerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		16CBDA9F18F6EE3A00233D3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Apple Inc.";
 				TargetAttributes = {
@@ -2163,6 +2211,10 @@
 					3E93587C1920355C0091408E = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					DE6B34E91C007A5D00A6F282 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 16CBDAA618F6EE3A00233D3C;
+					};
 				};
 			};
 			buildConfigurationList = 16CBDAA218F6EE3A00233D3C /* Build configuration list for PBXProject "Lister" */;
@@ -2192,6 +2244,7 @@
 				3E93585D1920343C0091408E /* Lister Today (OS X) */,
 				3E93587C1920355C0091408E /* ListerKit (OS X) */,
 				3E251766197F7A1400B8AF96 /* ListerKit Tests (OS X) */,
+				DE6B34E91C007A5D00A6F282 /* ListerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -2444,6 +2497,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE6B34E81C007A5D00A6F282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2635,6 +2695,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE6B34E61C007A5D00A6F282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE6B34ED1C007A5D00A6F282 /* ListerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2757,6 +2825,11 @@
 			isa = PBXTargetDependency;
 			target = 16EE5953192016410052916A /* ListerKit */;
 			targetProxy = 3EE9B7471A858A3D00D3990F /* PBXContainerItemProxy */;
+		};
+		DE6B34F01C007A5D00A6F282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16CBDAA618F6EE3A00233D3C /* Lister */;
+			targetProxy = DE6B34EF1C007A5D00A6F282 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3499,6 +3572,42 @@
 			};
 			name = Release;
 		};
+		DE6B34F21C007A5D00A6F282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ListerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.ListerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lister;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DE6B34F31C007A5D00A6F282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ListerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.ListerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lister;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3636,6 +3745,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DE6B34F11C007A5D00A6F282 /* Build configuration list for PBXNativeTarget "ListerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE6B34F21C007A5D00A6F282 /* Debug */,
+				DE6B34F31C007A5D00A6F282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
