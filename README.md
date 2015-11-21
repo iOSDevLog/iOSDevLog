@@ -28,7 +28,7 @@ Email:  <iosdevlog@iosdevlog.com>
 ## Video
 ---
 
-视频地址: <http://pan.baidu.com/s/1pJ5qjwR>
+<http://pan.baidu.com/s/1pJ5qjwR>
 
 ## Podcast
 ---
