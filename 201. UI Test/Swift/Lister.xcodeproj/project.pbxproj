@@ -2098,6 +2098,7 @@
 					};
 					16A9851B1936EEA5007B7F37 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = U42NM79F4W;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -2108,6 +2109,7 @@
 						};
 					};
 					16CBDAA618F6EE3A00233D3C = {
+						DevelopmentTeam = U42NM79F4W;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -2128,9 +2130,11 @@
 					};
 					16EE5953192016410052916A = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = U42NM79F4W;
 					};
 					16F60BF01A854A640028B2D8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = U42NM79F4W;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -2139,6 +2143,7 @@
 					};
 					16F60BFC1A854A650028B2D8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = U42NM79F4W;
 					};
 					3E251756197F7A0400B8AF96 = {
 						CreatedOnToolsVersion = 6.0;
