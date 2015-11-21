@@ -103,4 +103,25 @@ class ListerUITests: XCTestCase {
         XCTAssertEqual(button2.value as? String, "1")
     }
     
+    func testRemoveAllItems() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Groceries"].tap()
+        
+        let groceriesNavigationBarsQuery = app.navigationBars.matchingIdentifier("Groceries")
+        groceriesNavigationBarsQuery.buttons["Edit"].tap()
+        
+        while tablesQuery.cells.count > 1 {
+            let count = tablesQuery.cells.count
+            
+            let cell = tablesQuery.cells.elementBoundByIndex(1)
+            cell.buttons.matchingPredicate(NSPredicate(format: "label BEGINSWITH 'Delete'")).element.tap()
+            tablesQuery.buttons["Delete"].tap()
+            
+            XCTAssertEqual(tablesQuery.cells.count, (count - 1))
+        }
+        groceriesNavigationBarsQuery.buttons["Done"].tap()
+        
+    }
 }
