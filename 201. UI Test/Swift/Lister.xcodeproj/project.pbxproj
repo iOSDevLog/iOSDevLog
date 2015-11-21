@@ -2908,7 +2908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LISTER_BUNDLE_PREFIX = "com.example.apple-samplecode";
+				LISTER_BUNDLE_PREFIX = com.iosdevlog.lister;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2944,7 +2944,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LISTER_BUNDLE_PREFIX = "com.example.apple-samplecode";
+				LISTER_BUNDLE_PREFIX = com.iosdevlog.lister;
 				SDKROOT = iphoneos;
 				TOOLCHAINS = default;
 				VALIDATE_PRODUCT = YES;
