@@ -13,6 +13,7 @@
 		DE497B891C09F477003DC41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE497B881C09F477003DC41E /* Assets.xcassets */; };
 		DE497B8C1C09F477003DC41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE497B8A1C09F477003DC41E /* LaunchScreen.storyboard */; };
 		DE497B971C09F477003DC41E /* _11__StackViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497B961C09F477003DC41E /* _11__StackViewUITests.swift */; };
+		DE497BA21C09F9FB003DC41E /* DLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497BA11C09F9FB003DC41E /* DLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DE497B921C09F477003DC41E /* 211. StackViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "211. StackViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE497B961C09F477003DC41E /* _11__StackViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _11__StackViewUITests.swift; sourceTree = "<group>"; };
 		DE497B981C09F477003DC41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE497BA11C09F9FB003DC41E /* DLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				DE497B811C09F477003DC41E /* AppDelegate.swift */,
 				DE497B831C09F477003DC41E /* ViewController.swift */,
 				DE497B851C09F477003DC41E /* Main.storyboard */,
+				DE497BA11C09F9FB003DC41E /* DLView.swift */,
 				DE497B881C09F477003DC41E /* Assets.xcassets */,
 				DE497B8A1C09F477003DC41E /* LaunchScreen.storyboard */,
 				DE497B8D1C09F477003DC41E /* Info.plist */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE497B841C09F477003DC41E /* ViewController.swift in Sources */,
+				DE497BA21C09F9FB003DC41E /* DLView.swift in Sources */,
 				DE497B821C09F477003DC41E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
