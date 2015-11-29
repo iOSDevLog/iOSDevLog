@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE1BD17F1C0B444E00EEE783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1BD17E1C0B444E00EEE783 /* AppDelegate.swift */; };
+		DE1BD1811C0B444E00EEE783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1BD1801C0B444E00EEE783 /* ViewController.swift */; };
+		DE1BD1841C0B444E00EEE783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1BD1821C0B444E00EEE783 /* Main.storyboard */; };
+		DE1BD1861C0B444E00EEE783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1BD1851C0B444E00EEE783 /* Assets.xcassets */; };
+		DE1BD1891C0B444E00EEE783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1BD1871C0B444E00EEE783 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE1BD17B1C0B444D00EEE783 /* 212. Changing Constraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "212. Changing Constraints.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1BD17E1C0B444E00EEE783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE1BD1801C0B444E00EEE783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE1BD1831C0B444E00EEE783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE1BD1851C0B444E00EEE783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE1BD1881C0B444E00EEE783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE1BD18A1C0B444E00EEE783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE1BD1781C0B444D00EEE783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE1BD1721C0B444D00EEE783 = {
+			isa = PBXGroup;
+			children = (
+				DE1BD17D1C0B444E00EEE783 /* 212. Changing Constraints */,
+				DE1BD17C1C0B444D00EEE783 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE1BD17C1C0B444D00EEE783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE1BD17B1C0B444D00EEE783 /* 212. Changing Constraints.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE1BD17D1C0B444E00EEE783 /* 212. Changing Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				DE1BD17E1C0B444E00EEE783 /* AppDelegate.swift */,
+				DE1BD1801C0B444E00EEE783 /* ViewController.swift */,
+				DE1BD1821C0B444E00EEE783 /* Main.storyboard */,
+				DE1BD1851C0B444E00EEE783 /* Assets.xcassets */,
+				DE1BD1871C0B444E00EEE783 /* LaunchScreen.storyboard */,
+				DE1BD18A1C0B444E00EEE783 /* Info.plist */,
+			);
+			path = "212. Changing Constraints";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE1BD17A1C0B444D00EEE783 /* 212. Changing Constraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE1BD18D1C0B444E00EEE783 /* Build configuration list for PBXNativeTarget "212. Changing Constraints" */;
+			buildPhases = (
+				DE1BD1771C0B444D00EEE783 /* Sources */,
+				DE1BD1781C0B444D00EEE783 /* Frameworks */,
+				DE1BD1791C0B444D00EEE783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "212. Changing Constraints";
+			productName = "212. Changing Constraints";
+			productReference = DE1BD17B1C0B444D00EEE783 /* 212. Changing Constraints.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE1BD1731C0B444D00EEE783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = iosdevlog;
+				TargetAttributes = {
+					DE1BD17A1C0B444D00EEE783 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = DE1BD1761C0B444D00EEE783 /* Build configuration list for PBXProject "212. Changing Constraints" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE1BD1721C0B444D00EEE783;
+			productRefGroup = DE1BD17C1C0B444D00EEE783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE1BD17A1C0B444D00EEE783 /* 212. Changing Constraints */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE1BD1791C0B444D00EEE783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1BD1891C0B444E00EEE783 /* LaunchScreen.storyboard in Resources */,
+				DE1BD1861C0B444E00EEE783 /* Assets.xcassets in Resources */,
+				DE1BD1841C0B444E00EEE783 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE1BD1771C0B444D00EEE783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1BD1811C0B444E00EEE783 /* ViewController.swift in Sources */,
+				DE1BD17F1C0B444E00EEE783 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE1BD1821C0B444E00EEE783 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1BD1831C0B444E00EEE783 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE1BD1871C0B444E00EEE783 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1BD1881C0B444E00EEE783 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE1BD18B1C0B444E00EEE783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE1BD18C1C0B444E00EEE783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE1BD18E1C0B444E00EEE783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "212. Changing Constraints/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdevlog.-12--Changing-Constraints";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE1BD18F1C0B444E00EEE783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "212. Changing Constraints/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdevlog.-12--Changing-Constraints";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE1BD1761C0B444D00EEE783 /* Build configuration list for PBXProject "212. Changing Constraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1BD18B1C0B444E00EEE783 /* Debug */,
+				DE1BD18C1C0B444E00EEE783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE1BD18D1C0B444E00EEE783 /* Build configuration list for PBXNativeTarget "212. Changing Constraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1BD18E1C0B444E00EEE783 /* Debug */,
+				DE1BD18F1C0B444E00EEE783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE1BD1731C0B444D00EEE783 /* Project object */;
+}
