@@ -8,32 +8,29 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class TableViewController: UITableViewController {
+    var photos = [JSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Alamofire.request(.GET, "https://api.500px.com/v1/photos", parameters:["consumer_key":"uBuwcKGa9ktzoZQtGKI9otnF7yDlJBFQ9fCTHkHc"]).responseJSON() {
             jsonData in
-            print(jsonData.data)
+            let data = JSON(data: jsonData.data!)
+            self.photos = data["photos"].arrayValue
         }
     }
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.photos.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! TableViewCell
 
         // Configure the cell...
 
