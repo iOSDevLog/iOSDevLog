@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
+import DZNEmptyDataSet
 
 class TableViewController: UITableViewController {
     var photos = [JSON]()
