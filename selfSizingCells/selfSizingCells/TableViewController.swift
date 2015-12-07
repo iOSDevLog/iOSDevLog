@@ -21,6 +21,8 @@ class TableViewController: UITableViewController, DZNEmptyDataSetSource {
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        self.tableView.separatorStyle = .None
+        
         Alamofire.request(.GET, "https://api.500px.com/v1/photos", parameters:["consumer_key":"uBuwcKGa9ktzoZQtGKI9otnF7yDlJBFQ9fCTHkHc"]).responseJSON() {
             jsonData in
             let data = JSON(data: jsonData.data!)
