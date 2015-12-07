@@ -67,7 +67,7 @@
                             <outlet property="emptyDataSetSource" destination="QFc-3b-flN" id="HwO-fA-0UE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="self sizing table view cells" id="OiE-XW-Rxi"/>
+                    <navigationItem key="navigationItem" title="Self-sizing Table View Cells" id="OiE-XW-Rxi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idv-sj-MuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

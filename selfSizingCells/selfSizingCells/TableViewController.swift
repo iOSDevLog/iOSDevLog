@@ -28,6 +28,7 @@ class TableViewController: UITableViewController, DZNEmptyDataSetSource {
             let data = JSON(data: jsonData.data!)
             self.photos = data["photos"].arrayValue
             
+            self.tableView.separatorStyle = .SingleLine
             self.tableView.reloadData()
         }
     }
