@@ -14,8 +14,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "https://api.500px.com/v1/photos").responseJSON() { (jsonData) in
-            print(jsonData)
+        Alamofire.request(.GET, "https://api.500px.com/v1/photos", parameters:["consumer_key":"uBuwcKGa9ktzoZQtGKI9otnF7yDlJBFQ9fCTHkHc"]).responseJSON() {
+            jsonData in
+            print(jsonData.data)
         }
     }
     
