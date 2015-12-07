@@ -9,12 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
 
 class TableViewController: UITableViewController {
     var photos = [JSON]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         
         Alamofire.request(.GET, "https://api.500px.com/v1/photos", parameters:["consumer_key":"uBuwcKGa9ktzoZQtGKI9otnF7yDlJBFQ9fCTHkHc"]).responseJSON() {
             jsonData in
@@ -37,56 +41,14 @@ class TableViewController: UITableViewController {
         // Configure the cell...
         let cellData = self.photos[indexPath.row].dictionaryValue
         
-        let url = cellData["image_url"]?.stringValue
-        cell.pxImageView.image = UIImage(named: url!)
+        let image_url = cellData["image_url"]?.stringValue
+        let URL = NSURL(string:image_url!)!
+        let placeholderImage = UIImage(named: "Earth")!
+        
+        cell.pxImageView.af_setImageWithURL(URL, placeholderImage: placeholderImage)
+        
         cell.pxLabel.text = cellData["description"]?.stringValue
 
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
