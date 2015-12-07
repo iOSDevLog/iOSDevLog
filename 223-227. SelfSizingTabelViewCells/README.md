@@ -5,7 +5,7 @@
 
 ![SelfSizingCells-2](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/SelfSizingCells-2.png)
 
-{% highlight ruby %}
+```ruby
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
 # Uncomment this line if you're using Swift
@@ -27,5 +27,4 @@ end
 target 'selfSizingCellsUITests' do
 
 end
-{% lighlight %}
-
+```
