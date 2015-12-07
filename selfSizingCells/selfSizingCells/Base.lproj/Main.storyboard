@@ -33,7 +33,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500Px" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-lp-7CM">
-                                            <rect key="frame" x="208" y="116" width="384" height="21"/>
+                                            <rect key="frame" x="208" y="8" width="384" height="238"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,10 +43,12 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="tEt-QV-6v6" firstAttribute="leading" secondItem="7B1-Kq-co1" secondAttribute="leadingMargin" id="1lH-4o-gfi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5K4-lp-7CM" secondAttribute="bottom" id="OT1-pc-Bax"/>
                                         <constraint firstItem="5K4-lp-7CM" firstAttribute="leading" secondItem="tEt-QV-6v6" secondAttribute="trailing" constant="8" symbolic="YES" id="Pye-HF-Gc3"/>
                                         <constraint firstItem="tEt-QV-6v6" firstAttribute="centerY" secondItem="7B1-Kq-co1" secondAttribute="centerY" id="SfK-Mw-yC5"/>
                                         <constraint firstItem="5K4-lp-7CM" firstAttribute="trailing" secondItem="7B1-Kq-co1" secondAttribute="trailingMargin" id="hgr-Yp-YBn"/>
                                         <constraint firstItem="5K4-lp-7CM" firstAttribute="width" secondItem="tEt-QV-6v6" secondAttribute="width" multiplier="2:1" id="lc9-72-WfC"/>
+                                        <constraint firstItem="5K4-lp-7CM" firstAttribute="top" secondItem="7B1-Kq-co1" secondAttribute="topMargin" id="qfR-Iy-P5b"/>
                                         <constraint firstItem="5K4-lp-7CM" firstAttribute="centerY" secondItem="tEt-QV-6v6" secondAttribute="centerY" id="t1Z-Gd-DYh"/>
                                     </constraints>
                                 </tableViewCellContentView>
