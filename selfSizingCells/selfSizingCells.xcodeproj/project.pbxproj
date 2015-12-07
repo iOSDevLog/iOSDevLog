@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4A6495FAAA32291CE9A75E /* Pods_selfSizingCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89D453CC66C82F2DB6DFEA9 /* Pods_selfSizingCells.framework */; };
 		DEA917611C15E7BE00D35C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA917601C15E7BE00D35C55 /* AppDelegate.swift */; };
 		DEA917661C15E7BE00D35C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA917641C15E7BE00D35C55 /* Main.storyboard */; };
 		DEA917681C15E7BE00D35C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA917671C15E7BE00D35C55 /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		599E078FF93E8FE403B41BB2 /* Pods-selfSizingCells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfSizingCells.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfSizingCells/Pods-selfSizingCells.release.xcconfig"; sourceTree = "<group>"; };
+		C9EDABFC52681987B71D67EA /* Pods-selfSizingCells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfSizingCells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-selfSizingCells/Pods-selfSizingCells.debug.xcconfig"; sourceTree = "<group>"; };
 		DEA9175D1C15E7BE00D35C55 /* selfSizingCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfSizingCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA917601C15E7BE00D35C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA917651C15E7BE00D35C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		DEA9177C1C15E7BF00D35C55 /* selfSizingCellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = selfSizingCellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA917801C15E7BF00D35C55 /* selfSizingCellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfSizingCellsUITests.swift; sourceTree = "<group>"; };
 		DEA917821C15E7BF00D35C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F89D453CC66C82F2DB6DFEA9 /* Pods_selfSizingCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfSizingCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4A6495FAAA32291CE9A75E /* Pods_selfSizingCells.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B233365E615856CF0115DC86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F89D453CC66C82F2DB6DFEA9 /* Pods_selfSizingCells.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6A563F1DBA8E7BD6C220F84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9EDABFC52681987B71D67EA /* Pods-selfSizingCells.debug.xcconfig */,
+				599E078FF93E8FE403B41BB2 /* Pods-selfSizingCells.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DEA917541C15E7BE00D35C55 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,8 @@
 				DEA917741C15E7BF00D35C55 /* selfSizingCellsTests */,
 				DEA9177F1C15E7BF00D35C55 /* selfSizingCellsUITests */,
 				DEA9175E1C15E7BE00D35C55 /* Products */,
+				D6A563F1DBA8E7BD6C220F84 /* Pods */,
+				B233365E615856CF0115DC86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA917851C15E7BF00D35C55 /* Build configuration list for PBXNativeTarget "selfSizingCells" */;
 			buildPhases = (
+				285DAF6317FE171A9FF0C8EF /* Check Pods Manifest.lock */,
 				DEA917591C15E7BE00D35C55 /* Sources */,
 				DEA9175A1C15E7BE00D35C55 /* Frameworks */,
 				DEA9175B1C15E7BE00D35C55 /* Resources */,
+				9E036DE0A80DFD0419AE0892 /* Embed Pods Frameworks */,
+				059FA7BB05EA62B3A18836A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		059FA7BB05EA62B3A18836A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-selfSizingCells/Pods-selfSizingCells-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		285DAF6317FE171A9FF0C8EF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E036DE0A80DFD0419AE0892 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-selfSizingCells/Pods-selfSizingCells-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEA917591C15E7BE00D35C55 /* Sources */ = {
@@ -396,6 +471,7 @@
 		};
 		DEA917861C15E7BF00D35C55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EDABFC52681987B71D67EA /* Pods-selfSizingCells.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = selfSizingCells/Info.plist;
@@ -407,6 +483,7 @@
 		};
 		DEA917871C15E7BF00D35C55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 599E078FF93E8FE403B41BB2 /* Pods-selfSizingCells.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = selfSizingCells/Info.plist;
@@ -483,6 +560,7 @@
 				DEA917871C15E7BF00D35C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEA917881C15E7BF00D35C55 /* Build configuration list for PBXNativeTarget "selfSizingCellsTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +569,7 @@
 				DEA9178A1C15E7BF00D35C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEA9178B1C15E7BF00D35C55 /* Build configuration list for PBXNativeTarget "selfSizingCellsUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +578,7 @@
 				DEA9178D1C15E7BF00D35C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
