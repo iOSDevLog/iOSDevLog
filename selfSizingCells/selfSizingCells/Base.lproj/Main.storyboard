@@ -3,27 +3,58 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--self sizing table view cells-->
         <scene sceneID="Pnj-aX-Ikx">
             <objects>
                 <tableViewController id="QFc-3b-flN" customClass="TableViewController" customModule="selfSizingCells" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vIw-sv-SpL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="255" sectionHeaderHeight="28" sectionFooterHeight="28" id="vIw-sv-SpL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="cbR-6g-rgI" customClass="TableViewCell" customModule="selfSizingCells" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="255" id="cbR-6g-rgI" customClass="TableViewCell" customModule="selfSizingCells" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="255"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cbR-6g-rgI" id="7B1-Kq-co1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="254"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="tEt-QV-6v6">
+                                            <rect key="frame" x="8" y="31" width="192" height="192"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="tEt-QV-6v6" secondAttribute="height" multiplier="1:1" id="f3k-wK-a9v"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500Px" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-lp-7CM">
+                                            <rect key="frame" x="208" y="116" width="384" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="tEt-QV-6v6" firstAttribute="leading" secondItem="7B1-Kq-co1" secondAttribute="leadingMargin" id="1lH-4o-gfi"/>
+                                        <constraint firstItem="5K4-lp-7CM" firstAttribute="leading" secondItem="tEt-QV-6v6" secondAttribute="trailing" constant="8" symbolic="YES" id="Pye-HF-Gc3"/>
+                                        <constraint firstItem="tEt-QV-6v6" firstAttribute="centerY" secondItem="7B1-Kq-co1" secondAttribute="centerY" id="SfK-Mw-yC5"/>
+                                        <constraint firstItem="5K4-lp-7CM" firstAttribute="trailing" secondItem="7B1-Kq-co1" secondAttribute="trailingMargin" id="hgr-Yp-YBn"/>
+                                        <constraint firstItem="5K4-lp-7CM" firstAttribute="width" secondItem="tEt-QV-6v6" secondAttribute="width" multiplier="2:1" id="lc9-72-WfC"/>
+                                        <constraint firstItem="5K4-lp-7CM" firstAttribute="centerY" secondItem="tEt-QV-6v6" secondAttribute="centerY" id="t1Z-Gd-DYh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="pxImageView" destination="tEt-QV-6v6" id="Eap-dr-oAw"/>
+                                    <outlet property="pxLabel" destination="5K4-lp-7CM" id="YSJ-JV-2ai"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,11 +62,11 @@
                             <outlet property="delegate" destination="QFc-3b-flN" id="gOO-Gh-OQy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="OiE-XW-Rxi"/>
+                    <navigationItem key="navigationItem" title="self sizing table view cells" id="OiE-XW-Rxi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idv-sj-MuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="447"/>
+            <point key="canvasLocation" x="173" y="415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GXQ-hb-w29">
@@ -55,4 +86,7 @@
             <point key="canvasLocation" x="-435" y="447"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Earth" width="133" height="132"/>
+    </resources>
 </document>
