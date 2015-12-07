@@ -20,6 +20,8 @@ class TableViewController: UITableViewController {
             jsonData in
             let data = JSON(data: jsonData.data!)
             self.photos = data["photos"].arrayValue
+            
+            self.tableView.reloadData()
         }
     }
     
@@ -33,6 +35,11 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! TableViewCell
 
         // Configure the cell...
+        let cellData = self.photos[indexPath.row].dictionaryValue
+        
+        let url = cellData["image_url"]?.stringValue
+        cell.pxImageView.image = UIImage(named: url!)
+        cell.pxLabel.text = cellData["description"]?.stringValue
 
         return cell
     }
