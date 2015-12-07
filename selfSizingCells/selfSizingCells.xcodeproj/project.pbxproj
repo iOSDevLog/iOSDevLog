@@ -223,7 +223,6 @@
 				TargetAttributes = {
 					DEA9175C1C15E7BE00D35C55 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 2926X3EUC5;
 					};
 					DEA917701C15E7BF00D35C55 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -482,6 +481,7 @@
 			baseConfigurationReference = C9EDABFC52681987B71D67EA /* Pods-selfSizingCells.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = selfSizingCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.selfSizingCells;
@@ -494,6 +494,7 @@
 			baseConfigurationReference = 599E078FF93E8FE403B41BB2 /* Pods-selfSizingCells.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = selfSizingCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.selfSizingCells;

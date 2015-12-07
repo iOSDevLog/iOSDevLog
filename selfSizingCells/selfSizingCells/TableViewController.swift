@@ -20,6 +20,8 @@ class TableViewController: UITableViewController {
             jsonData in
             let data = JSON(data: jsonData.data!)
             self.photos = data["photos"].arrayValue
+            
+            self.tableView.reloadData()
         }
     }
     
