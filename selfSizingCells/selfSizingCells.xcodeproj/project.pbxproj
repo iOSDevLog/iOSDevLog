@@ -14,6 +14,8 @@
 		DEA9176B1C15E7BE00D35C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA917691C15E7BE00D35C55 /* LaunchScreen.storyboard */; };
 		DEA917761C15E7BF00D35C55 /* selfSizingCellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA917751C15E7BF00D35C55 /* selfSizingCellsTests.swift */; };
 		DEA917811C15E7BF00D35C55 /* selfSizingCellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA917801C15E7BF00D35C55 /* selfSizingCellsUITests.swift */; };
+		DEA9178F1C15E95400D35C55 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9178E1C15E95400D35C55 /* TableViewController.swift */; };
+		DEA917911C15E96100D35C55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA917901C15E96100D35C55 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		DEA9177C1C15E7BF00D35C55 /* selfSizingCellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = selfSizingCellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA917801C15E7BF00D35C55 /* selfSizingCellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfSizingCellsUITests.swift; sourceTree = "<group>"; };
 		DEA917821C15E7BF00D35C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA9178E1C15E95400D35C55 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DEA917901C15E96100D35C55 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F89D453CC66C82F2DB6DFEA9 /* Pods_selfSizingCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfSizingCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,8 @@
 			children = (
 				DEA917601C15E7BE00D35C55 /* AppDelegate.swift */,
 				DEA917641C15E7BE00D35C55 /* Main.storyboard */,
+				DEA917901C15E96100D35C55 /* TableViewCell.swift */,
+				DEA9178E1C15E95400D35C55 /* TableViewController.swift */,
 				DEA917671C15E7BE00D35C55 /* Assets.xcassets */,
 				DEA917691C15E7BE00D35C55 /* LaunchScreen.storyboard */,
 				DEA9176C1C15E7BE00D35C55 /* Info.plist */,
@@ -331,7 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA917911C15E96100D35C55 /* TableViewCell.swift in Sources */,
 				DEA917611C15E7BE00D35C55 /* AppDelegate.swift in Sources */,
+				DEA9178F1C15E95400D35C55 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
