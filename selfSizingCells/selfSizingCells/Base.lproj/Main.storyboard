@@ -8,7 +8,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--self sizing table view cells-->
+        <!--Empty Data Set Delegate-->
         <scene sceneID="Pnj-aX-Ikx">
             <objects>
                 <tableViewController id="QFc-3b-flN" customClass="TableViewController" customModule="selfSizingCells" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,6 +63,8 @@
                         <connections>
                             <outlet property="dataSource" destination="QFc-3b-flN" id="Rhl-IA-URv"/>
                             <outlet property="delegate" destination="QFc-3b-flN" id="gOO-Gh-OQy"/>
+                            <outlet property="emptyDataSetDelegate" destination="QFc-3b-flN" id="QQH-Kz-GK2"/>
+                            <outlet property="emptyDataSetSource" destination="QFc-3b-flN" id="HwO-fA-0UE"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="self sizing table view cells" id="OiE-XW-Rxi"/>
@@ -86,7 +88,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEl-3p-q5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-435" y="447"/>
+            <point key="canvasLocation" x="-565" y="415"/>
         </scene>
     </scenes>
     <resources>

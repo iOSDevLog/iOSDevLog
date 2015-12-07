@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
+import DZNEmptyDataSet
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, DZNEmptyDataSetSource {
     var photos = [JSON]()
 
     override func viewDidLoad() {
@@ -50,5 +51,18 @@ class TableViewController: UITableViewController {
         cell.pxLabel.text = cellData["description"]?.stringValue
 
         return cell
+    }
+    
+    //MARK: - DZNEmptyDataSetSource
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "Wait a minute...")
+    }
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Earth")
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "Do you want beautiful photos ?\nLet's Go!")
     }
 }
