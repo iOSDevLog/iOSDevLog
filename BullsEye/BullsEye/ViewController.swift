@@ -11,14 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     
     var currentValue: Int = 0
+    var targetValue: Int = 1
 
     @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var targetLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        currentValue = lroundf(slider.value)
+        startNewRound()
+        updateLabels()
     }
     
     @IBAction func sliderMoved(sender: UISlider) {
@@ -26,7 +30,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAlert(sender: UIButton) {
+        var difference: Int
+        
+        if currentValue > targetValue {
+            difference = currentValue - targetValue
+        } else if targetValue > currentValue {
+            difference = targetValue - currentValue
+        } else {
+            difference = 0
+        }
+        
+        
         let message = "The value of the slider is: \(currentValue)"
+                + "\nThe target value is: \(targetValue)"
+                + "\nThe difference is: \(difference)"
         
         let alert = UIAlertController(title: "Hello, World!", message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -38,5 +55,14 @@ class ViewController: UIViewController {
         }
     }
     
+    func startNewRound() {
+        targetValue = 1 + Int(arc4random_uniform(100))
+        currentValue = lroundf(slider		.value)
+        slider.value = Float(currentValue)
+    }
+    
+    func updateLabels() {
+            targetLabel.text = String(targetValue)
+    }
 }
 
