@@ -9,18 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     var currentValue: Int = 0
     var targetValue: Int = 1
     var score = 0
     var round = 0
 
     @IBOutlet weak var slider: UISlider!
-    
     @IBOutlet weak var targetLabel: UILabel!
-    
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var roundLabel: UILabel!
     
     override func viewDidLoad() {
@@ -41,9 +37,21 @@ class ViewController: UIViewController {
         
         score += points
         
+        let title: String
+        
+        if difference == 0 {
+            title = "Perfect"
+        } else if difference < 5 {
+            title = "You almost had it!"
+        } else if difference < 10 {
+            title = "Pretty good!"
+        } else {
+            title = "Not even close..."
+        }
+        
         let message = "You scored \(points) points"
         
-        let alert = UIAlertController(title: "Hello, World!", message: message, preferredStyle: .Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         
         alert.addAction(action)
