@@ -57,9 +57,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-24-gNm">
                                 <rect key="frame" x="42" y="237" width="71" height="30"/>
                                 <state key="normal" title="Start Over"/>
-                                <connections>
-                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tz2-qk-XYD"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTJ-rk-2Ma">
                                 <rect key="frame" x="125" y="241" width="50" height="21"/>
@@ -87,9 +84,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NI-Ac-apE">
                                 <rect key="frame" x="462" y="241" width="22" height="22"/>
-                                <connections>
-                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tF6-ND-7Dc"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
