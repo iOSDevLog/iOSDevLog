@@ -63,8 +63,8 @@ class ViewController: UIViewController {
             print("You Hit Me!")
         }
         
-        updateLabels()
         startNewRound()
+        updateLabels()
     }
     
     func startNewRound() {
