@@ -23,8 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        startNewRound()
-        updateLabels()
+        startNewGame()
     }
     
     @IBAction func sliderMoved(sender: UISlider) {
@@ -66,6 +65,17 @@ class ViewController: UIViewController {
         presentViewController(alert, animated: true) { () -> Void in
             print("You Hit Me!")
         }
+    }
+    
+    @IBAction func startOver(sender: UIButton) {
+        startNewGame()
+        updateLabels()
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
     }
     
     func startNewRound() {
