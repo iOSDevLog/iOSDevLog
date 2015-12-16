@@ -14,6 +14,7 @@
 		DE2C689A1C20663300AC9826 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2C68981C20663300AC9826 /* LaunchScreen.storyboard */; };
 		DE2C68A51C20663300AC9826 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C68A41C20663300AC9826 /* BullsEyeTests.swift */; };
 		DE2C68B01C20663300AC9826 /* BullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C68AF1C20663300AC9826 /* BullsEyeUITests.swift */; };
+		DE9A27DA1C21B664002625B1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A27D91C21B664002625B1 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DE2C68AB1C20663300AC9826 /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2C68AF1C20663300AC9826 /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
 		DE2C68B11C20663300AC9826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9A27D91C21B664002625B1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				DE2C688F1C20663300AC9826 /* AppDelegate.swift */,
 				DE2C68911C20663300AC9826 /* ViewController.swift */,
+				DE9A27D91C21B664002625B1 /* AboutViewController.swift */,
 				DE2C68931C20663300AC9826 /* Main.storyboard */,
 				DE2C68961C20663300AC9826 /* Assets.xcassets */,
 				DE2C68981C20663300AC9826 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9A27DA1C21B664002625B1 /* AboutViewController.swift in Sources */,
 				DE2C68921C20663300AC9826 /* ViewController.swift in Sources */,
 				DE2C68901C20663300AC9826 /* AppDelegate.swift in Sources */,
 			);
@@ -488,6 +492,7 @@
 				DE2C68B61C20663300AC9826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE2C68B71C20663300AC9826 /* Build configuration list for PBXNativeTarget "BullsEyeTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				DE2C68B91C20663300AC9826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE2C68BA1C20663300AC9826 /* Build configuration list for PBXNativeTarget "BullsEyeUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				DE2C68BC1C20663300AC9826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
