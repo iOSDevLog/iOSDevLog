@@ -58,3 +58,13 @@
 ---
 
 ![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/11.png)
+
+### Display Name
+---
+
+![12](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/12.png)
+
+### Apple 
+---
+
+![13](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/13.png)
