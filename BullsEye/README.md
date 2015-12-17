@@ -28,3 +28,33 @@
 ---
 
 ![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/5.png)
+
+### polish
+---
+
+![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/6.png)
+
+### Load html
+---
+
+![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/7.png)
+
+### AutoLayout
+---
+
+![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/8.png)
+
+### iPhone 4s Support
+---
+
+![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/9.png)
+
+### Core Animation
+---
+
+![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/10.png)
+
+### icon
+---
+
+![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Getting_Started/11.png)
