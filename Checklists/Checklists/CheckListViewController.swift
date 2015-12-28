@@ -66,7 +66,9 @@ class CheckListViewController: UITableViewController {
                     isChecked = row3checked
                 } else if indexPath.row == 4 {
                     row4checked = !row4checked
-                    isChecked = row4checked }
+                    isChecked = row4checked
+                }
+            
                 if isChecked {
                     cell.accessoryType = .Checkmark
                 } else {
