@@ -15,6 +15,7 @@ class CheckListViewController: UITableViewController {
     var row3checked = false
     var row4checked = true
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,6 +26,7 @@ class CheckListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -50,7 +52,8 @@ class CheckListViewController: UITableViewController {
         
         return cell
     }
-
+    
+    // MARK: - table view delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             if let cell = tableView.cellForRowAtIndexPath(indexPath) {
                 var isChecked = false
@@ -81,6 +84,7 @@ class CheckListViewController: UITableViewController {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    // MARK: - helper
     func configureCheckmarkForCell(cell: UITableViewCell, indexPath: NSIndexPath) {
         var isChecked = false
         
