@@ -9,6 +9,12 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
+    var row0text = "Walk the dog"
+    var row1text = "Brush teeth"
+    var row2text = "Learn iOS development"
+    var row3text = "Soccer practice"
+    var row4text = "Eat ice cream"
+    
     var row0checked = false
     var row1checked = true
     var row2checked = true
@@ -37,15 +43,15 @@ class CheckListViewController: UITableViewController {
         let label = cell.viewWithTag(1000) as! UILabel
         
         if indexPath.row == 0 {
-            label.text = "Walk the dog"
+            label.text = row0text
         } else if indexPath.row == 1 {
-            label.text = "Brush my teeth"
+            label.text = row1text
         } else if indexPath.row == 2 {
-            label.text = "Learn iOS development"
+            label.text = row2text
         } else if indexPath.row == 3 {
-            label.text = "Soccer practice"
+            label.text = row3text
         } else if indexPath.row == 4 {
-            label.text = "Eat ice cream"
+            label.text = row4text
         }
         
         configureCheckmarkForCell(cell, indexPath: indexPath)
