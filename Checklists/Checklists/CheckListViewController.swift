@@ -63,9 +63,8 @@ class CheckListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItem", forIndexPath: indexPath)
         
         let item = items[indexPath.row]
-        let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.text
         
+        configureTextForCell(cell, withChecklistItem: item)
         configureCheckmarkForCell(cell, withCheckItem: item)
         
         return cell
@@ -90,6 +89,11 @@ class CheckListViewController: UITableViewController {
         } else {
             cell.accessoryType = .None
         }
+    }
+    
+    func configureTextForCell(cell: UITableViewCell, withChecklistItem item:ChecklistItem) {
+        let label = cell.viewWithTag(1000) as! UILabel
+        label.text = item.text
     }
 }
 
