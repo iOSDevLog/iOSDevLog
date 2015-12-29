@@ -74,12 +74,11 @@ class CheckListViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let cell = tableView.cellForRowAtIndexPath(indexPath) {
             let item = items[indexPath.row]
-            item.checked = !item.checked
-        
+            item.toggleChecked()
             configureCheckmarkForCell(cell, withCheckItem: item)
         }
-            
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // MARK: - helper
