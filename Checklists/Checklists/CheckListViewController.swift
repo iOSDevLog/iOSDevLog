@@ -9,10 +9,12 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
-    var items = [ChecklistItem]()
+    var items: [ChecklistItem]
     
     // MARK: - init
     required init?(coder aDecoder: NSCoder) {
+        items = [ChecklistItem]()
+        
         let row0item = ChecklistItem()
         row0item.text = "Walk the dog"
         row0item.checked = false
