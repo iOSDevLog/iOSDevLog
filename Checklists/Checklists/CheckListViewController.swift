@@ -60,7 +60,7 @@ class CheckListViewController: UITableViewController {
         let newRowIndex = items.count
         let item = ChecklistItem()
         item.text = "I am a new row"
-        item.checked = false
+        item.checked = true
         items.append(item)
         
         // update UI
@@ -94,6 +94,15 @@ class CheckListViewController: UITableViewController {
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // remove the item from the data model
+        items.removeAtIndex(indexPath.row)
+        
+        // delete the corresponding row from the view
+        let indexPaths = [indexPath]
+        tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     }
     
     // MARK: - helper
