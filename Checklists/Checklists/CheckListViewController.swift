@@ -56,7 +56,17 @@ class CheckListViewController: UITableViewController {
     
     // MARK: - IBAction
     @IBAction func addItem() {
+        // update Data Model
+        let newRowIndex = items.count
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = false
+        items.append(item)
         
+        // update UI
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     }
 
     // MARK: - table view data source
