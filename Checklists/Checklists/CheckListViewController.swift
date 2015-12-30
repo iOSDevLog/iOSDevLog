@@ -53,6 +53,11 @@ class CheckListViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - IBAction
+    @IBAction func addItem() {
+        
+    }
 
     // MARK: - table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
