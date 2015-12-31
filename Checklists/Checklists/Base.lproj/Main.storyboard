@@ -92,7 +92,7 @@
                                 <action selector="cancel" destination="EYJ-bV-faj" id="hki-6K-pEq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="l7W-GM-6U6">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="l7W-GM-6U6">
                             <connections>
                                 <action selector="done" destination="EYJ-bV-faj" id="1lp-wH-3JI"/>
                             </connections>
