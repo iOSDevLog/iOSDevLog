@@ -10,8 +10,17 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
 
+    // MARK: - outlet
     @IBOutlet weak var textField: UITextField!
     
+    // MARK: life cycle
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        textField.becomeFirstResponder()
+    }
+    
+    // MARK: - Action
     @IBAction func cancel() {
         dismissViewControllerAnimated(true, completion: nil)
     }
