@@ -8,11 +8,19 @@
 
 import UIKit
 
+protocol AddItemViewControllerDelegate: class {
+    func addItemViewControllerDidCancel(controller: AddItemViewController)
+    func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem)
+}
+
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var doneButtonItem: UIBarButtonItem!
 
     // MARK: - outlet
     @IBOutlet weak var textField: UITextField!
+    
+    weak var delegate: AddItemViewControllerDelegate?
     
     // MARK: life cycle
     override func viewWillAppear(animated: Bool) {
@@ -23,12 +31,16 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: - Action
     @IBAction func cancel() {
-        dismissViewControllerAnimated(true, completion: nil)
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
-        print("Contents of the text field: \(textField.text)")
-        dismissViewControllerAnimated(true, completion: nil)
+        let item = ChecklistItem()
+        
+        item.text = textField.text!
+        item.checked = false
+        
+        delegate?.addItemViewController(self, didFinishAddingItem: item)
     }
     
     // MARK: - tableview delegate
