@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="DMp-Js-VNv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1me-Zf-vsx">
                             <connections>
-                                <segue destination="2vZ-jH-M0X" kind="presentation" id="rTJ-Wc-Wjp"/>
+                                <segue destination="2vZ-jH-M0X" kind="presentation" identifier="AddItem" id="rTJ-Wc-Wjp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
