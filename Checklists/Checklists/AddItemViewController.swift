@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AddItemViewController: UITableViewController, UITextFieldDelegate {
+    @IBOutlet weak var doneButtonItem: UIBarButtonItem!
 
     // MARK: - outlet
     @IBOutlet weak var textField: UITextField!
@@ -33,5 +34,19 @@ class AddItemViewController: UITableViewController {
     // MARK: - tableview delegate
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return nil
+    }
+    
+    // MARK: - textfield delegate
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let oldText: NSString = textField.text!
+        let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+        
+        if newText.length > 0 {
+            doneButtonItem.enabled = true
+        } else {
+            doneButtonItem.enabled = false
+        }
+        
+        return true
     }
 }
