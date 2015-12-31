@@ -54,20 +54,7 @@ class CheckListViewController: UITableViewController, AddItemViewControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - IBAction
-    @IBAction func addItem() {
-        // update Data Model
-        let newRowIndex = items.count
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        item.checked = true
-        items.append(item)
-        
-        // update UI
-        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-    }
+    
 
     // MARK: - table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,18 +110,31 @@ class CheckListViewController: UITableViewController, AddItemViewControllerDeleg
     func addItemViewControllerDidCancel(controller: AddItemViewController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+    // MARK: - IBAction
     func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem) {
+        let newRowIndex = items.count
+        
+        items.append(item)
+        
+        // update UI
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: -
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // get real one
         if segue.identifier == "AddItem" {
+            // get the destinationViewController
             let navigationController = segue.destinationViewController as! UINavigationController
             
+            // get the real controller
             let controller = navigationController.topViewController as! AddItemViewController
             
+            // delegate is myself
             controller.delegate = self
         }
     }
