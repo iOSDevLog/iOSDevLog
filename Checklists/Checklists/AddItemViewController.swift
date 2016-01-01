@@ -22,7 +22,18 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     weak var delegate: AddItemViewControllerDelegate?
     
+    var itemToEdit: ChecklistItem?
+    
     // MARK: life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+        }
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         

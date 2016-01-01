@@ -124,7 +124,7 @@ class CheckListViewController: UITableViewController, AddItemViewControllerDeleg
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // MARK: -
+    // MARK: - segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // get real one
         if segue.identifier == "AddItem" {
@@ -136,6 +136,20 @@ class CheckListViewController: UITableViewController, AddItemViewControllerDeleg
             
             // delegate is myself
             controller.delegate = self
+        } else if segue.identifier == "EditItem" {
+            // get the destinationViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            
+            // get the real controller
+            let controller = navigationController.topViewController as! AddItemViewController
+            
+            // delegate is myself
+            controller.delegate = self
+            
+            // set item to edit
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                controller.itemToEdit = items[indexPath.row]
+            }
         }
     }
 }
