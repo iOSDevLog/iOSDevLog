@@ -110,6 +110,7 @@ class CheckListViewController: UITableViewController, AddItemViewControllerDeleg
     func addItemViewControllerDidCancel(controller: AddItemViewController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
     // MARK: - IBAction
     func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem) {
         let newRowIndex = items.count
