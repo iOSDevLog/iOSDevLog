@@ -41,6 +41,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         items.append(row4item)
         
         super.init(coder: aDecoder)
+        
+        print("Document folder is \(documentsDirectory())")
+        print("Data file path is\(dataFilePath())")
     }
     
     // MARK: - life cycle
