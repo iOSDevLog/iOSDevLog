@@ -15,32 +15,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     required init?(coder aDecoder: NSCoder) {
         items = [ChecklistItem]()
         
-        let row0item = ChecklistItem()
-        row0item.text = "Walk the dog"
-        row0item.checked = false
-        items.append(row0item)
-        
-        let row1item = ChecklistItem()
-        row1item.text = "Brush my teeth"
-        row1item.checked = true
-        items.append(row1item)
-        
-        let row2item = ChecklistItem()
-        row2item.text = "Learn iOS development"
-        row2item.checked = true
-        items.append(row2item)
-        
-        let row3item = ChecklistItem()
-        row3item.text = "Soccer practice"
-        row3item.checked = false
-        items.append(row3item)
-        
-        let row4item = ChecklistItem()
-        row4item.text = "Eat ice cream"
-        row4item.checked = true
-        items.append(row4item)
-        
         super.init(coder: aDecoder)
+        
+        loadChecklistItems()
     }
     
     // MARK: - life cycle
@@ -81,6 +58,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Update
+        saveChecklistItem()
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -90,6 +70,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         // delete the corresponding row from the view
         let indexPaths = [indexPath]
         tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
+        // Delete
+        saveChecklistItem()
     }
     
     // MARK: - helper
@@ -125,6 +108,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
         
         dismissViewControllerAnimated(true, completion: nil)
+    
+        // Create
+        saveChecklistItem()
     }
     
     func addItemViewController(controller: ItemDetailViewController, didFinishEditingItem item: ChecklistItem) {
@@ -136,6 +122,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         }
         
         dismissViewControllerAnimated(true, completion: nil)
+    
+        // Update
+        saveChecklistItem()
     }
     
     // MARK: - segue
@@ -163,6 +152,39 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
             // set item to edit
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 controller.itemToEdit = items[indexPath.row]
+            }
+        }
+    }
+    
+    // MARK: - save & load directory
+    func documentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        
+        return paths[0]
+    }
+    
+    func dataFilePath() -> String {
+        return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklists.plist")
+    }
+    
+    // CURD Create / Update / Retrieve / Delete
+    func saveChecklistItem() {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+        archiver.encodeObject(items, forKey: "ChecklistItems")
+        archiver.finishEncoding()
+        data.writeToFile(dataFilePath(), atomically: true)
+    }
+    
+    func loadChecklistItems() {
+        // load path
+        let path = dataFilePath()
+        // file exist
+        if NSFileManager.defaultManager().fileExistsAtPath(path) {
+            if let data = NSData(contentsOfFile: path) {
+                let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
+                items = unarchiver.decodeObjectForKey("ChecklistItems") as! [ChecklistItem]
+                unarchiver.finishDecoding()
             }
         }
     }
