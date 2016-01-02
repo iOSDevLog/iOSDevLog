@@ -84,6 +84,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Update
+        saveChecklistItem()
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -93,6 +96,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         // delete the corresponding row from the view
         let indexPaths = [indexPath]
         tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
+        // Delete
+        saveChecklistItem()
     }
     
     // MARK: - helper
@@ -128,6 +134,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
         
         dismissViewControllerAnimated(true, completion: nil)
+    
+        // Create
+        saveChecklistItem()
     }
     
     func addItemViewController(controller: ItemDetailViewController, didFinishEditingItem item: ChecklistItem) {
@@ -139,6 +148,9 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         }
         
         dismissViewControllerAnimated(true, completion: nil)
+    
+        // Update
+        saveChecklistItem()
     }
     
     // MARK: - segue
@@ -187,6 +199,15 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     // recommended
     func dataFilePath() -> String {
         return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklists.plist")
+    }
+    
+    // CURD Create / Update / Retrieve / Delete
+    func saveChecklistItem() {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+        archiver.encodeObject(items, forKey: "ChecklistItems")
+        archiver.finishEncoding()
+        data.writeToFile(dataFilePath(), atomically: true)
     }
 }
 
