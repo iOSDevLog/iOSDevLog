@@ -166,5 +166,24 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
             }
         }
     }
+    
+    // MARK: - save & load directory
+    func documentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        
+        return paths[0]
+    }
+    
+    /*
+    // not recommended
+    func dataFilePath2() -> String {
+    return "\(documentsDirectory())/Checklists.plist"
+    }
+    */
+    
+    // recommended
+    func dataFilePath() -> String {
+        return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklists.plist")
+    }
 }
 
