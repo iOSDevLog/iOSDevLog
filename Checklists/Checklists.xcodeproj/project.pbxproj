@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE399FE61C3975A6002CBC7D /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE399FE51C3975A6002CBC7D /* AllListsViewController.swift */; };
 		DE865B371C3563220007EF70 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE865B361C3563220007EF70 /* AddItemViewController.swift */; };
 		DEE7D6991C316DB700EE7591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE7D6981C316DB700EE7591 /* AppDelegate.swift */; };
 		DEE7D69B1C316DB700EE7591 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE7D69A1C316DB700EE7591 /* CheckListViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE399FE51C3975A6002CBC7D /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		DE865B361C3563220007EF70 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AddItemViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DEE7D6951C316DB700EE7591 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE7D6981C316DB700EE7591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DEE7D6A11C316DB700EE7591 /* LaunchScreen.storyboard */,
 				DEE7D6A41C316DB700EE7591 /* Info.plist */,
 				DEED02E51C32B0BB00C9FEA7 /* ChecklistItem.swift */,
+				DE399FE51C3975A6002CBC7D /* AllListsViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				DEE7D69B1C316DB700EE7591 /* CheckListViewController.swift in Sources */,
 				DE865B371C3563220007EF70 /* AddItemViewController.swift in Sources */,
 				DEED02E61C32B0BB00C9FEA7 /* ChecklistItem.swift in Sources */,
+				DE399FE61C3975A6002CBC7D /* AllListsViewController.swift in Sources */,
 				DEE7D6991C316DB700EE7591 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
