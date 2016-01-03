@@ -28,6 +28,7 @@ class AllListsViewController: UITableViewController {
         return cell
     }
 
+    // cellForRowAtIndexPath helper
     func cellForTableView(tableView: UITableView) -> UITableViewCell {
         let cellIedntifier = "Cell"
         
@@ -36,5 +37,9 @@ class AllListsViewController: UITableViewController {
         } else {
             return UITableViewCell(style: .Default, reuseIdentifier: cellIedntifier)
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("ShowChecklist", sender: nil)
     }
 }

@@ -159,7 +159,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="mGs-1X-yGI"/>
                     <connections>
-                        <segue destination="gre-eM-gOv" kind="show" id="c35-jZ-ovB"/>
+                        <segue destination="gre-eM-gOv" kind="show" identifier="ShowChecklist" id="c35-jZ-ovB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-SX-xGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
