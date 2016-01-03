@@ -12,28 +12,20 @@ class AllListsViewController: UITableViewController {
     var lists: [Checklist]
     
     required init?(coder aDecoder: NSCoder) {
-        // 1
         lists = [Checklist]()
         
-        // 2
         super.init(coder: aDecoder)
         
-        // 3
-        var list = Checklist()
-        list.name = "Birthdays"
+        var list = Checklist(name: "Birthdays")
         lists.append(list)
         
-        // 4
-        list = Checklist()
-        list.name = "Groceries"
+        list = Checklist(name: "Groceries")
         lists.append(list)
         
-        list = Checklist()
-        list.name = "Cool Apps"
+        list = Checklist(name: "Cool Apps")
         lists.append(list)
         
-        list = Checklist()
-        list.name = "To Do"
+        list = Checklist(name: "To Do")
         lists.append(list)
     }
     
@@ -53,6 +45,7 @@ class AllListsViewController: UITableViewController {
         let checklist = lists[indexPath.row]
         
         cell.textLabel?.text = checklist.name
+        cell.accessoryType = .DetailDisclosureButton
         
         return cell
     }
