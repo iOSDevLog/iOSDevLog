@@ -118,7 +118,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jyb-QW-6L0">
             <objects>
-                <navigationController id="Ci4-Wo-faD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ListDetailNavigationController" id="Ci4-Wo-faD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Za-hd-I2b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -224,7 +224,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="mGs-1X-yGI"/>
                     <connections>
                         <segue destination="gre-eM-gOv" kind="show" identifier="ShowChecklist" id="c35-jZ-ovB"/>
-                        <segue destination="Ci4-Wo-faD" kind="presentation" identifier="AddChecklist" id="f1l-X3-5xe"/>
+                        <segue destination="Ci4-Wo-faD" kind="show" identifier="AddChecklist" id="f1l-X3-5xe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-SX-xGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
