@@ -16,7 +16,7 @@ protocol ItemDetailViewControllerDelegate: class {
 
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var doneButtonItem: UIBarButtonItem!
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
     // MARK: - outlet
     @IBOutlet weak var textField: UITextField!
@@ -32,6 +32,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         if let item = itemToEdit {
             title = "Edit Item"
             textField.text = item.text
+            doneBarButton.enabled = true
         }
     }
     
@@ -70,7 +71,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         let oldText: NSString = textField.text!
         let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
         
-        doneButtonItem.enabled = (newText.length > 0)
+        doneBarButton.enabled = (newText.length > 0)
         
         return true
     }
