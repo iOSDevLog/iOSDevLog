@@ -43,3 +43,8 @@
 
 
 ![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/8.png)
+
+#### Lists
+
+
+![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/9.png)

@@ -61,15 +61,15 @@
         <scene sceneID="ssH-Ip-Qqx">
             <objects>
                 <tableViewController id="c2R-iX-shU" customClass="ListDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZd-g4-52I">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fZd-g4-52I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="Eub-WQ-2cX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5HZ-ht-Wzw">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5HZ-ht-Wzw" id="TgG-LT-kxD">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -221,10 +221,15 @@
                             <outlet property="delegate" destination="R2Z-rS-1qs" id="nLO-Y2-7uf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="mGs-1X-yGI"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="mGs-1X-yGI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xhv-UD-3n4">
+                            <connections>
+                                <segue destination="Ci4-Wo-faD" kind="presentation" identifier="AddChecklist" id="CQP-oe-OqU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="gre-eM-gOv" kind="show" identifier="ShowChecklist" id="c35-jZ-ovB"/>
-                        <segue destination="Ci4-Wo-faD" kind="show" identifier="AddChecklist" id="f1l-X3-5xe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-SX-xGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
