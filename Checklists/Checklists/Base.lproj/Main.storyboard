@@ -224,7 +224,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="mGs-1X-yGI"/>
                     <connections>
                         <segue destination="gre-eM-gOv" kind="show" identifier="ShowChecklist" id="c35-jZ-ovB"/>
-                        <segue destination="Ci4-Wo-faD" kind="presentation" id="f1l-X3-5xe"/>
+                        <segue destination="Ci4-Wo-faD" kind="presentation" identifier="AddChecklist" id="f1l-X3-5xe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-SX-xGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
