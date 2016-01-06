@@ -16,23 +16,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         
         super.init(coder: aDecoder)
         
-        var list = Checklist(name: "Birthdays")
-        lists.append(list)
-        
-        list = Checklist(name: "Groceries")
-        lists.append(list)
-        
-        list = Checklist(name: "Cool Apps")
-        lists.append(list)
-        
-        list = Checklist(name: "To Do")
-        lists.append(list)
-        
-        for list in lists {
-            let item = ChecklistItem()
-            item.text = "Item for \(list.name)"
-            list.items.append(item)
-        }
+        loadChecklists()
     }
     
     override func viewDidLoad() {

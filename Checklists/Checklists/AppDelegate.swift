@@ -12,5 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        saveData()
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        saveData()
+    }
+    
+    // MARK: - helper
+    func saveData() {
+        let navigationController = window?.rootViewController as! UINavigationController
+        let controller = navigationController.viewControllers[0] as! AllListsViewController
+        
+        controller.saveChecklists()
+    }
 }
 
