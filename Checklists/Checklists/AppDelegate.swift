@@ -13,6 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var dataModel = DataModel()
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let navigationController = window?.rootViewController as! UINavigationController
+        let controller = navigationController.viewControllers[0] as! AllListsViewController
+
+        controller.dataModel = dataModel
+        
+        return true
+    }
+    
     func applicationDidEnterBackground(application: UIApplication) {
         saveData()
     }
@@ -23,10 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - helper
     func saveData() {
-        let navigationController = window?.rootViewController as! UINavigationController
-        let controller = navigationController.viewControllers[0] as! AllListsViewController
-        
-        controller.saveChecklists()
+        dataModel.saveChecklists()
     }
 }
 
