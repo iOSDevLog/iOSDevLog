@@ -12,5 +12,29 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var dataModel = DataModel()
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let navigationController = window?.rootViewController as! UINavigationController
+        let controller = navigationController.viewControllers[0] as! AllListsViewController
+
+        controller.dataModel = dataModel
+        
+        return true
+    }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        saveData()
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        saveData()
+    }
+    
+    // MARK: - helper
+    func saveData() {
+        dataModel.saveChecklists()
+    }
 }
 
