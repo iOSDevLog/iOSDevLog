@@ -28,11 +28,21 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         list = Checklist(name: "To Do")
         lists.append(list)
         
-        for list in lists {
-            let item = ChecklistItem()
-            item.text = "Item for \(list.name)"
-            list.items.append(item)
-        }
+        var item = ChecklistItem()
+        item.text = "Item for Birthdays"
+        lists[0].items.append(item)
+        
+        item = ChecklistItem()
+        item.text = "Item for Groceries"
+        lists[1].items.append(item)
+        
+        item = ChecklistItem()
+        item.text = "Item for Cool Apps"
+        lists[2].items.append(item)
+        
+        item = ChecklistItem()
+        item.text = "Item for To Do"
+        lists[3].items.append(item)
     }
     
     override func viewDidLoad() {
