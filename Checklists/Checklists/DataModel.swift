@@ -26,6 +26,7 @@ class DataModel {
         loadChecklists()
         
         registerDefaults()
+        handleFirstTime()
     }
     
     // MARK: - save & load directory
@@ -63,8 +64,22 @@ class DataModel {
     
     // MARK: - NSUserDefauts
     func registerDefaults() {
-        let dictionary = ["ChecklistIndex": -1];
+        let dictionary = ["ChecklistIndex": -1,
+                            "FistTime": true];
         
         NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
+    }
+    
+    func handleFirstTime() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let firstTime = userDefaults.boolForKey("FistTime")
+        
+        if firstTime {
+            let checklist = Checklist(name: "List")
+            lists.append(checklist)
+            indexOfSelectedChecklist = 0
+            userDefaults.setBool(false, forKey: "FistTime")
+            userDefaults.synchronize()
+        }
     }
 }
