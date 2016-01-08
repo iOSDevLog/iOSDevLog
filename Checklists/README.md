@@ -51,3 +51,9 @@
 #### 08 - Improved Data Model
 
 ![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/10.png)
+
+#### 09 - NSUserDefaults
+
+![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/11.png)
+
+![12](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/12.png)
