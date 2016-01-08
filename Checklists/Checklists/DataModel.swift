@@ -14,6 +14,8 @@ class DataModel {
     // MARK: - init
     init() {
         loadChecklists()
+        
+        registerDefaults()
     }
     
     // MARK: - save & load directory
@@ -47,5 +49,12 @@ class DataModel {
                 unarchiver.finishDecoding()
             }
         }
+    }
+    
+    // MARK: - NSUserDefauts
+    func registerDefaults() {
+        let dictionary = ["ChecklistIndex": -1];
+        
+        NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
     }
 }
