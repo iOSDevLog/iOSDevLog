@@ -11,9 +11,22 @@ import Foundation
 class DataModel {
     var lists = [Checklist]()
     
+    var indexOfSelectedChecklist: Int {
+        get {
+            return NSUserDefaults.standardUserDefaults().integerForKey("ChecklistIndex")
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey: "ChecklistIndex")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+    }
+    
     // MARK: - init
     init() {
         loadChecklists()
+        
+        registerDefaults()
+        handleFirstTime()
     }
     
     // MARK: - save & load directory
@@ -46,6 +59,27 @@ class DataModel {
                 lists = unarchiver.decodeObjectForKey("Checklists") as! [Checklist]
                 unarchiver.finishDecoding()
             }
+        }
+    }
+    
+    // MARK: - NSUserDefauts
+    func registerDefaults() {
+        let dictionary = ["ChecklistIndex": -1,
+                            "FistTime": true];
+        
+        NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
+    }
+    
+    func handleFirstTime() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let firstTime = userDefaults.boolForKey("FistTime")
+        
+        if firstTime {
+            let checklist = Checklist(name: "List")
+            lists.append(checklist)
+            indexOfSelectedChecklist = 0
+            userDefaults.setBool(false, forKey: "FistTime")
+            userDefaults.synchronize()
         }
     }
 }
