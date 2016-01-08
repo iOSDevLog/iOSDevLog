@@ -11,8 +11,23 @@ import UIKit
 class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     var dataModel: DataModel!
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+        
+        // load ChecklistIndex
+        let index = NSUserDefaults.standardUserDefaults().integerForKey("ChecklistIndex")
+        
+        if index != -1 {
+            let checklist = dataModel.lists[index]
+            performSegueWithIdentifier("ShowChecklist", sender: checklist)
+        }
     }
 
     // MARK: - Table view data source
