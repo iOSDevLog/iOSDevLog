@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     var dataModel: DataModel!
     
     override func viewDidLoad() {
@@ -107,5 +107,13 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             }
         }
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: - UINavigationControllerDelegate
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        if viewController === self {
+            // Delete ChecklistIndex
+            NSUserDefaults.standardUserDefaults().setInteger(-1, forKey: "ChecklistIndex")
+        }
     }
 }
