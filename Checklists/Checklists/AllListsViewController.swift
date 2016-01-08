@@ -22,7 +22,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         navigationController?.delegate = self
         
         // load ChecklistIndex
-        let index = NSUserDefaults.standardUserDefaults().integerForKey("ChecklistIndex")
+        let index = dataModel.indexOfSelectedChecklist
         
         if index != -1 {
             let checklist = dataModel.lists[index]
@@ -60,7 +60,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Save ChecklistIndex
-        NSUserDefaults.standardUserDefaults().setInteger(indexPath.row, forKey: "ChecklistIndex")
+        self.dataModel.indexOfSelectedChecklist = indexPath.row
         
         let checklist = dataModel.lists[indexPath.row]
         performSegueWithIdentifier("ShowChecklist", sender: checklist)
