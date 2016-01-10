@@ -18,12 +18,13 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        // should in viewWillAppear()
+        tableView.reloadData()
         
         navigationController?.delegate = self
         
