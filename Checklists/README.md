@@ -44,16 +44,30 @@
 
 ![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/8.png)
 
-#### 07 - Lists
+### 07 - Lists
+---
 
 ![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/9.png)
 
-#### 08 - Improved Data Model
+### 08 - Improved Data Model
+---
 
 ![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/10.png)
 
-#### 09 - NSUserDefaults
+### 09 - NSUserDefaults
+---
 
 ![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/11.png)
 
 ![12](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/12.png)
+
+### UI Improvements
+---
+
+#### Showing the number of to-do items remaining
+
+![13](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/13.png)
+
+#### Sorting the lists
+
+![14](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/14.png)
