@@ -123,13 +123,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist) {
         dataModel.lists.append(checklist)
         dataModel.sortChecklists()
-        tableView.reloadData()
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist) {
         dataModel.sortChecklists()
-        tableView.reloadData()
         dismissViewControllerAnimated(true, completion: nil)
     }
     
