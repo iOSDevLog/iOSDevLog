@@ -58,6 +58,8 @@ class DataModel {
                 let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
                 lists = unarchiver.decodeObjectForKey("Checklists") as! [Checklist]
                 unarchiver.finishDecoding()
+                
+                sortChecklists()
             }
         }
     }
@@ -80,6 +82,13 @@ class DataModel {
             indexOfSelectedChecklist = 0
             userDefaults.setBool(false, forKey: "FistTime")
             userDefaults.synchronize()
+        }
+    }
+    
+    // MARK: - Sorting the lists
+    func sortChecklists() {
+        lists.sortInPlace { (checklist1, checklist2) -> Bool in
+            checklist1.name.localizedCaseInsensitiveCompare(checklist2.name) == .OrderedAscending
         }
     }
 }
