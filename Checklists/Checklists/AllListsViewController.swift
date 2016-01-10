@@ -44,6 +44,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         cell.textLabel?.text = checklist.name
         cell.accessoryType = .DetailDisclosureButton
         
+        cell.detailTextLabel?.text = "\(checklist.countUncheckedItems()) Remaning"
+        
         return cell
     }
 
@@ -54,7 +56,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIedntifier) {
             return cell
         } else {
-            return UITableViewCell(style: .Default, reuseIdentifier: cellIedntifier)
+            return UITableViewCell(style: .Subtitle, reuseIdentifier: cellIedntifier)
         }
     }
     
