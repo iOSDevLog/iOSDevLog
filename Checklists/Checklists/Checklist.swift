@@ -10,7 +10,7 @@ import UIKit
 
 class Checklist: NSObject, NSCoding {
     var name = ""
-    var iconName: String
+    var iconName = "No Icon"
     var items = [ChecklistItem]()
     
     init(name: String) {
