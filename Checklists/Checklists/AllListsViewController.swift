@@ -14,6 +14,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .SingleLine
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -59,6 +61,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         } else {
             cell.detailTextLabel?.text = "\(count) Remaning"
         }
+        
+        cell.imageView?.image = UIImage(named: checklist.iconName)
         
         return cell
     }
