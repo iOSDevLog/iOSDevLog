@@ -15,7 +15,6 @@ class Checklist: NSObject, NSCoding {
     
     init(name: String) {
         self.name = name
-        self.iconName = "Appointments"
         
         super.init()
     }
