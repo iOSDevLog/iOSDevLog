@@ -14,7 +14,10 @@ protocol ListDetailViewControllerDelegate: class {
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
 }
 
-class ListDetailViewController: UITableViewController, UITextFieldDelegate {
+class ListDetailViewController:
+UITableViewController,
+UITextFieldDelegate,
+IconPickerViewControllerDelegate {
     
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextField!
@@ -82,5 +85,20 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
         doneBarButton.enabled = (newText.length > 0)
         
         return true
+    }
+    
+    // MARK: - IconPickerViewControllerDelegate
+    func iconPicker(picker: IconPickerViewController, didPickIcon iconName: String) {
+        self.iconName = iconName
+        iconImageView.image = UIImage(named: iconName)
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    // MARK: - segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PickIcon" {
+            let controller = segue.destinationViewController as! IconPickerViewController
+            controller.delegate = self
+        }
     }
 }
