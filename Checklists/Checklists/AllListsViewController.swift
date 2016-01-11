@@ -62,7 +62,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             cell.detailTextLabel?.text = "\(count) Remaning"
         }
         
-        cell.imageView?.image = UIImage(named: checklist.iconName)
+        if indexPath.row % 2 == 0 {
+            cell.imageView?.image = UIImage(named: checklist.iconName)
+        } else {
+            cell.imageView?.image = UIImage(named: "")
+        }
         
         return cell
     }
