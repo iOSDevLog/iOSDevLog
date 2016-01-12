@@ -71,3 +71,11 @@
 #### Sorting the lists
 
 ![14](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/14.png)
+
+#### Adding icons to the checklists
+
+![15](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/15.png)
+
+![16](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/16.png)
+
+![17](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/17.png)
