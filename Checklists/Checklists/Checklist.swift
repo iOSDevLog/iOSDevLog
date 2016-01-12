@@ -19,6 +19,13 @@ class Checklist: NSObject, NSCoding {
         super.init()
     }
     
+    init(name: String, iconName: String) {
+        self.name = name
+        self.iconName = iconName
+        
+        super.init()
+    }
+    
     // MARK: - protocol NSCoding
     
     func encodeWithCoder(aCoder: NSCoder) {
