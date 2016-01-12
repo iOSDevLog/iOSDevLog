@@ -58,10 +58,11 @@ IconPickerViewControllerDelegate {
     @IBAction func done() {
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
+            checklist.iconName = iconName
             delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
         } else {
             let checklist = Checklist(name: textField.text!)
-            
+            checklist.iconName = iconName
             delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
         }
     }    
