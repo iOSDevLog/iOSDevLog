@@ -13,10 +13,8 @@ class Checklist: NSObject, NSCoding {
     var iconName = "No Icon"
     var items = [ChecklistItem]()
     
-    init(name: String) {
-        self.name = name
-        
-        super.init()
+    convenience init(name: String) {
+        self.init(name: name, iconName: "No Icon")
     }
     
     init(name: String, iconName: String) {
