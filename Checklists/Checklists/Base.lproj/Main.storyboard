@@ -22,19 +22,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="533" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-ab-nrq">
-                                            <rect key="frame" x="42" y="11" width="550" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-ab-nrq">
+                                            <rect key="frame" x="38" y="11" width="495" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9Q-1Q-q5X">
-                                            <rect key="frame" x="8" y="11" width="26" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9Q-1Q-q5X">
+                                            <rect key="frame" x="8" y="8" width="24" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1iy-ab-nrq" firstAttribute="centerY" secondItem="0e3-ZA-7TJ" secondAttribute="centerY" id="4HW-Fh-KSj"/>
+                                        <constraint firstAttribute="trailing" secondItem="1iy-ab-nrq" secondAttribute="trailing" id="L9A-EJ-18c"/>
+                                        <constraint firstItem="1iy-ab-nrq" firstAttribute="leading" secondItem="0e3-ZA-7TJ" secondAttribute="leadingMargin" constant="30" id="SYL-fh-nAZ"/>
+                                        <constraint firstItem="b9Q-1Q-q5X" firstAttribute="centerY" secondItem="1iy-ab-nrq" secondAttribute="centerY" id="ggL-P4-29t"/>
+                                        <constraint firstItem="b9Q-1Q-q5X" firstAttribute="leading" secondItem="0e3-ZA-7TJ" secondAttribute="leadingMargin" id="mup-TV-OLd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="2vZ-jH-M0X" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="2xZ-DD-kaj"/>
