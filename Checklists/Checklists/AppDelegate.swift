@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         controller.dataModel = dataModel
         
+        // local notification test
+        let notifacationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notifacationSettings)
+        
         return true
     }
     
