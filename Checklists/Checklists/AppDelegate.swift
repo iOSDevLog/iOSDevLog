@@ -25,7 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notifacationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound, .Badge], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notifacationSettings)
         
+        let date = NSDate(timeIntervalSinceNow: 2)
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = date
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.alertBody = "I am a local notification"
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        print("didReceiveLocalNotification \(notification)")
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
