@@ -91,4 +91,13 @@ class DataModel {
             checklist1.name.localizedCaseInsensitiveCompare(checklist2.name) == .OrderedAscending
         }
     }
+    
+    class func nextChecklistItemID() -> Int {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let itemID = userDefaults.integerForKey("ChecklistItemID")
+        userDefaults.setInteger(itemID+1, forKey: "ChecklistItemID")
+        userDefaults.synchronize()
+        
+        return itemID
+    }
 }

@@ -29,6 +29,8 @@ class ChecklistItem: NSObject, NSCoding {
     }
     
     override init() {
+        itemID = DataModel.nextChecklistItemID()
+        
         super.init()
     }
 
