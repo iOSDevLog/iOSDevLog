@@ -40,8 +40,8 @@ class ChecklistItem: NSObject, NSCoding {
         aCoder.encodeObject(text, forKey: "Text")
         aCoder.encodeBool(checked, forKey: "Checked")
         
-        aCoder.encodeObject(text, forKey: "DueDate")
-        aCoder.encodeBool(checked, forKey: "ShouldRemind")
+        aCoder.encodeObject(dueDate, forKey: "DueDate")
+        aCoder.encodeBool(shouldRemind, forKey: "ShouldRemind")
         aCoder.encodeInteger(itemID, forKey: "ItemID")
     }
     
