@@ -67,7 +67,9 @@ class DataModel {
     // MARK: - NSUserDefauts
     func registerDefaults() {
         let dictionary = ["ChecklistIndex": -1,
-                            "FistTime": true];
+                            "FistTime": true,
+                            "ChecklistItemID": 0
+        ];
         
         NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
     }
