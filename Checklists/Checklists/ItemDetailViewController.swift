@@ -121,7 +121,11 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         
         if indexPath.section == 1 && indexPath.row == 1 {
-            showDatePicker()
+            if !datePickerVisible {
+                showDatePicker()
+            } else {
+                hideDatePicker()
+            }
         }
     }
     
@@ -151,6 +155,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        hideDatePicker()
+    }
+    
     // MARK: - update UI
     func updateDueDateLabel() {
         let formatter = NSDateFormatter()
@@ -172,9 +180,29 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         
         tableView.beginUpdates()
         tableView.insertRowsAtIndexPaths([datePickerIndexPath], withRowAnimation: .Fade)
-        tableView.reloadRowsAtIndexPaths([dateRowIndexPath], withRowAnimation: .Automatic)
+        tableView.reloadRowsAtIndexPaths([dateRowIndexPath], withRowAnimation: .None)
         tableView.endUpdates()
         
         datePicker.setDate(dueDate, animated: false)
+    }
+    
+    func hideDatePicker() {
+        if datePickerVisible {
+            datePickerVisible = false
+            
+            let dateRowIndexPath = NSIndexPath(forRow: 1, inSection: 1)
+            let datePickerIndexPath = NSIndexPath(forRow: 2, inSection: 1)
+            
+            if let dateCell = tableView.cellForRowAtIndexPath(dateRowIndexPath) {
+                dateCell.detailTextLabel?.textColor = UIColor(white: 0, alpha: 0.5)
+            }
+            
+            tableView.beginUpdates()
+            tableView.deleteRowsAtIndexPaths([datePickerIndexPath], withRowAnimation: .Fade)
+            tableView.reloadRowsAtIndexPaths([dateRowIndexPath], withRowAnimation: .None)
+            tableView.endUpdates()
+            
+            datePicker.setDate(dueDate, animated: false)
+        }
     }
 }
