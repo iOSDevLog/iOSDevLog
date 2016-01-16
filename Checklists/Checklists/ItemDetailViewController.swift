@@ -85,6 +85,11 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func dateChanged(sender: UIDatePicker) {
+        dueDate = sender.date
+        updateDueDateLabel()
+    }
+    
     // MARK: - tableview data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 1 && datePickerVisible {
