@@ -163,7 +163,18 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     func showDatePicker() {
         datePickerVisible = true
         
+        let dateRowIndexPath = NSIndexPath(forRow: 1, inSection: 1)
         let datePickerIndexPath = NSIndexPath(forRow: 2, inSection: 1)
+        
+        if let dateCell = tableView.cellForRowAtIndexPath(dateRowIndexPath) {
+            dateCell.detailTextLabel?.textColor = dateCell.detailTextLabel?.tintColor
+        }
+        
+        tableView.beginUpdates()
         tableView.insertRowsAtIndexPaths([datePickerIndexPath], withRowAnimation: .Fade)
+        tableView.reloadRowsAtIndexPaths([dateRowIndexPath], withRowAnimation: .Automatic)
+        tableView.endUpdates()
+        
+        datePicker.setDate(dueDate, animated: false)
     }
 }
