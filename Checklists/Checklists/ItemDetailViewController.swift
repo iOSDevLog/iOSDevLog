@@ -25,11 +25,17 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var dueDateLabel: UILabel!
     
+    @IBOutlet var datePickerCell: UITableViewCell!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     weak var delegate: ItemDetailViewControllerDelegate?
     
     var itemToEdit: ChecklistItem?
     
     var dueDate = NSDate()
+    
+    var datePickerVisible = false
     
     // MARK: life cycle
     override func viewDidLoad() {
@@ -79,6 +85,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: - tableview data source
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 1 && indexPath.row == 2 {
+            return datePickerCell
+        }
+        
+        return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    }
+    
     // MARK: - tableview delegate
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return nil
@@ -100,5 +115,13 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         formatter.dateStyle = .MediumStyle
         formatter.timeStyle = .ShortStyle
         dueDateLabel.text = formatter.stringFromDate(dueDate)
+    }
+    
+    // MARK: show / hide datePicker
+    func showDatePicker() {
+        datePickerVisible = true
+        
+        let datePickerIndexPath = NSIndexPath(forRow: 2, inSection: 1)
+        tableView.insertRowsAtIndexPaths([datePickerIndexPath], withRowAnimation: .Fade)
     }
 }
