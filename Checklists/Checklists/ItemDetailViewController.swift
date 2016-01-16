@@ -86,17 +86,33 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
     
     // MARK: - tableview data source
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 1 && datePickerVisible {
+            return 3
+        } else {
+            return super.tableView(tableView, numberOfRowsInSection: section)
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 1 && indexPath.row == 2 {
             return datePickerCell
+        } else {
+            return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
         }
-        
-        return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
     }
     
     // MARK: - tableview delegate
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return nil
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 1 && indexPath.row == 2 {
+            return 217
+        } else {
+            return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+        }
     }
     
     // MARK: - textfield delegate
