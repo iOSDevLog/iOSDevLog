@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         controller.dataModel = dataModel
         
+        
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
     }
     
     func applicationDidEnterBackground(application: UIApplication) {

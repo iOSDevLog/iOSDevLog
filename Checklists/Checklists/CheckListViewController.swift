@@ -74,7 +74,7 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     
     func configureTextForCell(cell: UITableViewCell, withChecklistItem item:ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.text
+        label.text = "\(item.text)"
     }
     
     // MARK: - ItemDetailViewControllerDelegate

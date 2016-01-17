@@ -87,3 +87,33 @@
 #### Supporting all iPhone models
 
 ![19](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/19.png)
+
+### Local Notifications
+---
+
+#### Extra feature: local notifications
+
+##### Badge
+![20](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/20.png)
+
+
+##### itemID
+
+![21](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/21.png)
+
+##### date
+
+![22](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/22.png)
+
+#### The date picker 
+
+![23](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/23.png)
+
+##### tintColor
+
+![24](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/24.png)
+
+### Scheduling the local notifications
+---
+
+![25](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/25.png)
