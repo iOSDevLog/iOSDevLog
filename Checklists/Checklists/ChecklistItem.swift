@@ -35,6 +35,12 @@ class ChecklistItem: NSObject, NSCoding {
         super.init()
     }
 
+    deinit {
+        if let notification = notificationForThisItem() {
+            print("Removing existing notification \(notification)")
+            UIApplication.sharedApplication().cancelLocalNotification(notification)
+        }
+    }
     
     // MARK: - NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
