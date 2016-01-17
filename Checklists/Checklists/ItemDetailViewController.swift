@@ -67,19 +67,17 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func done() {
         if let item = itemToEdit {
             item.text = textField.text!
-            
             item.shouldRemind = shouldRemindSwitch.on
             item.dueDate = dueDate
-            
+            item.scheduleNotification()
             delegate?.addItemViewController(self, didFinishEditingItem: item)
         } else {
             let item = ChecklistItem()
-            
             item.text = textField.text!
             item.checked = false
-            
             item.shouldRemind = shouldRemindSwitch.on
             item.dueDate = dueDate
+            item.scheduleNotification()
             
             delegate?.addItemViewController(self, didFinishAddingItem: item)
         }
@@ -88,6 +86,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func dateChanged(sender: UIDatePicker) {
         dueDate = sender.date
         updateDueDateLabel()
+    }
+    
+    @IBAction func shouldRemindToggled(sender: UISwitch) {
+        textField.resignFirstResponder()
+        if sender.on {
+            let notifacationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound, .Badge], categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(notifacationSettings)
+        }
     }
     
     // MARK: - tableview data source

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ChecklistItem: NSObject, NSCoding {
     var text = ""
@@ -34,6 +35,12 @@ class ChecklistItem: NSObject, NSCoding {
         super.init()
     }
 
+    deinit {
+        if let notification = notificationForThisItem() {
+            print("Removing existing notification \(notification)")
+            UIApplication.sharedApplication().cancelLocalNotification(notification)
+        }
+    }
     
     // MARK: - NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
@@ -47,5 +54,39 @@ class ChecklistItem: NSObject, NSCoding {
     
     func toggleChecked() {
         checked = !checked
+    }
+    
+    func scheduleNotification() {
+        if shouldRemind && dueDate.compare(NSDate()) != .OrderedAscending {
+            let existingNotification = notificationForThisItem()
+            
+            if let notification = existingNotification {
+                print("Found an existing notification \(notification)")
+                UIApplication.sharedApplication().cancelLocalNotification(notification)
+            }
+            
+            let localNotification = UILocalNotification()
+            localNotification.fireDate = dueDate
+            localNotification.timeZone = NSTimeZone.defaultTimeZone()
+            localNotification.applicationIconBadgeNumber += 1
+            localNotification.alertBody = text
+            localNotification.userInfo = ["ItemID": itemID]
+            localNotification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+            
+            print("Scheduled notification \(localNotification) for itemID \(itemID)")
+        }
+    }
+    
+    func notificationForThisItem() -> UILocalNotification? {
+        let allNotification = UIApplication.sharedApplication().scheduledLocalNotifications!
+        
+        for notification in allNotification {
+            if let number = notification.userInfo!["ItemID"] as? Int where number == itemID {
+                return notification
+            }
+        }
+        
+        return nil
     }
 }
