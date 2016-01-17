@@ -48,4 +48,10 @@ class ChecklistItem: NSObject, NSCoding {
     func toggleChecked() {
         checked = !checked
     }
+    
+    func scheduleNotification() {
+        if shouldRemind && dueDate.compare(NSDate()) != .OrderedAscending {
+            print("We should schedule a notification")
+        }
+    }
 }
