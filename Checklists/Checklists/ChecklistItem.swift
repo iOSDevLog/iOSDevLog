@@ -64,4 +64,16 @@ class ChecklistItem: NSObject, NSCoding {
             print("Scheduled notification \(localNotification) for itemID \(itemID)")
         }
     }
+    
+    func notificationForThisItem() -> UILocalNotification? {
+        let allNotification = UIApplication.sharedApplication().scheduledLocalNotifications!
+        
+        for notification in allNotification {
+            if let number = notification.userInfo!["ItemID"] as? Int where number == itemID {
+                return notification
+            }
+        }
+        
+        return nil
+    }
 }
