@@ -52,6 +52,13 @@ class ChecklistItem: NSObject, NSCoding {
     
     func scheduleNotification() {
         if shouldRemind && dueDate.compare(NSDate()) != .OrderedAscending {
+            let existingNotification = notificationForThisItem()
+            
+            if let notification = existingNotification {
+                print("Found an existing notification \(notification)")
+                UIApplication.sharedApplication().cancelLocalNotification(notification)
+            }
+            
             let localNotification = UILocalNotification()
             localNotification.fireDate = dueDate
             localNotification.timeZone = NSTimeZone.defaultTimeZone()
