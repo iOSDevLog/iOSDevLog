@@ -88,6 +88,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         updateDueDateLabel()
     }
     
+    @IBAction func shouldRemindToggled(sender: UISwitch) {
+        textField.resignFirstResponder()
+        if sender.on {
+            let notifacationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound, .Badge], categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(notifacationSettings)
+        }
+    }
+    
     // MARK: - tableview data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 1 && datePickerVisible {
