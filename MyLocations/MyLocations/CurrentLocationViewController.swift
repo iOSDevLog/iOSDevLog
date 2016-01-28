@@ -21,6 +21,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     // MARK: - property
     let locationManager = CLLocationManager()
     var location: CLLocation?
+    var updatingLocation = false
+    var lastLocationError: NSError?
     
     // MARK: life cycle
     override func viewDidLoad() {
@@ -53,6 +55,15 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     // MARK: - CLLocationManagerDelegate
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("didFailWithError \(error)")
+        
+        if error.code == CLError.LocationUnknown.rawValue {
+            return
+        }
+        
+        lastLocationError = error
+        
+        stopLocationManager()
+        updateLabels()
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -84,7 +95,33 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             latitudeLabel.text = ""
             longitudeLabel.text = ""
             tagButton.hidden = true
-            messageLabel.text = "Tap 'Get My Location' to Start"
+            addressLabel.text = ""
+            
+            let statusMessage: String
+            
+            if let error = lastLocationError {
+                if error.domain == kCLErrorDomain && error.code == CLError.Denied.rawValue {
+                    statusMessage = "Location Services Disabled"
+                } else {
+                    statusMessage = "Error Getting Location"
+                }
+            } else if !CLLocationManager.locationServicesEnabled() {
+                statusMessage = "Location Services Disabled"
+            } else if updatingLocation {
+                statusMessage = "Seaching..."
+            } else {
+                statusMessage = "Tap 'Get My Location' to Start"
+            }
+            
+            messageLabel.text = statusMessage
+        }
+    }
+    
+    func stopLocationManager() {
+        if updatingLocation {
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            updatingLocation = false
         }
     }
 }
