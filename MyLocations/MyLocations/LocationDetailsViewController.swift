@@ -66,6 +66,14 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     
+    // MARK: - prepareForSegue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PickCategory" {
+        let controller = segue.destinationViewController as! CategoryPickerViewController
+        controller.selectedCategoryName = categoryName
+        }
+    }
+
     // MARK: - helper
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
         var text = ""
