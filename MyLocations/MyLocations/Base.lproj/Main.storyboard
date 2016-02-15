@@ -10,7 +10,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Tag-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="CurrentLocationViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tag Location"/>
                                 <connections>
-                                    <segue destination="TkF-Xb-WHl" kind="modal" id="egS-fF-2Va"/>
+                                    <segue destination="TkF-Xb-WHl" kind="modal" identifier="TagLocation" id="egS-fF-2Va"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ohs-NQ-VEw">
@@ -79,7 +79,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JoR-oh-gl3"/>
+                    <tabBarItem key="tabBarItem" title="Tag" image="first" id="JoR-oh-gl3"/>
                     <navigationItem key="navigationItem" id="l6P-tz-gfq"/>
                     <connections>
                         <outlet property="addressLabel" destination="awQ-NJ-03x" id="Qg4-yW-de5"/>
@@ -275,9 +275,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tag Location" id="kgd-0c-fFH">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YhO-tn-UAy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YhN-9s-a3X"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YhO-tn-UAy">
+                            <connections>
+                                <action selector="cancel" destination="Kd3-xQ-nWd" id="Dvo-Qj-vzc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YhN-9s-a3X">
+                            <connections>
+                                <action selector="done" destination="Kd3-xQ-nWd" id="VZa-xQ-14m"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="hPV-6D-vkC" id="ci9-T1-uo4"/>
+                        <outlet property="categoryLabel" destination="9Lc-sq-hJU" id="Vgi-Gb-xTc"/>
+                        <outlet property="dateLabel" destination="bfv-WI-ZCT" id="3Ln-yf-6st"/>
+                        <outlet property="descriptionTextView" destination="JZy-4j-ABd" id="dkN-mM-5oX"/>
+                        <outlet property="latitudeLabel" destination="u8T-mG-mkI" id="8Yg-n3-PUr"/>
+                        <outlet property="longitudeLabel" destination="DP3-TW-jAr" id="J4v-AX-BEn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whg-AW-Nik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,8 +342,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Aez-4S-q3h"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -354,6 +370,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

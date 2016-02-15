@@ -29,7 +29,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var lastGeocodingError: NSError?
     var timer: NSTimer?
     
-    // MARK: life cycle
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,7 +38,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         configureGetButton()
     }
 
-    // MARK: action
+    // MARK: - action
     @IBAction func getLocation(sender: UIButton) {
         let authStatus = CLLocationManager.authorizationStatus()
         
