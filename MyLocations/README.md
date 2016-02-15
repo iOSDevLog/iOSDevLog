@@ -10,19 +10,19 @@
 
 #### Improving the results
 
-![2](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/2.png)
+![2](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/2.png)
 
 #### Reverse geocoding
 
-![3](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/3.png)
+![3](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/3.png)
 
 #### Testing in practice
 
-![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/4.png)
+![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/4.png)
 
 #### Supporting other iPhone models
 
-![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/5.png)
+![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/5.png)
 
 ### 02 - Tagging Locations
 
@@ -30,11 +30,11 @@
 
 #### The Tag Location screen
 
-![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/6.png)
+![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/6.png)
 
 #### The category picker
 
-![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/7.png)
+![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/7.png)
 
 ### 03 - Core Data
 ---
