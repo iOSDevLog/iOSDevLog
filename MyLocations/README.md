@@ -18,3 +18,11 @@
 #### Reverse geocoding
 
 ![3](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/3.png)
+
+#### Testing in practice
+
+![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/4.png)
+
+### Supporting other iPhone models
+
+![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/5.png)
