@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE08CEB71C71F8C000589244 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08CEB61C71F8C000589244 /* LocationDetailsViewController.swift */; };
 		DEE12FAD1C591204003948F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE12FAC1C591204003948F8 /* AppDelegate.swift */; };
 		DEE12FB11C591204003948F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE12FB01C591204003948F8 /* SecondViewController.swift */; };
 		DEE12FB61C591204003948F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE12FB51C591204003948F8 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE08CEB61C71F8C000589244 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		DEE12FA91C591204003948F8 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE12FAC1C591204003948F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE12FAE1C591204003948F8 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				DEE12FAC1C591204003948F8 /* AppDelegate.swift */,
 				DEE12FAE1C591204003948F8 /* CurrentLocationViewController.swift */,
+				DE08CEB61C71F8C000589244 /* LocationDetailsViewController.swift */,
 				DEE12FB01C591204003948F8 /* SecondViewController.swift */,
 				DEE12FB21C591204003948F8 /* Main.storyboard */,
 				DEE12FB51C591204003948F8 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE08CEB71C71F8C000589244 /* LocationDetailsViewController.swift in Sources */,
 				DEE12FC11C5913FC003948F8 /* CurrentLocationViewController.swift in Sources */,
 				DEE12FB11C591204003948F8 /* SecondViewController.swift in Sources */,
 				DEE12FAD1C591204003948F8 /* AppDelegate.swift in Sources */,
@@ -294,6 +298,7 @@
 				DEE12FBF1C591204003948F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
