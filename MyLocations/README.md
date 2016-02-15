@@ -1,9 +1,6 @@
 # The iOS Apprentice 3 MyLocations
 ---
 
-## snap shot
----
-
 ### 01 - GPS Coordinates
 ---
 
@@ -23,6 +20,23 @@
 
 ![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/4.png)
 
-### Supporting other iPhone models
+#### Supporting other iPhone models
 
 ![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/5.png)
+
+### 02 - Tagging Locations
+
+---
+
+#### The Tag Location screen
+
+![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/6.png)
+
+#### The category picker
+
+![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/Checklists/7.png)
+
+### 03 - Core Data
+---
+
+#### Storing the locations with Core Data
