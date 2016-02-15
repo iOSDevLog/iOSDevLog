@@ -40,6 +40,10 @@ class LocationDetailsViewController: UITableViewController {
         }
         
         dateLabel.text = formatDate(NSDate())
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
     }
     
     // MARK: - Action
@@ -129,4 +133,16 @@ class LocationDetailsViewController: UITableViewController {
         formatter.timeStyle = .ShortStyle
         return formatter
     }()
+    
+    
+    func hideKeyboard(gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.locationInView(tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        
+        descriptionTextView.resignFirstResponder()
+    }
 }
