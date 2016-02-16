@@ -36,7 +36,19 @@
 
 ![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/7.png)
 
+## Storing the locations with Core Data
+---
+
 ### 03 - Core Data
 ---
 
-#### Storing the locations with Core Data
+![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/8.png)
+
+![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/9.png)
+
+![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/10.png)
+
+![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/11.png)
+
+### 04 - Locations Tab
+---
