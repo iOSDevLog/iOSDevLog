@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import Dispatch
+import CoreData
 
 class LocationDetailsViewController: UITableViewController {
     // MARK: - outlet
@@ -24,6 +25,8 @@ class LocationDetailsViewController: UITableViewController {
     var placemark: CLPlacemark?
     
     var categoryName = "No Category"
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
