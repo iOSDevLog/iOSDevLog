@@ -71,12 +71,12 @@ class LocationDetailsViewController: UITableViewController {
         // 3
         do {
             try managedObjectContext.save()
+            
+            afterDelay(0.6) {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
         } catch {
             fatalCoreDataError(error)
-        }
-        
-        afterDelay(0.6) {
-            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
