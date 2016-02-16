@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import Dispatch
+import CoreData
 
 class LocationDetailsViewController: UITableViewController {
     // MARK: - outlet
@@ -25,6 +26,9 @@ class LocationDetailsViewController: UITableViewController {
     
     var categoryName = "No Category"
     
+    var managedObjectContext: NSManagedObjectContext!
+    var date = NSDate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +44,7 @@ class LocationDetailsViewController: UITableViewController {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = formatDate(NSDate())
+        dateLabel.text = formatDate(date)
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
         gestureRecognizer.cancelsTouchesInView = false
@@ -53,8 +57,26 @@ class LocationDetailsViewController: UITableViewController {
             animated: true)
         hudView.text = "Tagged"
         
-        afterDelay(0.6) {
-            self.dismissViewControllerAnimated(true, completion: nil)
+        // 1
+        let location = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: managedObjectContext) as! Location
+        
+        // 2
+        location.locationDescription = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        
+        // 3
+        do {
+            try managedObjectContext.save()
+            
+            afterDelay(0.6) {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        } catch {
+            fatalCoreDataError(error)
         }
     }
     
