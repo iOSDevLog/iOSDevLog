@@ -52,3 +52,10 @@
 
 ### 04 - Locations Tab
 ---
+
+![12](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/12.png)
+
+
+![13](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/13.png)
+
+![14](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/14.png)
