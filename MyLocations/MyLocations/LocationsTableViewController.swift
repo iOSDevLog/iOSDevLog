@@ -13,10 +13,30 @@ import CoreLocation
 class LocationsTableViewController: UITableViewController {
     // MARK: - property
     var managedObjectContext: NSManagedObjectContext!
-
+    var locations = [Location]()
+    
     // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // The NSFetchRequest is the object that describes which objects you’re going to fetch from the data store
+        let fetchRequest = NSFetchRequest()
+        // The NSEntityDescription tells the fetch request you’re looking for Location entities.
+        let entity = NSEntityDescription.entityForName("Location", inManagedObjectContext: managedObjectContext)
+        fetchRequest.entity = entity
+        // The NSSortDescriptor tells the fetch request to sort on the date attribute, in ascending order.
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            // Now that you have the fetch request, you can tell the context to execute it.
+            let foundObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
+            
+            // casting foundObjects from an array of AnyObjects to an array of Location objects.
+            locations = foundObjects as! [Location]
+        } catch {
+            fatalCoreDataError(error)
+        }
     }
     
     // MARK: - UITableViewDataSource
