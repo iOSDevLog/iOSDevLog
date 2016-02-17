@@ -34,6 +34,7 @@ class LocationsTableViewController: UITableViewController {
             
             // casting foundObjects from an array of AnyObjects to an array of Location objects.
             locations = foundObjects as! [Location]
+            tableView.reloadData()
         } catch {
             fatalCoreDataError(error)
         }

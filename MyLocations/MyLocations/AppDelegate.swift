@@ -19,6 +19,7 @@ func fatalCoreDataError(error: ErrorType) {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - property
     var window: UIWindow?
     
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -47,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }()
 
+    // MARK: - UIApplicationDelegate
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let tabBarController = window!.rootViewController as! UITabBarController
@@ -55,10 +57,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let currentLocationViewController = tabBarViewControllers[0] as! CurrentLocationViewController
             
             currentLocationViewController.managedObjectContext = managedObjectContext
+            
+            let navigationController = tabBarViewControllers[1] as! UINavigationController
+            let locationsViewController = navigationController.viewControllers[0] as! LocationsTableViewController
+            locationsViewController.managedObjectContext = managedObjectContext
+
         }
         
         listenForFatalCoreDataNotifications()
-        
+
         return true
     }
 
