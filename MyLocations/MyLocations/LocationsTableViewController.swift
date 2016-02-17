@@ -41,18 +41,35 @@ class LocationsTableViewController: UITableViewController {
     
     // MARK: - UITableViewDataSource
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return locations.count
     }
     
     override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier( "LocationCell", forIndexPath: indexPath)
+        let location = locations[indexPath.row]
         
         let descriptionLabel = cell.viewWithTag(100) as! UILabel
-        descriptionLabel.text = "If you can see this"
+        descriptionLabel.text = location.locationDescription
         
         let addressLabel = cell.viewWithTag(101) as! UILabel
-        addressLabel.text = "Then it works!"
+        if let placemark = location.placemark {
+            var text = ""
+            if let s = placemark.subThoroughfare {
+                text += s + " "
+            }
+    
+            if let s = placemark.thoroughfare {
+                text += s + ", "
+            }
+            
+            if let s = placemark.locality {
+                text += s
+            }
+            addressLabel.text = text
+        } else {
+            addressLabel.text = ""
+        }
         
         return cell
     }
