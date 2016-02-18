@@ -412,7 +412,7 @@
         <!--Map-->
         <scene sceneID="gj8-wZ-7m0">
             <objects>
-                <viewController id="8LG-QX-V9P" sceneMemberID="viewController">
+                <viewController id="8LG-QX-V9P" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoo-jT-pIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,7 +427,11 @@
                                 <items>
                                     <navigationItem title="Map" id="Na8-H0-HBE">
                                         <barButtonItem key="leftBarButtonItem" title="Locations" id="wHg-7C-dKE"/>
-                                        <barButtonItem key="rightBarButtonItem" title="User" id="t0I-OH-mR3"/>
+                                        <barButtonItem key="rightBarButtonItem" title="User" id="t0I-OH-mR3">
+                                            <connections>
+                                                <action selector="showUser" destination="8LG-QX-V9P" id="ufZ-6g-WgJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -435,6 +439,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="gfF-ib-8nz"/>
+                    <connections>
+                        <outlet property="mapView" destination="zXz-gZ-hLh" id="0Ro-yP-7lA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9a-V1-zKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
