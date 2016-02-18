@@ -11,6 +11,7 @@
 		DE08CEB91C720AF900589244 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08CEB81C720AF900589244 /* CategoryPickerViewController.swift */; };
 		DE08CEBB1C72118100589244 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08CEBA1C72118100589244 /* HudView.swift */; };
 		DE08CEBD1C7213A300589244 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08CEBC1C7213A300589244 /* Functions.swift */; };
+		DE5787061C75FD77008C944B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5787051C75FD77008C944B /* MapKit.framework */; };
 		DEBB23021C74B3FF001165D6 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB23011C74B3FF001165D6 /* LocationsTableViewController.swift */; };
 		DEBB23041C74BF90001165D6 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB23031C74BF90001165D6 /* LocationCell.swift */; };
 		DEBFD6261C734E5C005EB45F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD6241C734E5C005EB45F /* DataModel.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 		DE08CEB81C720AF900589244 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		DE08CEBA1C72118100589244 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		DE08CEBC1C7213A300589244 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		DE5787051C75FD77008C944B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DEBB23011C74B3FF001165D6 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		DEBB23031C74BF90001165D6 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		DEBFD6251C734E5C005EB45F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5787061C75FD77008C944B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 		DEE12FA01C591204003948F8 = {
 			isa = PBXGroup;
 			children = (
+				DE5787051C75FD77008C944B /* MapKit.framework */,
 				DEE12FAB1C591204003948F8 /* MyLocations */,
 				DEE12FAA1C591204003948F8 /* Products */,
 			);
