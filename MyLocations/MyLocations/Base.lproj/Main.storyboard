@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="-355"/>
+            <point key="canvasLocation" x="312" y="-1123"/>
         </scene>
         <!--Tag Location-->
         <scene sceneID="msk-Ng-zAi">
@@ -352,11 +352,12 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Aez-4S-q3h"/>
                         <segue destination="wym-mD-JJS" kind="relationship" relationship="viewControllers" id="1Zo-j1-3I1"/>
+                        <segue destination="8LG-QX-V9P" kind="relationship" relationship="viewControllers" id="axb-wi-nsd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37" y="-2"/>
+            <point key="canvasLocation" x="-509" y="-174"/>
         </scene>
         <!--Locations-->
         <scene sceneID="uVX-hw-SWq">
@@ -378,7 +379,7 @@
                                             <rect key="frame" x="8" y="8" width="304" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QN9-7N-YM4">
@@ -406,7 +407,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMj-ZL-zIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="447"/>
+            <point key="canvasLocation" x="860" y="-174"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="gj8-wZ-7m0">
+            <objects>
+                <viewController id="8LG-QX-V9P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoo-jT-pIW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="gfF-ib-8nz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9a-V1-zKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="626"/>
         </scene>
         <!--Locations-->
         <scene sceneID="99Y-HJ-xqR">
@@ -424,7 +440,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGO-eb-eyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="447"/>
+            <point key="canvasLocation" x="312" y="-174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JB3-uh-9IB">
@@ -450,6 +466,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AKY-At-Zgf"/>
+        <segue reference="egS-fF-2Va"/>
     </inferredMetricsTieBreakers>
 </document>
