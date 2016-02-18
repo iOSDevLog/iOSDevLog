@@ -60,7 +60,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             location = nil
             lastLocationError = nil
             placemark = nil
-            lastLocationError = nil
+            lastGeocodingError = nil
             startLocationManager()
         }
         updateLabels()
