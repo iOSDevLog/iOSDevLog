@@ -31,6 +31,11 @@ class MapViewController: UIViewController {
         mapView.setRegion(mapView.regionThatFits(region), animated: true)
     }
     
+    @IBAction func showLocations() {
+        let region = regionForAnnotations(locations)
+        mapView.setRegion(region, animated: true)
+    }
+    
     // MARK: - helper
     func updateLocations() {
         mapView.removeAnnotations(locations)
