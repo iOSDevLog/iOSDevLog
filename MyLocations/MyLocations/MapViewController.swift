@@ -85,6 +85,9 @@ class MapViewController: UIViewController {
         
         return mapView.regionThatFits(region)
     }
+    
+    func showLocationDetails(sender: UIButton) {
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
