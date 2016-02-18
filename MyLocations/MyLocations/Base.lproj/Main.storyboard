@@ -420,6 +420,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="zXz-gZ-hLh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8LG-QX-V9P" id="zc1-68-z1Z"/>
+                                </connections>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" id="jM5-F2-n5Z">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -445,11 +448,12 @@
                     <tabBarItem key="tabBarItem" title="Map" id="gfF-ib-8nz"/>
                     <connections>
                         <outlet property="mapView" destination="zXz-gZ-hLh" id="0Ro-yP-7lA"/>
+                        <segue destination="TkF-Xb-WHl" kind="modal" identifier="EditLocation" id="Evh-bd-rSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9a-V1-zKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="626"/>
+            <point key="canvasLocation" x="860" y="628"/>
         </scene>
         <!--Locations-->
         <scene sceneID="99Y-HJ-xqR">
@@ -493,6 +497,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="egS-fF-2Va"/>
+        <segue reference="Evh-bd-rSB"/>
     </inferredMetricsTieBreakers>
 </document>
