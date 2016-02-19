@@ -210,7 +210,13 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    // UIImagePickerControllerDelegate
+    func choosePhotoFromLibrary() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
     
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
