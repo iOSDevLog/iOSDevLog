@@ -132,7 +132,8 @@ class LocationDetailsViewController: UITableViewController {
         if indexPath.section == 0 && indexPath.row == 0 {
             descriptionTextView.becomeFirstResponder()
         } else if indexPath.section == 1 && indexPath.row == 0 {
-            choosePhotoFromLibrary()
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            pickPhoto()
         }
     }
     
