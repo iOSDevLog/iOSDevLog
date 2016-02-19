@@ -199,11 +199,23 @@ class LocationDetailsViewController: UITableViewController {
 
 // MARK: - extension
 extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // MARK: - Helper
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .Camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    // UIImagePickerControllerDelegate
+    
+    // MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
