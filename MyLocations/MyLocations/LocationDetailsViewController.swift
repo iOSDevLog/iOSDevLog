@@ -131,6 +131,8 @@ class LocationDetailsViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             descriptionTextView.becomeFirstResponder()
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            takePhotoWithCamera()
         }
     }
     
