@@ -196,3 +196,14 @@ class LocationDetailsViewController: UITableViewController {
         descriptionTextView.resignFirstResponder()
     }
 }
+
+// MARK: - extension
+extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func takePhotoWithCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .Camera
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+}
