@@ -93,6 +93,7 @@ class LocationDetailsViewController: UITableViewController {
         } else {
             hudView.text = "Tagged"
             location = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: managedObjectContext) as! Location
+            location.photoID = nil
         }
         
         location.locationDescription = descriptionTextView.text
