@@ -161,6 +161,10 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="asG-pL-x8P">
+                                                    <rect key="frame" x="99" y="12" width="180" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -285,10 +289,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="3aO-HT-wZo" id="giQ-4Y-FEY"/>
                         <outlet property="addressLabel" destination="hPV-6D-vkC" id="ci9-T1-uo4"/>
                         <outlet property="categoryLabel" destination="9Lc-sq-hJU" id="Vgi-Gb-xTc"/>
                         <outlet property="dateLabel" destination="bfv-WI-ZCT" id="3Ln-yf-6st"/>
                         <outlet property="descriptionTextView" destination="JZy-4j-ABd" id="dkN-mM-5oX"/>
+                        <outlet property="imageView" destination="asG-pL-x8P" id="5SE-ml-9Ak"/>
                         <outlet property="latitudeLabel" destination="u8T-mG-mkI" id="8Yg-n3-PUr"/>
                         <outlet property="longitudeLabel" destination="DP3-TW-jAr" id="J4v-AX-BEn"/>
                     </connections>

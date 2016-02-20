@@ -20,6 +20,9 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addPhotoLabel: UILabel!
+    
     // MARK: - property
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
@@ -28,6 +31,7 @@ class LocationDetailsViewController: UITableViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     var date = NSDate()
+    var image: UIImage?
     
     var descriptionText = ""
     var locationToEdit: Location? {
@@ -198,6 +202,13 @@ class LocationDetailsViewController: UITableViewController {
         
         descriptionTextView.resignFirstResponder()
     }
+    
+    func showImage(image: UIImage) {
+        imageView.image = image
+        imageView.hidden = false
+        imageView.frame = CGRect(x: 10, y: 10, width: 260, height: 260)
+        addPhotoLabel.hidden = true
+    }
 }
 
 // MARK: - extension
@@ -244,6 +255,14 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
     
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        image = info[UIImagePickerControllerEditedImage] as? UIImage
+        
+        if let image = image {
+            showImage(image)
+        }
+        
+        tableView.reloadData()
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
