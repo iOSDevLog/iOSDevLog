@@ -111,21 +111,20 @@ class LocationDetailsViewController: UITableViewController {
     
     // MARK: - UITableViewDelegate
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 && indexPath.row == 0 {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
             return 88
-        } else if indexPath.section == 1 {
-            if imageView.hidden {
-                return 44
-            } else {
-                return 280
-            }
-        } else if indexPath.section == 2 && indexPath.row == 2 {
+            
+        case (1, _):
+            return imageView.hidden ? 44 : 280
+            
+        case (2, 2):
             addressLabel.frame.size = CGSize(width: view.bounds.size.width - 115, height: 10000)
             addressLabel.sizeToFit()
             addressLabel.frame.origin.x = view.bounds.size.width - addressLabel.frame.size.width - 15
-            
             return addressLabel.frame.size.height + 20
-        } else {
+            
+        default:
             return 44
         }
     }
