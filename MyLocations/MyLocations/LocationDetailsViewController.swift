@@ -32,6 +32,7 @@ class LocationDetailsViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     var date = NSDate()
     var image: UIImage?
+    var observer: AnyObject!
     
     var descriptionText = ""
     var locationToEdit: Location? {
@@ -46,6 +47,7 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +72,13 @@ class LocationDetailsViewController: UITableViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+        
+        listenForBackgroundNotification()
+    }
+    
+    deinit {
+            print("*** deinit \(self)")
+            NSNotificationCenter.defaultCenter().removeObserver(observer)
     }
     
     // MARK: - Action
@@ -213,6 +222,19 @@ class LocationDetailsViewController: UITableViewController {
         imageView.hidden = false
         imageView.frame = CGRect(x: 10, y: 10, width: 260, height: 260)
         addPhotoLabel.hidden = true
+    }
+    
+    func listenForBackgroundNotification() {
+        observer = NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [weak self] _ in
+            
+            if let strongSelf = self {
+                print("strongSelf.presentedViewController = \(strongSelf.presentedViewController)")
+                if strongSelf.presentedViewController != nil {
+                    strongSelf.dismissViewControllerAnimated(false, completion: nil)
+                }
+                strongSelf.descriptionTextView.resignFirstResponder()
+            }
+        }
     }
 }
 
