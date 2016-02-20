@@ -59,6 +59,18 @@
 
 ![14](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/14.png)
 
+### 05 - Map View
+---
+
 ![15](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/15.png)
 
 ![16](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/16.png)
+
+### 06 - Photo Picker
+---
+
+![17](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/17.png)
+
+![18](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/18.png)
+
+![19](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/19.png)
