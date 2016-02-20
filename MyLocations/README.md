@@ -70,3 +70,7 @@
 ---
 
 ![17](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/17.png)
+
+![18](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/18.png)
+
+![19](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/MyLocations/19.png)
