@@ -13,6 +13,8 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     // MARK: - lifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,5 +51,13 @@ class LocationCell: UITableViewCell {
         } else {
             addressLabel.text = String(format: "Lat: %.8f, Long: %.8f", location.latitude, location.longitude)
         }
+        photoImageView.image = imageForLocation(location)
+    }
+    
+    func imageForLocation(location: Location) -> UIImage {
+        if location.hasPhoto, let image = location.photoImage {
+            return image.resizedImageWithBounds(CGSize(width: 52, height: 52))
+        }
+        return UIImage()
     }
 }
