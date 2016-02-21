@@ -42,6 +42,10 @@ class LocationsTableViewController: UITableViewController {
         
         performFetch()
         navigationItem.rightBarButtonItem = editButtonItem()
+        
+        tableView.backgroundColor = UIColor.blackColor()
+        tableView.separatorColor = UIColor(white: 1.0, alpha: 0.2)
+        tableView.indicatorStyle = .White
     }
     
     deinit {
