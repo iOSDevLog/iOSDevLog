@@ -20,6 +20,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var getButton: UIButton!
     @IBOutlet weak var latitudeTextLabel: UILabel!
     @IBOutlet weak var longitudeTextLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
     // MARK: - property
     let locationManager = CLLocationManager()
@@ -32,6 +33,19 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var lastGeocodingError: NSError?
     var timer: NSTimer?
     var managedObjectContext: NSManagedObjectContext!
+    
+    var logoVisible = false
+    lazy var logoButton: UIButton = {
+        let button = UIButton(type: .Custom)
+        button.setBackgroundImage(UIImage(named: "Logo"), forState: .Normal)
+        button.sizeToFit()
+        button.addTarget(self, action: Selector("getLocation"),
+        forControlEvents: .TouchUpInside)
+        button.center.x = CGRectGetMidX(self.view.bounds)
+        button.center.y = 220
+        
+        return button
+    }()
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -211,7 +225,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             } else if updatingLocation {
                 statusMessage = "Seaching..."
             } else {
-                statusMessage = "Tap 'Get My Location' to Start"
+                statusMessage = ""
+                showLogoView()
             }
             
             messageLabel.text = statusMessage
@@ -274,6 +289,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             lastLocationError = NSError(domain: "MyLocationErrorDomain", code: 1, userInfo: nil)
             updateLabels()
             configureGetButton()
+        }
+    }
+    
+    func showLogoView() {
+        if !logoVisible {
+            logoVisible = true
+            containerView.hidden = true
+            view.addSubview(logoButton)
         }
     }
 }
