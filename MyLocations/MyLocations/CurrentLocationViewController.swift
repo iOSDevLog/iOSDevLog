@@ -43,7 +43,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         let button = UIButton(type: .Custom)
         button.setBackgroundImage(UIImage(named: "Logo"), forState: .Normal)
         button.sizeToFit()
-        button.addTarget(self, action: Selector("getLocation"),
+        button.addTarget(self, action: Selector("getLocation:"),
         forControlEvents: .TouchUpInside)
         button.center.x = CGRectGetMidX(self.view.bounds)
         button.center.y = 220
