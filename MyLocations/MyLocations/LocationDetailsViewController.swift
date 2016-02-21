@@ -284,7 +284,7 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
     }
     
     func takePhotoWithCamera() {
-        let imagePicker = UIImagePickerController()
+        let imagePicker = MyImagePickerController()
         imagePicker.sourceType = .Camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
