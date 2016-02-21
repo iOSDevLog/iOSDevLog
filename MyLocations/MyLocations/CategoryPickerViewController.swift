@@ -9,6 +9,7 @@
 import UIKit
 
 class CategoryPickerViewController: UITableViewController {
+    // MARK: - property
     var selectedCategoryName = ""
     
     let categories = [
@@ -26,6 +27,7 @@ class CategoryPickerViewController: UITableViewController {
     
     var selectedIndexPath = NSIndexPath()
     
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,10 @@ class CategoryPickerViewController: UITableViewController {
                 break
             }
         }
+        
+        tableView.backgroundColor = UIColor.blackColor()
+        tableView.separatorColor = UIColor(white: 1.0, alpha: 0.2)
+        tableView.indicatorStyle = .White
     }
     
     // MARK: - UITableViewDataSource
@@ -71,6 +77,19 @@ class CategoryPickerViewController: UITableViewController {
             
             selectedIndexPath = indexPath
         }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.blackColor()
+        
+        if let textLabel = cell.textLabel {
+            textLabel.textColor = UIColor.whiteColor()
+            textLabel.highlightedTextColor = textLabel.textColor
+        }
+        
+        let selectionView = UIView(frame: CGRect.zero)
+        selectionView.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
+        cell.selectedBackgroundView = selectionView
     }
     
     // MARK: - prepareForSegue
