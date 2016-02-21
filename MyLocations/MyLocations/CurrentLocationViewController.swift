@@ -267,6 +267,17 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         return line1 + "\n" + line2
     }
     
+    func addText(text: String?, toLine line: String, withSeparator separator: String) -> String {
+        var result = line
+        if let text = text {
+            if !line.isEmpty {
+                result += separator
+            }
+            result += text
+        }
+        return result
+    }
+    
     func didTimeOut() {
         print("*** Time out")
         
