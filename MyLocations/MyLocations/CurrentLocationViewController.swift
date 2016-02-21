@@ -244,26 +244,17 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
         var line1 = ""
-        line1 = addText(placemark.subThoroughfare, toLine: line1, withSeparator: "")
-        line1 = addText(placemark.thoroughfare, toLine: line1, withSeparator: " ")
+        line1.addText(placemark.subThoroughfare, withSeparator: "")
+        line1.addText(placemark.thoroughfare, withSeparator: " ")
         
         var line2 = ""
-        line2 = addText(placemark.locality, toLine: line2, withSeparator: "")
-        line2 = addText(placemark.administrativeArea, toLine: line2, withSeparator: " ")
-        line2 = addText(placemark.postalCode, toLine: line2, withSeparator: " ")
-    
-        return addText(line2, toLine: line1, withSeparator: "\n")
-    }
-    
-    func addText(text: String?, toLine line: String, withSeparator separator: String) -> String {
-        var result = line
-        if let text = text {
-            if !line.isEmpty {
-                result += separator
-            }
-            result += text
-        }
-        return result
+        line2.addText(placemark.locality, withSeparator: "")
+        line2.addText(placemark.administrativeArea, withSeparator: " ")
+        line2.addText(placemark.postalCode, withSeparator: " ")
+        
+        line1.addText(line2, withSeparator: "\n")
+        
+        return line1
     }
     
     func didTimeOut() {
