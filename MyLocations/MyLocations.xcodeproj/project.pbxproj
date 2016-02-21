@@ -26,7 +26,6 @@
 		DEBFD6301C73503C005EB45F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD62E1C73503C005EB45F /* Location.swift */; };
 		DEE12FAD1C591204003948F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE12FAC1C591204003948F8 /* AppDelegate.swift */; };
 		DEE12FB61C591204003948F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE12FB51C591204003948F8 /* Assets.xcassets */; };
-		DEE12FB91C591204003948F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE12FB71C591204003948F8 /* LaunchScreen.storyboard */; };
 		DEE12FC01C5913D3003948F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE12FB21C591204003948F8 /* Main.storyboard */; };
 		DEE12FC11C5913FC003948F8 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE12FAE1C591204003948F8 /* CurrentLocationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		DEE12FAE1C591204003948F8 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		DEE12FB31C591204003948F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEE12FB51C591204003948F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DEE12FB81C591204003948F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEE12FBA1C591204003948F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +115,6 @@
 				DEBFD6241C734E5C005EB45F /* DataModel.xcdatamodeld */,
 				DEBFD62D1C73503C005EB45F /* Location+CoreDataProperties.swift */,
 				DEBFD62E1C73503C005EB45F /* Location.swift */,
-				DEE12FB71C591204003948F8 /* LaunchScreen.storyboard */,
 				DEE12FBA1C591204003948F8 /* Info.plist */,
 				DE2E3FB01C7A18F400CA9B15 /* Sound */,
 			);
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEE12FC01C5913D3003948F8 /* Main.storyboard in Resources */,
-				DEE12FB91C591204003948F8 /* LaunchScreen.storyboard in Resources */,
 				DE2E3FB21C7A18F400CA9B15 /* Sound.caf in Resources */,
 				DEE12FB61C591204003948F8 /* Assets.xcassets in Resources */,
 			);
@@ -225,14 +221,6 @@
 				DEE12FB31C591204003948F8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DEE12FB71C591204003948F8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEE12FB81C591204003948F8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -325,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLocations/Info.plist;
@@ -340,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLocations/Info.plist;
