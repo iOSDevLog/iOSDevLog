@@ -491,10 +491,10 @@
             </objects>
             <point key="canvasLocation" x="312" y="-174"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Navigation Controller-->
         <scene sceneID="JB3-uh-9IB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TkF-Xb-WHl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TkF-Xb-WHl" customClass="MyNavigationController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fBz-zN-Dmd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-Hs-hOg">
