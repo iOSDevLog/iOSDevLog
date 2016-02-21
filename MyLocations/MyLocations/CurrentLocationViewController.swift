@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import CoreData
 import QuartzCore
+import AudioToolbox
 
 class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: - outlet
@@ -35,6 +36,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var timer: NSTimer?
     var managedObjectContext: NSManagedObjectContext!
     
+    var soundID: SystemSoundID = 0
+    
     var logoVisible = false
     lazy var logoButton: UIButton = {
         let button = UIButton(type: .Custom)
@@ -55,6 +58,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         
         updateLabels()
         configureGetButton()
+            
+        loadSoundEffect("Sound.caf")
     }
 
     // MARK: - action
@@ -146,8 +151,12 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             geocoder.reverseGeocodeLocation(newLocation!, completionHandler: { (placemarks, error) -> Void in
                 print("*** Found placemarks: \(placemarks), error: \(error) ***")
                 
-                self.lastLocationError = error
+                self.lastGeocodingError = error
                 if error == nil, let p = placemarks where !p.isEmpty {
+                    if self.placemark == nil {
+                        print("FIRST TIME!")
+                        self.playSoundEffect()
+                    }
                     self.placemark = p.last
                 } else {
                     self.placemark = nil
@@ -368,5 +377,25 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             
         logoButton.layer.removeAllAnimations()
         logoButton.removeFromSuperview()
+    }
+    
+    // MARK: - Sound Effect
+    func loadSoundEffect(name: String) {
+        if let path = NSBundle.mainBundle().pathForResource(name, ofType: nil) {
+            let fileURL = NSURL.fileURLWithPath(path, isDirectory: false)
+            let error = AudioServicesCreateSystemSoundID(fileURL, &soundID)
+            if error != kAudioServicesNoError {
+                print("Error code \(error) loading sound at path: \(path)")
+            }
+        }
+    }
+    
+    func unloadSoundEffect() {
+            AudioServicesDisposeSystemSoundID(soundID)
+            soundID = 0
+    }
+    
+    func playSoundEffect() {
+        AudioServicesPlaySystemSound(soundID)
     }
 }
