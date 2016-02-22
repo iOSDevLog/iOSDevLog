@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - outlet
     var searchResults = [SearchResult]()
+    var hasSearched = false
     
     // MARK: - lifeCycle
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class SearchViewController: UIViewController {
 // MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        hasSearched = true
         searchResults = [SearchResult]()
         for i in 0...2 {
             let searchResult = SearchResult()
@@ -47,7 +49,9 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView,
             numberOfRowsInSection section: Int) -> Int {
-        if searchResults.count == 0 {
+        if !hasSearched {
+            return 0
+        } else if searchResults.count == 0 {
             return 1
         } else {
             return searchResults.count
