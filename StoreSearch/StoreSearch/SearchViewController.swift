@@ -21,3 +21,23 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print("The search text is: '\(searchBar.text)'")
+    }
+}
+
+extension SearchViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(tableView: UITableView,
+        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+}
