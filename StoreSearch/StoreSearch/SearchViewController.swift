@@ -62,9 +62,14 @@ extension SearchViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdentifier)
         }
     
-        let searchResult = searchResults[indexPath.row]
-        cell.textLabel!.text = searchResult.name
-        cell.detailTextLabel!.text = searchResult.artistName
+        if searchResults.count == 0 {
+            cell.textLabel!.text = "(Nothing found)"
+            cell.detailTextLabel!.text = ""
+        } else {
+            let searchResult = searchResults[indexPath.row]
+            cell.textLabel!.text = searchResult.name
+            cell.detailTextLabel!.text = searchResult.artistName
+        }
     
         return cell
     }
