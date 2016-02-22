@@ -25,6 +25,7 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: - extension
+// MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchResults = [String]()
@@ -33,8 +34,13 @@ extension SearchViewController: UISearchBarDelegate {
         }
         tableView.reloadData()
     }
+    
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return .TopAttached
+    }
 }
 
+// MARK: - SearchViewController
 extension SearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView,
             numberOfRowsInSection section: Int) -> Int {
@@ -58,5 +64,6 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate {
 }
