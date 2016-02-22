@@ -13,6 +13,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - outlet
+    var searchResults = [String]()
+    
     // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +24,37 @@ class SearchViewController: UIViewController {
     }
 }
 
+// MARK: - extension
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        print("The search text is: '\(searchBar.text)'")
+        searchResults = [String]()
+        for i in 0...2 {
+            searchResults.append(String(format: "Fake Result %d for '%@'", i, searchBar.text!))
+        }
+        tableView.reloadData()
     }
 }
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int {
-        return 0
+            numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
     }
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        searchBar.resignFirstResponder()
+    
+        let cellIdentifier = "SearchResultCell"
+    
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    
+        if cell == nil {
+            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdentifier)
+        }
+        cell.textLabel!.text = searchResults[indexPath.row]
+    
+        return cell
     }
 }
 
