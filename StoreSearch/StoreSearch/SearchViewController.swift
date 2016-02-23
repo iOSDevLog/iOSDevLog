@@ -17,6 +17,10 @@ class SearchViewController: UIViewController {
     var searchResults = [SearchResult]()
     var hasSearched = false
     
+    struct TableViewCellIdentifiers {
+        static let searchResultCell = "SearchResultCell"
+    }
+    
     // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +28,9 @@ class SearchViewController: UIViewController {
         tableView.rowHeight = 80;
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         
-        let cellNib = UINib(nibName: "SearchResultCell", bundle: nil)
+        let cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
         tableView.registerNib(cellNib,
-            forCellReuseIdentifier: "SearchResultCell")
+            forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
     }
 }
 
