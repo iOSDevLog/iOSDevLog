@@ -10,6 +10,11 @@
 
 ### 02 - Custom Table Cells
 ---
+
+![3](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/3.png)
+
+![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/4.png)
+
 ### 03 - Using Web Service
 ---
 ### 04 - Async Networking
@@ -26,10 +31,6 @@
 ---
 ### 10 - Finished App
 ---
-
-![3](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/3.png)
-
-![4](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/4.png)
 
 ![5](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/5.png)
 
