@@ -15,6 +15,7 @@
 		DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */; };
 		DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF55751C7C775A00697D88 /* SearchResultCell.xib */; };
 		DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */; };
+		DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DEFF55751C7C775A00697D88 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				DEFF55751C7C775A00697D88 /* SearchResultCell.xib */,
 				DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */,
+				DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */,
 				DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */,
 				DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */,
+				DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */,
 				DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
