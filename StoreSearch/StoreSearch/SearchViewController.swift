@@ -44,6 +44,8 @@ class SearchViewController: UIViewController {
 // MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
         hasSearched = true
         searchResults = [SearchResult]()
         for i in 0...2 {
@@ -93,6 +95,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         searchBar.resignFirstResponder()
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
             
