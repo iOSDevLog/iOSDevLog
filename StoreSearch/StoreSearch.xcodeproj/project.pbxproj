@@ -13,6 +13,9 @@
 		DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441F1C7B330700E61B20 /* Assets.xcassets */; };
 		DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D44211C7B330700E61B20 /* LaunchScreen.storyboard */; };
 		DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */; };
+		DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF55751C7C775A00697D88 /* SearchResultCell.xib */; };
+		DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */; };
+		DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DE7D44221C7B330700E61B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE7D44241C7B330700E61B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		DEFF55751C7C775A00697D88 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		DE7D44171C7B330700E61B20 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
-				DE7D44181C7B330700E61B20 /* AppDelegate.swift */,
-				DE7D441A1C7B330700E61B20 /* SearchViewController.swift */,
 				DE7D441C1C7B330700E61B20 /* Main.storyboard */,
+				DEFF55731C7C770B00697D88 /* Controller */,
+				DEFF55721C7C770100697D88 /* Model */,
+				DEFF55711C7C76F500697D88 /* View */,
+				DEFF55741C7C772600697D88 /* Support */,
+			);
+			path = StoreSearch;
+			sourceTree = "<group>";
+		};
+		DEFF55711C7C76F500697D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF55751C7C775A00697D88 /* SearchResultCell.xib */,
+				DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */,
+				DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DEFF55721C7C770100697D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEFF55731C7C770B00697D88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE7D441A1C7B330700E61B20 /* SearchViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DEFF55741C7C772600697D88 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DE7D44181C7B330700E61B20 /* AppDelegate.swift */,
 				DE7D441F1C7B330700E61B20 /* Assets.xcassets */,
 				DE7D44211C7B330700E61B20 /* LaunchScreen.storyboard */,
 				DE7D44241C7B330700E61B20 /* Info.plist */,
-				DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */,
 			);
-			path = StoreSearch;
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +169,8 @@
 			files = (
 				DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */,
 				DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */,
+				DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */,
+				DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */,
 				DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +184,7 @@
 			files = (
 				DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */,
 				DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */,
+				DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */,
 				DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +333,7 @@
 				DE7D44291C7B330700E61B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
