@@ -55,6 +55,10 @@ extension SearchViewController: UISearchBarDelegate {
             if let jsonString = performStoreRequestWithURL(url) {
                 if let dictionary = parseJSON(jsonString) {
                     searchResults = parseDictionary(dictionary)
+                    searchResults.sortInPlace({
+                        result1, result2 in
+                        return result1.name.localizedStandardCompare(result2.name) == .OrderedAscending
+                        })
                     
                     tableView.reloadData()
                     return
