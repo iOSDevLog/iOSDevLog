@@ -44,17 +44,17 @@ class SearchViewController: UIViewController {
 // MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        
-        hasSearched = true
-        searchResults = [SearchResult]()
-        for i in 0...2 {
-            let searchResult = SearchResult()
-            searchResult.name = String(format: "Fake Result %d for", i)
-            searchResult.artistName = searchBar.text!
-            searchResults.append(searchResult)
+        if !searchBar.text!.isEmpty {
+            searchBar.resignFirstResponder()
+            
+            hasSearched = true
+            searchResults = [SearchResult]()
+            
+            let url = urlWithSearchText(searchBar.text!)
+            print("URL: '\(url)'")
+            
+            tableView.reloadData()
         }
-        tableView.reloadData()
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
@@ -105,5 +105,14 @@ extension SearchViewController: UITableViewDelegate {
         } else {
             return indexPath
         }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension SearchViewController {
+    func urlWithSearchText(searchText: String) -> NSURL {
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@", searchText)
+        let url = NSURL(string: urlString)
+        return url!
     }
 }
