@@ -54,12 +54,13 @@ extension SearchViewController: UISearchBarDelegate {
             
             if let jsonString = performStoreRequestWithURL(url) {
                 if let dictionary = parseJSON(jsonString) {
-                    print("Dictionary \(dictionary)")
+                    parseDictionary(dictionary)
+                    
+                    tableView.reloadData()
+                    return
                 }
             }
-
-            
-            tableView.reloadData()
+            showNetworkError()
         }
     }
     
@@ -144,5 +145,36 @@ extension SearchViewController {
             print("JSON Error: \(error)")
             return nil
         }
+    }
+    
+    func showNetworkError() {
+        let alert = UIAlertController(
+            title: "Whoops...",
+            message: "There was an error reading from the iTunes Store. Please try again.",
+            preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func parseDictionary(dictionary: [String: AnyObject]) -> [SearchResult] {
+        guard let array = dictionary["results"] as? [AnyObject] else {
+            print("Expected 'results' array")
+            return []
+        }
+        
+        var searchResults = [SearchResult]()
+        
+        for resultDict in array {
+            if let resultDict = resultDict as? [String: AnyObject] {
+                if let wrapperType = resultDict["wrapperType"] as? String, let kind = resultDict["kind"] as? String  {
+                    print("wrapperType: \(wrapperType), kind: \(kind)")
+                }
+            }
+        }
+        
+        return searchResults
     }
 }
