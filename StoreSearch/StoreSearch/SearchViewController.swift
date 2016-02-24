@@ -51,7 +51,11 @@ extension SearchViewController: UISearchBarDelegate {
             searchResults = [SearchResult]()
             
             let url = urlWithSearchText(searchBar.text!)
-            print("URL: '\(url)'")
+            
+            if let jsonString = performStoreRequestWithURL(url) {
+                print("Received JSON string '\(jsonString)'")
+            }
+
             
             tableView.reloadData()
         }
@@ -108,11 +112,22 @@ extension SearchViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - Networking
 extension SearchViewController {
     func urlWithSearchText(searchText: String) -> NSURL {
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@", searchText)
+        let escapedSearchText = searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@", escapedSearchText)
         let url = NSURL(string: urlString)
         return url!
+    }
+    
+    func performStoreRequestWithURL(url: NSURL) -> String? {
+        do {
+            return try String(contentsOfURL: url, encoding: NSUTF8StringEncoding)
+        } catch {
+            print("Download Error: \(error)")
+            return nil
+        }
     }
 }
