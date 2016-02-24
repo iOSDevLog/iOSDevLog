@@ -53,7 +53,9 @@ extension SearchViewController: UISearchBarDelegate {
             let url = urlWithSearchText(searchBar.text!)
             
             if let jsonString = performStoreRequestWithURL(url) {
-                print("Received JSON string '\(jsonString)'")
+                if let dictionary = parseJSON(jsonString) {
+                    print("Dictionary \(dictionary)")
+                }
             }
 
             
@@ -127,6 +129,19 @@ extension SearchViewController {
             return try String(contentsOfURL: url, encoding: NSUTF8StringEncoding)
         } catch {
             print("Download Error: \(error)")
+            return nil
+        }
+    }
+    
+    func parseJSON(jsonString: String) -> [String: AnyObject]? {
+        guard let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding) else {
+            return nil
+        }
+        
+        do {
+            return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String: AnyObject]
+        } catch {
+            print("JSON Error: \(error)")
             return nil
         }
     }
