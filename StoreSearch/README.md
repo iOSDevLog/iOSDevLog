@@ -19,6 +19,19 @@
 
 ### 03 - Using Web Service
 ---
+
+#### Search *iOSDevLog*
+
+![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/6.png)
+
+#### Search *Apple*, a lot of result
+
+![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/7.png)
+
+#### Search *Apple* then sort them
+
+![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/8.png)
+
 ### 04 - Async Networking
 ---
 ### 05 - NSURLSession
@@ -34,12 +47,6 @@
 ### 10 - Finished App
 ---
 
-
-![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/6.png)
-
-![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/7.png)
-
-![8](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/8.png)
 
 ![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/9.png)
 
