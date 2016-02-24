@@ -6,6 +6,10 @@
 //  Copyright © 2016年 iosdevlog. All rights reserved.
 //
 
+func < (lhs: SearchResult, rhs: SearchResult) -> Bool {
+    return lhs.name.localizedStandardCompare(rhs.name) == .OrderedAscending
+}
+
 class SearchResult {
     var name = ""
     var artistName = ""
