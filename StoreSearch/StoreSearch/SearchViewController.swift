@@ -72,7 +72,10 @@ extension SearchViewController: UISearchBarDelegate {
                         self.isLoading = false
                         self.tableView.reloadData()
                     
-                        print("DONE!")
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.isLoading = false;
+                            self.tableView.reloadData()
+                        }
                         return
                     }
                     print("Error!")
