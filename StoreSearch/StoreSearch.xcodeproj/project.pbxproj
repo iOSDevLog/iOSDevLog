@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5764361C7F3CE700E4E96F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5764351C7F3CE700E4E96F /* LoadingCell.xib */; };
 		DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D44181C7B330700E61B20 /* AppDelegate.swift */; };
 		DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D441A1C7B330700E61B20 /* SearchViewController.swift */; };
 		DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441C1C7B330700E61B20 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE5764351C7F3CE700E4E96F /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		DE7D44151C7B330700E61B20 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7D44181C7B330700E61B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7D441A1C7B330700E61B20 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				DEFF55751C7C775A00697D88 /* SearchResultCell.xib */,
 				DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */,
 				DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */,
+				DE5764351C7F3CE700E4E96F /* LoadingCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */,
 				DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */,
+				DE5764361C7F3CE700E4E96F /* LoadingCell.xib in Resources */,
 				DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */,
 				DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */,
 				DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */,
