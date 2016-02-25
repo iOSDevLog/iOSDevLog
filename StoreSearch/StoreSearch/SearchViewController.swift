@@ -78,7 +78,10 @@ extension SearchViewController: UISearchBarDelegate {
                         }
                         return
                     }
-                    print("Error!")
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.showNetworkError()
+                    }
                 }
             }
         }
