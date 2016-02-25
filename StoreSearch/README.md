@@ -34,6 +34,9 @@
 
 ### 04 - Async Networking
 ---
+
+![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/9.png)
+
 ### 05 - NSURLSession
 ---
 ### 06 - Detail Pop-up
@@ -47,8 +50,6 @@
 ### 10 - Finished App
 ---
 
-
-![9](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/9.png)
 
 ![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/10.png)
 
