@@ -20,11 +20,11 @@
 ### 03 - Using Web Service
 ---
 
-#### Search *iOSDevLog*
+#### Search *iOSDevLog*, error
 
 ![6](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/6.png)
 
-#### Search *Apple*, a lot of result
+#### Search *iOSDevLog*
 
 ![7](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/7.png)
 
