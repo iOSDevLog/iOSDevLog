@@ -44,15 +44,6 @@
 
 ### 06 - Detail Pop-up
 ---
-### 07 - Landscape
----
-### 08 - Refactored Search
----
-### 09 - Internationalization
----
-### 10 - Finished App
----
-
 
 ![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/11.png)
 
@@ -76,7 +67,18 @@
 
 ![21](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/21.png)
 
-![22](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/22.png)
+![22](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/22.gif)
+
+### 07 - Landscape
+---
+### 08 - Refactored Search
+---
+### 09 - Internationalization
+---
+### 10 - Finished App
+---
+
+
 
 ![23](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/23.png)
 
