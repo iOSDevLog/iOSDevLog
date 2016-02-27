@@ -70,7 +70,8 @@ extension SearchViewController: UISearchBarDelegate {
                         self.searchResults = self.parseDictionary(dictionary)
                         self.searchResults.sortInPlace(<)
                         
-                        dispatch_async(dispatch_get_main_queue()) { self.isLoading = false
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.isLoading = false
                             self.tableView.reloadData()
                         }
                         
@@ -78,6 +79,13 @@ extension SearchViewController: UISearchBarDelegate {
                     }
                 } else {
                     print("Failure! \(response)")
+                }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.hasSearched = false
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                    self.showNetworkError()
                 }
             })
             
