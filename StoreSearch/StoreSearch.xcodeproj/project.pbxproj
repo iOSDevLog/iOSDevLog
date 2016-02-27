@@ -16,6 +16,7 @@
 		DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */; };
 		DE9D614D1C8191D90079F145 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE631FB21C81860C0017915B /* DetailViewController.swift */; };
 		DE9D614F1C8193470079F145 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D614E1C8193470079F145 /* DimmingPresentationController.swift */; };
+		DE9D61511C81BE660079F145 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D61501C81BE660079F145 /* GradientView.swift */; };
 		DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF55751C7C775A00697D88 /* SearchResultCell.xib */; };
 		DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */; };
 		DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */; };
@@ -33,6 +34,7 @@
 		DE7D44241C7B330700E61B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DE9D614E1C8193470079F145 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		DE9D61501C81BE660079F145 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DEFF55751C7C775A00697D88 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */,
 				DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */,
 				DE5764351C7F3CE700E4E96F /* LoadingCell.xib */,
+				DE9D61501C81BE660079F145 /* GradientView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */,
 				DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */,
 				DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */,
+				DE9D61511C81BE660079F145 /* GradientView.swift in Sources */,
 				DE645AAF1C81699F000DE925 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

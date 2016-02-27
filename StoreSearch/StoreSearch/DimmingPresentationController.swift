@@ -9,7 +9,16 @@
 import UIKit
 
 class DimmingPresentationController: UIPresentationController {
+    // MARK: - property
+    lazy var dimmingView = GradientView(frame: CGRect.zero)
+    
+    // MARK: - override
     override func shouldPresentInFullscreen() -> Bool {
         return false
+    }
+    
+    override func presentationTransitionWillBegin() {
+        dimmingView.frame = containerView!.bounds
+        containerView!.insertSubview(dimmingView, atIndex: 0)
     }
 }
