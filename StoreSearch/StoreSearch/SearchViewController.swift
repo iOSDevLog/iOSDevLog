@@ -50,7 +50,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - action
     @IBAction func segmentChanged(sender: UISegmentedControl) {
-        print("Segment changed: \(sender.selectedSegmentIndex)")
+        performSearch()
     }
     
 }
@@ -59,6 +59,10 @@ class SearchViewController: UIViewController {
 // MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        performSearch()
+    }
+    
+    func performSearch() {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
         
@@ -69,7 +73,7 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = [SearchResult]()
         
-            let url = urlWithSearchText(searchBar.text!)
+            let url = urlWithSearchText(searchBar.text!, categoary: segmentControl.selectedSegmentIndex)
             let session = NSURLSession.sharedSession()
             dataTask = session.dataTaskWithURL(url, completionHandler: {
                 (data, response, error)  in
@@ -186,10 +190,18 @@ extension SearchViewController: UITableViewDelegate {
 
 // MARK: - Networking
 extension SearchViewController {
-    func urlWithSearchText(searchText: String) -> NSURL {
+    func urlWithSearchText(searchText: String, categoary: Int) -> NSURL {
+        let entityName: String
+        switch categoary {
+        case 1: entityName = "musicTrack"
+        case 2: entityName = "software"
+        case 3: entityName = "ebook"
+        default: entityName = ""
+        }
+        
         let escapedSearchText = searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         //  Network Link Conditioner
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200", escapedSearchText)
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200&entity=%@", escapedSearchText, entityName)
         let url = NSURL(string: urlString)
         return url!
     }
