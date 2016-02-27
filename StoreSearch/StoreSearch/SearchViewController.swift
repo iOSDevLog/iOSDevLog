@@ -65,8 +65,10 @@ extension SearchViewController: UISearchBarDelegate {
                 (data, response, error)  in
                 if let error = error {
                     print("Failure! \(error)")
+                } else if let httpResponse = response as? NSHTTPURLResponse where httpResponse.statusCode == 200 {
+                    print("Success! \(data)")
                 } else {
-                    print("Success! \(response)")
+                    print("Failure! \(response)")
                 }
             })
             
