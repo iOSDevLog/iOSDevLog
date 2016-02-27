@@ -97,7 +97,7 @@
                                         <rect key="frame" x="3" y="1" width="15" height="22"/>
                                         <state key="normal" image="CloseButton"/>
                                         <connections>
-                                            <action selector="close:" destination="z3S-eT-46r" eventType="touchUpInside" id="NRR-kU-fmR"/>
+                                            <action selector="close" destination="z3S-eT-46r" eventType="touchUpInside" id="R2t-xZ-pYV"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-fT-FYR">
@@ -139,15 +139,21 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pA-iC-D4u">
-                                        <rect key="frame" x="168" y="212" width="68" height="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pA-iC-D4u">
+                                        <rect key="frame" x="159" y="210" width="75" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="FF6-jx-pKQ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="$9.99" backgroundImage="PriceButton"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.94999999999999996" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7pA-iC-D4u" secondAttribute="trailing" constant="6" id="SCx-ia-5xu"/>
                                     <constraint firstAttribute="width" constant="240" id="VjX-LH-HDp"/>
+                                    <constraint firstAttribute="bottom" secondItem="7pA-iC-D4u" secondAttribute="bottom" constant="6" id="gkb-2a-mrK"/>
                                     <constraint firstAttribute="height" constant="240" id="j8d-Z4-t9L"/>
                                 </constraints>
                             </view>
