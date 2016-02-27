@@ -155,6 +155,8 @@ extension SearchViewController: UITableViewDelegate {
         searchBar.resignFirstResponder()
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        performSegueWithIdentifier("ShowDetail", sender: indexPath)
     }
             
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {

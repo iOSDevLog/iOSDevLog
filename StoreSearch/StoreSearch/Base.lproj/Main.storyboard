@@ -72,6 +72,7 @@
                         <outlet property="searchBar" destination="BJk-Jn-kGF" id="P2W-FP-o07"/>
                         <outlet property="segmentControl" destination="HaH-zu-mWf" id="sUX-Kd-4Ju"/>
                         <outlet property="tableView" destination="31t-VU-dE3" id="9g2-9o-ktj"/>
+                        <segue destination="z3S-eT-46r" kind="presentation" identifier="ShowDetail" id="WLC-Oa-eag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,12 +89,33 @@
                     <view key="view" contentMode="scaleToFill" id="HCA-K8-gyV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqa-OM-PSs" userLabel="Pop-up View">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-xe-RYj" userLabel="Close Button">
+                                        <rect key="frame" x="3" y="1" width="15" height="22"/>
+                                        <state key="normal" image="CloseButton"/>
+                                        <connections>
+                                            <action selector="close:" destination="z3S-eT-46r" eventType="touchUpInside" id="NRR-kU-fmR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.94999999999999996" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="close" destination="c4a-xe-RYj" id="yGr-Qq-Rnb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O24-o9-p8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1201" y="389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CloseButton" width="15" height="15"/>
+    </resources>
 </document>
