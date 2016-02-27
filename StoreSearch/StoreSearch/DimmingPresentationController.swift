@@ -28,4 +28,12 @@ class DimmingPresentationController: UIPresentationController {
                 }, completion: nil)
         }
     }
+    
+    override func dismissalTransitionWillBegin()  {
+        if let transitionCoordinator = presentedViewController.transitionCoordinator() {
+            transitionCoordinator.animateAlongsideTransition({ _ in
+                    self.dimmingView.alpha = 0
+                }, completion: nil)
+        }
+    }
 }
