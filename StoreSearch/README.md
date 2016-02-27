@@ -39,6 +39,9 @@
 
 ### 05 - NSURLSession
 ---
+
+![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/10.png)
+
 ### 06 - Detail Pop-up
 ---
 ### 07 - Landscape
@@ -50,8 +53,6 @@
 ### 10 - Finished App
 ---
 
-
-![10](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/10.png)
 
 ![11](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/11.png)
 
