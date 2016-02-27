@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DE5764361C7F3CE700E4E96F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5764351C7F3CE700E4E96F /* LoadingCell.xib */; };
-		DE631FB31C81860C0017915B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE631FB21C81860C0017915B /* DetailViewController.swift */; };
 		DE645AAF1C81699F000DE925 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE645AAE1C81699F000DE925 /* UIImageView+DownloadImage.swift */; };
 		DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D44181C7B330700E61B20 /* AppDelegate.swift */; };
 		DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D441A1C7B330700E61B20 /* SearchViewController.swift */; };
 		DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441C1C7B330700E61B20 /* Main.storyboard */; };
 		DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441F1C7B330700E61B20 /* Assets.xcassets */; };
 		DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */; };
+		DE9D614D1C8191D90079F145 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE631FB21C81860C0017915B /* DetailViewController.swift */; };
 		DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF55751C7C775A00697D88 /* SearchResultCell.xib */; };
 		DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */; };
 		DEFF557C1C7C86BA00697D88 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF557B1C7C86BA00697D88 /* NothingFoundCell.xib */; };
@@ -195,10 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9D614D1C8191D90079F145 /* DetailViewController.swift in Sources */,
 				DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */,
 				DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */,
 				DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */,
-				DE631FB31C81860C0017915B /* DetailViewController.swift in Sources */,
 				DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */,
 				DE645AAF1C81699F000DE925 /* UIImageView+DownloadImage.swift in Sources */,
 			);
