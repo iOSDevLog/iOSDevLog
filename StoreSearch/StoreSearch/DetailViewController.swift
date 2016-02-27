@@ -10,6 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
     // MARK: - lifeCycle
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        modalPresentationStyle = .Custom
+        transitioningDelegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,3 +27,13 @@ class DetailViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
+// MARK: -
+extension DetailViewController: UIViewControllerTransitioningDelegate {
+    func presentationControllerForPresentedViewController(presented: UIViewController,
+        presentingViewController presenting: UIViewController,
+        sourceViewController source: UIViewController) -> UIPresentationController? {
+        return DimmingPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    }
+}
+
