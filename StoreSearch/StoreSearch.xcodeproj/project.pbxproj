@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE5764361C7F3CE700E4E96F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5764351C7F3CE700E4E96F /* LoadingCell.xib */; };
+		DE645AAF1C81699F000DE925 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE645AAE1C81699F000DE925 /* UIImageView+DownloadImage.swift */; };
 		DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D44181C7B330700E61B20 /* AppDelegate.swift */; };
 		DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D441A1C7B330700E61B20 /* SearchViewController.swift */; };
 		DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441C1C7B330700E61B20 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		DE5764351C7F3CE700E4E96F /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		DE645AAE1C81699F000DE925 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		DE7D44151C7B330700E61B20 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7D44181C7B330700E61B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7D441A1C7B330700E61B20 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE645AAD1C816964000DE925 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE645AAE1C81699F000DE925 /* UIImageView+DownloadImage.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		DE7D440C1C7B330700E61B20 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 				DEFF55731C7C770B00697D88 /* Controller */,
 				DEFF55721C7C770100697D88 /* Model */,
 				DEFF55711C7C76F500697D88 /* View */,
+				DE645AAD1C816964000DE925 /* Extension */,
 				DEFF55741C7C772600697D88 /* Support */,
 			);
 			path = StoreSearch;
@@ -185,6 +196,7 @@
 				DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */,
 				DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */,
 				DE7D44191C7B330700E61B20 /* AppDelegate.swift in Sources */,
+				DE645AAF1C81699F000DE925 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
