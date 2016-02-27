@@ -12,7 +12,6 @@
 		DE7D441B1C7B330700E61B20 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D441A1C7B330700E61B20 /* SearchViewController.swift */; };
 		DE7D441E1C7B330700E61B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441C1C7B330700E61B20 /* Main.storyboard */; };
 		DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7D441F1C7B330700E61B20 /* Assets.xcassets */; };
-		DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7D44211C7B330700E61B20 /* LaunchScreen.storyboard */; };
 		DE7D442B1C7B3DD200E61B20 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */; };
 		DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF55751C7C775A00697D88 /* SearchResultCell.xib */; };
 		DEFF557A1C7C7A9E00697D88 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF55791C7C7A9E00697D88 /* SearchResultCell.swift */; };
@@ -26,7 +25,6 @@
 		DE7D441A1C7B330700E61B20 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DE7D441D1C7B330700E61B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE7D441F1C7B330700E61B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE7D44221C7B330700E61B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE7D44241C7B330700E61B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE7D442A1C7B3DD200E61B20 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		DEFF55751C7C775A00697D88 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			children = (
 				DE7D44181C7B330700E61B20 /* AppDelegate.swift */,
 				DE7D441F1C7B330700E61B20 /* Assets.xcassets */,
-				DE7D44211C7B330700E61B20 /* LaunchScreen.storyboard */,
 				DE7D44241C7B330700E61B20 /* Info.plist */,
 			);
 			name = Support;
@@ -143,7 +140,6 @@
 				TargetAttributes = {
 					DE7D44141C7B330700E61B20 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = UC3LEF3795;
 					};
 				};
 			};
@@ -170,7 +166,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE7D44231C7B330700E61B20 /* LaunchScreen.storyboard in Resources */,
 				DE7D44201C7B330700E61B20 /* Assets.xcassets in Resources */,
 				DE5764361C7F3CE700E4E96F /* LoadingCell.xib in Resources */,
 				DEFF55761C7C775A00697D88 /* SearchResultCell.xib in Resources */,
@@ -202,14 +197,6 @@
 				DE7D441D1C7B330700E61B20 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DE7D44211C7B330700E61B20 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE7D44221C7B330700E61B20 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -300,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.StoreSearch;
@@ -311,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.StoreSearch;
