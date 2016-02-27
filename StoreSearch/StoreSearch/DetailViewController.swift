@@ -21,11 +21,18 @@ class DetailViewController: UIViewController {
     // MARK: - property
     var searchResult: SearchResult!
     
+    var downloadTask: NSURLSessionDownloadTask?
+    
     // MARK: - lifeCycle
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         modalPresentationStyle = .Custom
         transitioningDelegate = self
+    }
+    
+    deinit {
+        print("deinit \(self)")
+        downloadTask?.cancel()
     }
     
     override func viewDidLoad() {
@@ -75,7 +82,12 @@ class DetailViewController: UIViewController {
         } else {
             priceText = ""
         }
+        
         priceButton.setTitle(priceText, forState: .Normal)
+        
+        if let url = NSURL(string: searchResult.artworkURL100) {
+            downloadTask = artworkImageView.loadImageWithURL(url)
+        }
     }
 }
 
