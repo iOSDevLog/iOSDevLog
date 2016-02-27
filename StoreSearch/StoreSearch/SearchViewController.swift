@@ -66,7 +66,16 @@ extension SearchViewController: UISearchBarDelegate {
                 if let error = error {
                     print("Failure! \(error)")
                 } else if let httpResponse = response as? NSHTTPURLResponse where httpResponse.statusCode == 200 {
-                    print("Success! \(data)")
+                    if let data = data, dictionary = self.parseJSON(data) {
+                        self.searchResults = self.parseDictionary(dictionary)
+                        self.searchResults.sortInPlace(<)
+                        
+                        dispatch_async(dispatch_get_main_queue()) { self.isLoading = false
+                            self.tableView.reloadData()
+                        }
+                        
+                        return
+                    }
                 } else {
                     print("Failure! \(response)")
                 }
@@ -167,11 +176,7 @@ extension SearchViewController {
         return url!
     }
     
-    func parseJSON(jsonString: String) -> [String: AnyObject]? {
-        guard let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding) else {
-            return nil
-        }
-        
+    func parseJSON(data: NSData) -> [String: AnyObject]? {
         do {
             return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String: AnyObject]
         } catch {
