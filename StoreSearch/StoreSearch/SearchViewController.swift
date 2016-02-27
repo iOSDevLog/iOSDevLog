@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     // MARK: - property
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     // MARK: - outlet
     var searchResults = [SearchResult]()
@@ -32,7 +33,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = 80;
-        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
         tableView.registerNib(cellNib,
@@ -46,6 +47,12 @@ class SearchViewController: UIViewController {
         
         searchBar.becomeFirstResponder()
     }
+    
+    // MARK: - action
+    @IBAction func segmentChanged(sender: UISegmentedControl) {
+        print("Segment changed: \(sender.selectedSegmentIndex)")
+    }
+    
 }
 
 // MARK: - extension
