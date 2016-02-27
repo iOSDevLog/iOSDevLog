@@ -59,31 +59,18 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = [SearchResult]()
         
-            let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-        
-            dispatch_async(queue) {
-                let url = self.urlWithSearchText(searchBar.text!)
-            
-                if let jsonString = self.performStoreRequestWithURL(url) {
-                    if let dictionary = self.parseJSON(jsonString) {
-                        self.searchResults = self.parseDictionary(dictionary)
-                        self.searchResults.sortInPlace(<)
-                
-                        self.isLoading = false
-                        self.tableView.reloadData()
-                    
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.isLoading = false;
-                            self.tableView.reloadData()
-                        }
-                        return
-                    }
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.showNetworkError()
-                    }
+            let url = urlWithSearchText(searchBar.text!)
+            let session = NSURLSession.sharedSession()
+            let dataTask = session.dataTaskWithURL(url, completionHandler: {
+                (data, response, error)  in
+                if let error = error {
+                    print("Failure! \(error)")
+                } else {
+                    print("Success! \(response)")
                 }
-            }
+            })
+            
+            dataTask.resume()
         }
     }
     
@@ -176,15 +163,6 @@ extension SearchViewController {
         let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200", escapedSearchText)
         let url = NSURL(string: urlString)
         return url!
-    }
-    
-    func performStoreRequestWithURL(url: NSURL) -> String? {
-        do {
-            return try String(contentsOfURL: url, encoding: NSUTF8StringEncoding)
-        } catch {
-            print("Download Error: \(error)")
-            return nil
-        }
     }
     
     func parseJSON(jsonString: String) -> [String: AnyObject]? {
