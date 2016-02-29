@@ -9,5 +9,8 @@
 import UIKit
 
 class LandscapeViewController: UIViewController {
-
+    // MARK: - lifeCycle
+    deinit {
+        print("deinit \(self)")
+    }
 }
