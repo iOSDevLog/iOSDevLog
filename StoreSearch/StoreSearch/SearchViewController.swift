@@ -361,5 +361,11 @@ extension SearchViewController {
     }
     
     func hideLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+        if let controller = landscapeViewController {
+            controller.willMoveToParentViewController(nil)
+            controller.view.removeFromSuperview()
+            controller.removeFromParentViewController()
+            self.landscapeViewController = nil
+        }
     }
 }
