@@ -359,6 +359,11 @@ extension SearchViewController {
             
             coordinator.animateAlongsideTransition({ _ in
                 controller.view.alpha = 1
+                self.searchBar.resignFirstResponder()
+                
+                if self.presentedViewController != nil {
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
             }, completion: { _ in
                     controller.didMoveToParentViewController(self)
             })
