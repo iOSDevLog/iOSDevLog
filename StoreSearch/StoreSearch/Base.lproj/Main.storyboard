@@ -206,6 +206,36 @@
             </objects>
             <point key="canvasLocation" x="1205" y="374"/>
         </scene>
+        <!--Landscape View Controller-->
+        <scene sceneID="fhs-Ge-Gbz">
+            <objects>
+                <viewController storyboardIdentifier="LandscapeViewController" id="mEV-Hm-08k" customClass="LandscapeViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bd4-Ah-Xiw"/>
+                        <viewControllerLayoutGuide type="bottom" id="k86-N0-A0i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9h-EK-5av">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're in landscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-47-YGG">
+                                <rect key="frame" x="228" y="289" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fTh-47-YGG" firstAttribute="centerX" secondItem="f9h-EK-5av" secondAttribute="centerX" id="vOW-dP-f8c"/>
+                            <constraint firstItem="fTh-47-YGG" firstAttribute="centerY" secondItem="f9h-EK-5av" secondAttribute="centerY" id="xSV-2U-hCD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VX-Bm-hvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="1133"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CloseButton" width="15" height="15"/>

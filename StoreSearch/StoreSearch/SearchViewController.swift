@@ -22,6 +22,8 @@ class SearchViewController: UIViewController {
     
     var dataTask: NSURLSessionDataTask?
     
+    var landscapeViewController: LandscapeViewController?
+    
     struct TableViewCellIdentifiers {
         static let searchResultCell = "SearchResultCell"
         static let nothingFoundCell = "NothingFoundCell"
@@ -328,5 +330,36 @@ extension SearchViewController {
             searchResult.genre = (genres as! [String]).joinWithSeparator(", ")
         }
         return searchResult
+    }
+}
+
+// MARK: - Transition
+extension SearchViewController {
+    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+        
+        switch newCollection.verticalSizeClass {
+        case .Compact:
+            showLandscapeViewWithCoordinator(coordinator)
+        case .Regular, .Unspecified:
+            hideLandscapeViewWithCoordinator(coordinator)
+        }
+    }
+
+    func showLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+        precondition(landscapeViewController == nil)
+        
+        landscapeViewController = storyboard!.instantiateViewControllerWithIdentifier("LandscapeViewController") as? LandscapeViewController
+        if let controller = landscapeViewController {
+            controller.view.frame = view.bounds
+            
+            view.addSubview(controller.view)
+            addChildViewController(controller)
+            
+            controller.didMoveToParentViewController(self)
+        }
+    }
+    
+    func hideLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
     }
 }
