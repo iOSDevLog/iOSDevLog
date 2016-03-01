@@ -35,6 +35,8 @@ class LandscapeViewController: UIViewController {
         scrollView.removeConstraints(scrollView.constraints)
         scrollView.translatesAutoresizingMaskIntoConstraints = true
         scrollView.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+        
+        pageControl.numberOfPages = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -52,6 +54,14 @@ class LandscapeViewController: UIViewController {
             firstTime = false
             tileButtons(searchResults)
         }
+    }
+    
+    // MARK: - action
+    @IBAction func pageChanged(sender: UIPageControl) {
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
+                self.scrollView.contentOffset = CGPoint(x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage),y: 0)
+            },
+            completion: nil)
     }
     
     // MARK: - helper
@@ -95,9 +105,13 @@ class LandscapeViewController: UIViewController {
         var row = 0
         var column = 0
         var x = marginX
-        for searchResult in searchResults {
+        
+        for (index, searchResult) in searchResults.enumerate() {
             let button = UIButton(type: .Custom)
-            button.setBackgroundImage(UIImage(named: "LandscapeButton"), forState: .Normal)
+            button.backgroundColor = UIColor.whiteColor()
+            
+            button.setTitle("\(index)", forState: .Normal)
+            button.setTitleColor(UIColor.redColor(), forState: .Normal)
             
             button.frame = CGRect(
                 x: x + paddingHorz,
@@ -125,5 +139,14 @@ class LandscapeViewController: UIViewController {
         
         pageControl.numberOfPages = numPages
         pageControl.currentPage = 0
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+extension LandscapeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let currentPage = Int((scrollView.contentOffset.x + width/2)/width)
+        pageControl.currentPage = currentPage
     }
 }
