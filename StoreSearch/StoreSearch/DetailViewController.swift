@@ -23,6 +23,14 @@ class DetailViewController: UIViewController {
     
     var downloadTask: NSURLSessionDownloadTask?
     
+    enum AnimationStyle {
+        case Slide
+        case Fade
+    }
+    
+    var dismissAnimationStyle = AnimationStyle.Fade
+    
+
     // MARK: - lifeCycle
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,6 +64,7 @@ class DetailViewController: UIViewController {
     
     // MARK: - action
     @IBAction func close() {
+        dismissAnimationStyle = .Slide
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -106,7 +115,13 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
     }
                 
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissAnimationStyle {
+        case .Slide:
             return SlideOutAnimationController()
+        case .Fade:
+            return FadeOutAnimationController()
+        }
+
     }
 }
 

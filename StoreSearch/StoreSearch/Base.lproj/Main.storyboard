@@ -78,6 +78,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Landscape View Controller-->
+        <scene sceneID="AoE-Pm-LrZ">
+            <objects>
+                <viewController storyboardIdentifier="LandscapeViewController" id="NQH-xe-0Pv" customClass="LandscapeViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uf7-bj-O3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="0XM-TT-uq5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rn3-gl-FFc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're in landscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-Bc-OuN">
+                                <rect key="frame" x="228" y="289" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WIa-Bc-OuN" firstAttribute="centerX" secondItem="rn3-gl-FFc" secondAttribute="centerX" id="TcP-c3-nf9"/>
+                            <constraint firstItem="WIa-Bc-OuN" firstAttribute="centerY" secondItem="rn3-gl-FFc" secondAttribute="centerY" id="bJb-AQ-z4I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKT-kW-IBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="1012"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="64J-iD-XCb">
             <objects>
