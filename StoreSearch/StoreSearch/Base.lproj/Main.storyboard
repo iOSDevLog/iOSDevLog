@@ -99,6 +99,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="LF7-dH-3zy" id="tet-NW-btW"/>
+                        <outlet property="scrollView" destination="7Ob-RE-KC2" id="7vI-37-qAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKT-kW-IBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
