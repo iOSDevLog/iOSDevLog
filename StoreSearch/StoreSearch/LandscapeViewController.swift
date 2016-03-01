@@ -38,6 +38,8 @@ class LandscapeViewController: UIViewController {
         
         scrollView.frame = view.bounds
         
+        scrollView.contentSize = CGSize(width: 1000, height: 1000)
+        
         pageControl.frame = CGRect(
             x: 0,
             y: view.frame.size.height - pageControl.frame.size.height,
