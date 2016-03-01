@@ -71,6 +71,13 @@
 
 ### 07 - Landscape
 ---
+
+![23](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/23.png)
+
+![24](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/24.png)
+
+![25](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/25.png)
+
 ### 08 - Refactored Search
 ---
 ### 09 - Internationalization
@@ -79,11 +86,5 @@
 ---
 
 
-
-![23](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/23.png)
-
-![24](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/24.png)
-
-![25](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/25.png)
 
 ![26](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/26.png)
