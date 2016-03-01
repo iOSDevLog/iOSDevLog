@@ -18,9 +18,15 @@ class LandscapeViewController: UIViewController {
     
     private var firstTime = true
     
+    private var downloadTasks = [NSURLSessionDownloadTask]()
+    
     // MARK: - lifeCycle
     deinit {
         print("deinit \(self)")
+        
+        for task in downloadTasks {
+            task.cancel()
+        }
     }
     
     override func viewDidLoad() {
@@ -156,6 +162,7 @@ class LandscapeViewController: UIViewController {
                 }
             }
             downloadTask.resume()
+            downloadTasks.append(downloadTask)
         }
     }
 }
