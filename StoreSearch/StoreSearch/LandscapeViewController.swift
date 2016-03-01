@@ -112,7 +112,7 @@ class LandscapeViewController: UIViewController {
         var column = 0
         var x = marginX
         
-        for (index, searchResult) in searchResults.enumerate() {
+        for (_, searchResult) in searchResults.enumerate() {
             let button = UIButton(type: .Custom)
             button.setBackgroundImage(UIImage(named: "LandscapeButton"), forState: .Normal)
             
