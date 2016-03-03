@@ -191,7 +191,10 @@ class LandscapeViewController: UIViewController {
     func searchResultsReceived() {
         hideSpinner()
         switch search.state {
-        case .NotSearchedYet, .Loading, .NoResults:
+        case .NotSearchedYet, .Loading:
+            break
+        case .NoResults:
+            showNothingFoundLabel()
             break
         case .Results(let list):
             tileButtons(list)
