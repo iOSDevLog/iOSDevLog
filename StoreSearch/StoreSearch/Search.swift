@@ -29,9 +29,12 @@ class Search {
         }
     }
 
-    var searchResults = [SearchResult]()
-    var hasSearched = false
-    var isLoading = false
+    enum State {
+        case NotSearchedYet
+        case Loading
+        case NoResults
+        case Results([SearchResult])
+    }
     
     private var dataTask: NSURLSessionDataTask? = nil
     
