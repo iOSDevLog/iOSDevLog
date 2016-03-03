@@ -46,8 +46,6 @@ class LandscapeViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
         scrollView.frame = view.bounds
         
         pageControl.frame = CGRect(
