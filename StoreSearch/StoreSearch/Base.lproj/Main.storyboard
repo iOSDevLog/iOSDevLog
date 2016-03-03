@@ -70,13 +70,14 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="BJk-Jn-kGF" id="P2W-FP-o07"/>
-                        <outlet property="segmentControl" destination="HaH-zu-mWf" id="sUX-Kd-4Ju"/>
+                        <outlet property="segmentedControl" destination="HaH-zu-mWf" id="6xf-3e-htc"/>
                         <outlet property="tableView" destination="31t-VU-dE3" id="9g2-9o-ktj"/>
                         <segue destination="z3S-eT-46r" kind="presentation" identifier="ShowDetail" id="WLC-Oa-eag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="41" y="374"/>
         </scene>
         <!--Landscape View Controller-->
         <scene sceneID="AoE-Pm-LrZ">
@@ -90,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ob-RE-KC2">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ob-RE-KC2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <outlet property="delegate" destination="NQH-xe-0Pv" id="gH5-AQ-cs4"/>
@@ -99,20 +100,21 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-dH-3zy">
                                 <rect key="frame" x="280" y="500" width="39" height="37"/>
                                 <connections>
-                                    <action selector="pageChanged:" destination="NQH-xe-0Pv" eventType="valueChanged" id="PuM-LM-1pa"/>
+                                    <action selector="pageChanged:" destination="NQH-xe-0Pv" eventType="valueChanged" id="bWN-Dp-wKc"/>
                                 </connections>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="LF7-dH-3zy" id="tet-NW-btW"/>
+                        <outlet property="pageControl" destination="LF7-dH-3zy" id="BLn-LO-g3k"/>
                         <outlet property="scrollView" destination="7Ob-RE-KC2" id="7vI-37-qAM"/>
+                        <segue destination="z3S-eT-46r" kind="presentation" identifier="ShowDetail" id="ZSz-2Y-ZYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKT-kW-IBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="1158"/>
+            <point key="canvasLocation" x="41" y="1134"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="64J-iD-XCb">
@@ -247,4 +249,7 @@
         <image name="CloseButton" width="15" height="15"/>
         <image name="PriceButton" width="11" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZSz-2Y-ZYd"/>
+    </inferredMetricsTieBreakers>
 </document>

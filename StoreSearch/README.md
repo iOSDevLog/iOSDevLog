@@ -80,11 +80,11 @@
 
 ### 08 - Refactored Search
 ---
+
+![26](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/26.png)
+
 ### 09 - Internationalization
 ---
 ### 10 - Finished App
 ---
 
-
-
-![26](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/26.png)
