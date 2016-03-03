@@ -73,6 +73,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func performSearch() {
         if let category = Search.Category(rawValue: segmentedControl.selectedSegmentIndex) {
+            self.landscapeViewController?.searchResultsReceived()
             search.performSearchForText(searchBar.text!, category: category) { success in
                 if !success {
                     self.showNetworkError()
