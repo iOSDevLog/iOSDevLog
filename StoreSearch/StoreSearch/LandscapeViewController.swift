@@ -63,6 +63,7 @@ class LandscapeViewController: UIViewController {
                 showSpinner()
                 break
             case .NoResults:
+                showNothingFoundLabel()
                 break
             case .Results(let list):
                 tileButtons(list)
@@ -195,6 +196,23 @@ class LandscapeViewController: UIViewController {
         case .Results(let list):
             tileButtons(list)
         }
+    }
+    
+    private func showNothingFoundLabel() {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = "Nothing Found"
+        label.textColor = UIColor.whiteColor()
+        label.backgroundColor = UIColor.clearColor()
+            
+        label.sizeToFit()
+            
+        var rect = label.frame
+        rect.size.width = ceil(rect.size.width/2) * 2    // make even
+        rect.size.height = ceil(rect.size.height/2) * 2  // make even
+        label.frame = rect
+            
+        label.center = CGPoint(x: CGRectGetMidX(scrollView.bounds), y: CGRectGetMidY(scrollView.bounds))
+        view.addSubview(label)
     }
 }
 
