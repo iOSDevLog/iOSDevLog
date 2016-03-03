@@ -74,6 +74,7 @@
 				DEAD06541C88912A00F2D840 /* Sources */,
 				DEAD06551C88912A00F2D840 /* Frameworks */,
 				DEAD06561C88912A00F2D840 /* Resources */,
+				DEAD066D1C88913600F2D840 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -96,7 +97,6 @@
 				TargetAttributes = {
 					DEAD06571C88912A00F2D840 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = UC3LEF3795;
 					};
 				};
 			};
@@ -130,6 +130,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEAD066D1C88913600F2D840 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Scripts/iconVersioning.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEAD06541C88912A00F2D840 /* Sources */ = {
@@ -250,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IconOverlaying/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.IconOverlaying;
@@ -261,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IconOverlaying/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdevlog.IconOverlaying;
