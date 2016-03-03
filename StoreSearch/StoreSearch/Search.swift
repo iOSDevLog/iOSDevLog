@@ -12,13 +12,32 @@ import UIKit
 typealias SearchComplete = (Bool) -> Void
 
 class Search {
+    
+    enum Category: Int {
+        case All = 0
+        case Music = 1
+        case Software = 2
+        case EBooks = 3
+        
+        var entityName: String {
+            switch self {
+                case .All: return ""
+                case .Music: return "musicTrack"
+                case .Software: return "software"
+                case .EBooks: return "ebook"
+            }
+        }
+    }
+
     var searchResults = [SearchResult]()
     var hasSearched = false
     var isLoading = false
     
     private var dataTask: NSURLSessionDataTask? = nil
     
-    func performSearchForText(text: String, category: Int, completion: SearchComplete) {
+    func performSearchForText(text: String, category: Category, completion: SearchComplete) {
+        let entityName = category.entityName
+    
         if !text.isEmpty {
             dataTask?.cancel()
             
@@ -63,13 +82,13 @@ class Search {
 
 // MARK: - Networking
 extension Search {
-    func urlWithSearchText(searchText: String, category: Int) -> NSURL {
+    func urlWithSearchText(searchText: String, category: Category) -> NSURL {
         let entityName: String
         switch category {
-        case 1: entityName = "musicTrack"
-        case 2: entityName = "software"
-        case 3: entityName = "ebook"
-        default: entityName = ""
+        case .Music: entityName = "musicTrack"
+        case .Software: entityName = "software"
+        case .EBooks: entityName = "ebook"
+        case .All: entityName = ""
         }
         
         let escapedSearchText = searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
