@@ -12,15 +12,10 @@ class SearchViewController: UIViewController {
     // MARK: - property
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     // MARK: - outlet
-    var searchResults = [SearchResult]()
-    var hasSearched = false
-    
-    var isLoading = false
-    
-    var dataTask: NSURLSessionDataTask?
+    let search = Search()
     
     var landscapeViewController: LandscapeViewController?
 
@@ -56,6 +51,17 @@ class SearchViewController: UIViewController {
         performSearch()
     }
     
+    func showNetworkError() {
+        let alert = UIAlertController(
+        title: "Whoops...",
+        message: "There was an error reading from the iTunes Store. Please try again.",
+        preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - extension
@@ -66,48 +72,9 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func performSearch() {
-        if !searchBar.text!.isEmpty {
-            searchBar.resignFirstResponder()
-        
-            dataTask?.cancel()
-            isLoading = true
-            tableView.reloadData()
-        
-            hasSearched = true
-            searchResults = [SearchResult]()
-        
-            let url = urlWithSearchText(searchBar.text!, categoary: segmentControl.selectedSegmentIndex)
-            let session = NSURLSession.sharedSession()
-            dataTask = session.dataTaskWithURL(url, completionHandler: {
-                (data, response, error)  in
-                if let error = error where error.code == -999 {
-                    return // Search was cancelled
-                } else if let httpResponse = response as? NSHTTPURLResponse where httpResponse.statusCode == 200 {
-                    if let data = data, dictionary = self.parseJSON(data) {
-                        self.searchResults = self.parseDictionary(dictionary)
-                        self.searchResults.sortInPlace(<)
-                        
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.isLoading = false
-                            self.tableView.reloadData()
-                        }
-                        
-                        return
-                    }
-                } else {
-                    print("Failure! \(response)")
-                }
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.hasSearched = false
-                    self.isLoading = false
-                    self.tableView.reloadData()
-                    self.showNetworkError()
-                }
-            })
-            
-            dataTask?.resume()
-        }
+        search.performSearchForText(searchBar.text!, category: segmentedControl.selectedSegmentIndex)
+        tableView.reloadData()
+        searchBar.resignFirstResponder()
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
@@ -119,32 +86,32 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView,
             numberOfRowsInSection section: Int) -> Int {
-        if isLoading {
+        if search.isLoading {
             return 1
-        } else if !hasSearched {
+        } else if !search.hasSearched {
             return 0
-        } else if searchResults.count == 0 {
+        } else if search.searchResults.count == 0 {
             return 1
         } else {
-            return searchResults.count
+            return search.searchResults.count
         }
     }
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if isLoading {
+        if search.isLoading {
             let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.loadingCell, forIndexPath:indexPath)
             
             let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
             spinner.startAnimating()
             
             return cell
-        } else if searchResults.count == 0 {
+        } else if search.searchResults.count == 0 {
             return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell,forIndexPath: indexPath)
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("SearchResultCell", forIndexPath: indexPath) as! SearchResultCell
             
-            let searchResult = searchResults[indexPath.row]
+            let searchResult = search.searchResults[indexPath.row]
             cell.cofnigureForSearchResult(searchResult)
             
             return cell
@@ -156,7 +123,7 @@ extension SearchViewController: UITableViewDataSource {
         if segue.identifier == "ShowDetail" {
             let detailViewController = segue.destinationViewController as! DetailViewController
             let indexPath = sender as! NSIndexPath
-            let searchResult = searchResults[indexPath.row]
+            let searchResult = search.searchResults[indexPath.row]
             detailViewController.searchResult = searchResult
         }
     }
@@ -173,7 +140,7 @@ extension SearchViewController: UITableViewDelegate {
     }
             
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if searchResults.count == 0 || isLoading {
+        if search.searchResults.count == 0 || search.isLoading {
             return nil
         } else {
             return indexPath
@@ -198,8 +165,9 @@ extension SearchViewController {
         precondition(landscapeViewController == nil)
         
         landscapeViewController = storyboard!.instantiateViewControllerWithIdentifier("LandscapeViewController") as? LandscapeViewController
+        
         if let controller = landscapeViewController {
-            controller.searchResults = searchResults
+            controller.search = search
             
             controller.view.frame = view.bounds
             controller.view.alpha = 0

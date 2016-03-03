@@ -17,16 +17,45 @@ class Search {
     private var dataTask: NSURLSessionDataTask? = nil
     
     func performSearchForText(text: String, category: Int) {
-        print("Searching...")
+        if !text.isEmpty {
+            dataTask?.cancel()
+            
+            isLoading = true
+            hasSearched = true
+            
+            searchResults = [SearchResult]()
+            
+            let url = urlWithSearchText(text, category: category)
+            let session = NSURLSession.sharedSession()
+            dataTask = session.dataTaskWithURL(url, completionHandler: {
+                data, response, error in
+                
+                if let error = error where error.code == -999 {
+                    return   // Search was cancelled
+                }
+                
+                if let httpResponse = response as? NSHTTPURLResponse where httpResponse.statusCode == 200,
+                    let data = data, dictionary = self.parseJSON(data) {
+                    self.searchResults = self.parseDictionary(dictionary)
+                    self.searchResults.sortInPlace(<)
+                    
+                    
+                    print("Success!")
+                    self.isLoading = false
+                    return
+                }
+            })
+            dataTask?.resume()
+        }
     }
 }
 
 
 // MARK: - Networking
 extension Search {
-    func urlWithSearchText(searchText: String, categoary: Int) -> NSURL {
+    func urlWithSearchText(searchText: String, category: Int) -> NSURL {
         let entityName: String
-        switch categoary {
+        switch category {
         case 1: entityName = "musicTrack"
         case 2: entityName = "software"
         case 3: entityName = "ebook"
@@ -47,18 +76,6 @@ extension Search {
             print("JSON Error: \(error)")
             return nil
         }
-    }
-    
-    func showNetworkError() {
-        let alert = UIAlertController(
-            title: "Whoops...",
-            message: "There was an error reading from the iTunes Store. Please try again.",
-            preferredStyle: .Alert)
-        
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alert.addAction(action)
-        
-        presentViewController(alert, animated: true, completion: nil)
     }
     
     func parseDictionary(dictionary: [String: AnyObject]) -> [SearchResult] {

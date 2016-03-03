@@ -14,7 +14,7 @@ class LandscapeViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     // MARK: - property
-    var searchResults = [SearchResult]()
+    var search: Search!
     
     private var firstTime = true
     
@@ -56,7 +56,7 @@ class LandscapeViewController: UIViewController {
         
         if firstTime {
             firstTime = false
-            tileButtons(searchResults)
+            tileButtons(search.searchResults)
         }
     }
     
