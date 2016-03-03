@@ -38,7 +38,7 @@ class SearchResultCell: UITableViewCell {
     }
     
     // MARK: - helper
-    func cofnigureForSearchResult(searchResult: SearchResult) {
+    func configureForSearchResult(searchResult: SearchResult) {
         nameLabel.text = searchResult.name
         
         if searchResult.artistName.isEmpty {
