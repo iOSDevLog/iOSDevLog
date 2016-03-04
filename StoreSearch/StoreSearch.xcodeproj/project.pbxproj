@@ -43,6 +43,7 @@
 		DE9BDF231C89CFAC005A7000 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/NothingFoundCell.xib"; sourceTree = "<group>"; };
 		DE9BDF251C89D097005A7000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
 		DE9BDF281C89D0A0005A7000 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LoadingCell.strings"; sourceTree = "<group>"; };
+		DE9BDF2A1C89D287005A7000 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DE9D614E1C8193470079F145 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 		DE9D61501C81BE660079F145 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DE9D61521C81C3C80079F145 /* BounceAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
@@ -242,6 +243,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE7D441D1C7B330700E61B20 /* Base */,
+				DE9BDF2A1C89D287005A7000 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
