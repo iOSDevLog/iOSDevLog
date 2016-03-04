@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  StoreSearch
+
+  Created by iosdevlog on 16/3/4.
+  Copyright © 2016年 iosdevlog. All rights reserved.
+*/
+
+CFBundleDisplayName = "StoreZoeker";
