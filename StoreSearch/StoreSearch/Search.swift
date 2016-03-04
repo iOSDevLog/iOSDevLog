@@ -69,6 +69,7 @@ class Search {
                         searchResults.sortInPlace(<)
                         self.state = .Results(searchResults)
                     }
+                    success = true
                 }
                 dispatch_async(dispatch_get_main_queue()) {
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = true
