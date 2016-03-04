@@ -75,7 +75,7 @@ class DetailViewController: UIViewController {
         if searchResult.artistName.isEmpty {
             artistNameLabel.text = "Unknown"
         } else {
-            artistNameLabel.text = searchResult.artistName
+            artistNameLabel.text = String(format: "%@ (%@)", searchResult.artistName, searchResult.kindForDisplay())
         }
         
         kindLabel.text = searchResult.kindForDisplay()
