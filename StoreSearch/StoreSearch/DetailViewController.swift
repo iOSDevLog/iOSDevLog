@@ -105,7 +105,7 @@ class DetailViewController: UIViewController {
         
         let priceText: String
         if searchResult.price == 0 {
-            priceText = "Free"
+            priceText = NSLocalizedString("Free", comment: "Price: Free")
         } else if let text = formatter.stringFromNumber(searchResult.price) {
             priceText = text
         } else {
@@ -168,9 +168,17 @@ extension DetailViewController: MenuViewControllerDelegate {
                 let controller = MFMailComposeViewController()
                 controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
                 controller.setToRecipients(["iosdevlog@iosdevlog.com"])
+                controller.mailComposeDelegate = self
                 controller.modalPresentationStyle = .FormSheet
                 self.presentViewController(controller, animated: true, completion: nil)
             }
         }
+    }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -192,12 +192,20 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController {
     override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
-        
-        switch newCollection.verticalSizeClass {
-        case .Compact:
-            showLandscapeViewWithCoordinator(coordinator)
-        case .Regular, .Unspecified:
-            hideLandscapeViewWithCoordinator(coordinator)
+    
+        let rect = UIScreen.mainScreen().bounds
+        if (rect.width == 736 && rect.height == 414) ||   // portrait
+            (rect.width == 414 && rect.height == 736) {    // landscape
+            if presentedViewController != nil {
+                dismissViewControllerAnimated(true, completion: nil)
+            }
+        } else if UIDevice.currentDevice().userInterfaceIdiom != .Pad {
+            switch newCollection.verticalSizeClass {
+            case .Compact:
+                showLandscapeViewWithCoordinator(coordinator)
+            case .Regular, .Unspecified:
+                hideLandscapeViewWithCoordinator(coordinator)
+            }
         }
     }
     

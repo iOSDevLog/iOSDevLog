@@ -308,6 +308,11 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="c4a-xe-RYj"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="subviews">
                                         <exclude reference="c4a-xe-RYj"/>
@@ -322,7 +327,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sqa-OM-PSs" firstAttribute="centerX" secondItem="HCA-K8-gyV" secondAttribute="centerX" id="GIZ-X3-sFm"/>
-                            <constraint firstItem="sqa-OM-PSs" firstAttribute="centerY" secondItem="HCA-K8-gyV" secondAttribute="centerY" id="fOo-uP-yao"/>
+                            <constraint firstItem="sqa-OM-PSs" firstAttribute="centerY" secondItem="HCA-K8-gyV" secondAttribute="centerY" id="fOo-uP-yao">
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ex-uD-Mn2">
