@@ -19,7 +19,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceButton: UIButton!
     
     // MARK: - property
-    var searchResult: SearchResult!
+    var searchResult: SearchResult! {
+        didSet {
+            if isViewLoaded() {
+                updateUI()
+            }
+        }
+    }
     
     var downloadTask: NSURLSessionDownloadTask?
     
@@ -110,6 +116,8 @@ class DetailViewController: UIViewController {
         if let url = NSURL(string: searchResult.artworkURL100) {
             downloadTask = artworkImageView.loadImageWithURL(url)
         }
+        
+        popupView.hidden = false
     }
 }
 
