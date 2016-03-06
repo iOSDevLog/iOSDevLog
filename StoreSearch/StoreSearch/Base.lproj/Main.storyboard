@@ -196,30 +196,45 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-9q-SsR">
                                         <rect key="frame" x="10" y="170" width="29" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odk-Mb-8T4">
                                         <rect key="frame" x="10" y="188" width="35" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kind Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFt-Aa-gUx">
                                         <rect key="frame" x="59" y="170" width="56" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-jf-Jdo">
                                         <rect key="frame" x="59" y="188" width="64" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pA-iC-D4u">
                                         <rect key="frame" x="159" y="212" width="75" height="24"/>
@@ -235,6 +250,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.94999999999999996" colorSpace="calibratedWhite"/>
@@ -249,10 +267,14 @@
                                     <constraint firstItem="42x-ye-slZ" firstAttribute="top" secondItem="6Ix-b3-vi1" secondAttribute="bottom" constant="8" id="F1H-gh-4Dx">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstItem="6Ix-b3-vi1" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="H2H-XZ-4v4"/>
+                                    <constraint firstItem="6Ix-b3-vi1" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="H2H-XZ-4v4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstItem="pqA-fT-FYR" firstAttribute="centerX" secondItem="sqa-OM-PSs" secondAttribute="centerX" id="K6c-1f-MTb"/>
                                     <constraint firstItem="Til-jf-Jdo" firstAttribute="leading" secondItem="yFt-Aa-gUx" secondAttribute="leading" id="KjX-mB-0Ot"/>
-                                    <constraint firstItem="odk-Mb-8T4" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="Np4-aK-pq7"/>
+                                    <constraint firstItem="odk-Mb-8T4" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="Np4-aK-pq7">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstItem="odk-Mb-8T4" firstAttribute="top" secondItem="XO6-9q-SsR" secondAttribute="bottom" constant="4" id="QFy-Ed-Mu1">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
@@ -261,12 +283,16 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="500"/>
                                     </constraint>
                                     <constraint firstItem="Til-jf-Jdo" firstAttribute="baseline" secondItem="odk-Mb-8T4" secondAttribute="baseline" id="X8K-mL-GAL"/>
-                                    <constraint firstItem="XO6-9q-SsR" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="Y2b-oM-MR3"/>
+                                    <constraint firstItem="XO6-9q-SsR" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="Y2b-oM-MR3">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Ix-b3-vi1" secondAttribute="trailing" constant="10" id="ZCE-es-eQ9"/>
                                     <constraint firstItem="6Ix-b3-vi1" firstAttribute="top" secondItem="pqA-fT-FYR" secondAttribute="bottom" constant="8" id="b0x-NM-Dyp">
                                         <variation key="heightClass=regular-widthClass=regular" constant="28"/>
                                     </constraint>
-                                    <constraint firstItem="42x-ye-slZ" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="gVF-Fm-TuJ"/>
+                                    <constraint firstItem="42x-ye-slZ" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="gVF-Fm-TuJ">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="bottom" secondItem="7pA-iC-D4u" secondAttribute="bottom" constant="6" id="gkb-2a-mrK"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="42x-ye-slZ" secondAttribute="trailing" constant="10" id="jDO-er-yLe"/>
                                     <constraint firstItem="7pA-iC-D4u" firstAttribute="top" secondItem="Til-jf-Jdo" secondAttribute="bottom" constant="10" id="nnf-mV-UUa">
@@ -308,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O24-o9-p8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485" y="454"/>
+            <point key="canvasLocation" x="1485" y="453.75"/>
         </scene>
     </scenes>
     <resources>
