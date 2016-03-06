@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     // MARK: - outlet
@@ -119,9 +120,17 @@ class DetailViewController: UIViewController {
         
         popupView.hidden = false
     }
+    
+    // MARK: - prepareForSegue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowMenu" {
+            let controller = segue.destinationViewController as! MenuViewController
+            controller.delegate = self
+        }
+    }
 }
 
-// MARK: -
+// MARK: - UIViewControllerTransitioningDelegate
 extension DetailViewController: UIViewControllerTransitioningDelegate {
     func presentationControllerForPresentedViewController(presented: UIViewController,
         presentingViewController presenting: UIViewController,
@@ -144,8 +153,24 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
+// MARK: - UIGestureRecognizerDelegate
 extension DetailViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
         return (touch.view === self.view)
+    }
+}
+
+// MARK: - MenuViewControllerDelegate
+extension DetailViewController: MenuViewControllerDelegate {
+    func menuViewControllerSendSupportEmail(_: MenuViewController) {
+        dismissViewControllerAnimated(true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+                controller.setToRecipients(["iosdevlog@iosdevlog.com"])
+                controller.modalPresentationStyle = .FormSheet
+                self.presentViewController(controller, animated: true, completion: nil)
+            }
+        }
     }
 }
