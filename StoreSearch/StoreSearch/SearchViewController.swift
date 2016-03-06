@@ -44,7 +44,9 @@ class SearchViewController: UIViewController {
         cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
         tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
         
-        searchBar.becomeFirstResponder()
+        if UIDevice.currentDevice().userInterfaceIdiom != .Pad {
+            searchBar.becomeFirstResponder()
+        }
         
         title = NSLocalizedString("Search", comment: "Split-view master button")
     }
@@ -54,6 +56,7 @@ class SearchViewController: UIViewController {
         performSearch()
     }
     
+    // MARK: - helper
     func showNetworkError() {
         let alert = UIAlertController(
             title: NSLocalizedString("Whoops...", comment: "Error alert: title"),
@@ -64,6 +67,14 @@ class SearchViewController: UIViewController {
         alert.addAction(action)
         
         presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func hideMasterPane() {
+            UIView.animateWithDuration(0.25, animations: {
+        self.splitViewController!.preferredDisplayMode = .PrimaryHidden
+        }, completion: { _ in
+                self.splitViewController!.preferredDisplayMode = .Automatic
+        })
     }
 }
 
@@ -141,6 +152,8 @@ extension SearchViewController: UITableViewDataSource {
                 let indexPath = sender as! NSIndexPath
                 let searchResult = list[indexPath.row]
                 detailViewController.searchResult = searchResult
+        
+                detailViewController.isPopUp = true
             }
         }
     }
@@ -157,6 +170,9 @@ extension SearchViewController: UITableViewDelegate {
         } else {
             if case .Results(let list) = search.state {
                 splitViewDetail?.searchResult = list[indexPath.row]
+            }
+            if splitViewController!.displayMode != .AllVisible {
+                hideMasterPane()
             }
         }
     }
