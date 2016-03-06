@@ -71,6 +71,9 @@ Email:  <iosdevlog@iosdevlog.com>
 
 <https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift/>
 
+### *<https://www.raywenderlich.com>*
+
+[The iOS Apprentice](https://www.raywenderlich.com/store/ios-apprentice)
 
 # License
 ---
