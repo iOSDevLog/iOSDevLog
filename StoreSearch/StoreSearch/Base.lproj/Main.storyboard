@@ -128,6 +128,9 @@
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-dH-3zy">
                                 <rect key="frame" x="280" y="500" width="39" height="37"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="280" y="500" width="40" height="37"/>
+                                </variation>
                                 <connections>
                                     <action selector="pageChanged:" destination="NQH-xe-0Pv" eventType="valueChanged" id="bWN-Dp-wKc"/>
                                 </connections>
@@ -167,6 +170,12 @@
                                             <constraint firstAttribute="height" constant="15" id="dV8-bX-cBc"/>
                                         </constraints>
                                         <state key="normal" image="CloseButton"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="1bS-2j-rgO"/>
+                                                <exclude reference="dV8-bX-cBc"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="close" destination="z3S-eT-46r" eventType="touchUpInside" id="R2t-xZ-pYV"/>
                                         </connections>
@@ -251,6 +260,15 @@
                                     <constraint firstItem="c4a-xe-RYj" firstAttribute="top" secondItem="sqa-OM-PSs" secondAttribute="top" constant="3" id="qmV-W4-bHc"/>
                                     <constraint firstItem="pqA-fT-FYR" firstAttribute="top" secondItem="sqa-OM-PSs" secondAttribute="top" constant="9" id="v7P-J0-ffY"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="c4a-xe-RYj"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="Aj7-8j-Itu"/>
+                                        <exclude reference="qmV-W4-bHc"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
