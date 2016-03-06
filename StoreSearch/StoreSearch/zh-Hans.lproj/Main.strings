@@ -1,6 +1,12 @@
 
+/* Class = "UILabel"; text = "Send Support Email"; ObjectID = "130-O4-uIA"; */
+"130-O4-uIA.text" = "发送支持邮件";
+
 /* Class = "UILabel"; text = "Artist Name"; ObjectID = "42x-ye-slZ"; */
-"42x-ye-slZ.text" = "Artist Name";
+"42x-ye-slZ.text" = "艺人";
+
+/* Class = "UILabel"; text = "Rate this App"; ObjectID = "5Od-V9-fDI"; */
+"5Od-V9-fDI.text" = "给我们评分";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "6Ix-b3-vi1"; */
 "6Ix-b3-vi1.text" = "Name";
@@ -28,6 +34,9 @@
 
 /* Class = "UILabel"; text = "Type:"; ObjectID = "XO6-9q-SsR"; */
 "XO6-9q-SsR.text" = "类型:";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "nQp-I7-gw4"; */
+"nQp-I7-gw4.text" = "关于";
 
 /* Class = "UILabel"; text = "Genre:"; ObjectID = "odk-Mb-8T4"; */
 "odk-Mb-8T4.text" = "种类:";
