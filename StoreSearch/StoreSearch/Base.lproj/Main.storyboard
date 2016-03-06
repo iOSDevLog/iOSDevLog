@@ -278,7 +278,9 @@
                                     <constraint firstItem="odk-Mb-8T4" firstAttribute="top" secondItem="XO6-9q-SsR" secondAttribute="bottom" constant="4" id="QFy-Ed-Mu1">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="7pA-iC-D4u" secondAttribute="trailing" constant="6" id="SCx-ia-5xu"/>
+                                    <constraint firstAttribute="trailing" secondItem="7pA-iC-D4u" secondAttribute="trailing" constant="6" id="SCx-ia-5xu">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" constant="240" id="VjX-LH-HDp">
                                         <variation key="heightClass=regular-widthClass=regular" constant="500"/>
                                     </constraint>
@@ -293,7 +295,9 @@
                                     <constraint firstItem="42x-ye-slZ" firstAttribute="leading" secondItem="sqa-OM-PSs" secondAttribute="leading" constant="10" id="gVF-Fm-TuJ">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="7pA-iC-D4u" secondAttribute="bottom" constant="6" id="gkb-2a-mrK"/>
+                                    <constraint firstAttribute="bottom" secondItem="7pA-iC-D4u" secondAttribute="bottom" constant="6" id="gkb-2a-mrK">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="42x-ye-slZ" secondAttribute="trailing" constant="10" id="jDO-er-yLe"/>
                                     <constraint firstItem="7pA-iC-D4u" firstAttribute="top" secondItem="Til-jf-Jdo" secondAttribute="bottom" constant="10" id="nnf-mV-UUa">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
