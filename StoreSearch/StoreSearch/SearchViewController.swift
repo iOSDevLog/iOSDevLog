@@ -44,6 +44,8 @@ class SearchViewController: UIViewController {
         tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
         
         searchBar.becomeFirstResponder()
+        
+        title = NSLocalizedString("Search", comment: "Split-view master button")
     }
     
     // MARK: - action
