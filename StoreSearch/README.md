@@ -95,3 +95,8 @@
 ### 10 - Finished App
 ---
 
+![30](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/30.png)
+
+![31](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/31.png)
+
+![32](https://github.com/iOSDevLog/iOSDevLog/raw/master/assets/img/The_iOS_Apprentice/StoreSearch/32.png)
