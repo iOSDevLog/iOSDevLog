@@ -1,9 +1,9 @@
 <?php
 
-$deviceToken='215429c637b955dfec66811a338b6c3bd691995d565e74f7d21320e8bc792bf6';//这里填写设备的Token码
-$passphrase = '123456'; //证书密码
+$deviceToken='';//这里填写设备的Token码
+$passphrase = ''; //证书密码
 //推送的消息 ;
-$message = 'Hello'; //要发送的标题
+$message = ''; //要发送的标题
 ////////////////////////////////////////////////////////////////////////////////
 //如果在Windows的服务器上，寻找pem路径会有问题，路径修改成这样的方法：
 //$pem = dirname(__FILE__) . '/' . 'apns-dev.pem';
@@ -37,7 +37,7 @@ echo 'Connected to APNS' . PHP_EOL;
 $body['aps'] = array(
     'alert' => $message,
     'sound' => 'default',
-    'badge' => '12',
+    'badge' => 12,
     'url' => 'https://iosdevlog.com',
     );
 
